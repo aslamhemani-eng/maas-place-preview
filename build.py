@@ -187,5 +187,22 @@ pg=head("Our Programs")+f'''<header class="hero" style="--img:url(gallery/2026-1
 </div></div></section>
 {donate("our programs")}
 '''+foot
-for n,h in [('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
+ty=head('Thank You')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="programs.html">Back to Programs</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:hello@maasinspiration.org>hello@maasinspiration.org</a>."</script>'''+foot
+for n,h in [('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
+
+# --- form wiring: name attributes, honeypot, action ---
+import re as _re
+def _wire(fn,formname):
+    h=open(fn).read()
+    def nm(m):
+        lab=_re.sub(r'<[^>]+>|\*','',m.group(1)).strip()
+        slug=_re.sub(r'[^a-z0-9]+','_',lab.lower()).strip('_')[:40] or 'field'
+        return m.group(0).replace('<'+m.group(2),'<'+m.group(2)+f' name="{slug}"',1)
+    h=_re.sub(r'<label[^>]*>([^<]*(?:<[^>]+>[^<]*)*?)<(input|select|textarea)(?![^>]*name=)',nm,h)
+    h=h.replace('<select name="days_you_plan_to_attend" multiple','<select name="days_you_plan_to_attend[]" multiple')
+    h=h.replace('<form id="enroll">',f'<form id="enroll" method="post" action="enroll.php"><input type="hidden" name="form" value="{formname}"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>')
+    h=h.replace('<span class="ph">Form not connected yet – submission destination to be decided</span>','').replace('<span class="ph">Form not connected yet</span>','')
+    for a,b in [('name="field"','name="agree_waiver" value="Yes"'),('email_optional','email'),('_amp_','_'),('senior_s_','senior_'),('participant_s_','participant_'),('anything_you_d_like_us_to_know_needs_com','notes')]: h=h.replace(a,b)
+    open(fn,'w').write(h)
+_wire('maas-place.html',"Maa's Place enrollment"); _wire('blooming-star-village.html','Blooming Star Village interest list')

@@ -21,6 +21,23 @@ Page text lives in `build.py`. Edit, then run `python3 build.py` (preview) or
 
 ## Publishing on the live site (GoDaddy cPanel)
 Upload via cPanel File Manager to `public_html/`: `maas-place.html`, `blooming-star-village.html`,
-`programs.html`, `site-chrome.css`, `section.css`, `section.js`, `schedule.json`, `gallery.json`,
+`programs.html`, `thank-you.html`, `enroll.php`, `site-chrome.css`, `section.css`, `section.js`, `schedule.json`, `gallery.json`,
 `img/site-logo.png`, `gallery/`. Weekly, only `schedule.json`, `gallery.json` and new photos change.
 Do not upload `index.html` from this folder (it would replace the homepage).
+
+## Enrollment forms → hello@maasinspiration.org
+Both forms (Maa's Place enrollment, Blooming Star Village interest list) post to `enroll.php`,
+a small PHP mail handler that emails each submission to **hello@maasinspiration.org**
+(Reply-To = the submitter's email when given) and then shows `thank-you.html`.
+- Spam protection: hidden "website" honeypot field (bots that fill it are silently dropped), plus a
+  whitelist of form names, header-injection stripping, and a minimum-fields check.
+- Live setup (GoDaddy cPanel): upload `enroll.php` and `thank-you.html` with the other files to `public_html/`.
+  In cPanel › Email Accounts make sure `hello@maasinspiration.org` receives mail (the domain's MX is Microsoft 365,
+  so create the mailbox/alias there). `$FROM` in enroll.php is `no-reply@maasinspiration.org`; GoDaddy requires a
+  From on your own domain. If messages land in spam, add GoDaddy's server to the domain's SPF record
+  or switch the handler to SMTP.
+- Test after upload: submit each form once with your own email and confirm it arrives at hello@.
+- To change the recipient, edit `$TO` at the top of enroll.php.
+- Preview (github.io) cannot run PHP: there the forms just show the thank-you page and nothing is sent.
+- Fallback if PHP mail is blocked: set the form `action` to `https://formsubmit.co/hello@maasinspiration.org`
+  (one-time activation email to hello@).

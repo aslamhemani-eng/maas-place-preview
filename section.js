@@ -15,4 +15,4 @@ if(g)fetch('gallery.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  g.innerHTML=d.photos.filter(p=>!p.program||p.program===g.dataset.program).map(p=>`<figure><img loading="lazy" src="gallery/${esc(p.file)}" alt="${esc(p.caption)}"><figcaption>${esc(p.caption)}</figcaption></figure>`).join('');
  g.querySelectorAll('img').forEach(i=>i.onclick=()=>{const lb=document.getElementById('lb');lb.querySelector('img').src=i.src;lb.style.display='flex'});
 });
-const f=document.getElementById('enroll'); if(f)f.onsubmit=e=>{e.preventDefault();alert('Thank you! (Preview: form not connected yet.)')};
+const f=document.getElementById('enroll'); if(f&&/github\.io$/.test(location.hostname))f.onsubmit=e=>{e.preventDefault();location.href='thank-you.html'}; // preview only; live site posts to enroll.php

@@ -59,11 +59,11 @@
 <div class="card"><h3>4. Join in</h3><p>Start attending at a pace that feels right.</p></div></div></div></section>
 <section id="schedule"><div class="wrap"><h2>Schedule</h2><p><span class="ph">Weekly schedule – coming soon</span></p><p>Hours: <span class="ph">Hours</span> · Cost: <span class="ph">Cost / sliding scale?</span> · Transportation: <span class="ph">Transport</span></p></div></section>
 <section id="enroll"><div class="wrap"><h2>Enroll &amp; Get Involved</h2><p>Blooming Star Village is coming soon. Join our interest list and we'll contact you as programs open.</p>
-<form id="enroll"><label>Parent / caregiver name *<input required></label><label>Phone *<input type="tel" required></label>
-<label>Email<input type="email"></label><label>Participant's age<input type="number" min="0"></label>
-<label class="full">Programs of interest<input placeholder="e.g. sensory play, social skills, family support"></label>
-<label class="full">Anything you'd like us to know (needs, communication, interests)<textarea rows="3"></textarea></label>
-<div class="full"><button class="btn">Join Interest List</button> <span class="ph">Form not connected yet</span></div></form></div></section>
+<form id="enroll" method="post" action="enroll.php"><input type="hidden" name="form" value="Blooming Star Village interest list"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><label>Parent / caregiver name *<input name="parent_caregiver_name" required></label><label>Phone *<input name="phone" type="tel" required></label>
+<label>Email<input name="email" type="email"></label><label>Participant's age<input name="participant_age" type="number" min="0"></label>
+<label class="full">Programs of interest<input name="programs_of_interest" placeholder="e.g. sensory play, social skills, family support"></label>
+<label class="full">Anything you'd like us to know (needs, communication, interests)<textarea name="notes" rows="3"></textarea></label>
+<div class="full"><button class="btn">Join Interest List</button> </div></form></div></section>
 <section id="volunteer"><div class="wrap"><h2>Volunteer</h2><p>Patient, caring volunteers will be at the heart of Blooming Star Village. Educators, therapists, students and anyone with a big heart are welcome.</p><a class="btn" href="https://maasinspiration.org/volunteer.html">Sign Up to Volunteer</a></div></section>
 <section id="donate" class="donate"><div class="wrap"><h2>Support Blooming Star Village</h2>
 <p>Donations are taken through our existing secure donation page.</p>
