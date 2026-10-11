@@ -186,9 +186,9 @@ bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi p
 '''+foot
 pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through Maa's Place and Blooming Star Village.</p></header>
 <section><div class="wrap"><div class="grid">
-<div class="card"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
-<div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
-<div class="card"><h3>🌟 Blooming Star Village</h3><p>A free day program for recreation and care for children with special needs. Mon–Thu, 9 AM–2 PM. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
+<div class="card"><img class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt="Maa's Meals volunteers"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
+<div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at Maa's Place"><h3>🏡 Maa's Place Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
+<div class="card"><img class="pc-img" src="gallery/bsv-girl-at-desk.jpg" alt="Child at Blooming Star Village"><h3>🌟 Blooming Star Village</h3><p>A free day program for recreation and care for children with special needs. Mon–Thu, 9 AM–2 PM. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
@@ -203,7 +203,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
 </div>
 <div id="panel" class="panel">
-<h2 id="pname"></h2><p id="pdesc"></p>
+<img id="pimg" class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt=""><h2 id="pname"></h2><p id="pdesc"></p>
 <div class="acts">
 <a id="actDonate" class="act" href="{DON}">💜<b>Donate</b><small>Secure checkout via our donation page</small></a>
 <a class="act" href="#vol">🙌<b>Volunteer</b><small>Sign up in 1 minute</small></a>
@@ -298,7 +298,7 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <a class="pmain" href="{href}"><img src="gallery/{img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
-<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","bsv-girl-at-desk.jpg","A free day program for recreation and care for children with special needs.","Coming soon · Mon–Thu · 9 AM–2 PM · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","maas-meals-volunteers.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","bsv-girl-at-desk.jpg","A free day program for recreation and care for children with special needs.","Coming soon · Mon–Thu · 9 AM–2 PM · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
 <section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)

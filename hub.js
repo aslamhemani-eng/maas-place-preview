@@ -10,7 +10,7 @@ let cur='meals';
 function show(p){if(!P[p])p='meals';cur=p;const c=P[p];
  document.querySelectorAll('.psel button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
  document.getElementById('panel').dataset.p=p;
- pname.textContent=c.name;pdesc.textContent=c.desc;pmore.innerHTML=c.more;
+ pname.textContent=c.name;pimg.src='gallery/'+({meals:'maas-meals-volunteers.jpg','maas-place':'maas-place-seniors-painting.jpg',bsv:'bsv-girl-at-desk.jpg'}[p]||'maas-meals-volunteers.jpg');pimg.alt=c.name;pdesc.textContent=c.desc;pmore.innerHTML=c.more;
  actDonate.href='donate.html?program='+p;
  const rows=p==='maas-place'?(MPS||[["Loading…","",""]]):c.sched;
  hsched.innerHTML=rows.map(r=>'<tr>'+r.map(x=>'<td>'+(/PLACEHOLDER/.test(x)?'<span class="ph">To be scheduled</span>':x)+'</td>').join('')+'</tr>').join('');
