@@ -210,7 +210,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <div id="vol"><h3>Volunteer sign-up</h3><p>Pick the program(s) you'd like to help with – we'll show only the days and times that program runs.</p>
 '''+open('vol_form.html').read()+'''</div>
 </div></div></section>
-'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>')
+'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>')
 
 pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Photo consent and code of conduct for MAA's Inspiration volunteers.</p></header>
 <section id="consent"><div class="wrap"><h2>Photo &amp; Video Consent</h2><ul>
@@ -230,6 +230,7 @@ pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purp
 <p>Questions? <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
 '''+foot
 open('volunteer-policy.html','w').write(pol)
+hub=hub.replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
 
