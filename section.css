@@ -50,3 +50,25 @@
 .mi .ticks{list-style:none;padding:0;margin:6px 0 0}.mi .ticks li{padding:3px 0 3px 22px;position:relative;font-size:.95rem}
 .mi .ticks li:before{content:"✓";position:absolute;left:0;color:#6E8B4E;font-weight:700}
 .mi.purple th{background:#5B2A86}.mi.purple td:first-child{border-left:4px solid #E0A526}
+/* === Mixed theme (Oct 11): purple + sage green + cream/beige + white, gold accents === */
+.mi.purple{--sage:#6E8B4E;--sageD:#4F6B3A;--cream:#F7F1E5;--lav:#F3EDF9;--green:#5B2A86;--dgreen:#3D1A6E;--beige:var(--cream);background:#fff}
+.mi.purple section:nth-of-type(3n+1){background:#fff}.mi.purple section:nth-of-type(3n+2){background:var(--cream)}.mi.purple section:nth-of-type(3n){background:var(--lav)}
+.mi.purple section .card{background:#fff!important;border-top:6px solid #5B2A86}
+.mi.purple section:nth-of-type(3n+1) .card{background:var(--cream)!important}
+.mi.purple .card:nth-child(even){border-top-color:var(--sage)}.mi.purple .card:nth-child(3n+2){border-top-color:#5B2A86}
+.mi.purple .card h3{color:#3D1A6E}.mi.purple .card:nth-child(even) h3{color:var(--sageD)}
+.mi.purple .btn{background:#5B2A86;color:#fff}
+.mi.purple .btn.alt,.mi.purple .donate .btn,.mi.hub.purple #actDonate{background:#E0A526;color:#2E2438}
+.mi.purple .btn.ghost{background:var(--sage);border-color:var(--sage);color:#fff}
+.mi.purple #volunteer .btn,.mi.purple form .btn{background:var(--sageD)}
+.mi.purple .sub{background:#3D1A6E;border-bottom:4px solid var(--sage)}
+.mi.purple .hero{--hero1:#3D1A6Ef0;--hero2:#4F6B3A99}
+.mi.purple th{background:#5B2A86}.mi.purple tbody tr:nth-child(even){background:var(--cream)}.mi.purple td:first-child{border-left:4px solid var(--sage)}
+.mi.purple .tag{background:#E4EBDA;color:#3B5129}
+.mi.purple .ticks li:before{color:var(--sage)}
+.mi.purple form{background:var(--cream)}
+.mi.purple .donate{background:#3D1A6E!important}
+.mi.purple details{border-left:4px solid var(--sage)}
+.mi.hub.purple .panel{border-top-color:#5B2A86;background:#fff}
+.mi.hub.purple .act{background:#5B2A86}.mi.hub.purple .act:nth-child(3){background:var(--sageD)}
+.mi.hub.purple .psel button[aria-selected=true]{border-color:var(--sage);box-shadow:0 0 0 3px #E4EBDA}
