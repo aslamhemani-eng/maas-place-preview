@@ -235,3 +235,24 @@ def _wire(fn,formname):
     for a,b in [('name="field"','name="agree_waiver" value="Yes"'),('email_optional','email'),('_amp_','_'),('senior_s_','senior_'),('participant_s_','participant_'),('anything_you_d_like_us_to_know_needs_com','notes')]: h=h.replace(a,b)
     open(fn,'w').write(h)
 _wire('maas-place.html',"Maa's Place enrollment"); _wire('blooming-star-village.html','Blooming Star Village interest list')
+
+# --- Design variants of Maa's Place (same content, different layouts) ---
+d1=mp.replace('<main class="mi purple">','<main class="mi purple d1">').replace("<title>Maa's Place Senior Center","<title>Design 1 Classic – Maa's Place Senior Center")
+d2=mp.replace('<main class="mi purple">','<main class="mi purple d2">').replace("<title>Maa's Place Senior Center","<title>Design 2 Magazine – Maa's Place Senior Center")
+d2=d2.replace('<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)">','<header class="hero split"><div class="split-text">',1)
+d2=d2.replace('</header>','</div><div class="split-img"><img src="gallery/2026-10-10-service-02.jpg" alt="Maa\'s Place volunteers"></div></header>',1)
+for sid,img in [('what','04'),('visit','05'),('volunteer','03')]:
+    d2=d2.replace(f'<section id="{sid}"><div class="wrap">',f'<section id="{sid}" class="row"><div class="wrap"><img class="row-img" src="gallery/2026-10-10-service-{img}.jpg" alt=""><div class="row-body">',1)
+import re as _r
+for sid in ['what','visit','volunteer']:
+    i=d2.find(f'<section id="{sid}" class="row">'); j=d2.find('</div></section>',i)
+    d2=d2[:j]+'</div>'+d2[j:]
+d2=d2.replace('</main>','<aside class="side-cta"><a class="btn alt" href="https://maasinspiration.org/donate.html?program=maas-place">💜 Donate</a><a class="btn green" href="https://maasinspiration.org/volunteer.html">🙌 Volunteer</a><a class="btn" href="tel:+12145171938">📞 Call</a></aside></main>',1)
+d3=mp.replace('<main class="mi purple">','<main class="mi purple d3">').replace("<title>Maa's Place Senior Center","<title>Design 3 App – Maa's Place Senior Center")
+i=d3.find('<header class="hero"'); j=d3.find('</header>',i)+9
+d3=d3[:i]+'''<header class="appbar"><div><h1>Maa's Place</h1><p class="tagline">Place where everybody knows your name</p><p class="meta">Mon–Thu · 10 AM–2 PM · Ages 55+ · Free</p></div></header>
+<nav class="tiles"><a href="#visit" data-tab="visit">📍<b>Visit</b></a><a href="#schedule" data-tab="schedule">🗓️<b>Schedule</b></a><a href="#volunteer" data-tab="volunteer">🙌<b>Volunteer</b></a><a href="https://maasinspiration.org/donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>
+<div class="apptabs" role="tablist"><button data-tab="what">What we do</button><button data-tab="schedule">Schedule</button><button data-tab="gallery">Gallery</button><button data-tab="visit">Visit / Enroll</button><button data-tab="volunteer">Volunteer</button><button data-tab="contact">FAQ</button></div>'''+d3[j:]
+_s=d3.find('<div class="sub">'); _e=d3.find('</div>',_s)+6; d3=d3[:_s]+d3[_e:]
+d3=d3.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="design3.js"></script>')
+for n,h in [('maas-place-design-1.html',d1),('maas-place-design-2.html',d2),('maas-place-design-3.html',d3)]:open(n,'w').write(h)

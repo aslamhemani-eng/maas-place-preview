@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Design 3 App – Maa's Place Senior Center - MAA's Inspiration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site-chrome.css">
+    <link rel="stylesheet" href="section.css">
+</head>
+<body>
+<div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>
+    <nav>
+        <div class="navbar-container">
+            <a href="https://maasinspiration.org/" class="logo-section">
+                <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                <span class="logo-text">MAA's Inspiration</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://maasinspiration.org/">Home</a></li>
+                <li><a href="https://maasinspiration.org/about.html">About</a></li>
+                <li><a href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>
+                <li><a href="https://maasinspiration.org/schedule.html">Schedule</a></li>
+                <li><a href="https://maasinspiration.org/gallery.html">Gallery</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="https://maasinspiration.org/#contact">Contact</a></li>
+                <li><button class="donate-btn" onclick="window.location.href='https://maasinspiration.org/donate.html'">Donate</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+<main class="mi purple d3">
+
+<header class="appbar"><div><h1>Maa's Place</h1><p class="tagline">Place where everybody knows your name</p><p class="meta">Mon–Thu · 10 AM–2 PM · Ages 55+ · Free</p></div></header>
+<nav class="tiles"><a href="#visit" data-tab="visit">📍<b>Visit</b></a><a href="#schedule" data-tab="schedule">🗓️<b>Schedule</b></a><a href="#volunteer" data-tab="volunteer">🙌<b>Volunteer</b></a><a href="https://maasinspiration.org/donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>
+<div class="apptabs" role="tablist"><button data-tab="what">What we do</button><button data-tab="schedule">Schedule</button><button data-tab="gallery">Gallery</button><button data-tab="visit">Visit / Enroll</button><button data-tab="volunteer">Volunteer</button><button data-tab="contact">FAQ</button></div>
+<section id="what"><div class="wrap"><h2>What We Do</h2><p>Every activity at Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone.</p>
+<div class="grid">
+<div class="card"><h3>💪 Physical</h3><ul class="ticks"><li>Chair exercises and gentle stretching</li><li>Balance and fall-prevention exercises</li><li>Group walks</li><li>Light dance and movement to music</li><li>Chair yoga or tai chi</li><li>Fun movement games (balloon toss, bean bag games)</li><li>Healthy snacks</li><li>Health checks and wellness talks</li></ul></div>
+<div class="card"><h3>🧠 Mental</h3><ul class="ticks"><li>Puzzles, word games, and trivia</li><li>Memory and brain-training games</li><li>Reading and storytelling circles</li><li>Learning sessions (technology, health talks, new skills)</li><li>Music, singing, and sing-alongs</li><li>Arts and crafts for creativity and focus</li><li>Group discussions and sharing life stories</li><li>Bingo, cards, and board games</li></ul></div>
+<div class="card"><h3>📚 Educational</h3><ul class="ticks"><li>Smartphone, tablet, and video-call help (staying in touch with family)</li><li>Health, nutrition, and medication-safety talks</li><li>Scam and fraud awareness</li><li>Guest speakers from the community</li><li>Cooking and healthy-eating demonstrations</li><li>Language and conversation classes</li><li>Gardening and nature sessions</li><li>Cultural and history discussions</li></ul></div>
+<div class="card"><h3>🎲 Fun &amp; Entertainment</h3><ul class="ticks"><li>Bingo, cards, and board games</li><li>Movie and music afternoons</li><li>Sing-alongs and karaoke</li><li>Birthday celebrations</li><li>Holiday and cultural festivals</li><li>Talent shows and storytelling</li><li>Outings and field trips</li><li>Tea, snacks, and social hours</li></ul></div>
+<div class="card"><h3>🍵 Snacks &amp; Chai</h3><ul class="ticks"><li>Light snacks</li><li>Tea and coffee</li><li>Fresh fruit</li><li>Special treats for birthdays and holidays</li><li>Prepared with care for senior dietary needs</li></ul></div>
+</div></div></section>
+<section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
+<p>Open: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
+<div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
+<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p>A look at what's happening this week. <span class="ph">Maa's Place photos of consenting seniors to be added</span></p><div class="gal" id="gal" data-program="maas-place"></div></div></section>
+<section id="visit"><div class="wrap"><h2>Visit or Enroll</h2>
+<div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+12145171938">214-517-1938</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
+<div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
+<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit.</p></div></div>
+<p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
+<h3>Enrollment Form</h3>
+<form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
+<label>Phone *<input type="tel" required></label><label>Email (optional)<input type="email"></label>
+<label class="full">Home address / city &amp; ZIP<input></label>
+<label>Preferred language<select><option>English</option><option>Urdu / Hindi</option><option>Gujarati</option><option>Other</option></select></label>
+<label>Days you plan to attend<select multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option></select></label>
+<label class="full">Activities of interest<input placeholder="e.g. yoga, bingo, crafts, planting"></label>
+<label>Emergency contact name &amp; relationship *<input required></label><label>Emergency contact phone *<input type="tel" required></label>
+<label class="full">Dietary needs / food allergies<input></label>
+<label class="full">Mobility or health needs (optional)<textarea rows="2"></textarea></label>
+
+<label>Photo/video consent<select><option>Yes, I consent</option><option>No</option></select></label>
+<label class="full">How did you hear about us?<input></label>
+<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the participation waiver.</label>
+<div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
+<section id="volunteer"><div class="wrap"><h2>Volunteer at Maa's Place</h2>
+<p>Share a skill, lead an activity, or simply sit and talk.</p>
+<div class="grid"><div class="card"><h3>Lead an activity</h3><p>Yoga, crafts, games, planting, karaoke.</p></div><div class="card"><h3>Share expertise</h3><p>Health, insurance, phone and tech help.</p></div><div class="card"><h3>Serve &amp; connect</h3><p>Snacks, chai, conversation and companionship.</p></div></div>
+<p style="margin-top:24px"><a class="btn" href="https://maasinspiration.org/volunteer.html">Sign Up to Volunteer</a></p></div></section>
+<section id="donate" class="donate"><div class="wrap"><h2>Support Maa's Place</h2>
+<p>Donations are taken through our existing secure donation page.</p>
+<a class="btn alt" href="https://maasinspiration.org/donate.html">Donate Now</a>
+<p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>
+<section id="contact"><div class="wrap"><h2>Contact &amp; FAQ</h2>
+<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> · 📞 <a href="tel:+12145171938">214-517-1938</a></p>
+<details><summary>Who can attend Maa's Place?</summary><p>Adults 55 and up</p></details>
+<details><summary>Where is Maa's Place?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></p></details>
+<details><summary>What are your hours?</summary><p>Monday to Thursday, 10 AM to 2 PM.</p></details>
+<details><summary>Is there a cost?</summary><p>No. Maa's Place is free.</p></details>
+<details><summary>Do you provide transportation?</summary><p>No, transportation is not provided.</p></details>
+<details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.</p></details>
+<details><summary>How do I volunteer?</summary><p>Sign up on our <a href="https://maasinspiration.org/volunteer.html">volunteer page</a> and we'll reach out to get you started.</p></details>
+<div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to Maa's Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
+</div></section>
+</main>
+<div id="lb" onclick="this.style.display='none'"><img alt=""></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo-section">
+                    <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                </div>
+                <div class="footer-motto">LOVE ALL SERVE ALL</div>
+                <p class="footer-description">Serving our community with warmth, dignity, and compassion through nourishing meals and genuine care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="https://maasinspiration.org/">Home</a></li>
+                    <li><a href="https://maasinspiration.org/about.html">About</a></li>
+                    <li><a href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>
+                    <li><a href="https://maasinspiration.org/schedule.html">Schedule</a></li>
+                    <li><a href="https://maasinspiration.org/gallery.html">Gallery</a></li>
+                    <li><a href="https://maasinspiration.org/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Maa's Place</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006<br><a href="tel:+12145171938" style="color:inherit">214-517-1938</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
+        </div>
+    </footer>
+<script src="section.js"></script><script src="design3.js"></script>
+</body>
+</html>
