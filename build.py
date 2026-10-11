@@ -28,7 +28,7 @@ head=lambda t:f'''<!DOCTYPE html>
                 <li><a href="{B}schedule.html">Schedule</a></li>
                 <li><a href="{B}gallery.html">Gallery</a></li>
                 <li><a href="programs.html">Programs</a></li>
-                <li><a href="{B}#contact">Contact</a></li>
+                <li><a href="{B}meals.html#contact">Contact</a></li>
                 <li><button class="donate-btn" onclick="window.location.href='{B}donate.html'">Donate</button></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -59,7 +59,7 @@ foot=f'''</main>
                     <li><a href="{B}volunteer.html">Volunteer</a></li>
                     <li><a href="{B}schedule.html">Schedule</a></li>
                     <li><a href="{B}gallery.html">Gallery</a></li>
-                    <li><a href="{B}#contact">Contact</a></li>
+                    <li><a href="{B}meals.html#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -84,9 +84,10 @@ donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Su
 <a class="btn alt" href="{DON}">Donate Now</a>
 <p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
 mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a><a href="get-involved.html#maas-place">Get Involved</a></div>
-<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
+<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p><span class="soon-badge">🌱 Opening soon</span>
 <h1>Maa's Place Senior Center</h1>
 <p class="tagline">Place where everybody knows your name</p>
+<p class="soon-line">Maa's Place is opening soon. Join the interest list below and we'll let you know when doors open.</p>
 <p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
 <div class="facts"><div>🕙 Monday to Thursday, 10 AM to 2 PM</div><div>👵 Ages 55+</div><div>📞 <a href="tel:+12145171938" style="color:#fff">214-517-1938</a></div><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div></div>
 <a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
@@ -102,12 +103,12 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <p>Open: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
 <div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
 <section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p>A look at what's happening this week. {ph("Maa's Place photos of consenting seniors to be added")}</p><div class="gal" id="gal" data-program="maas-place"></div></div></section>
-<section id="visit"><div class="wrap"><h2>Visit or Enroll</h2>
+<section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+12145171938">214-517-1938</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
 <div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
 <div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit.</p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
-<h3>Enrollment Form</h3>
+<h3>Enrollment / Interest Form</h3><p>Maa's Place is opening soon – sign up now and we'll contact you when it opens.</p>
 <form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
 <label>Phone *<input type="tel" required></label><label>Email (optional)<input type="email"></label>
 <label class="full">Home address / city &amp; ZIP<input></label>
@@ -183,7 +184,7 @@ bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi p
 pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through Maa's Place and Blooming Star Village.</p></header>
 <section><div class="wrap"><div class="grid">
 <div class="card"><h3>🍽️ Weekly Meal Service</h3><p>2,200+ hot meals every week for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="{B}schedule.html">See Schedule</a></div>
-<div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p>Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
+<div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
 <div class="card"><h3>🌟 Blooming Star Village</h3><p>A free, planned recreation program for children and adults with special needs and their families. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
@@ -195,7 +196,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <section><div class="wrap">
 <div class="psel" role="tablist">
 <button role="tab" data-p="meals" class="p-meals">🍽️<b>Weekly Meal Service</b></button>
-<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Seniors 55+</small></button>
+<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Opening soon · 55+</small></button>
 <button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
 </div>
 <div id="panel" class="panel">
@@ -270,7 +271,7 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <a class="pmain" href="{href}"><img src="gallery/{img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
-<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","https://maasinspiration.org/schedule.html","meals")+_pcard("Maa's Place","2026-10-10-service-02.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","2026-10-10-service-05.jpg","A free recreation program for children and adults with special needs and their families.","Opening soon · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","2026-10-10-service-02.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","2026-10-10-service-05.jpg","A free recreation program for children and adults with special needs and their families.","Opening soon · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
 <section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="https://maasinspiration.org/donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)
