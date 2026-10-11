@@ -1,0 +1,159 @@
+# Regenerates the 3 pages. Run: python3 build.py   (PREVIEW=0 python3 build.py for live build without banner/noindex)
+import os,re
+P=os.environ.get('PREVIEW','1')=='1'
+B='https://maasinspiration.org/'
+head=lambda t:f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {'<meta name="robots" content="noindex,nofollow">' if P else ''}
+    <title>{t} - MAA's Inspiration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site-chrome.css">
+    <link rel="stylesheet" href="section.css">
+</head>
+<body>
+'''+('<div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>\n' if P else '')+f'''    <nav>
+        <div class="navbar-container">
+            <a href="{B}" class="logo-section">
+                <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                <span class="logo-text">MAA's Inspiration</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{B}">Home</a></li>
+                <li><a href="{B}about.html">About</a></li>
+                <li><a href="{B}volunteer.html">Volunteer</a></li>
+                <li><a href="{B}schedule.html">Schedule</a></li>
+                <li><a href="{B}gallery.html">Gallery</a></li>
+                <li><a href="{B}#contact">Contact</a></li>
+                <li><button class="donate-btn" onclick="window.location.href='{B}donate.html'">Donate</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+<main class="mi">
+'''
+foot=f'''</main>
+<div id="lb" onclick="this.style.display='none'"><img alt=""></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo-section">
+                    <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                </div>
+                <div class="footer-motto">LOVE ALL SERVE ALL</div>
+                <p class="footer-description">Serving our community with warmth, dignity, and compassion through nourishing meals and genuine care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{B}">Home</a></li>
+                    <li><a href="{B}about.html">About</a></li>
+                    <li><a href="{B}volunteer.html">Volunteer</a></li>
+                    <li><a href="{B}schedule.html">Schedule</a></li>
+                    <li><a href="{B}gallery.html">Gallery</a></li>
+                    <li><a href="{B}#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="http://www.maasinspiration.org/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
+        </div>
+    </footer>
+<script src="section.js"></script>
+</body>
+</html>
+'''
+DON=B+'donate.html'; VOL=B+'volunteer.html'; ph=lambda t:f'<span class="ph">{t}</span>'
+donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Support {w}</h2>
+<p>Donations are taken through our existing secure donation page.</p>
+<a class="btn alt" href="{DON}">Donate Now</a>
+<p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
+mp=head("Maa's Place Senior Center")+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a></div>
+<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
+<h1>Maa's Place Senior Center</h1>
+<p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
+<div class="facts"><div>🕙 Mon–Fri 10am–2pm</div><div>🕤 Sat 9:30am–noon</div><div>📍 {ph("Address – to confirm")}</div></div>
+<a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
+<section id="what"><div class="wrap"><h2>What We Do</h2><p>Every activity is chosen to keep seniors active in body and mind, learning something new, and enjoying time together.</p>
+<div class="grid">
+<div class="card"><h3>💪 Physical</h3><span class="tag">Yoga</span><span class="tag">Walking</span><span class="tag">Tai chi</span><span class="tag">Musical chairs</span><span class="tag">Ball in basket</span><span class="tag">Planting</span></div>
+<div class="card"><h3>🧠 Mental</h3><span class="tag">Yoga</span><span class="tag">Word search</span><span class="tag">Crafts</span></div>
+<div class="card"><h3>📚 Educational</h3><span class="tag">Health insurance help</span><span class="tag">Phone use</span><span class="tag">Puzzle games</span><span class="tag">Beads</span></div>
+<div class="card"><h3>🎲 Fun &amp; Entertainment</h3><span class="tag">Board games</span><span class="tag">Bingo</span><span class="tag">Karaoke</span><span class="tag">Crafts</span><span class="tag">Beads &amp; jewelry</span></div>
+<div class="card"><h3>🍵 Snacks &amp; Chai</h3><p>Homestyle favorites like mini samosas, dhokra, pakora, chaat, vada, nan khatai, fruit salad, banana bread, fresh cookies, and chai.</p></div>
+</div></div></section>
+<section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
+<p>Week of: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
+<div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>Activities</th><th>Led by</th></tr></thead><tbody id="sched"><tr><td colspan="4">Loading…</td></tr></tbody></table></div></div></section>
+<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p>A look at what's happening this week. {ph("Maa's Place photos of consenting seniors to be added")}</p><div class="gal" id="gal" data-program="maas-place"></div></div></section>
+<section id="visit"><div class="wrap"><h2>Visit or Enroll</h2>
+<div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in during open hours or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
+<div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
+<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit.</p></div></div>
+<p style="margin-top:18px">Who can attend: {ph("Eligibility – to confirm")} · Cost: {ph("to confirm")} · Transportation: {ph("to confirm")}</p>
+<h3>Enrollment Form</h3>
+<form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
+<label>Phone *<input type="tel" required></label><label>Email (optional)<input type="email"></label>
+<label class="full">Home address / city &amp; ZIP<input></label>
+<label>Preferred language<select><option>English</option><option>Urdu / Hindi</option><option>Gujarati</option><option>Other</option></select></label>
+<label>Days you plan to attend<select multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
+<label class="full">Activities of interest<input placeholder="e.g. yoga, bingo, crafts, planting"></label>
+<label>Emergency contact name &amp; relationship *<input required></label><label>Emergency contact phone *<input type="tel" required></label>
+<label class="full">Dietary needs / food allergies<input></label>
+<label class="full">Mobility or health needs (optional)<textarea rows="2"></textarea></label>
+<label>Need transportation?<select><option>No</option><option>Yes</option></select></label>
+<label>Photo/video consent<select><option>Yes, I consent</option><option>No</option></select></label>
+<label class="full">How did you hear about us?<input></label>
+<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the participation waiver.</label>
+<div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
+<section id="volunteer"><div class="wrap"><h2>Volunteer at Maa's Place</h2>
+<p>Share a skill, lead an activity, or simply sit and talk.</p>
+<div class="grid"><div class="card"><h3>Lead an activity</h3><p>Yoga, crafts, games, planting, karaoke.</p></div><div class="card"><h3>Share expertise</h3><p>Health, insurance, phone and tech help.</p></div><div class="card"><h3>Serve &amp; connect</h3><p>Snacks, chai, conversation and companionship.</p></div></div>
+<p style="margin-top:24px"><a class="btn" href="{VOL}">Sign Up to Volunteer</a></p></div></section>
+{donate("Maa's Place")}
+<section id="contact"><div class="wrap"><h2>Contact &amp; FAQ</h2>
+<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 {ph("Address")} · 📞 {ph("Phone")}</p>
+<details><summary>Who can attend Maa's Place?</summary><p>{ph("Eligibility – to confirm")}</p></details>
+<details><summary>What are your hours?</summary><p>Monday–Friday 10am–2pm and Saturday 9:30am–noon.</p></details>
+<details><summary>Is there a cost?</summary><p>{ph("To confirm")}</p></details>
+<details><summary>Do you provide transportation?</summary><p>{ph("To confirm")}</p></details>
+<details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.</p></details>
+<details><summary>How do I volunteer?</summary><p>Sign up on our <a href="{VOL}">volunteer page</a> and we'll reach out to get you started.</p></details>
+</div></section>
+'''+foot
+bsv=head("Blooming Star Village")+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-05.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
+<h1>Blooming Star Village</h1><p>{ph("One-sentence description of Blooming Star Village – needed")}</p>
+<a class="btn alt" href="#contact">Get in Touch</a></header>
+<section><div class="wrap"><h2>What We Do</h2><p>{ph("Who it serves, what it offers, and how it relates to Maa's Place – needed")}</p>
+<div class="grid"><div class="card"><h3>Program 1</h3><p>{ph("Details needed")}</p></div><div class="card"><h3>Program 2</h3><p>{ph("Details needed")}</p></div><div class="card"><h3>Program 3</h3><p>{ph("Details needed")}</p></div></div></div></section>
+<section><div class="wrap"><h2>Visit, Schedule &amp; Enrollment</h2><p>Location: {ph("Address")} · Hours: {ph("Hours")} · Cost: {ph("Cost")} · Eligibility: {ph("Eligibility")} · Transportation: {ph("Transport")}</p></div></section>
+<section><div class="wrap"><h2>Volunteer</h2><p>Help us grow Blooming Star Village.</p><a class="btn" href="{VOL}">Sign Up to Volunteer</a></div></section>
+{donate("Blooming Star Village")}
+<section id="contact"><div class="wrap"><h2>Contact</h2><p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📞 {ph("Phone")}</p></div></section>
+'''+foot
+pg=head("Our Programs")+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through Maa's Place and Blooming Star Village.</p></header>
+<section><div class="wrap"><div class="grid">
+<div class="card"><h3>🍽️ Weekly Meal Service</h3><p>2,200+ hot meals every week for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="{B}schedule.html">See Schedule</a></div>
+<div class="card"><h3>🏡 Maa's Place Senior Center</h3><p>Activities, snacks, chai and companionship for seniors. Mon–Fri 10am–2pm, Sat 9:30am–noon.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
+<div class="card"><h3>🌟 Blooming Star Village</h3><p>{ph("Short description needed")}</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
+</div></div></section>
+{donate("our programs")}
+'''+foot
+for n,h in [('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
+open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')

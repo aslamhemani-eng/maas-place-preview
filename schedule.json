@@ -1,0 +1,12 @@
+{
+  "week_of": "PLACEHOLDER – e.g. Oct 12–17, 2026",
+  "note": "Proposed schedule based on volunteer assigned days – please confirm days & times.",
+  "days": [
+    {"day": "Monday",    "time": "10am–2pm", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""},
+    {"day": "Tuesday",   "time": "10am–2pm", "activities": "Beads & jewelry · Yoga / exercise · Health check-ins", "led_by": "Nadia, Suraiya, Mehtab"},
+    {"day": "Wednesday", "time": "10am–2pm", "activities": "Bingo & board games · Open activities · Insurance Q&A", "led_by": "Ashraf, Shabana, Salima"},
+    {"day": "Thursday",  "time": "10am–2pm", "activities": "Planting · Designing & crafts", "led_by": "Shamsha, Fatima"},
+    {"day": "Friday",    "time": "10am–2pm", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""},
+    {"day": "Saturday",  "time": "9:30am–noon", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""}
+  ]
+}
