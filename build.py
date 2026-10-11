@@ -308,3 +308,8 @@ sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home
 import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-new.html','w').write(sp)
 
 _wire('maas-place.html',"Maa's Place enrollment")
+
+_b=open('blooming-star-village.html').read()
+_b=_b.replace('<header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)">','<header class="hero split"><div class="split-text">',1)
+_b=_b.replace('</header>','</div><div class="split-img"><img src="gallery/bsv-girl-at-desk.jpg" alt="A child working happily at a desk"></div></header>',1)
+open('blooming-star-village.html','w').write(_b)
