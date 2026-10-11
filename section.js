@@ -8,8 +8,9 @@ const sc=document.getElementById('sched');
 if(sc)fetch('schedule.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  document.getElementById('weekOf').innerHTML=mark(d.week_of);
  const n=document.getElementById('schedNote'); if(d.note)n.textContent=d.note; else n.remove();
- sc.innerHTML=d.days.map(x=>`<tr><td><b>${esc(x.day)}</b></td><td>${esc(x.time)}</td><td>${mark(x.activities)}</td><td>${esc(x.led_by)}</td></tr>`).join('');
-}).catch(()=>sc.innerHTML='<tr><td colspan="4">Schedule unavailable.</td></tr>');
+ const S=d.slots||[];document.getElementById('schedHead').innerHTML='<tr><th>Day</th>'+S.map(x=>'<th>'+esc(x)+'</th>').join('')+'</tr>';
+ sc.innerHTML=d.days.filter(x=>!x.hidden).map(x=>'<tr><td><b>'+esc(x.day)+'</b></td>'+(x.slots?x.slots.map(c=>'<td>'+(c==='TBD'?'<span class="ph">TBD</span>':esc(c))+'</td>').join(''):'<td colspan="'+S.length+'">'+esc(x.all_day)+(x.led_by?' <small>– led by '+esc(x.led_by)+'</small>':'')+'</td>')+'</tr>').join('');
+}).catch(()=>sc.innerHTML='<tr><td>Schedule unavailable.</td></tr>');
 const g=document.getElementById('gal');
 if(g)fetch('gallery.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  g.innerHTML=d.photos.filter(p=>!p.program||p.program===g.dataset.program).map(p=>`<figure><img loading="lazy" src="gallery/${esc(p.file)}" alt="${esc(p.caption)}"><figcaption>${esc(p.caption)}</figcaption></figure>`).join('');

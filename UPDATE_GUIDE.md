@@ -2,11 +2,11 @@
 
 ## Update the weekly schedule (2 min)
 Edit `schedule.json`:
-- `week_of`: e.g. "Oct 19–24, 2026"
-- each day: `time`, `activities`, `led_by` (first names only)
-- `note`: optional; set to "" to hide
-Any text containing the word PLACEHOLDER shows as a highlighted box – remove it when filled.
-Check the commas/quotes are kept (paste into https://jsonlint.com if unsure).
+- `week_of`: line shown above the table (e.g. "Monday to Thursday, 10 AM to 2 PM")
+- `slots`: the column times; each day's `slots` list has one activity per column (same order). "TBD" shows highlighted.
+- A day can use `all_day` (one line across all columns) instead of `slots`; optional `led_by`.
+- `"hidden": true` hides a day (Friday is hidden until confirmed).
+Keep commas/quotes valid (check at https://jsonlint.com).
 
 ## Update the gallery (3 min)
 1. Resize photos to ~1200px on the long side (JPG). Only people with signed photo consent.

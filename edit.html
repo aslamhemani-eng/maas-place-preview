@@ -36,12 +36,12 @@ const API="https://script.google.com/macros/s/AKfycbx1VIE_gWz_2DziRg7AaW53JJQFw0
 let S=[],state={},page=location.hash==="#bsv"?"bsv":"mp",pass=localStorage.getItem("maas_pass")||"";
 const esc=s=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const toast=t=>{msg.textContent=t;msg.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>msg.style.display="none",2200)};
-function progress(){const n=S.length,a=S.filter(s=>state[s.id]?.done).length,z=S.filter(s=>s.need&&!state[s.id]?.done&&!state[s.id]?.notes).length;
+function progress(){const n=S.length,a=S.filter(s=>state[s.id]?.done).length,z=S.filter(s=>s.need&&!(state[s.id]?.notes&&state[s.id].notes.trim()!==s.text.trim())&&!(state[s.id]?.done&&!s.applied)).length;
  prog.textContent=`${a} of ${n} sections approved · ${z} need your info`;barfill.style.width=(n?100*a/n:0)+"%"}
 function render(){document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.p===page));
- list.innerHTML=S.filter(s=>s.page===page).map(s=>{const st=state[s.id]||{},ed=!!st.notes,hero=s.label.startsWith("Top banner");
+ list.innerHTML=S.filter(s=>s.page===page).map(s=>{const st=state[s.id]||{},ed=!!st.notes&&st.notes.trim()!==s.text.trim(),hero=s.label.startsWith("Top banner");
  return `<div class="sec ${s.page} ${hero?"hero":""} ${st.done?"done":""}" data-id="${s.id}">
- <div class="lab">${esc(s.label)} ${ed?'<span class="tag ed">edited</span>':""} ${st.done?'<span class="tag ok">✓ Looks good</span>':""}</div>
+ <div class="lab">${esc(s.label)} ${ed?'<span class="tag ed">edited</span>':""}${s.applied&&!ed?'<span class="tag ok">on website ✓</span>':""} ${st.done?'<span class="tag ok">✓ Looks good</span>':""}</div>
  ${s.need&&!st.done?`<div class="need">⚠️ Needs your info: ${esc(s.need)}</div>`:""}
  <div class="txt" contenteditable="true">${esc(ed?st.notes:s.text)}</div>
  ${ed?`<div class="orig">Original: ${esc(s.text||"(empty)")}</div>`:""}

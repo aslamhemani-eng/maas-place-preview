@@ -1,12 +1,12 @@
 {
-  "week_of": "PLACEHOLDER – e.g. Oct 12–17, 2026",
-  "note": "Proposed schedule based on volunteer assigned days – please confirm days & times.",
+  "week_of": "Monday to Thursday, 10 AM to 2 PM",
+  "note": "",
+  "slots": ["10:00–11:00", "11:00–12:00", "12:00–12:45", "12:45–2:00"],
   "days": [
-    {"day": "Monday",    "time": "10am–2pm", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""},
-    {"day": "Tuesday",   "time": "10am–2pm", "activities": "Beads & jewelry · Yoga / exercise · Health check-ins", "led_by": "Nadia, Suraiya, Mehtab"},
-    {"day": "Wednesday", "time": "10am–2pm", "activities": "Bingo & board games · Open activities · Insurance Q&A", "led_by": "Ashraf, Shabana, Salima"},
-    {"day": "Thursday",  "time": "10am–2pm", "activities": "Planting · Designing & crafts", "led_by": "Shamsha, Fatima"},
-    {"day": "Friday",    "time": "10am–2pm", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""},
-    {"day": "Saturday",  "time": "9:30am–noon", "activities": "PLACEHOLDER – to be scheduled", "led_by": ""}
+    {"day": "Monday",    "slots": ["Chair exercise and stretching", "Memory games and puzzles", "Lunch and chai", "TBD"]},
+    {"day": "Tuesday",   "slots": ["Gentle yoga", "Health talk or guest speaker", "Lunch and chai", "Carrom, cards and board games"]},
+    {"day": "Wednesday", "all_day": "Bingo & board games · Open activities · Insurance Q&A", "led_by": "Ashraf, Shabana, Salima"},
+    {"day": "Thursday",  "slots": ["Chair exercise", "Phone and computer help", "Lunch and chai", "Bingo and prizes"]},
+    {"day": "Friday",    "hidden": true, "comment": "Hidden until Aslam confirms Friday is open", "slots": ["Gentle yoga", "Storytelling and sharing circle", "Lunch and chai", "Birthday or celebration time"]}
   ]
 }

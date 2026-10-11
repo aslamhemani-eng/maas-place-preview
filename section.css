@@ -44,3 +44,9 @@
 .mi.hub.purple .panel[data-p=bsv]{box-shadow:inset 0 6px 0 #4F6B3A}
 .mi.hub.purple #actDonate{background:#E0A526;color:#2E2438}
 .mi.hub.purple .panel{background:#fff;box-shadow:0 4px 18px #3D1A6E14}
+/* Maa's Place accents per Aslam: yellow + earthy green within purple/white */
+.mi.purple .tagline{font-style:italic;font-size:1.25rem;color:#F6D365;margin:-4px 0 10px}
+.mi.purple .card:nth-child(3n+2){border-top-color:#E0A526}.mi.purple .card:nth-child(3n){border-top-color:#6E8B4E}
+.mi .ticks{list-style:none;padding:0;margin:6px 0 0}.mi .ticks li{padding:3px 0 3px 22px;position:relative;font-size:.95rem}
+.mi .ticks li:before{content:"✓";position:absolute;left:0;color:#6E8B4E;font-weight:700}
+.mi.purple th{background:#5B2A86}.mi.purple td:first-child{border-left:4px solid #E0A526}

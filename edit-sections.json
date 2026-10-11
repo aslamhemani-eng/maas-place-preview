@@ -3,15 +3,17 @@
   "id": "website-c6c54461",
   "page": "mp",
   "label": "Page colors",
-  "text": "purple & white (brand #5B2A86 / #3D1A6E) with gold accent buttons (\"Plan a Visit\", \"Donate Now\")",
-  "need": ""
+  "text": "combine purple , white, yellow and green earthy",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-1b8429a0",
   "page": "mp",
-  "label": "Top banner: title",
-  "text": "\"Maa's Place Senior Center\" (eyebrow: \"Programs · MAA's Inspiration\")",
-  "need": ""
+  "label": "Top banner: tagline (under \"Maa's Place Senior Center\")",
+  "text": "Place where everybody knows your name",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-3cbc1667",
@@ -24,71 +26,80 @@
   "id": "website-581c1d73",
   "page": "mp",
   "label": "Top banner: quick facts",
-  "text": "\"Mon–Fri 10am–2pm\" · \"Sat 9:30am–noon\" · \"Ages 55+\" · \"214-517-1938\" · \"2700 Old Denton Rd, Suite 102, Carrollton, TX 75006\"; buttons \"Plan a Visit\" + \"Volunteer\"",
+  "text": "\"Monday to Thursday, 10 AM to 2 PM\" · \"Ages 55+\" · \"214-517-1938\" · \"2700 Old Denton Rd, Suite 102, Carrollton, TX 75006\"; buttons \"Plan a Visit\" + \"Volunteer\"",
   "need": ""
  },
  {
   "id": "website-e7d08f81",
   "page": "mp",
   "label": "What we do",
-  "text": "Every activity is chosen to keep seniors active in body and mind, learning something new, and enjoying time together.",
-  "need": ""
+  "text": "Every activity at Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, meals, and friendship, where every senior feels valued and no one is alone",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-ad846227",
   "page": "mp",
   "label": "What we do: Physical",
-  "text": "Yoga, Walking, Tai chi, Musical chairs, Ball in basket, Planting",
-  "need": ""
+  "text": "Chair exercises and gentle stretching\n\n\nBalance and fall-prevention exercises\n\n\nGroup walks\n\n\nLight dance and movement to music\n\n\nChair yoga or tai chi\n\n\nFun movement games (balloon toss, bean bag games)\n\n\nHealthy, nutritious meals and snacks\n\n\nHealth checks and wellness talks",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-1703028f",
   "page": "mp",
   "label": "What we do: Mental",
-  "text": "Yoga, Word search, Crafts",
-  "need": ""
+  "text": "Puzzles, word games, and trivia\n\n\nMemory and brain-training games\n\n\nReading and storytelling circles\n\n\nLearning sessions (technology, health talks, new skills)\n\n\nMusic, singing, and sing-alongs\n\n\nArts and crafts for creativity and focus\n\n\nGroup discussions and sharing life stories\n\n\nBingo, cards, and board games",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-a8d8f65f",
   "page": "mp",
   "label": "What we do: Educational",
-  "text": "Health insurance help, Phone use, Puzzle games, Beads",
-  "need": ""
+  "text": "Smartphone, tablet, and video-call help (staying in touch with family)\n\n\nHealth, nutrition, and medication-safety talks\n\n\nScam and fraud awareness\n\n\nGuest speakers from the community\n\n\nCooking and healthy-eating demonstrations\n\n\nLanguage and conversation classes\n\n\nGardening and nature sessions\n\n\nCultural and history discussions",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-31b71153",
   "page": "mp",
   "label": "What we do: Fun & Entertainment",
-  "text": "Board games, Bingo, Karaoke, Crafts, Beads & jewelry",
-  "need": ""
+  "text": "Bingo, cards, and board games\n\n\nMovie and music afternoons\n\n\nSing-alongs and karaoke\n\n\nBirthday celebrations\n\n\nHoliday and cultural festivals\n\n\nTalent shows and storytelling\n\n\nOutings and field trips\n\n\nTea, snacks, and social hours",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-0f0861b0",
   "page": "mp",
   "label": "Snacks & chai",
-  "text": "Homestyle favorites like mini samosas, dhokra, pakora, chaat, vada, nan khatai, fruit salad, banana bread, fresh cookies, and chai.",
-  "need": ""
+  "text": "One hearty, nutritious meal daily\n\n\nHealthy snacks and refreshments\n\n\nTea and coffee\n\n\nFresh fruit\n\n\nSpecial treats for birthdays and holidays\n\n\nMeals prepared with care for senior dietary needs",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-54b96fa2",
   "page": "mp",
-  "label": "Schedule: week & note",
-  "text": "Week of: ____ · Proposed schedule based on volunteer assigned days – please confirm days & times.",
-  "need": "Which week does this schedule start, and are these days and times right?"
+  "label": "Schedule: open days & hours",
+  "text": "Monday to Thursday 10am to 2pm",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-291c257c",
   "page": "mp",
   "label": "Schedule: Monday 10am–2pm",
-  "text": "",
-  "need": "What happens at Maa's Place on Mondays?"
+  "text": "Day\t10:00–11:00\t11:00–12:00\t12:00–12:45\t12:45–2:00\nMon\tChair exercise and stretching\tMemory games and puzzles\tLunch and chai",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-57cf5b83",
   "page": "mp",
   "label": "Schedule: Tuesday 10am–2pm",
-  "text": "Beads & jewelry · Yoga / exercise · Health check-ins – led by Nadia, Suraiya, Mehtab",
-  "need": ""
+  "text": "Gentle yoga\tHealth talk or guest speaker\tLunch and chai\tCarrom, cards and board games",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-f575ded3",
@@ -101,22 +112,25 @@
   "id": "website-4ea7eec8",
   "page": "mp",
   "label": "Schedule: Thursday 10am–2pm",
-  "text": "Planting · Designing & crafts – led by Shamsha, Fatima",
-  "need": ""
+  "text": "Chair exercise\tPhone and computer help\tLunch and chai\tBingo and prizes",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-ff339392",
   "page": "mp",
   "label": "Schedule: Friday 10am–2pm",
-  "text": "",
-  "need": "What happens at Maa's Place on Fridays?"
+  "text": "Gentle yoga\tStorytelling and sharing circle\tLunch and chai\tBirthday or celebration time",
+  "need": "Is Maa's Place open on Fridays? (Friday row is hidden until you confirm)",
+  "applied": true
  },
  {
   "id": "website-84e5f34f",
   "page": "mp",
   "label": "Schedule: Saturday 9:30am–noon",
-  "text": "",
-  "need": "What happens at Maa's Place on Saturdays?"
+  "text": "closed",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-ef08b2af",
@@ -206,7 +220,7 @@
   "id": "website-984bcf69",
   "page": "mp",
   "label": "FAQ: What are your hours?",
-  "text": "Monday–Friday 10am–2pm and Saturday 9:30am–noon.",
+  "text": "Monday to Thursday, 10 AM to 2 PM.",
   "need": ""
  },
  {
@@ -254,7 +268,7 @@
  {
   "id": "website-35f1fc58",
   "page": "bsv",
-  "label": "Top banner: title",
+  "label": "Top banner: tagline (under \"Maa's Place Senior Center\")",
   "text": "\"Blooming Star Village\" (eyebrow: \"Programs · MAA's Inspiration · Coming soon\")",
   "need": ""
  },
