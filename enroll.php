@@ -1,6 +1,6 @@
 <?php
-// Enrollment form handler for maasinspiration.org (GoDaddy cPanel). Emails submissions to hello@maasinspiration.org.
-$TO = 'hello@maasinspiration.org';
+// Enrollment form handler for maasinspiration.org (GoDaddy cPanel). Emails submissions to $TO below.
+$TO = 'aslamhemani@gmail.com';   // TEMPORARY: switch to hello@maasinspiration.org once that mailbox exists
 $FROM = 'no-reply@maasinspiration.org';   // must be an address on this domain for deliverability
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: /programs.html'); exit; }
 if (!empty($_POST['website'])) { header('Location: /thank-you.html'); exit; }   // honeypot: bots fill it

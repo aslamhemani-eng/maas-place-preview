@@ -25,9 +25,12 @@ Upload via cPanel File Manager to `public_html/`: `maas-place.html`, `blooming-s
 `img/site-logo.png`, `gallery/`. Weekly, only `schedule.json`, `gallery.json` and new photos change.
 Do not upload `index.html` from this folder (it would replace the homepage).
 
-## Enrollment forms → hello@maasinspiration.org
+## Enrollment forms → aslamhemani@gmail.com (for now)
+**Current recipient: aslamhemani@gmail.com** (`$TO` in enroll.php). Switch `$TO` to hello@maasinspiration.org once that mailbox is set up in Microsoft 365.
+Note: Gmail is strict about mail "From" no-reply@maasinspiration.org sent by GoDaddy's server; the first messages may land in Spam. Mark them "Not spam" / create a Gmail filter, and add GoDaddy to the domain SPF record (or use SMTP) for reliable delivery.
+
 Both forms (Maa's Place enrollment, Blooming Star Village interest list) post to `enroll.php`,
-a small PHP mail handler that emails each submission to **hello@maasinspiration.org**
+a small PHP mail handler that emails each submission to the `$TO` address
 (Reply-To = the submitter's email when given) and then shows `thank-you.html`.
 - Spam protection: hidden "website" honeypot field (bots that fill it are silently dropped), plus a
   whitelist of form names, header-injection stripping, and a minimum-fields check.
