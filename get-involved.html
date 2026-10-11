@@ -51,15 +51,33 @@
 <a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
 </div>
 <div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
-<div id="vol"><h3>Volunteer sign-up</h3>
-<p id="mealsVol" hidden>Meal-service volunteers sign up on our main volunteer page: <a class="btn" href="https://maasinspiration.org/volunteer.html">Volunteer sign-up</a></p>
-<form id="volform" method="post" action="enroll.php"><input type="hidden" name="form" value="Volunteer sign-up"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<label>Program<select name="program" id="volprog"><option value="Maa's Place">Maa's Place</option><option value="Blooming Star Village">Blooming Star Village</option></select></label>
-<label>Full name *<input name="full_name" required></label><label>Phone *<input name="phone" type="tel" required></label><label>Email<input name="email" type="email"></label>
-<label>Days available<select name="days_available[]" multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
-<label>Skills / how you'd like to help<input name="skills" placeholder="e.g. yoga, crafts, games, health, tech help"></label>
-<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" name="agree_conduct" value="Yes" required> I agree to the volunteer code of conduct.</label>
-<div class="full"><button class="btn">Sign Up</button></div></form></div>
+<div id="vol"><h3>Volunteer sign-up</h3><p>Pick the program(s) you'd like to help with – we'll show only the days and times that program runs.</p>
+<form class="vf" id="vf" method="post" action="enroll.php">
+<input type="hidden" name="form" value="Volunteer sign-up">
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<fieldset><legend>1. Which program? <small>(pick one or more)</small></legend>
+<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Meals" data-p="meals"><span><b>🍲 Maa's Meals</b><small>Saturdays 9:30 AM–noon packing &amp; delivery · Weekdays Mon–Fri 10 AM–2 PM prep</small></span></label>
+<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Place senior center" data-p="mp"><span><b>🏡 Maa's Place senior center</b> <em class="sb">Opening soon</em><small>Mon–Thu 10 AM–2 PM</small></span></label>
+<label class="pk"><input type="checkbox" name="programs[]" value="Blooming Star Village (interest list)" data-p="bsv"><span><b>🌟 Blooming Star Village</b> <em class="sb">Coming soon</em><small>Join the interest list – we'll contact you when it opens</small></span></label>
+</fieldset>
+<fieldset id="vfDyn" hidden><legend>2. When and how can you help?</legend><div id="vfBlocks"></div></fieldset>
+<fieldset><legend>3. About you</legend><div class="vg">
+<label>Full name *<input name="full_name" required autocomplete="name"></label>
+<label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
+<label>Email *<input name="email" type="email" required autocomplete="email"></label>
+<label>How did you hear about us?<select name="heard_about_us"><option value="">Choose…</option><option>Friend or family</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>Mosque / temple / church / community center</option><option>School or employer</option><option>Website / Google</option><option>Other</option></select></label>
+<label class="full">Skills or experience <small>(optional)</small><textarea name="skills" rows="2" placeholder="e.g. cooking, driving, yoga, crafts, tech help, languages spoken"></textarea></label>
+</div></fieldset>
+<fieldset><legend>4. Reminders &amp; agreements</legend>
+<p class="rl">Send me shift reminders by: <label><input type="radio" name="reminder_preference" value="Text" checked> Text</label> <label><input type="radio" name="reminder_preference" value="Email"> Email</label></p>
+<label class="ck"><input type="checkbox" name="age_18_or_guardian" value="Yes" required> I am 18 or older, or my parent/guardian has approved this sign-up. *</label>
+<label class="ck"><input type="checkbox" name="photo_consent" value="Yes"> I agree that photos/videos of me may be used by MAA's Inspiration (<a href="volunteer-policy.html#consent" target="_blank">photo consent policy</a>). <small>(optional)</small></label>
+<label class="ck"><input type="checkbox" name="agree_code_of_conduct" value="Yes" required> I agree to the <a href="volunteer-policy.html#conduct" target="_blank">volunteer code of conduct</a>. *</label>
+</fieldset>
+<p id="vfErr" class="vfe" hidden>Please pick at least one program.</p>
+<button class="vfb" type="submit">Sign Me Up 🙌</button>
+</form>
+</div>
 </div></div></section>
 </main>
 <div id="lb" onclick="this.style.display='none'"><img alt=""></div>
@@ -95,6 +113,6 @@
             © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
         </div>
     </footer>
-<script src="section.js"></script><script src="hub.js"></script>
+<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>
 </body>
 </html>

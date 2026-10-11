@@ -14,10 +14,10 @@ function show(p){if(!P[p])p='meals';cur=p;const c=P[p];
  actDonate.href='https://maasinspiration.org/donate.html?program='+p;
  const rows=p==='maas-place'?(MPS||[["Loading…","",""]]):c.sched;
  hsched.innerHTML=rows.map(r=>'<tr>'+r.map(x=>'<td>'+(/PLACEHOLDER/.test(x)?'<span class="ph">To be scheduled</span>':x)+'</td>').join('')+'</tr>').join('');
- mealsVol.hidden=p!=='meals';volform.hidden=p==='meals';
+ if(window.VF)VF.select(p);
  if(p!=='meals')volprog.value=p==='bsv'?'Blooming Star Village':"Maa's Place";
  if(location.hash.slice(1)!==p)history.replaceState(null,'','#'+p);}
 document.querySelectorAll('.psel button').forEach(b=>b.onclick=()=>show(b.dataset.p));
 addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(P[h])show(h)});
 show(location.hash.slice(1));
-if(/github\.io$/.test(location.hostname))volform.onsubmit=e=>{e.preventDefault();location.href='thank-you.html'};
+

@@ -207,17 +207,29 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
 </div>
 <div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
-<div id="vol"><h3>Volunteer sign-up</h3>
-<p id="mealsVol" hidden>Meal-service volunteers sign up on our main volunteer page: <a class="btn" href="{VOL}">Volunteer sign-up</a></p>
-<form id="volform" method="post" action="enroll.php"><input type="hidden" name="form" value="Volunteer sign-up"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<label>Program<select name="program" id="volprog"><option value="Maa's Place">Maa's Place</option><option value="Blooming Star Village">Blooming Star Village</option></select></label>
-<label>Full name *<input name="full_name" required></label><label>Phone *<input name="phone" type="tel" required></label><label>Email<input name="email" type="email"></label>
-<label>Days available<select name="days_available[]" multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
-<label>Skills / how you'd like to help<input name="skills" placeholder="e.g. yoga, crafts, games, health, tech help"></label>
-<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" name="agree_conduct" value="Yes" required> I agree to the volunteer code of conduct.</label>
-<div class="full"><button class="btn">Sign Up</button></div></form></div>
+<div id="vol"><h3>Volunteer sign-up</h3><p>Pick the program(s) you'd like to help with – we'll show only the days and times that program runs.</p>
+'''+open('vol_form.html').read()+'''</div>
 </div></div></section>
-'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="hub.js"></script>')
+'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>')
+
+pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Photo consent and code of conduct for MAA's Inspiration volunteers.</p></header>
+<section id="consent"><div class="wrap"><h2>Photo &amp; Video Consent</h2><ul>
+<li>We take photos and videos at meal service, Maa's Place and events to share our work on our website and social media (Facebook, Instagram, TikTok).</li>
+<li>Ticking the photo consent box means MAA's Inspiration may use photos/videos that include you for these purposes, without payment. We never sell images.</li>
+<li>With your permission we may use your first name only. We never post phone numbers, addresses or other private details.</li>
+<li>Consent is optional – you can still volunteer without it. You can withdraw consent any time by emailing <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>; we will stop using new images and remove posts we control where possible.</li>
+<li>Seniors and participants are only filmed with their own written consent. Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul></div></section>
+<section id="conduct"><div class="wrap"><h2>Volunteer Code of Conduct</h2><ul>
+<li><b>Dignity first:</b> treat every guest, senior, family and fellow volunteer with kindness and respect – Love All, Serve All.</li>
+<li><b>Show up:</b> arrive on time, check in and check out with the shift lead, and let us know early if you can't make it.</li>
+<li><b>Food safety:</b> wash hands, wear gloves and hair covering in the kitchen, and follow the lead's instructions.</li>
+<li><b>Privacy:</b> keep guests' personal information private; no photos of guests without consent.</li>
+<li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site; drivers must have a valid license and insurance.</li>
+<li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
+<li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
+<p>Questions? <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
+'''+foot
+open('volunteer-policy.html','w').write(pol)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
 
