@@ -1,0 +1,36 @@
+--- /tmp/donate_orig_clean.html	2026-10-11 16:14:25.825014708 -0500
++++ live-upload/donate.html	2026-10-11 16:14:25.825014708 -0500
+@@ -1289,6 +1289,15 @@
+             500: 'https://buy.stripe.com/cNieVd9Y55jbbALd0mbjW08'
+         };
+ 
++        // Program tagging: ?program=meals|maas-place|bsv|general (default general) -> Stripe client_reference_id
++        const donationProgram = (function () {
++            const p = (new URLSearchParams(window.location.search).get('program') || '').toLowerCase();
++            return ['meals', 'maas-place', 'bsv', 'general'].includes(p) ? p : 'general';
++        })();
++        function withProgram(url) {
++            return url + (url.indexOf('?') === -1 ? '?' : '&') + 'client_reference_id=' + donationProgram;
++        }
++
+         document.getElementById('stripeBtn').addEventListener('click', () => {
+             // Get the total donation amount
+             const totalText = document.getElementById('donationGrandTotal').textContent;
+@@ -1296,7 +1305,7 @@
+ 
+             // Find the matching Stripe link or closest one
+             if (stripeLinks[total]) {
+-                window.open(stripeLinks[total], '_blank');
++                window.open(withProgram(stripeLinks[total]), '_blank');
+             } else {
+                 // For custom amounts, find the closest available link
+                 const amounts = Object.keys(stripeLinks).map(Number).sort((a, b) => a - b);
+@@ -1305,7 +1314,7 @@
+                     if (amt <= total) closest = amt;
+                 }
+                 const qty = Math.round(total / closest);
+-                window.open(stripeLinks[closest] + '?quantity=' + qty, '_blank');
++                window.open(withProgram(stripeLinks[closest] + '?quantity=' + qty), '_blank');
+             }
+         });
+     </script>
