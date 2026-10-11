@@ -3,7 +3,7 @@
   "id": "website-c6c54461",
   "page": "mp",
   "label": "Page colors",
-  "text": "combine purple , white, yellow and green earthy",
+  "text": "Purple & white with small yellow and earthy-green accents",
   "need": "",
   "applied": true
  },
@@ -33,7 +33,7 @@
   "id": "website-e7d08f81",
   "page": "mp",
   "label": "What we do",
-  "text": "Every activity at Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, meals, and friendship, where every senior feels valued and no one is alone",
+  "text": "Every activity at Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone",
   "need": "",
   "applied": true
  },
@@ -41,7 +41,7 @@
   "id": "website-ad846227",
   "page": "mp",
   "label": "What we do: Physical",
-  "text": "Chair exercises and gentle stretching\n\n\nBalance and fall-prevention exercises\n\n\nGroup walks\n\n\nLight dance and movement to music\n\n\nChair yoga or tai chi\n\n\nFun movement games (balloon toss, bean bag games)\n\n\nHealthy, nutritious meals and snacks\n\n\nHealth checks and wellness talks",
+  "text": "Chair exercises and gentle stretching\n\n\nBalance and fall-prevention exercises\n\n\nGroup walks\n\n\nLight dance and movement to music\n\n\nChair yoga or tai chi\n\n\nFun movement games (balloon toss, bean bag games)\n\n\nHealthy snacks\n\n\nHealth checks and wellness talks",
   "need": "",
   "applied": true
  },
@@ -73,7 +73,7 @@
   "id": "website-0f0861b0",
   "page": "mp",
   "label": "Snacks & chai",
-  "text": "One hearty, nutritious meal daily\n\n\nHealthy snacks and refreshments\n\n\nTea and coffee\n\n\nFresh fruit\n\n\nSpecial treats for birthdays and holidays\n\n\nMeals prepared with care for senior dietary needs",
+  "text": "Light snacks\nTea and coffee\nFresh fruit\nSpecial treats for birthdays and holidays\nPrepared with care for senior dietary needs",
   "need": "",
   "applied": true
  },
@@ -89,7 +89,7 @@
   "id": "website-291c257c",
   "page": "mp",
   "label": "Schedule: Monday 10am–2pm",
-  "text": "Day\t10:00–11:00\t11:00–12:00\t12:00–12:45\t12:45–2:00\nMon\tChair exercise and stretching\tMemory games and puzzles\tLunch and chai",
+  "text": "10–11 Chair exercise and stretching · 11–12 Memory games and puzzles · 12–12:45 Snacks and chai · 12:45–2 Movie or music hour",
   "need": "",
   "applied": true
  },
@@ -97,7 +97,7 @@
   "id": "website-57cf5b83",
   "page": "mp",
   "label": "Schedule: Tuesday 10am–2pm",
-  "text": "Gentle yoga\tHealth talk or guest speaker\tLunch and chai\tCarrom, cards and board games",
+  "text": "Gentle yoga\tHealth talk or guest speaker\tSnacks and chai\tCarrom, cards and board games",
   "need": "",
   "applied": true
  },
@@ -112,23 +112,23 @@
   "id": "website-4ea7eec8",
   "page": "mp",
   "label": "Schedule: Thursday 10am–2pm",
-  "text": "Chair exercise\tPhone and computer help\tLunch and chai\tBingo and prizes",
+  "text": "Chair exercise\tPhone and computer help\tSnacks and chai\tBingo and prizes",
   "need": "",
   "applied": true
  },
  {
   "id": "website-ff339392",
   "page": "mp",
-  "label": "Schedule: Friday 10am–2pm",
-  "text": "Gentle yoga\tStorytelling and sharing circle\tLunch and chai\tBirthday or celebration time",
-  "need": "Is Maa's Place open on Fridays? (Friday row is hidden until you confirm)",
+  "label": "Schedule: Friday",
+  "text": "Closed (Maa's Place is open Monday to Thursday)",
+  "need": "",
   "applied": true
  },
  {
   "id": "website-84e5f34f",
   "page": "mp",
-  "label": "Schedule: Saturday 9:30am–noon",
-  "text": "closed",
+  "label": "Schedule: Saturday",
+  "text": "Closed",
   "need": "",
   "applied": true
  },
@@ -255,8 +255,9 @@
   "id": "website-e35980fb",
   "page": "mp",
   "label": "Volunteer times on the main website",
-  "text": "Live site lists volunteer times \"Wed 6–8 PM / Sat 10–12 at MAA's Place\" – confirm vs. Mon–Fri 10–2, Sat 9:30–noon",
-  "need": ""
+  "text": "Leave as is for now (Wed 6–8 PM / Sat 10–12 on main site) – revisit later.",
+  "need": "",
+  "applied": true
  },
  {
   "id": "website-1340d1f9",

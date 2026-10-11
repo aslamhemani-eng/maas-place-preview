@@ -1,7 +1,7 @@
 const P={
  meals:{name:"Weekly Meal Service",desc:"Every week our volunteers cook, pack and deliver 2,200+ hot meals to seniors, the homeless and shelter homes across DFW.",cls:"p-meals",
   sched:[["Saturday","9:30am","Meal packing & delivery"],["Mon–Fri","10am–2pm","Hours of operation"]],more:'Full schedule: <a href="https://maasinspiration.org/schedule.html">maasinspiration.org/schedule.html</a>'},
- "maas-place":{name:"Maa's Place Senior Center",desc:"Free activities, a daily meal, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Maa\'s Place page</a>'},
+ "maas-place":{name:"Maa's Place Senior Center",desc:"Free activities, snacks, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Maa\'s Place page</a>'},
  bsv:{name:"Blooming Star Village",desc:"A free, planned recreation program for children and adults with special needs and their families. Coming soon.",cls:"p-bsv",sched:[["Coming soon","",""]],more:'<a href="blooming-star-village.html">Visit the Blooming Star Village page</a>'}
 };
 let MPS=null;

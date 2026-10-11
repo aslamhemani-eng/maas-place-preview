@@ -1,0 +1,53 @@
+--- live/donate.html
++++ upload/donate.html
+@@ -834,6 +834,7 @@
+             <li><a href="volunteer.html">Volunteer</a></li>
+             <li><a href="schedule.html">Schedule</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
++            <li><a href="programs.html">Programs</a></li>
+             <li><a href="index.html#contact">Contact</a></li>
+             <li><button class="donate-nav-btn active-link" onclick="document.getElementById('donateForm').scrollIntoView({behavior:'smooth'})">Donate</button></li>
+         </ul>
+@@ -998,17 +999,17 @@
+                 <h3>Volunteer Your Time</h3>
+                 <p>Join our team on Wednesdays, Fridays, or Saturdays. Your hands and heart make a huge difference.</p>
+             </a>
+-            <a href="mailto:aslamhemani@gmail.com?subject=Food%20%26%20Supply%20Donation%20Inquiry" class="way-card" style="text-decoration:none;color:inherit;">
++            <a href="mailto:aslam@maasinspiration.org?subject=Food%20%26%20Supply%20Donation%20Inquiry" class="way-card" style="text-decoration:none;color:inherit;">
+                 <i class="fas fa-apple-whole"></i>
+                 <h3>Donate Food & Supplies</h3>
+-                <p>We accept non-perishable food items, snacks, beverages, and hygiene products. Email us at <strong>aslamhemani@gmail.com</strong> to coordinate.</p>
++                <p>We accept non-perishable food items, snacks, beverages, and hygiene products. Email us at <strong>aslam@maasinspiration.org</strong> to coordinate.</p>
+             </a>
+             <div class="way-card">
+                 <i class="fas fa-share-nodes"></i>
+                 <h3>Spread the Word</h3>
+                 <p>Share our mission on social media, tell friends and family, or invite them to volunteer with us.</p>
+                 <div class="share-links" style="display:flex;gap:0.75rem;margin-top:1rem;justify-content:center;">
+-                    <a href="http://www.maasinspiration.org/" target="_blank" title="Facebook" style="color:var(--medium-purple);font-size:1.4rem;"><i class="fab fa-facebook-f"></i></a>
++                    <a href="https://www.facebook.com/maasinspiration" target="_blank" title="Facebook" style="color:var(--medium-purple);font-size:1.4rem;"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/maasinspiration/" target="_blank" title="Instagram" style="color:var(--medium-purple);font-size:1.4rem;"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.tiktok.com/@maasinspiration" target="_blank" title="TikTok" style="color:var(--medium-purple);font-size:1.4rem;"><i class="fab fa-tiktok"></i></a>
+                 </div>
+@@ -1058,7 +1059,7 @@
+             <div style="background:linear-gradient(135deg, var(--dark-purple) 0%, var(--medium-purple) 100%); padding:2.5rem; border-radius:16px; color:var(--white);">
+                 <h3 style="font-family:'Sora',sans-serif; font-size:1.5rem; margin-bottom:0.75rem;">Become a Partner</h3>
+                 <p style="opacity:0.95; margin-bottom:1.5rem; font-size:1.05rem;">Are you a restaurant, business, or organization looking to give back? Join hands with MAA's Inspiration and be part of a growing movement that feeds, supports, and uplifts our community.</p>
+-                <a href="mailto:aslamhemani@gmail.com?subject=Partnership%20Inquiry%20—%20MAA's%20Inspiration" style="display:inline-block; background:var(--white); color:var(--dark-purple); padding:0.85rem 2rem; border-radius:8px; font-weight:600; text-decoration:none; font-size:1.05rem; transition:transform 0.3s;">
++                <a href="mailto:aslam@maasinspiration.org?subject=Partnership%20Inquiry%20—%20MAA's%20Inspiration" style="display:inline-block; background:var(--white); color:var(--dark-purple); padding:0.85rem 2rem; border-radius:8px; font-weight:600; text-decoration:none; font-size:1.05rem; transition:transform 0.3s;">
+                     <i class="fas fa-handshake" style="margin-right:8px;"></i>Contact Us to Partner
+                 </a>
+             </div>
+@@ -1146,10 +1147,8 @@
+             <div class="footer-links">
+                 <h4>Follow Us</h4>
+                 <div class="footer-socials">
+-                    <a href="http://www.maasinspiration.org/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
++                    <a href="https://www.facebook.com/maasinspiration" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
++                    <a href="https://www.instagram.com/maasinspiration/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                 </div>
+             </div>
+         </div>

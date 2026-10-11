@@ -1,0 +1,37 @@
+--- live/volunteer.html
++++ upload/volunteer.html
+@@ -978,6 +978,7 @@
+             <li><a href="volunteer.html" class="active-link">Volunteer</a></li>
+             <li><a href="schedule.html">Schedule</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
++            <li><a href="programs.html">Programs</a></li>
+             <li><a href="index.html#contact">Contact</a></li>
+             <li><button class="donate-btn" onclick="window.location.href='donate.html'">Donate</button></li>
+         </ul>
+@@ -1336,10 +1337,8 @@
+             <div class="footer-links">
+                 <h4>Follow Us</h4>
+                 <div class="footer-socials">
+-                    <a href="http://www.maasinspiration.org/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
++                    <a href="https://www.facebook.com/maasinspiration" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
++                    <a href="https://www.instagram.com/maasinspiration/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                 </div>
+             </div>
+         </div>
+@@ -1422,11 +1421,11 @@
+                     form.reset();
+                 } else {
+                     const msg = result.message || ('HTTP ' + response.status);
+-                    alert('Submission issue: ' + msg + '\n\nPlease try again or email aslamhemani@gmail.com directly.');
++                    alert('Submission issue: ' + msg + '\n\nPlease try again or email aslam@maasinspiration.org directly.');
+                 }
+             } catch (err) {
+                 console.error('FormSubmit error:', err);
+-                alert('Network error: ' + err.message + '\n\nPlease try again or email aslamhemani@gmail.com directly.');
++                alert('Network error: ' + err.message + '\n\nPlease try again or email aslam@maasinspiration.org directly.');
+             }
+         });
+ 

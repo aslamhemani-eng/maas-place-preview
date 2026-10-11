@@ -1,0 +1,62 @@
+--- live/index.html
++++ upload/index.html
+@@ -1666,6 +1666,7 @@
+                 <li><a href="volunteer.html">Volunteer</a></li>
+                 <li><a href="schedule.html">Schedule</a></li>
+                 <li><a href="gallery.html">Gallery</a></li>
++                <li><a href="programs.html">Programs</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 <li><button class="donate-btn" onclick="window.location.href='donate.html'">Donate</button></li>
+             </ul>
+@@ -1874,7 +1875,7 @@
+                 <h3>Spread the Word</h3>
+                 <p>Help us reach more people! Share our mission on social media and tag us.</p>
+                 <div class="share-links">
+-                    <a href="http://www.maasinspiration.org/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
++                    <a href="https://www.facebook.com/maasinspiration" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/maasinspiration/" target="_blank" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.tiktok.com/@maasinspiration" target="_blank" title="Follow on TikTok"><i class="fab fa-tiktok"></i></a>
+                 </div>
+@@ -1977,7 +1978,7 @@
+                 <h3>Get in Touch</h3>
+                 <div class="contact-info-item">
+                     <strong>Email</strong>
+-                    <a href="mailto:aslamhemani@gmail.com" style="color: inherit; text-decoration: none;">aslamhemani@gmail.com</a>
++                    <a href="mailto:aslam@maasinspiration.org" style="color: inherit; text-decoration: none;">aslam@maasinspiration.org</a>
+                 </div>
+                 <div class="contact-info-item">
+                     <strong>Address</strong>
+@@ -2028,17 +2029,11 @@
+             <div class="footer-section">
+                 <h4>Follow Us</h4>
+                 <div class="social-icons">
+-                    <a href="http://www.maasinspiration.org/" target="_blank" rel="noopener noreferrer" title="Facebook">
++                    <a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener noreferrer" title="Facebook">
+                         <i class="fab fa-facebook-f"></i>
+                     </a>
+-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
++                    <a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                         <i class="fab fa-instagram"></i>
+-                    </a>
+-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+-                        <i class="fab fa-twitter"></i>
+-                    </a>
+-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+-                        <i class="fab fa-linkedin-in"></i>
+                     </a>
+                 </div>
+             </div>
+@@ -2369,11 +2364,11 @@
+                     form.reset();
+                 } else {
+                     const msg = result.message || ('HTTP ' + response.status);
+-                    alert('Submission issue: ' + msg + '\n\nPlease try again or email aslamhemani@gmail.com directly.');
++                    alert('Submission issue: ' + msg + '\n\nPlease try again or email aslam@maasinspiration.org directly.');
+                 }
+             } catch (err) {
+                 console.error('FormSubmit (contact) error:', err);
+-                alert('Network error: ' + err.message + '\n\nPlease try again or email aslamhemani@gmail.com directly.');
++                alert('Network error: ' + err.message + '\n\nPlease try again or email aslam@maasinspiration.org directly.');
+             } finally {
+                 submitBtn.textContent = originalText;
+                 submitBtn.disabled = false;
