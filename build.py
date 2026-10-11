@@ -256,3 +256,10 @@ d3=d3[:i]+'''<header class="appbar"><div><h1>Maa's Place</h1><p class="tagline">
 _s=d3.find('<div class="sub">'); _e=d3.find('</div>',_s)+6; d3=d3[:_s]+d3[_e:]
 d3=d3.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="design3.js"></script>')
 for n,h in [('maas-place-design-1.html',d1),('maas-place-design-2.html',d2),('maas-place-design-3.html',d3)]:open(n,'w').write(h)
+
+# --- Final main page: Design 2 + app tiles in hero ---
+TILES='''<nav class="tiles hero-tiles"><a href="#visit">📍<b>Visit</b></a><a href="#schedule">🗓️<b>Schedule</b></a><a href="#volunteer">🙌<b>Volunteer</b></a><a href="https://maasinspiration.org/donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>'''
+main=d2.replace("<title>Design 2 Magazine – Maa's Place Senior Center","<title>Maa's Place Senior Center")
+main=main.replace('<p class="tagline">Place where everybody knows your name</p>','<p class="tagline">Place where everybody knows your name</p>\n'+TILES,1)
+main=_r.sub(r'<a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost"[^>]*>Volunteer</a>','',main,1)
+open('maas-place.html','w').write(main)
