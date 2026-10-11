@@ -3,7 +3,7 @@
 .mi .btn{display:inline-block;background:var(--green);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
 .mi .btn.alt{background:var(--clay)}.mi .btn.ghost{background:transparent;border:2px solid #fff}
 .mi .sub{background:var(--dgreen);display:flex;gap:4px;padding:8px 5%;overflow-x:auto;position:sticky;top:78px;z-index:50}.mi .sub a{color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;white-space:nowrap;font-size:.9rem}.mi .sub a:hover{background:#ffffff22}
-.mi .hero{background:linear-gradient(90deg,#2F4224ee,#2F422488),var(--img) center/cover;color:#fff;padding:90px 5%}
+.mi .hero{background:linear-gradient(90deg,var(--hero1,#2F4224ee),var(--hero2,#2F422488)),var(--img) center/cover;color:#fff;padding:90px 5%}
 .mi .hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem)}.mi .hero p{max-width:640px;font-size:1.15rem}.mi .eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
 .mi .facts{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}.mi .facts div{background:#ffffff22;padding:10px 16px;border-radius:10px}
 .mi section{padding:64px 5%}.mi section:nth-of-type(even){background:#fff}.mi .wrap{max-width:1100px;margin:auto}
@@ -20,3 +20,8 @@
 .mi .donate{background:var(--dgreen)!important;color:#fff;text-align:center}.mi .donate h2{color:#fff}
 .preview-banner{background:#C0392B;color:#fff;text-align:center;font-size:.85rem;padding:6px}
 @media(max-width:768px){.mi form{grid-template-columns:1fr}.mi .hero{padding:60px 6%}.mi section{padding:44px 6%}.mi .sub{top:70px}}
+/* Maa's Place: brand purple & white */
+.mi.purple{--beige:#F6F1FB;--sand:#E9DDF5;--green:#5B2A86;--dgreen:#3D1A6E;--clay:#E0A526;--txt:#2E2438;--hero1:#3D1A6Eee;--hero2:#5B2A8688;background:#fff}
+.mi.purple section:nth-of-type(odd){background:#fff}.mi.purple section:nth-of-type(even){background:var(--beige)}
+.mi.purple section:nth-of-type(odd) .card{background:var(--beige)}.mi.purple section:nth-of-type(even) .card{background:#fff}
+.mi.purple .btn.alt{color:#2E2438}.mi .card.purple-card{border-top-color:#5B2A86}.mi .card.purple-card .btn{background:#5B2A86}.mi .card.purple-card h3{color:#3D1A6E}

@@ -84,7 +84,7 @@ donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Su
 <p>Donations are taken through our existing secure donation page.</p>
 <a class="btn alt" href="{DON}">Donate Now</a>
 <p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
-mp=head("Maa's Place Senior Center")+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a></div>
+mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a></div>
 <header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
 <h1>Maa's Place Senior Center</h1>
 <p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
@@ -183,7 +183,7 @@ bsv=head("Blooming Star Village")+f'''<div class="sub"><a href="#mission">Missio
 pg=head("Our Programs")+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through Maa's Place and Blooming Star Village.</p></header>
 <section><div class="wrap"><div class="grid">
 <div class="card"><h3>🍽️ Weekly Meal Service</h3><p>2,200+ hot meals every week for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="{B}schedule.html">See Schedule</a></div>
-<div class="card"><h3>🏡 Maa's Place Senior Center</h3><p>Activities, snacks, chai and companionship for seniors. Ages 55+. Mon–Fri 10am–2pm, Sat 9:30am–noon.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
+<div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p>Activities, snacks, chai and companionship for seniors. Ages 55+. Mon–Fri 10am–2pm, Sat 9:30am–noon.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
 <div class="card"><h3>🌟 Blooming Star Village</h3><p>A free, planned recreation program for children and adults with special needs and their families. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
 {donate("our programs")}
