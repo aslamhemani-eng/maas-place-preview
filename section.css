@@ -191,3 +191,4 @@ footer{background:#2E2438!important}
 .mi.home .q-donate{background:#E0A526;color:#2E2438!important}.mi.home .q-vol{background:#2e9d4f;color:#fff!important}
 .mi.home .ribbon{position:absolute;top:16px;right:-36px;transform:rotate(35deg);background:#E0A526;color:#2E2438;font-weight:800;padding:6px 44px;z-index:2;font-size:.9rem;letter-spacing:.5px;box-shadow:0 2px 6px #0003}
 @media(max-width:900px){.mi.home .pgrid{grid-template-columns:1fr;max-width:520px;margin:auto}}
+.mi.purple .donate .btn.green{background:#2e9d4f!important;color:#fff!important}.mi.home .ribbon{font-size:1rem;padding:8px 48px}
