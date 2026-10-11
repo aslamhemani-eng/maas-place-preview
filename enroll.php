@@ -8,7 +8,7 @@ $clean = function($v){ $v = is_array($v) ? implode(', ', $v) : (string)$v; retur
 $form = $clean($_POST['form'] ?? 'Enrollment');
 $allowed = ["Maa's Place enrollment", 'Blooming Star Village interest list', 'Volunteer sign-up'];
 if (!in_array($form, $allowed, true)) { http_response_code(400); exit('Bad request'); }
-if ($form === 'Volunteer sign-up' && (empty($_POST['programs']) || empty($_POST['agree_code_of_conduct']) || empty($_POST['age_18_or_guardian']))) { http_response_code(400); exit('Please choose a program and tick the required boxes.'); }
+if ($form === 'Volunteer sign-up' && (empty($_POST['programs']) || empty($_POST['agree_policy']))) { http_response_code(400); exit('Please choose a program and tick the required boxes.'); }
 if ($form === 'Volunteer sign-up') { foreach (['photo_consent'=>'No'] as $k=>$d) if (!isset($_POST[$k])) $_POST[$k] = $d; }
 $lines = [];
 foreach ($_POST as $k => $v) { if (in_array($k, ['website','form'], true)) continue;

@@ -34,3 +34,9 @@ main .vf .lg{float:none;display:block}
 main .vf .lg{float:none;margin:0 0 12px;font-size:1.15rem}
 main .vf .rl label{display:inline-flex;align-items:center;gap:6px;margin-left:12px}
 main .vf .rl label input{width:18px;height:18px;padding:0}
+main .vf .pk span small{display:block;font-size:.95rem}
+main .vf .pk b{font-size:1.1rem}
+main .vf .pk{padding:16px}
+main .vf .chips{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+main .vf .chips label{padding:10px 14px;font-size:1rem}
+main .vf .vg{margin-bottom:6px}

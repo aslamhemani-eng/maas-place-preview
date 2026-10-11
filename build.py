@@ -207,7 +207,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
 </div>
 <div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
-<div id="vol"><h3>Volunteer sign-up</h3><p>Pick the program(s) you'd like to help with – we'll show only the days and times that program runs.</p>
+<div id="vol"><h3>Volunteer sign-up</h3><p>Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div>
 </div></div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>')
@@ -238,7 +238,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa's Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
 <div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Blooming Star Village</h3><p>Recreation for children and adults with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
 </div></div></section>
-<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about 2 minutes. We'll show only the days and times each program runs.</p>
+<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
 open('volunteer-page.html','w').write(VOLP)

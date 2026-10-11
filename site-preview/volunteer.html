@@ -7,9 +7,9 @@
     <title>Volunteer - MAA's Inspiration</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../site-chrome.css">
-    <link rel="stylesheet" href="../section.css">
-<link rel="stylesheet" href="../vol-form.css"></head>
+    <link rel="stylesheet" href="../site-chrome.css?v=202610111745">
+    <link rel="stylesheet" href="../section.css?v=202610111745">
+<link rel="stylesheet" href="../vol-form.css?v=202610111745"></head>
 <body>
 <div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>
     <nav>
@@ -42,29 +42,24 @@
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa's Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
 <div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Blooming Star Village</h3><p>Recreation for children and adults with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
 </div></div></section>
-<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about 2 minutes. We'll show only the days and times each program runs.</p>
+<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 <form class="vf" id="vf" method="post" action="../enroll.php">
-<input type="hidden" name="form" value="Volunteer sign-up">
+<input type="hidden" name="form" value="Volunteer sign-up"><input type="hidden" name="reminder_preference" value="Text">
 <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<div class="fs"><h3 class="lg">1. Choose program(s) <small>(pick one or more)</small></h3>
-<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Meals" data-p="meals"><span><b>🍲 Maa's Meals</b><small>Saturdays only, 10 AM–noon · packing &amp; delivery</small></span></label>
-<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Place senior center" data-p="mp"><span><b>🏡 Maa's Place senior center</b> <em class="sb">Opening soon</em><small>Mon–Thu 10 AM–2 PM</small></span></label>
-<label class="pk"><input type="checkbox" name="programs[]" value="Blooming Star Village (interest list)" data-p="bsv"><span><b>🌟 Blooming Star Village</b> <em class="sb">Coming soon</em><small>Join the interest list – we'll contact you when it opens</small></span></label>
+<div class="fs"><h3 class="lg">1. Which program?</h3>
+<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Meals" data-p="meals"><span><b>🍲 Maa's Meals</b><small>Saturdays, 10 AM – noon</small></span></label>
+<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Place" data-p="mp"><span><b>🏡 Maa's Place</b><small>Mon – Thu, 10 AM – 2 PM · <em class="sb">Opening soon</em></small></span></label>
+<label class="pk"><input type="checkbox" name="programs[]" value="Blooming Star Village (interest list)" data-p="bsv"><span><b>🌟 Blooming Star Village</b><small><em class="sb">Coming soon</em> · interest list</small></span></label>
 </div>
-<div class="fs" id="vfDyn" hidden><h3 class="lg">2. Pick days &amp; times</h3><div id="vfBlocks"></div></div>
-<div class="fs" id="vfDyn2" hidden><h3 class="lg">3. Choose roles</h3><div id="vfRoles"></div></div>
-<div class="fs"><h3 class="lg">4. Your info</h3><div class="vg">
+<div class="fs" id="vfDays" hidden><h3 class="lg">2. Which days at Maa's Place?</h3><div class="chips">
+<label><input type="checkbox" name="maas_place_days[]" value="Monday">Mon</label><label><input type="checkbox" name="maas_place_days[]" value="Tuesday">Tue</label><label><input type="checkbox" name="maas_place_days[]" value="Wednesday">Wed</label><label><input type="checkbox" name="maas_place_days[]" value="Thursday">Thu</label></div></div>
+<div class="fs" id="vfHelp" hidden><h3 class="lg"><span class="n"></span>What would you like to help with? <small>(optional)</small></h3><div class="chips" id="vfRoles"></div></div>
+<div class="fs"><h3 class="lg"><span class="n"></span>Your details</h3><div class="vg">
 <label>Full name *<input name="full_name" required autocomplete="name"></label>
 <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
-<label>Email *<input name="email" type="email" required autocomplete="email"></label>
-<label>How did you hear about us?<select name="heard_about_us"><option value="">Choose…</option><option>Friend or family</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>Mosque / temple / church / community center</option><option>School or employer</option><option>Website / Google</option><option>Other</option></select></label>
-<label class="full">Skills or experience <small>(optional)</small><textarea name="skills" rows="2" placeholder="e.g. cooking, driving, yoga, crafts, tech help, languages spoken"></textarea></label>
-</div></div>
-<div class="fs"><h3 class="lg">5. Agreements &amp; reminders</h3>
-<p class="rl">Send me shift reminders by: <label><input type="radio" name="reminder_preference" value="Text" checked> Text</label> <label><input type="radio" name="reminder_preference" value="Email"> Email</label></p>
-<label class="ck"><input type="checkbox" name="age_18_or_guardian" value="Yes" required><span>I am 18 or older, or my parent/guardian has approved this sign-up. *</span></label>
-<label class="ck"><input type="checkbox" name="photo_consent" value="Yes"><span>I agree that photos/videos of me may be used by MAA's Inspiration (<a href="../volunteer-policy.html#consent" target="_blank">photo consent policy</a>). <small>(optional)</small></span></label>
-<label class="ck"><input type="checkbox" name="agree_code_of_conduct" value="Yes" required><span>I agree to the <a href="../volunteer-policy.html#conduct" target="_blank">volunteer code of conduct</a>. *</span></label>
+<label class="full">Email *<input name="email" type="email" required autocomplete="email"></label></div>
+<label class="ck"><input type="checkbox" name="agree_policy" value="Yes" required><span>I'm 18+ and agree to the <a href="../volunteer-policy.html" target="_blank">volunteer policy</a>. *</span></label>
+<label class="ck"><input type="checkbox" name="photo_consent" value="Yes"><span>OK to appear in photos (optional)</span></label>
 </div>
 <p id="vfErr" class="vfe" hidden>Please pick at least one program.</p>
 <button class="vfb" type="submit">Sign Me Up 🙌</button>
@@ -104,6 +99,6 @@
             © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
         </div>
     </footer>
-<script src="../vol-form.js"></script>
+<script src="../vol-form.js?v=202610111745"></script>
 </body>
 </html>
