@@ -1,0 +1,37 @@
+/* MAA's Inspiration – final site theme (Oct 2026). Loaded last in <head>; overrides page styles only.
+   Beige #F3EBDD backgrounds, white cards, purple #3D1A6E/#5B2A86 for headings/buttons/thin accents,
+   gold #E0A526 donate, green #2e9d4f secondary. Solid colors, no gradients. */
+:root{--dark-purple:#3D1A6E;--medium-purple:#5B2A86;--light-purple:#F3EBDD;--light-gray:#F3EBDD}
+body{background:#F3EBDD}
+h1,h2,h3,h4{color:#3D1A6E}
+/* Big colored blocks -> beige with purple text */
+.page-hero,.cta-section,.crisis-block,.founder-message{background:#F3EBDD!important;background-image:none!important;color:#3D1A6E!important}
+.page-hero *,.cta-section *,.crisis-block *,.founder-message *{color:#3D1A6E}
+.crisis-block::before,.slideshow-frame::after{background:none!important}
+.page-hero{border-bottom:1px solid #E3D6C0}
+/* Buttons: solid purple */
+.btn-primary,.btn-primary-lg,.submit-btn,.form-submit,.btn-month-volunteer,.success-card .btn-back,.toggle-btn.active,.amount-btn.selected,.stripe-btn{background:#5B2A86!important;background-image:none!important;color:#fff!important;border-color:#5B2A86!important}
+.btn-primary:hover,.btn-primary-lg:hover,.submit-btn:hover,.form-submit:hover,.btn-month-volunteer:hover,.stripe-btn:hover{background:#3D1A6E!important}
+.btn-secondary:hover,.btn-outline-lg:hover,.amount-btn:hover,.qty-btn:hover{background:#2e9d4f!important;background-image:none!important;color:#fff!important;border-color:#2e9d4f!important}
+.page-hero .btn-primary,.page-hero .btn-primary-lg{color:#fff!important}
+/* Donate: solid gold */
+.donate-btn,.donate-nav-btn{background:#E0A526!important;background-image:none!important;color:#2E2438!important;border:0!important}
+.donate-btn:hover,.donate-nav-btn:hover{background:#c99015!important}
+/* Cards: white with thin purple top */
+.wwd-card,.wwd-card[class*="tone-"]{background:#fff!important;background-image:none!important;border-top:6px solid #5B2A86!important;color:#2E2438!important}
+.wwd-card::after{display:none!important}
+.wwd-card .wwd-num,.wwd-card .wwd-icon{color:#3D1A6E!important;background:#F3EBDD!important;background-image:none!important;-webkit-text-fill-color:#3D1A6E!important}
+.wwd-bar span,.wwd-card .wwd-bar span{background:#5B2A86!important;background-image:none!important}
+.flow-icon-wrap,.recurring .badge,.month-card .special-tag,.slide-dots button.active,.weekly-video-placeholder .play-icon{background:#5B2A86!important;background-image:none!important}
+.ratio-item .ratio-big{background:none!important;color:#3D1A6E!important;-webkit-text-fill-color:#3D1A6E!important}
+.photo-overlay{background:#3D1A6Ecc!important;background-image:none!important}
+.weekly-video-frame,.founder-photo{background:#F3EBDD!important;background-image:none!important}
+/* Nav + footer */
+nav{background:#fff!important}
+.hamburger span{background:#3D1A6E!important;background-image:none!important}
+footer{background:#2E2438!important;background-image:none!important}
+.social-icons a:hover,.footer-socials a:hover,.footer-socials a{background-image:none!important}
+.social-icons a:hover,.footer-socials a:hover{background:#5B2A86!important}
+/* Inline gradient blocks (e.g. donate partnership box) */
+[style*="linear-gradient"]{background:#F3EBDD!important;color:#3D1A6E!important;border:1px solid #E3D6C0}
+[style*="linear-gradient"] h2,[style*="linear-gradient"] h3,[style*="linear-gradient"] p{color:#3D1A6E!important}

@@ -173,3 +173,8 @@
 .mi.purple form input,.mi.purple form select,.mi.purple form textarea{background:#FBF7F0;border:1px solid #E3D6C0}
 .mi.d2 section:nth-of-type(odd) .card{background:#FBF7F0!important}
 .mi.purple .hero .hero-tiles a{color:#fff}.mi.purple .hero .hero-tiles a.gold{color:#2E2438}.mi.purple .hero .hero-tiles a b{color:inherit}
+/* Site-wide final theme bits */
+footer{background:#2E2438!important}
+.mi.purple .card.purple-card{border-top-color:#5B2A86!important}
+.mi.purple.bsvp .eyebrow:after{content:" 🌱"}.mi.purple.bsvp .tag{background:#E6F2E8;color:#1f6b35}
+.mi.purple section{padding-top:56px;padding-bottom:56px}
