@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Get Involved - MAA's Inspiration</title>
+    <meta name="description" content="Get involved with MAA's Inspiration: donate, volunteer or see schedules for Maa's Meals, Maa's Place and Blooming Star Village.">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site-chrome.css?v=202610111803">
+    <link rel="stylesheet" href="section.css?v=202610111803">
+<link rel="stylesheet" href="vol-form.css?v=202610111803"></head>
+<body><div style="background:#C0392B;color:#fff;text-align:center;font:14px sans-serif;padding:6px;position:relative;z-index:9999">PREVIEW of the final site — not live yet.</div>
+    <nav>
+        <div class="navbar-container">
+            <a href="index.html" class="logo-section">
+                <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                <span class="logo-text">MAA's Inspiration</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="meals.html#contact">Contact</a></li>
+                <li><button class="donate-btn" onclick="window.location.href='donate.html'">Donate</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+<main class="mi hub purple">
+<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
+<section><div class="wrap">
+<div class="psel" role="tablist">
+<button role="tab" data-p="meals" class="p-meals">🍲<b>Maa's Meals</b></button>
+<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Opening soon · 55+</small></button>
+<button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
+</div>
+<div id="panel" class="panel">
+<h2 id="pname"></h2><p id="pdesc"></p>
+<div class="acts">
+<a id="actDonate" class="act" href="donate.html">💜<b>Donate</b><small>Secure checkout via our donation page</small></a>
+<a class="act" href="#vol">🙌<b>Volunteer</b><small>Sign up in 1 minute</small></a>
+<a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
+</div>
+<div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
+<div id="vol"><h3>Volunteer sign-up</h3><p>Takes about a minute.</p>
+<div class="lvf-wrap">
+<form class="lvf" id="volunteerForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Volunteer Registration — MAA's Inspiration">
+<input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="lvf-sec"><div class="lvf-title">Which program? <span class="req">*</span> <small>(choose one or more)</small></div>
+<div class="prog-grid">
+<label class="prog"><input type="checkbox" name="Program" value="Maa's Meals" data-p="meals"><span class="pc"><b>🍲 Maa's Meals</b><small>Saturdays, 10 AM – noon</small></span></label>
+<label class="prog"><input type="checkbox" name="Program" value="Maa's Place" data-p="mp"><span class="pc"><b>🏡 Maa's Place</b><small>Mon – Thu, 10 AM – 2 PM</small><em>Opening soon</em></span></label>
+<label class="prog"><input type="checkbox" name="Program" value="Blooming Star Village (interest list)" data-p="bsv"><span class="pc"><b>🌟 Blooming Star Village</b><small>Mon – Thu, 9 AM – 2 PM · interest list</small><em>Coming soon</em></span></label>
+</div></div>
+<div class="form-row"><div class="form-group"><label>First Name <span class="req">*</span></label><input type="text" name="First Name" placeholder="Enter first name" required autocomplete="given-name"></div>
+<div class="form-group"><label>Last Name <span class="req">*</span></label><input type="text" name="Last Name" placeholder="Enter last name" required autocomplete="family-name"></div></div>
+<div class="form-row"><div class="form-group full"><label>Street Address <span class="req">*</span></label><input type="text" name="Address" placeholder="123 Main Street" required autocomplete="street-address"></div></div>
+<div class="form-row"><div class="form-group"><label>City <span class="req">*</span></label><input type="text" name="City" placeholder="City" required autocomplete="address-level2"></div>
+<div class="form-group"><label>ZIP Code <span class="req">*</span></label><input type="text" name="ZIP" placeholder="75007" required inputmode="numeric" autocomplete="postal-code"></div></div>
+<div class="form-row"><div class="form-group"><label>Phone Number <span class="req">*</span></label><input type="tel" name="Phone" placeholder="(214) 555-0123" required autocomplete="tel"></div>
+<div class="form-group"><label>Email Address <span class="req">*</span></label><input type="email" name="Email" placeholder="you@email.com" required autocomplete="email"></div></div>
+<div class="lvf-sec" id="daysSec" hidden><div class="lvf-title">Available Days <span class="req">*</span></div><div class="availability-grid" id="daysGrid"></div><p class="hint" id="daysHint"></p></div>
+<div class="lvf-sec" id="timeSec" hidden><div class="lvf-title">Preferred Time at Maa's Place <span class="req">*</span></div><div class="time-slots">
+<label class="opt"><input type="radio" name="Preferred Time" value="Morning (10 AM – 12 PM)">☀️ Morning (10–12)</label>
+<label class="opt"><input type="radio" name="Preferred Time" value="Afternoon (12 – 2 PM)">🌤️ Afternoon (12–2)</label>
+<label class="opt"><input type="radio" name="Preferred Time" value="Flexible">✅ Flexible</label></div></div>
+<p class="hint" id="bsvHint" hidden>🌟 Blooming Star Village (Mon – Thu, 9 AM – 2 PM) isn't open yet – we'll contact you when it opens.</p>
+<div class="form-row"><div class="form-group full"><label>How would you like to help?</label><select name="How to Help" id="helpType"></select></div></div>
+<div class="form-row"><div class="form-group full"><label>Anything else you'd like us to know?</label><textarea name="Notes" placeholder="Special skills, dietary restrictions, or any other notes..."></textarea></div></div>
+<label class="agree"><input type="checkbox" name="Photo Consent" value="Yes"> <span>OK to appear in photos (<a href="volunteer-policy.html" target="_blank">volunteer policy</a>)</span></label>
+<p class="err" id="lvfErr" hidden></p>
+<button type="submit" class="submit-btn">📨 Submit Registration</button>
+</form>
+<div class="lvf-done" id="lvfDone" hidden><div class="big">💜</div><h3>Thank you for signing up!</h3><p>We received your registration and will reach out soon to get you started.</p><button type="button" class="submit-btn" id="lvfAgain">Register another person</button></div>
+</div>
+</div>
+</div></div></section>
+</main>
+<div id="lb" onclick="this.style.display='none'"><img alt=""></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo-section">
+                    <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                </div>
+                <div class="footer-motto">LOVE ALL SERVE ALL</div>
+                <p class="footer-description">Serving our community with warmth, dignity, and compassion through nourishing meals and genuine care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="meals.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
+        </div>
+    </footer>
+<script src="section.js?v=202610111803"></script><script src="vol-form.js?v=202610111803"></script><script src="hub.js?v=202610111803"></script>
+<script>document.querySelectorAll("form[action$='enroll.php']").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();location.href="thank-you.html"}))</script></body>
+</html>

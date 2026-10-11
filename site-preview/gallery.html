@@ -550,9 +550,9 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="maas-theme.css?v=202610111758">
+    <link rel="stylesheet" href="maas-theme.css?v=202610111803">
 </head>
-<body><div style="background:#C0392B;color:#fff;text-align:center;font:14px sans-serif;padding:6px">PREVIEW of the whole site in the new theme — not live.</div>
+<body><div style="background:#C0392B;color:#fff;text-align:center;font:14px sans-serif;padding:6px;position:relative;z-index:9999">PREVIEW of the final site — not live yet.</div>
     <!-- Navigation -->
     <nav>
         <a href="index.html" class="nav-brand">
@@ -565,7 +565,7 @@
             <li><a href="volunteer.html">Volunteer</a></li>
             <li><a href="schedule.html">Schedule</a></li>
             <li><a href="gallery.html" class="active-link">Gallery</a></li>
-            <li><a href="../programs.html">Programs</a></li>
+            <li><a href="programs.html">Programs</a></li>
             <li><a href="meals.html#contact">Contact</a></li>
             <li><button class="donate-btn" onclick="window.location.href='donate.html'">Donate</button></li>
         </ul>
@@ -593,7 +593,7 @@
         <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
         <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
         <div class="lightbox-content">
-            <img id="lightboxImg" src="https://maasinspiration.org/" alt="Gallery Photo">
+            <img id="lightboxImg" src="" alt="Gallery Photo">
             <div class="lightbox-date" id="lightboxDate">
                 <i class="fas fa-calendar-alt"></i>
                 <span id="lightboxDateText"></span>
@@ -928,5 +928,5 @@
         // Initialize
         window.addEventListener('load', buildGallery);
     </script>
-</body>
+<script>document.querySelectorAll("form[action$='enroll.php']").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();location.href="thank-you.html"}))</script></body>
 </html>

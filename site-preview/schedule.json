@@ -1,0 +1,44 @@
+{
+  "week_of": "Monday to Thursday, 10 AM to 2 PM",
+  "note": "",
+  "slots": [
+    "10:00–11:00",
+    "11:00–12:00",
+    "12:00–12:45",
+    "12:45–2:00"
+  ],
+  "days": [
+    {
+      "day": "Monday",
+      "slots": [
+        "Chair exercise and stretching",
+        "Memory games and puzzles",
+        "Snacks and chai",
+        "Movie or music hour"
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "slots": [
+        "Gentle yoga",
+        "Health talk or guest speaker",
+        "Snacks and chai",
+        "Carrom, cards and board games"
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "all_day": "Bingo & board games · Open activities · Insurance Q&A",
+      "led_by": "Ashraf, Shabana, Salima"
+    },
+    {
+      "day": "Thursday",
+      "slots": [
+        "Chair exercise",
+        "Phone and computer help",
+        "Snacks and chai",
+        "Bingo and prizes"
+      ]
+    }
+  ]
+}

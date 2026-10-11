@@ -246,7 +246,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 '''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
 open('volunteer-page.html','w').write(VOLP)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
-open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
+open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=site-preview/index.html"><a href="site-preview/index.html">Site preview</a>')
 
 # --- form wiring: name attributes, honeypot, action ---
 import re as _re
