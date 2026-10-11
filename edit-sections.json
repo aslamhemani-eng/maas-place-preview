@@ -1,0 +1,443 @@
+[
+ {
+  "id": "website-c6c54461",
+  "page": "mp",
+  "label": "Page colors",
+  "text": "purple & white (brand #5B2A86 / #3D1A6E) with gold accent buttons (\"Plan a Visit\", \"Donate Now\")",
+  "need": ""
+ },
+ {
+  "id": "website-1b8429a0",
+  "page": "mp",
+  "label": "Top banner: title",
+  "text": "\"Maa's Place Senior Center\" (eyebrow: \"Programs · MAA's Inspiration\")",
+  "need": ""
+ },
+ {
+  "id": "website-3cbc1667",
+  "page": "mp",
+  "label": "Top banner: welcome text",
+  "text": "A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.",
+  "need": ""
+ },
+ {
+  "id": "website-581c1d73",
+  "page": "mp",
+  "label": "Top banner: quick facts",
+  "text": "\"Mon–Fri 10am–2pm\" · \"Sat 9:30am–noon\" · \"Ages 55+\" · \"214-517-1938\" · \"2700 Old Denton Rd, Suite 102, Carrollton, TX 75006\"; buttons \"Plan a Visit\" + \"Volunteer\"",
+  "need": ""
+ },
+ {
+  "id": "website-e7d08f81",
+  "page": "mp",
+  "label": "What we do",
+  "text": "Every activity is chosen to keep seniors active in body and mind, learning something new, and enjoying time together.",
+  "need": ""
+ },
+ {
+  "id": "website-ad846227",
+  "page": "mp",
+  "label": "What we do: Physical",
+  "text": "Yoga, Walking, Tai chi, Musical chairs, Ball in basket, Planting",
+  "need": ""
+ },
+ {
+  "id": "website-1703028f",
+  "page": "mp",
+  "label": "What we do: Mental",
+  "text": "Yoga, Word search, Crafts",
+  "need": ""
+ },
+ {
+  "id": "website-a8d8f65f",
+  "page": "mp",
+  "label": "What we do: Educational",
+  "text": "Health insurance help, Phone use, Puzzle games, Beads",
+  "need": ""
+ },
+ {
+  "id": "website-31b71153",
+  "page": "mp",
+  "label": "What we do: Fun & Entertainment",
+  "text": "Board games, Bingo, Karaoke, Crafts, Beads & jewelry",
+  "need": ""
+ },
+ {
+  "id": "website-0f0861b0",
+  "page": "mp",
+  "label": "Snacks & chai",
+  "text": "Homestyle favorites like mini samosas, dhokra, pakora, chaat, vada, nan khatai, fruit salad, banana bread, fresh cookies, and chai.",
+  "need": ""
+ },
+ {
+  "id": "website-54b96fa2",
+  "page": "mp",
+  "label": "Schedule: week & note",
+  "text": "Week of: ____ · Proposed schedule based on volunteer assigned days – please confirm days & times.",
+  "need": "Which week does this schedule start, and are these days and times right?"
+ },
+ {
+  "id": "website-291c257c",
+  "page": "mp",
+  "label": "Schedule: Monday 10am–2pm",
+  "text": "",
+  "need": "What happens at Maa's Place on Mondays?"
+ },
+ {
+  "id": "website-57cf5b83",
+  "page": "mp",
+  "label": "Schedule: Tuesday 10am–2pm",
+  "text": "Beads & jewelry · Yoga / exercise · Health check-ins – led by Nadia, Suraiya, Mehtab",
+  "need": ""
+ },
+ {
+  "id": "website-f575ded3",
+  "page": "mp",
+  "label": "Schedule: Wednesday 10am–2pm",
+  "text": "Bingo & board games · Open activities · Insurance Q&A – led by Ashraf, Shabana, Salima",
+  "need": ""
+ },
+ {
+  "id": "website-4ea7eec8",
+  "page": "mp",
+  "label": "Schedule: Thursday 10am–2pm",
+  "text": "Planting · Designing & crafts – led by Shamsha, Fatima",
+  "need": ""
+ },
+ {
+  "id": "website-ff339392",
+  "page": "mp",
+  "label": "Schedule: Friday 10am–2pm",
+  "text": "",
+  "need": "What happens at Maa's Place on Fridays?"
+ },
+ {
+  "id": "website-84e5f34f",
+  "page": "mp",
+  "label": "Schedule: Saturday 9:30am–noon",
+  "text": "",
+  "need": "What happens at Maa's Place on Saturdays?"
+ },
+ {
+  "id": "website-ef08b2af",
+  "page": "mp",
+  "label": "Photo gallery",
+  "text": "currently 6 photos from Oct 10 meal service, captioned \"Weekly meal service – Oct 10, 2026\"; Maa's Place photos of consenting seniors needed",
+  "need": "Can you share photos from Maa's Place (only seniors who said yes to photos)?"
+ },
+ {
+  "id": "website-36b19345",
+  "page": "mp",
+  "label": "How to visit: step 1",
+  "text": "Come say hello – Drop in during open hours, call 214-517-1938, or email aslam@maasinspiration.org to schedule a tour.",
+  "need": ""
+ },
+ {
+  "id": "website-ba0bab94",
+  "page": "mp",
+  "label": "How to visit: step 2",
+  "text": "Enroll – Complete the short form below; family members can fill it out on a senior's behalf.",
+  "need": ""
+ },
+ {
+  "id": "website-08842518",
+  "page": "mp",
+  "label": "How to visit: step 3",
+  "text": "Sign the waiver – Sign our participation waiver and optional photo/video consent on your first visit.",
+  "need": ""
+ },
+ {
+  "id": "website-0770e59c",
+  "page": "mp",
+  "label": "Who can come, cost & rides",
+  "text": "Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided",
+  "need": ""
+ },
+ {
+  "id": "website-3a871c64",
+  "page": "mp",
+  "label": "Sign-up form questions",
+  "text": "Senior's full name*, Date of birth, Phone*, Email (optional), Home address/city & ZIP, Preferred language (English/Urdu-Hindi/Gujarati/Other), Days you plan to attend, Activities of interest, Emergency contact name & relationship*, Emergency contact phone*, Dietary needs/food allergies, Mobility or health needs (optional), Photo/video consent, How did you hear about us?, Agree to waiver*",
+  "need": ""
+ },
+ {
+  "id": "website-f5802742",
+  "page": "mp",
+  "label": "Where sign-ups are sent",
+  "text": "submissions emailed to aslamhemani@gmail.com (switch to hello@maasinspiration.org later); thank-you page after submit",
+  "need": ""
+ },
+ {
+  "id": "website-e42c6469",
+  "page": "mp",
+  "label": "Volunteer",
+  "text": "\"Share a skill, lead an activity, or simply sit and talk.\" Cards: Lead an activity (Yoga, crafts, games, planting, karaoke) · Share expertise (Health, insurance, phone and tech help) · Serve & connect (Snacks, chai, conversation and companionship); button → maasinspiration.org/volunteer.html",
+  "need": ""
+ },
+ {
+  "id": "website-ba54abd0",
+  "page": "mp",
+  "label": "Donate",
+  "text": "\"Support Maa's Place – Donations are taken through our existing secure donation page.\" Button \"Donate Now\" → maasinspiration.org/donate.html; \"501(c)(3) nonprofit · EIN 86-2221897\"",
+  "need": ""
+ },
+ {
+  "id": "website-31fafb64",
+  "page": "mp",
+  "label": "Address & phone",
+  "text": "aslam@maasinspiration.org · 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 (Google Maps link + embedded map) · 214-517-1938; same in page footer",
+  "need": ""
+ },
+ {
+  "id": "website-d9104221",
+  "page": "mp",
+  "label": "FAQ: Who can attend Maa's Place?",
+  "text": "Adults 55 and up",
+  "need": ""
+ },
+ {
+  "id": "website-4d7a5026",
+  "page": "mp",
+  "label": "FAQ: Where is Maa's Place?",
+  "text": "2700 Old Denton Rd, Suite 102, Carrollton, TX 75006",
+  "need": ""
+ },
+ {
+  "id": "website-984bcf69",
+  "page": "mp",
+  "label": "FAQ: What are your hours?",
+  "text": "Monday–Friday 10am–2pm and Saturday 9:30am–noon.",
+  "need": ""
+ },
+ {
+  "id": "website-62acaf60",
+  "page": "mp",
+  "label": "FAQ: Is there a cost?",
+  "text": "No. Maa's Place is free.",
+  "need": ""
+ },
+ {
+  "id": "website-da13ba5f",
+  "page": "mp",
+  "label": "FAQ: Do you provide transportation?",
+  "text": "No, transportation is not provided.",
+  "need": ""
+ },
+ {
+  "id": "website-6b1ca148",
+  "page": "mp",
+  "label": "FAQ: Are snacks provided?",
+  "text": "Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.",
+  "need": ""
+ },
+ {
+  "id": "website-e1560302",
+  "page": "mp",
+  "label": "FAQ: How do I volunteer?",
+  "text": "Sign up on our volunteer page and we'll reach out to get you started.",
+  "need": ""
+ },
+ {
+  "id": "website-e35980fb",
+  "page": "mp",
+  "label": "Volunteer times on the main website",
+  "text": "Live site lists volunteer times \"Wed 6–8 PM / Sat 10–12 at MAA's Place\" – confirm vs. Mon–Fri 10–2, Sat 9:30–noon",
+  "need": ""
+ },
+ {
+  "id": "website-1340d1f9",
+  "page": "bsv",
+  "label": "Page colors",
+  "text": "earthy beige & green",
+  "need": ""
+ },
+ {
+  "id": "website-35f1fc58",
+  "page": "bsv",
+  "label": "Top banner: title",
+  "text": "\"Blooming Star Village\" (eyebrow: \"Programs · MAA's Inspiration · Coming soon\")",
+  "need": ""
+ },
+ {
+  "id": "website-7982d15b",
+  "page": "bsv",
+  "label": "Top banner: welcome text",
+  "text": "A planned, welcoming recreation program where children and adults with sensory, developmental and special needs, and their families, can learn, play and belong.",
+  "need": ""
+ },
+ {
+  "id": "website-e6638455",
+  "page": "bsv",
+  "label": "Top banner: quick facts",
+  "text": "location 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · Ages served · NEEDS INFO: Hours; buttons \"Join the Interest List\" + \"Volunteer\"",
+  "need": "What ages does Blooming Star Village serve, and what are its hours?"
+ },
+ {
+  "id": "website-8f835814",
+  "page": "bsv",
+  "label": "Our mission",
+  "text": "Every person deserves a place where they are understood, included and helped to grow. A free recreation program, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.",
+  "need": ""
+ },
+ {
+  "id": "website-327b903c",
+  "page": "bsv",
+  "label": "What we value",
+  "text": "Belonging (\"differences are welcomed, not just accommodated\") · Family support (\"parents, siblings and caregivers\") · Growth (\"skills and confidence at their own pace\")",
+  "need": ""
+ },
+ {
+  "id": "website-4e9e378c",
+  "page": "bsv",
+  "label": "Who we serve",
+  "text": "planned for individuals with sensory processing differences, autism, developmental delays and other special needs, together with their families, across Dallas–Fort Worth.",
+  "need": ""
+ },
+ {
+  "id": "website-6efa8794",
+  "page": "bsv",
+  "label": "Ages served",
+  "text": "",
+  "need": "What ages does Blooming Star Village serve? Is a referral needed?"
+ },
+ {
+  "id": "website-ddb56be6",
+  "page": "bsv",
+  "label": "Activities: intro",
+  "text": "\"These are program ideas under consideration; final programs will be announced.\" – confirm which programs will be offered",
+  "need": "Which activities will Blooming Star Village actually offer?"
+ },
+ {
+  "id": "website-ebd566ec",
+  "page": "bsv",
+  "label": "Activities: Sensory Play & Regulation",
+  "text": "Calm, sensory-friendly play and games where everyone can join in comfortably.",
+  "need": ""
+ },
+ {
+  "id": "website-3af3ed65",
+  "page": "bsv",
+  "label": "Activities: Social Skills Groups",
+  "text": "Small, friendly groups for practicing communication, sharing and friendship.",
+  "need": ""
+ },
+ {
+  "id": "website-37c75d5c",
+  "page": "bsv",
+  "label": "Activities: Seasonal & Weekend Activities",
+  "text": "Routine-friendly recreation during school breaks and weekends.",
+  "need": ""
+ },
+ {
+  "id": "website-4cd501bb",
+  "page": "bsv",
+  "label": "Activities: Family & Caregiver Support",
+  "text": "Gatherings, resources and community for parents and caregivers.",
+  "need": ""
+ },
+ {
+  "id": "website-a98216c1",
+  "page": "bsv",
+  "label": "Activities: Meals & Snacks",
+  "text": "Shared meals in the MAA's Inspiration tradition, with care for dietary and sensory needs.",
+  "need": ""
+ },
+ {
+  "id": "website-0ace18f0",
+  "page": "bsv",
+  "label": "How a visit works",
+  "text": "1 Reach out (email or interest form) · 2 Tour & meet (tours once location opens) · 3 A plan that fits · 4 Join in",
+  "need": "Can families tour now, or only after it opens?"
+ },
+ {
+  "id": "website-0b8243b0",
+  "page": "bsv",
+  "label": "Schedule",
+  "text": "\"Weekly schedule – coming soon\"; Hours placeholder; Cost: Free; Transportation: not provided",
+  "need": "What days and hours will Blooming Star Village run?"
+ },
+ {
+  "id": "website-8603ab3b",
+  "page": "bsv",
+  "label": "Join the interest list",
+  "text": "Blooming Star Village is coming soon. Join our interest list and we'll contact you as programs open.",
+  "need": ""
+ },
+ {
+  "id": "website-cbd36770",
+  "page": "bsv",
+  "label": "Interest list form questions",
+  "text": "Parent/caregiver name*, Phone*, Email, Participant's age, Programs of interest, Anything you'd like us to know (needs, communication, interests); emailed to aslamhemani@gmail.com for now",
+  "need": ""
+ },
+ {
+  "id": "website-f119e053",
+  "page": "bsv",
+  "label": "Volunteer",
+  "text": "\"Patient, caring volunteers will be at the heart of Blooming Star Village. Educators, students, parents and anyone with a big heart are welcome.\" → volunteer.html",
+  "need": ""
+ },
+ {
+  "id": "website-b30ebeb6",
+  "page": "bsv",
+  "label": "Donate",
+  "text": "\"Support Blooming Star Village\" → maasinspiration.org/donate.html",
+  "need": ""
+ },
+ {
+  "id": "website-02dfa2d4",
+  "page": "bsv",
+  "label": "FAQ: When will Blooming Star Village open?",
+  "text": "",
+  "need": "When will Blooming Star Village open?"
+ },
+ {
+  "id": "website-b3f59a03",
+  "page": "bsv",
+  "label": "FAQ: Where is it located?",
+  "text": "2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 (same location as Maa's Place)",
+  "need": ""
+ },
+ {
+  "id": "website-00f838b0",
+  "page": "bsv",
+  "label": "FAQ: What ages do you serve?",
+  "text": "",
+  "need": "What ages does Blooming Star Village serve?"
+ },
+ {
+  "id": "website-aab4f820",
+  "page": "bsv",
+  "label": "FAQ: Is there a cost?",
+  "text": "No. Blooming Star Village is free.",
+  "need": ""
+ },
+ {
+  "id": "website-be4541a2",
+  "page": "bsv",
+  "label": "FAQ: Is this therapy?",
+  "text": "No. Blooming Star Village is a recreation program: fun, inclusive activities and community. It does not provide therapy or medical services.",
+  "need": ""
+ },
+ {
+  "id": "website-d9998c2d",
+  "page": "bsv",
+  "label": "FAQ: Do you provide transportation?",
+  "text": "No, families arrange their own transportation.",
+  "need": ""
+ },
+ {
+  "id": "website-04c1fd33",
+  "page": "bsv",
+  "label": "FAQ: How can I help now?",
+  "text": "Volunteer, donate, or share this page with families who may benefit.",
+  "need": ""
+ },
+ {
+  "id": "website-fa141791",
+  "page": "bsv",
+  "label": "Photo gallery",
+  "text": "none yet on this page – add photos when available?",
+  "need": ""
+ }
+]
