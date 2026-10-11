@@ -263,3 +263,18 @@ main=d2.replace("<title>Design 2 Magazine – Maa's Place Senior Center","<title
 main=main.replace('<p class="tagline">Place where everybody knows your name</p>','<p class="tagline">Place where everybody knows your name</p>\n'+TILES,1)
 main=_r.sub(r'<a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost"[^>]*>Volunteer</a>','',main,1)
 open('maas-place.html','w').write(main)
+
+# --- Proposed new front page (home.html) ---
+def _pcard(title,img,desc,facts,href,key,badge=''):
+    return f'''<div class="pcard">{'<span class="ribbon">'+badge+'</span>' if badge else ''}
+<a class="pmain" href="{href}"><img src="gallery/{img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
+<div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
+home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","2,200 fresh meals every Saturday","https://maasinspiration.org/schedule.html","meals")+_pcard("Maa's Place","2026-10-10-service-02.jpg","A free senior center for activities, snacks, chai and friendship.","Mon–Thu · 10 AM–2 PM · Ages 55+","maas-place.html","maas-place")+_pcard("Blooming Star Village","2026-10-10-service-05.jpg","A free recreation program for children and adults with special needs and their families.","Opening soon · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
+<section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="https://maasinspiration.org/donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
+'''+foot
+open('home.html','w').write(home)
+sp=home
+for a,b in [('href="site-chrome.css"','href="../site-chrome.css"'),('href="section.css"','href="../section.css"'),('src="img/','src="../img/'),('src="gallery/','src="../gallery/'),('href="maas-place.html"','href="../maas-place.html"'),('href="blooming-star-village.html"','href="../blooming-star-village.html"'),('href="get-involved.html','href="../get-involved.html'),('src="section.js"','src="../section.js"'),('href="programs.html"','href="../programs.html"')]: sp=sp.replace(a,b)
+sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home').replace('href="https://maasinspiration.org/about.html"','href="about.html"').replace('href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>','href="volunteer.html">Volunteer</a></li>')
+import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-new.html','w').write(sp)

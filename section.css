@@ -178,3 +178,16 @@ footer{background:#2E2438!important}
 .mi.purple .card.purple-card{border-top-color:#5B2A86!important}
 .mi.purple.bsvp .eyebrow:after{content:" 🌱"}.mi.purple.bsvp .tag{background:#E6F2E8;color:#1f6b35}
 .mi.purple section{padding-top:56px;padding-bottom:56px}
+/* Front page */
+.mi.home .home-hero{text-align:center;padding:56px 6% 30px}.mi.home .home-hero h1{font-size:clamp(1.9rem,5vw,3rem)}.mi.home .home-hero p{margin:10px auto 0;max-width:640px;font-size:1.1rem}
+.mi.home .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mi.home .pcard{position:relative;background:#fff;border-radius:18px;overflow:hidden;border-top:6px solid #5B2A86;box-shadow:0 2px 12px #0000000f;display:flex;flex-direction:column}
+.mi.home .pmain{display:block;text-decoration:none;color:#2E2438;flex:1}.mi.home .pmain img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.mi.home .pbody{padding:18px 20px}.mi.home .pbody h2{margin:0 0 6px;font-size:1.5rem}.mi.home .pbody p{margin:0 0 8px}.mi.home .pfacts{font-weight:700;color:#5B2A86}
+.mi.home .pbody .btn{margin-top:6px}
+.mi.home .pmain:hover .btn{background:#3D1A6E}
+.mi.home .pquick{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #EFE6D6}
+.mi.home .pquick a{text-align:center;padding:14px 6px;font-weight:700;text-decoration:none}
+.mi.home .q-donate{background:#E0A526;color:#2E2438!important}.mi.home .q-vol{background:#2e9d4f;color:#fff!important}
+.mi.home .ribbon{position:absolute;top:16px;right:-36px;transform:rotate(35deg);background:#E0A526;color:#2E2438;font-weight:800;padding:6px 44px;z-index:2;font-size:.9rem;letter-spacing:.5px;box-shadow:0 2px 6px #0003}
+@media(max-width:900px){.mi.home .pgrid{grid-template-columns:1fr;max-width:520px;margin:auto}}
