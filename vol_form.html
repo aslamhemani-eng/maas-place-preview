@@ -1,21 +1,32 @@
-<form class="vf" id="vf" method="post" action="enroll.php">
-<input type="hidden" name="form" value="Volunteer sign-up"><input type="hidden" name="reminder_preference" value="Text">
-<div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<div class="fs"><h3 class="lg">1. Which program?</h3>
-<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Meals" data-p="meals"><span><b>🍲 Maa's Meals</b><small>Saturdays, 10 AM – noon</small></span></label>
-<label class="pk"><input type="checkbox" name="programs[]" value="Maa's Place" data-p="mp"><span><b>🏡 Maa's Place</b><small>Mon – Thu, 10 AM – 2 PM · <em class="sb">Opening soon</em></small></span></label>
-<label class="pk"><input type="checkbox" name="programs[]" value="Blooming Star Village (interest list)" data-p="bsv"><span><b>🌟 Blooming Star Village</b><small><em class="sb">Coming soon</em> · interest list</small></span></label>
-</div>
-<div class="fs" id="vfDays" hidden><h3 class="lg">2. Which days at Maa's Place?</h3><div class="chips">
-<label><input type="checkbox" name="maas_place_days[]" value="Monday">Mon</label><label><input type="checkbox" name="maas_place_days[]" value="Tuesday">Tue</label><label><input type="checkbox" name="maas_place_days[]" value="Wednesday">Wed</label><label><input type="checkbox" name="maas_place_days[]" value="Thursday">Thu</label></div></div>
-<div class="fs" id="vfHelp" hidden><h3 class="lg"><span class="n"></span>What would you like to help with? <small>(optional)</small></h3><div class="chips" id="vfRoles"></div></div>
-<div class="fs"><h3 class="lg"><span class="n"></span>Your details</h3><div class="vg">
-<label>Full name *<input name="full_name" required autocomplete="name"></label>
-<label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
-<label class="full">Email *<input name="email" type="email" required autocomplete="email"></label></div>
-<label class="ck"><input type="checkbox" name="agree_policy" value="Yes" required><span>I'm 18+ and agree to the <a href="volunteer-policy.html" target="_blank">volunteer policy</a>. *</span></label>
-<label class="ck"><input type="checkbox" name="photo_consent" value="Yes"><span>OK to appear in photos (optional)</span></label>
-</div>
-<p id="vfErr" class="vfe" hidden>Please pick at least one program.</p>
-<button class="vfb" type="submit">Sign Me Up 🙌</button>
+<div class="lvf-wrap">
+<form class="lvf" id="volunteerForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Volunteer Registration — MAA's Inspiration">
+<input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="lvf-sec"><div class="lvf-title">Which program? <span class="req">*</span> <small>(choose one or more)</small></div>
+<div class="prog-grid">
+<label class="prog"><input type="checkbox" name="Program" value="Maa's Meals" data-p="meals"><span class="pc"><b>🍲 Maa's Meals</b><small>Saturdays, 10 AM – noon</small></span></label>
+<label class="prog"><input type="checkbox" name="Program" value="Maa's Place" data-p="mp"><span class="pc"><b>🏡 Maa's Place</b><small>Mon – Thu, 10 AM – 2 PM</small><em>Opening soon</em></span></label>
+<label class="prog"><input type="checkbox" name="Program" value="Blooming Star Village (interest list)" data-p="bsv"><span class="pc"><b>🌟 Blooming Star Village</b><small>Interest list</small><em>Coming soon</em></span></label>
+</div></div>
+<div class="form-row"><div class="form-group"><label>First Name <span class="req">*</span></label><input type="text" name="First Name" placeholder="Enter first name" required autocomplete="given-name"></div>
+<div class="form-group"><label>Last Name <span class="req">*</span></label><input type="text" name="Last Name" placeholder="Enter last name" required autocomplete="family-name"></div></div>
+<div class="form-row"><div class="form-group full"><label>Street Address <span class="req">*</span></label><input type="text" name="Address" placeholder="123 Main Street" required autocomplete="street-address"></div></div>
+<div class="form-row"><div class="form-group"><label>City <span class="req">*</span></label><input type="text" name="City" placeholder="City" required autocomplete="address-level2"></div>
+<div class="form-group"><label>ZIP Code <span class="req">*</span></label><input type="text" name="ZIP" placeholder="75007" required inputmode="numeric" autocomplete="postal-code"></div></div>
+<div class="form-row"><div class="form-group"><label>Phone Number <span class="req">*</span></label><input type="tel" name="Phone" placeholder="(214) 555-0123" required autocomplete="tel"></div>
+<div class="form-group"><label>Email Address <span class="req">*</span></label><input type="email" name="Email" placeholder="you@email.com" required autocomplete="email"></div></div>
+<div class="lvf-sec" id="daysSec" hidden><div class="lvf-title">Available Days <span class="req">*</span></div><div class="availability-grid" id="daysGrid"></div><p class="hint" id="daysHint"></p></div>
+<div class="lvf-sec" id="timeSec" hidden><div class="lvf-title">Preferred Time at Maa's Place <span class="req">*</span></div><div class="time-slots">
+<label class="opt"><input type="radio" name="Preferred Time" value="Morning (10 AM – 12 PM)">☀️ Morning (10–12)</label>
+<label class="opt"><input type="radio" name="Preferred Time" value="Afternoon (12 – 2 PM)">🌤️ Afternoon (12–2)</label>
+<label class="opt"><input type="radio" name="Preferred Time" value="Flexible">✅ Flexible</label></div></div>
+<p class="hint" id="bsvHint" hidden>🌟 Blooming Star Village isn't open yet – we'll contact you when it opens.</p>
+<div class="form-row"><div class="form-group full"><label>How would you like to help?</label><select name="How to Help" id="helpType"></select></div></div>
+<div class="form-row"><div class="form-group full"><label>Anything else you'd like us to know?</label><textarea name="Notes" placeholder="Special skills, dietary restrictions, or any other notes..."></textarea></div></div>
+<label class="agree"><input type="checkbox" name="Photo Consent" value="Yes"> <span>OK to appear in photos (<a href="volunteer-policy.html" target="_blank">volunteer policy</a>)</span></label>
+<p class="err" id="lvfErr" hidden></p>
+<button type="submit" class="submit-btn">📨 Submit Registration</button>
 </form>
+<div class="lvf-done" id="lvfDone" hidden><div class="big">💜</div><h3>Thank you for signing up!</h3><p>We received your registration and will reach out soon to get you started.</p><button type="button" class="submit-btn" id="lvfAgain">Register another person</button></div>
+</div>
