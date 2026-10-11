@@ -1,6 +1,6 @@
 const P={
  meals:{name:"Maa's Meals",desc:"Every Saturday our volunteers cook, pack and deliver 2,200 fresh meals to seniors, the homeless and shelter homes across DFW.",cls:"p-meals",
-  sched:[["Saturday","10am–noon","Meal packing & delivery"]],more:'Full schedule: <a href="https://maasinspiration.org/schedule.html">maasinspiration.org/schedule.html</a>'},
+  sched:[["Saturday","10am–noon","Meal packing & delivery"]],more:'Full schedule: <a href="schedule.html">maasinspiration.org/schedule.html</a>'},
  "maas-place":{name:"Maa's Place Senior Center",desc:"Opening soon! Free activities, snacks, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Maa\'s Place page</a>'},
  bsv:{name:"Blooming Star Village",desc:"A free day program for recreation and care for children with special needs. Coming soon.",cls:"p-bsv",sched:[["Mon–Thu","9 AM–2 PM","Coming soon"]],more:'<a href="blooming-star-village.html">Visit the Blooming Star Village page</a>'}
 };
@@ -11,7 +11,7 @@ function show(p){if(!P[p])p='meals';cur=p;const c=P[p];
  document.querySelectorAll('.psel button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
  document.getElementById('panel').dataset.p=p;
  pname.textContent=c.name;pdesc.textContent=c.desc;pmore.innerHTML=c.more;
- actDonate.href='https://maasinspiration.org/donate.html?program='+p;
+ actDonate.href='donate.html?program='+p;
  const rows=p==='maas-place'?(MPS||[["Loading…","",""]]):c.sched;
  hsched.innerHTML=rows.map(r=>'<tr>'+r.map(x=>'<td>'+(/PLACEHOLDER/.test(x)?'<span class="ph">To be scheduled</span>':x)+'</td>').join('')+'</tr>').join('');
  if(window.VF)VF.select(p);

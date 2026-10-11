@@ -1,7 +1,7 @@
 # Regenerates the 3 pages. Run: python3 build.py   (PREVIEW=0 python3 build.py for live build without banner/noindex)
 import os,re
 P=os.environ.get('PREVIEW','1')=='1'
-B='https://maasinspiration.org/'
+B=''
 head=lambda t:f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +17,12 @@ head=lambda t:f'''<!DOCTYPE html>
 <body>
 '''+('<div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>\n' if P else '')+f'''    <nav>
         <div class="navbar-container">
-            <a href="{B}" class="logo-section">
+            <a href="index.html" class="logo-section">
                 <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
                 <span class="logo-text">MAA's Inspiration</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="{B}">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="{B}about.html">About</a></li>
                 <li><a href="{B}volunteer.html">Volunteer</a></li>
                 <li><a href="{B}schedule.html">Schedule</a></li>
@@ -54,7 +54,7 @@ foot=f'''</main>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="{B}">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="{B}about.html">About</a></li>
                     <li><a href="{B}volunteer.html">Volunteer</a></li>
                     <li><a href="{B}schedule.html">Schedule</a></li>
@@ -275,18 +275,18 @@ import re as _r
 for sid in ['what','visit','volunteer']:
     i=d2.find(f'<section id="{sid}" class="row">'); j=d2.find('</div></section>',i)
     d2=d2[:j]+'</div>'+d2[j:]
-d2=d2.replace('</main>','<aside class="side-cta"><a class="btn alt" href="https://maasinspiration.org/donate.html?program=maas-place">💜 Donate</a><a class="btn green" href="https://maasinspiration.org/volunteer.html">🙌 Volunteer</a><a class="btn" href="tel:+12145171938">📞 Call</a></aside></main>',1)
+d2=d2.replace('</main>','<aside class="side-cta"><a class="btn alt" href="donate.html?program=maas-place">💜 Donate</a><a class="btn green" href="volunteer.html">🙌 Volunteer</a><a class="btn" href="tel:+12145171938">📞 Call</a></aside></main>',1)
 d3=mp.replace('<main class="mi purple">','<main class="mi purple d3">').replace("<title>Maa's Place Senior Center","<title>Design 3 App – Maa's Place Senior Center")
 i=d3.find('<header class="hero"'); j=d3.find('</header>',i)+9
 d3=d3[:i]+'''<header class="appbar"><div><h1>Maa's Place</h1><p class="tagline">Place where everybody knows your name</p><p class="meta">Mon–Thu · 10 AM–2 PM · Ages 55+ · Free</p></div></header>
-<nav class="tiles"><a href="#visit" data-tab="visit">📍<b>Visit</b></a><a href="#schedule" data-tab="schedule">🗓️<b>Schedule</b></a><a href="#volunteer" data-tab="volunteer">🙌<b>Volunteer</b></a><a href="https://maasinspiration.org/donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>
+<nav class="tiles"><a href="#visit" data-tab="visit">📍<b>Visit</b></a><a href="#schedule" data-tab="schedule">🗓️<b>Schedule</b></a><a href="#volunteer" data-tab="volunteer">🙌<b>Volunteer</b></a><a href="donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>
 <div class="apptabs" role="tablist"><button data-tab="what">What we do</button><button data-tab="schedule">Schedule</button><button data-tab="gallery">Gallery</button><button data-tab="visit">Visit / Enroll</button><button data-tab="volunteer">Volunteer</button><button data-tab="contact">FAQ</button></div>'''+d3[j:]
 _s=d3.find('<div class="sub">'); _e=d3.find('</div>',_s)+6; d3=d3[:_s]+d3[_e:]
 d3=d3.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="design3.js"></script>')
 for n,h in [('maas-place-design-1.html',d1),('maas-place-design-2.html',d2),('maas-place-design-3.html',d3)]:open(n,'w').write(h)
 
 # --- Final main page: Design 2 + app tiles in hero ---
-TILES='''<nav class="tiles hero-tiles"><a href="#visit">📍<b>Visit</b></a><a href="#schedule">🗓️<b>Schedule</b></a><a href="#volunteer">🙌<b>Volunteer</b></a><a href="https://maasinspiration.org/donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>'''
+TILES='''<nav class="tiles hero-tiles"><a href="#visit">📍<b>Visit</b></a><a href="#schedule">🗓️<b>Schedule</b></a><a href="#volunteer">🙌<b>Volunteer</b></a><a href="donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+12145171938" class="green">📞<b>Call</b></a></nav>'''
 main=d2.replace("<title>Design 2 Magazine – Maa's Place Senior Center","<title>Maa's Place Senior Center")
 main=main.replace('<p class="tagline">Place where everybody knows your name</p>','<p class="tagline">Place where everybody knows your name</p>\n'+TILES,1)
 main=_r.sub(r'<a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost"[^>]*>Volunteer</a>','',main,1)
@@ -299,12 +299,12 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
 <section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","bsv-girl-at-desk.jpg","A free day program for recreation and care for children with special needs.","Coming soon · Mon–Thu · 9 AM–2 PM · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
-<section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="https://maasinspiration.org/donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
+<section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)
 sp=home
 for a,b in [('href="site-chrome.css"','href="../site-chrome.css"'),('href="section.css"','href="../section.css"'),('src="img/','src="../img/'),('src="gallery/','src="../gallery/'),('href="maas-place.html"','href="../maas-place.html"'),('href="blooming-star-village.html"','href="../blooming-star-village.html"'),('href="get-involved.html','href="../get-involved.html'),('src="section.js"','src="../section.js"'),('href="programs.html"','href="../programs.html"')]: sp=sp.replace(a,b)
-sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home').replace('href="https://maasinspiration.org/about.html"','href="about.html"').replace('href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>','href="volunteer.html">Volunteer</a></li>')
+sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home').replace('href="about.html"','href="about.html"').replace('href="volunteer.html">Volunteer</a></li>','href="volunteer.html">Volunteer</a></li>')
 import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-new.html','w').write(sp)
 
 _wire('maas-place.html',"Maa's Place enrollment")
