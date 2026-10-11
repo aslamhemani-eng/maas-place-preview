@@ -88,7 +88,7 @@ mp=head("Maa's Place Senior Center")+f'''<div class="sub"><a href="#what">What W
 <header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
 <h1>Maa's Place Senior Center</h1>
 <p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
-<div class="facts"><div>🕙 Mon–Fri 10am–2pm</div><div>🕤 Sat 9:30am–noon</div><div>👵 Ages 55+</div><div>📞 <a href="tel:+12145171938" style="color:#fff">214-517-1938</a></div><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Dr+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Dr, Suite 102, Carrollton, TX 75006</a></div></div>
+<div class="facts"><div>🕙 Mon–Fri 10am–2pm</div><div>🕤 Sat 9:30am–noon</div><div>👵 Ages 55+</div><div>📞 <a href="tel:+12145171938" style="color:#fff">214-517-1938</a></div><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div></div>
 <a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
 <section id="what"><div class="wrap"><h2>What We Do</h2><p>Every activity is chosen to keep seniors active in body and mind, learning something new, and enjoying time together.</p>
 <div class="grid">
@@ -128,21 +128,21 @@ mp=head("Maa's Place Senior Center")+f'''<div class="sub"><a href="#what">What W
 <p style="margin-top:24px"><a class="btn" href="{VOL}">Sign Up to Volunteer</a></p></div></section>
 {donate("Maa's Place")}
 <section id="contact"><div class="wrap"><h2>Contact &amp; FAQ</h2>
-<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Dr+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Dr, Suite 102, Carrollton, TX 75006</a> · 📞 <a href="tel:+12145171938">214-517-1938</a></p>
+<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> · 📞 <a href="tel:+12145171938">214-517-1938</a></p>
 <details><summary>Who can attend Maa's Place?</summary><p>Adults 55 and up</p></details>
-<details><summary>Where is Maa's Place?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Dr+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Dr, Suite 102, Carrollton, TX 75006</a></p></details>
+<details><summary>Where is Maa's Place?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></p></details>
 <details><summary>What are your hours?</summary><p>Monday–Friday 10am–2pm and Saturday 9:30am–noon.</p></details>
 <details><summary>Is there a cost?</summary><p>No. Maa's Place is free.</p></details>
 <details><summary>Do you provide transportation?</summary><p>No, transportation is not provided.</p></details>
 <details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.</p></details>
 <details><summary>How do I volunteer?</summary><p>Sign up on our <a href="{VOL}">volunteer page</a> and we'll reach out to get you started.</p></details>
-<div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to Maa's Place" src="https://www.google.com/maps?q=2700+Old+Denton+Dr+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
+<div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to Maa's Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
-'''+foot.replace('<h4>Follow Us</h4>','<h4>Maa\'s Place</h4><p class="footer-description">2700 Old Denton Dr, Suite 102, Carrollton, TX 75006<br><a href="tel:+12145171938" style="color:inherit">214-517-1938</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
+'''+foot.replace('<h4>Follow Us</h4>','<h4>Maa\'s Place</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006<br><a href="tel:+12145171938" style="color:inherit">214-517-1938</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
 bsv=head("Blooming Star Village")+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Programs</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a></div>
 <header class="hero" style="--img:url(gallery/2026-10-10-service-05.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
 <h1>Blooming Star Village</h1><p>A planned, welcoming recreation program where children and adults with sensory, developmental and special needs, and their families, can learn, play and belong.</p>
-<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=1445+MacArthur+Drive+Suite+104+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">1445 MacArthur Drive, Suite 104, Carrollton, TX 75007</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 {ph("Hours")}</div></div>
+<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 {ph("Hours")}</div></div>
 <a class="btn alt" href="#enroll">Join the Interest List</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
 <section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free recreation program, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
 <div class="grid"><div class="card"><h3>🌱 Belonging</h3><p>A place where differences are welcomed, not just accommodated.</p></div><div class="card"><h3>🤝 Family support</h3><p>Caring for the whole family, including parents, siblings and caregivers.</p></div><div class="card"><h3>⭐ Growth</h3><p>Helping each person build skills and confidence at their own pace.</p></div></div></div></section>
@@ -172,7 +172,7 @@ bsv=head("Blooming Star Village")+f'''<div class="sub"><a href="#mission">Missio
 {donate("Blooming Star Village")}
 <section id="faq"><div class="wrap"><h2>FAQ</h2>
 <details><summary>When will Blooming Star Village open?</summary><p>{ph("Opening date")}</p></details>
-<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=1445+MacArthur+Drive+Suite+104+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">1445 MacArthur Drive, Suite 104, Carrollton, TX 75007</a> (same location as MAA's Inspiration)</p></details>
+<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (same location as MAA's Inspiration)</p></details>
 <details><summary>What ages do you serve?</summary><p>{ph("Ages served")}</p></details>
 <details><summary>Is there a cost?</summary><p>No. Blooming Star Village is free.</p></details>
 <details><summary>Is this therapy?</summary><p>No. Blooming Star Village is a recreation program: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
