@@ -156,3 +156,19 @@
 .mi.d2 .hero h1{font-size:1.9rem}}
 @media(max-width:768px){.nav-links:not(.active){padding-top:0!important;padding-bottom:0!important;box-shadow:none!important}}
 @media(max-width:768px){.nav-links:not(.active){transition:none!important}}
+/* === Beige backgrounds (Oct 11): purple only for text, thin accents, buttons/tiles === */
+.mi.purple{--BG:#F3EBDD;background:#F3EBDD}
+.mi.purple .hero,.mi.d2 .hero.split{background:#F3EBDD!important;color:#3D1A6E}
+.mi.purple .hero h1,.mi.purple .hero p,.mi.purple .hero .eyebrow{color:#3D1A6E}
+.mi.purple .hero .tagline{color:#8a5a00}
+.mi.purple .hero a{color:#3D1A6E}
+.mi.purple .facts div{background:#fff;color:#3D1A6E}
+.mi.purple .facts a{color:#3D1A6E!important}
+.mi .hero-tiles a{border-color:transparent}
+.mi.purple .sub{background:#fff;border-bottom:1px solid #E3D6C0}.mi.purple .sub a{color:#3D1A6E;font-weight:600}.mi.purple .sub a:hover{background:#F3EBDD}
+.mi.purple section,.mi.purple section:nth-of-type(n),.mi.hub.purple section,.mi.hub.purple section:nth-of-type(n){background:#F3EBDD!important}
+.mi.d2 section:nth-of-type(odd){background:#fff!important}
+.mi.purple .donate,.mi.purple section.donate{background:#F3EBDD!important;color:#3D1A6E}.mi.purple .donate h2,.mi.purple .donate p{color:#3D1A6E}
+.mi.purple .tag{background:#F3EBDD}
+.mi.purple form input,.mi.purple form select,.mi.purple form textarea{background:#FBF7F0;border:1px solid #E3D6C0}
+.mi.d2 section:nth-of-type(odd) .card{background:#FBF7F0!important}
