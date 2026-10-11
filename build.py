@@ -231,6 +231,17 @@ pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purp
 '''+foot
 open('volunteer-policy.html','w').write(pol)
 hub=hub.replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)
+
+VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp">').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)+'''<header class="hero vhero"><h1>Volunteer with us</h1><p>Give a few hours, share a smile, and help feed and care for our neighbors in Dallas–Fort Worth. No experience needed.</p><a class="btn alt" href="#signup">Sign up</a></header>
+<section><div class="wrap"><h2>Where you can help</h2><div class="vcards">
+<div class="vcard"><span class="vt open">✅ Open now</span><h3>🍲 Maa's Meals</h3><p><b>Saturdays</b> 9:30 AM – noon<br>Packing &amp; delivery</p><p><b>Mon – Fri</b> 10 AM – 2 PM<br>Kitchen prep</p><small>📍 1445 MacArthur Dr, Suite 104, Carrollton</small></div>
+<div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa's Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
+<div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Blooming Star Village</h3><p>Recreation for children and adults with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
+</div></div></section>
+<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about 2 minutes. We'll show only the days and times each program runs.</p>
+'''+open('vol_form.html').read()+'''</div></section>
+'''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
+open('volunteer-page.html','w').write(VOLP)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
 

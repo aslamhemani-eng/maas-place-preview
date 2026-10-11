@@ -1,7 +1,7 @@
 main .vf{max-width:760px;margin:0 auto;text-align:left;color:#2E2438;font-family:'DM Sans',sans-serif}
-main .vf fieldset{background:#fff;border:0;border-top:5px solid #5B2A86;border-radius:14px;padding:18px 20px;margin:0 0 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-main .vf legend{font-family:Sora,sans-serif;font-weight:700;color:#3D1A6E;font-size:1.1rem;padding:0;float:left;width:100%;margin-bottom:10px}
-main .vf legend small{font-weight:400;color:#6b5f7a}
+main .vf .fs{background:#fff;border:0;border-top:5px solid #5B2A86;border-radius:14px;padding:18px 20px;margin:0 0 16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+main .vf .lg{font-family:Sora,sans-serif;font-weight:700;color:#3D1A6E;font-size:1.1rem;padding:0;float:left;width:100%;margin-bottom:10px}
+main .vf .lg small{font-weight:400;color:#6b5f7a}
 main .vf .pk{display:flex;gap:12px;align-items:flex-start;border:2px solid #e5dccd;border-radius:12px;padding:12px;margin:8px 0;cursor:pointer;background:#F9F5EE}
 main .vf .pk:has(input:checked){border-color:#5B2A86;background:#F6F1FB}
 main .vf .pk input,main .vf .ck input,main .vf .chips input{width:20px;height:20px;accent-color:#5B2A86;flex:none;margin-top:2px}
@@ -26,5 +26,11 @@ main .vf .vfb{display:block;width:100%;background:#2e9d4f;color:#fff;border:0;bo
 main form.vf{display:block;padding:0;background:none;grid-template-columns:none}
 main .vf .pk,main .vf .ck,main .vf .chips label,main .vf .rl label{flex-direction:row;font-weight:400}
 main .vf .chips label input,main .vf .pk input,main .vf .ck input{padding:0;width:20px}
-main .vf fieldset{padding:14px}
+main .vf .fs{padding:14px}
 @media(max-width:900px){main .vf .vg{grid-template-columns:1fr}}
+main .vf .chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+main .vf .chips label{margin:0;line-height:1.25}
+main .vf .lg{float:none;display:block}
+main .vf .lg{float:none;margin:0 0 12px;font-size:1.15rem}
+main .vf .rl label{display:inline-flex;align-items:center;gap:6px;margin-left:12px}
+main .vf .rl label input{width:18px;height:18px;padding:0}

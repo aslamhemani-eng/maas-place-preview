@@ -195,3 +195,13 @@ footer{background:#2E2438!important}
 .mi .soon-badge{display:inline-block;background:#E0A526;color:#2E2438;font-weight:800;border-radius:20px;padding:6px 16px;margin:4px 0 10px;font-size:1rem}
 .mi .soon-badge.sm{font-size:.8rem;padding:3px 10px;margin:0 6px 0 0;vertical-align:middle}
 .mi .soon-line{font-weight:700;color:#3D1A6E;background:#fff;border-left:5px solid #E0A526;padding:8px 12px;border-radius:8px;max-width:640px}
+.mi.volp{background:#F3EBDD}
+.mi.volp .vhero{background:#F3EBDD!important;color:#3D1A6E;text-align:center;padding:56px 20px 36px}
+.mi.volp .vhero h1{color:#3D1A6E}.mi.volp .vhero p{max-width:620px;margin:8px auto 18px;color:#2E2438}
+.mi.volp section{padding:36px 0}.mi.volp h2{text-align:center;color:#3D1A6E}
+.mi.volp .vcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.mi.volp .vcard{background:#fff;border-radius:14px;border-top:5px solid #5B2A86;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.mi.volp .vcard h3{color:#3D1A6E;margin:8px 0}.mi.volp .vcard small{color:#6b5f7a}
+.mi.volp .vt{display:inline-block;font-weight:800;font-size:.78rem;border-radius:20px;padding:3px 12px}.mi.volp .vt.open{background:#2e9d4f;color:#fff}.mi.volp .vt.soon{background:#E0A526;color:#2E2438}
+.mi.volp .vsign .vsub{text-align:center;margin:-4px auto 18px}
+.mi.volp .vf{max-width:720px}

@@ -1,25 +1,26 @@
 <form class="vf" id="vf" method="post" action="enroll.php">
 <input type="hidden" name="form" value="Volunteer sign-up">
 <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-<fieldset><legend>1. Which program? <small>(pick one or more)</small></legend>
+<div class="fs"><h3 class="lg">1. Choose program(s) <small>(pick one or more)</small></h3>
 <label class="pk"><input type="checkbox" name="programs[]" value="Maa's Meals" data-p="meals"><span><b>🍲 Maa's Meals</b><small>Saturdays 9:30 AM–noon packing &amp; delivery · Weekdays Mon–Fri 10 AM–2 PM prep</small></span></label>
 <label class="pk"><input type="checkbox" name="programs[]" value="Maa's Place senior center" data-p="mp"><span><b>🏡 Maa's Place senior center</b> <em class="sb">Opening soon</em><small>Mon–Thu 10 AM–2 PM</small></span></label>
 <label class="pk"><input type="checkbox" name="programs[]" value="Blooming Star Village (interest list)" data-p="bsv"><span><b>🌟 Blooming Star Village</b> <em class="sb">Coming soon</em><small>Join the interest list – we'll contact you when it opens</small></span></label>
-</fieldset>
-<fieldset id="vfDyn" hidden><legend>2. When and how can you help?</legend><div id="vfBlocks"></div></fieldset>
-<fieldset><legend>3. About you</legend><div class="vg">
+</div>
+<div class="fs" id="vfDyn" hidden><h3 class="lg">2. Pick days &amp; times</h3><div id="vfBlocks"></div></div>
+<div class="fs" id="vfDyn2" hidden><h3 class="lg">3. Choose roles</h3><div id="vfRoles"></div></div>
+<div class="fs"><h3 class="lg">4. Your info</h3><div class="vg">
 <label>Full name *<input name="full_name" required autocomplete="name"></label>
 <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
 <label>Email *<input name="email" type="email" required autocomplete="email"></label>
 <label>How did you hear about us?<select name="heard_about_us"><option value="">Choose…</option><option>Friend or family</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>Mosque / temple / church / community center</option><option>School or employer</option><option>Website / Google</option><option>Other</option></select></label>
 <label class="full">Skills or experience <small>(optional)</small><textarea name="skills" rows="2" placeholder="e.g. cooking, driving, yoga, crafts, tech help, languages spoken"></textarea></label>
-</div></fieldset>
-<fieldset><legend>4. Reminders &amp; agreements</legend>
+</div></div>
+<div class="fs"><h3 class="lg">5. Agreements &amp; reminders</h3>
 <p class="rl">Send me shift reminders by: <label><input type="radio" name="reminder_preference" value="Text" checked> Text</label> <label><input type="radio" name="reminder_preference" value="Email"> Email</label></p>
 <label class="ck"><input type="checkbox" name="age_18_or_guardian" value="Yes" required><span>I am 18 or older, or my parent/guardian has approved this sign-up. *</span></label>
 <label class="ck"><input type="checkbox" name="photo_consent" value="Yes"><span>I agree that photos/videos of me may be used by MAA's Inspiration (<a href="volunteer-policy.html#consent" target="_blank">photo consent policy</a>). <small>(optional)</small></span></label>
 <label class="ck"><input type="checkbox" name="agree_code_of_conduct" value="Yes" required><span>I agree to the <a href="volunteer-policy.html#conduct" target="_blank">volunteer code of conduct</a>. *</span></label>
-</fieldset>
+</div>
 <p id="vfErr" class="vfe" hidden>Please pick at least one program.</p>
 <button class="vfb" type="submit">Sign Me Up 🙌</button>
 </form>
