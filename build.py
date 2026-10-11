@@ -183,19 +183,19 @@ bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi p
 '''+foot
 pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through Maa's Place and Blooming Star Village.</p></header>
 <section><div class="wrap"><div class="grid">
-<div class="card"><h3>🍽️ Weekly Meal Service</h3><p>2,200+ hot meals every week for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="{B}schedule.html">See Schedule</a></div>
+<div class="card"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
 <div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
 <div class="card"><h3>🌟 Blooming Star Village</h3><p>A free, planned recreation program for children and adults with special needs and their families. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
 '''+foot
-ty=head('Thank You').replace('<main class="mi">','<main class="mi purple">')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="programs.html">Back to Programs</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:hello@maasinspiration.org>hello@maasinspiration.org</a>."</script>'''+foot
+ty=head('Thank You').replace('<main class="mi">','<main class="mi purple">')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="https://maasinspiration.org/">Back to Home</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:aslam@maasinspiration.org>aslam@maasinspiration.org</a>."</script>'''+foot
 
 hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
 <section><div class="wrap">
 <div class="psel" role="tablist">
-<button role="tab" data-p="meals" class="p-meals">🍽️<b>Weekly Meal Service</b></button>
+<button role="tab" data-p="meals" class="p-meals">🍲<b>Maa's Meals</b></button>
 <button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Opening soon · 55+</small></button>
 <button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
 </div>
@@ -303,3 +303,5 @@ sp=home
 for a,b in [('href="site-chrome.css"','href="../site-chrome.css"'),('href="section.css"','href="../section.css"'),('src="img/','src="../img/'),('src="gallery/','src="../gallery/'),('href="maas-place.html"','href="../maas-place.html"'),('href="blooming-star-village.html"','href="../blooming-star-village.html"'),('href="get-involved.html','href="../get-involved.html'),('src="section.js"','src="../section.js"'),('href="programs.html"','href="../programs.html"')]: sp=sp.replace(a,b)
 sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home').replace('href="https://maasinspiration.org/about.html"','href="about.html"').replace('href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>','href="volunteer.html">Volunteer</a></li>')
 import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-new.html','w').write(sp)
+
+_wire('maas-place.html',"Maa's Place enrollment")

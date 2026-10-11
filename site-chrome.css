@@ -71,8 +71,8 @@ nav{
             color: var(--medium-purple);
         }
 .donate-btn{
-            background-color: var(--medium-purple);
-            color: var(--white);
+            background-color: #E0A526;
+            color: #2E2438;
             padding: 0.6rem 1.8rem;
             border-radius: 50px;
             border: none;
@@ -83,7 +83,7 @@ nav{
             font-size: 0.95rem;
         }
 .donate-btn:hover{
-            background-color: var(--dark-purple);
+            background-color: #c99015;
             transform: translateY(-2px);
         }
 .hamburger{
