@@ -7,7 +7,7 @@ const mark=s=>/PLACEHOLDER/.test(s)?'<span class="ph">'+esc(s)+'</span>':esc(s);
 const sc=document.getElementById('sched');
 if(sc)fetch('schedule.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  document.getElementById('weekOf').innerHTML=mark(d.week_of);
- const n=document.getElementById('schedNote'); if(d.note)n.textContent=d.note; else n.remove();
+ const n=document.getElementById('schedNote'); if(n){if(d.note)n.textContent=d.note; else n.remove();}
  const S=d.slots||[];document.getElementById('schedHead').innerHTML='<tr><th>Day</th>'+S.map(x=>'<th>'+esc(x)+'</th>').join('')+'</tr>';
  sc.innerHTML=d.days.filter(x=>!x.hidden).map(x=>'<tr><td><b>'+esc(x.day)+'</b></td>'+(x.slots?x.slots.map(c=>'<td>'+(c==='TBD'?'<span class="ph">TBD</span>':esc(c))+'</td>').join(''):'<td colspan="'+S.length+'">'+esc(x.all_day)+(x.led_by?' <small>– led by '+esc(x.led_by)+'</small>':'')+'</td>')+'</tr>').join('');
 }).catch(()=>sc.innerHTML='<tr><td>Schedule unavailable.</td></tr>');

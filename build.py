@@ -100,7 +100,7 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <div class="card"><h3>🍵 Snacks &amp; Chai</h3><ul class="ticks"><li>Light snacks</li><li>Tea and coffee</li><li>Fresh fruit</li><li>Special treats for birthdays and holidays</li><li>Prepared with care for senior dietary needs</li></ul></div>
 </div></div></section>
 <section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
-<p>Open: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
+<p>Open: <b id="weekOf">…</b></p>
 <div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
 <section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p class="soon-line">Photos coming soon. Maa's Place opens its doors shortly!</p></div></section>
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
