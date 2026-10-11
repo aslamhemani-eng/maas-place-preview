@@ -1,5 +1,5 @@
 (function(){
-var P={meals:{n:"🍲 Maa's Meals",k:'meals',groups:[['Saturday','Sat 9:30 AM–12:00 PM (packing & delivery)'],['Weekday prep',['Mon','Tue','Wed','Thu','Fri'].map(function(d){return d+' 10 AM–2 PM'})]],roles:['Packing','Kitchen / prep','Delivery driver','Setup / cleanup']},
+var P={meals:{n:"🍲 Maa's Meals",k:'meals',groups:[['Saturday',['Sat 10 AM–12 PM (packing & delivery)']]],roles:['Packing','Kitchen / prep','Delivery driver','Setup / cleanup']},
 mp:{n:"🏡 Maa's Place (opening soon)",k:'maas_place',groups:[['Days',['Monday','Tuesday','Wednesday','Thursday']],['Time slots',['10:00–11:00','11:00–12:00','12:00–12:45','12:45–2:00']]],roles:['Activity helper','Exercise / yoga leader','Tech help','Snacks & chai','Companion / conversation']},
 bsv:{n:'🌟 Blooming Star Village (coming soon)',k:'bsv',groups:[['Interest',['Weekdays','Weekends','Evenings','Flexible – contact me when it opens']]],roles:['Activity helper','Events']}};
 var f=document.getElementById('vf');if(!f)return;
