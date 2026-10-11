@@ -154,3 +154,4 @@
 .mi .hero-tiles a b{font-size:.9rem}.mi .hero-tiles a.gold{background:var(--Y);color:#2E2438;border-color:var(--Y)}.mi .hero-tiles a.green{background:var(--G);border-color:var(--G)}
 @media(max-width:768px){.mi.d2 .split-text{padding:26px 6% 20px}.mi .hero-tiles{grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0 14px}.mi .hero-tiles a{padding:10px 2px;font-size:1.25rem;border-radius:12px}.mi .hero-tiles a b{font-size:.72rem}
 .mi.d2 .hero h1{font-size:1.9rem}}
+@media(max-width:768px){.nav-links:not(.active){padding-top:0!important;padding-bottom:0!important;box-shadow:none!important}}
