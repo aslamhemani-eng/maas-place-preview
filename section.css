@@ -38,3 +38,9 @@
 .mi.p-meals,.mi.p-mp{--beige:#F6F1FB;--sand:#E9DDF5;--green:#5B2A86;--dgreen:#3D1A6E;--clay:#E0A526;--hero1:#3D1A6Eee;--hero2:#5B2A8688}
 .mi.p-meals{--green:#6B3FA0}
 @media(max-width:640px){.mi.hub .psel{grid-template-columns:1fr}.mi.hub .psel button{flex-direction:row;justify-content:flex-start;gap:10px;padding:12px}.mi.hub .acts{grid-template-columns:1fr}.mi.hub .act{flex-direction:row;gap:10px;justify-content:flex-start;text-align:left;padding:14px}}
+/* Hub: always purple/white; BSV keeps a small green hint */
+.mi.hub.purple .psel button.p-bsv{border-left:6px solid #4F6B3A}
+.mi.hub.purple .psel button.p-bsv small{color:#4F6B3A}
+.mi.hub.purple .panel[data-p=bsv]{box-shadow:inset 0 6px 0 #4F6B3A}
+.mi.hub.purple #actDonate{background:#E0A526;color:#2E2438}
+.mi.hub.purple .panel{background:#fff;box-shadow:0 4px 18px #3D1A6E14}

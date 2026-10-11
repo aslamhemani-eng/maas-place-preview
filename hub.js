@@ -9,7 +9,7 @@ fetch('schedule.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{MPS=d.days.
 let cur='meals';
 function show(p){if(!P[p])p='meals';cur=p;const c=P[p];
  document.querySelectorAll('.psel button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
- const m=document.querySelector('main');m.classList.remove('p-meals','p-mp','p-bsv');m.classList.add(c.cls);
+ document.getElementById('panel').dataset.p=p;
  pname.textContent=c.name;pdesc.textContent=c.desc;pmore.innerHTML=c.more;
  actDonate.href='https://maasinspiration.org/donate.html?program='+p;
  const rows=p==='maas-place'?(MPS||[["Loading…","",""]]):c.sched;

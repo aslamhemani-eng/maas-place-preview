@@ -191,7 +191,7 @@ pg=head("Our Programs")+f'''<header class="hero" style="--img:url(gallery/2026-1
 '''+foot
 ty=head('Thank You')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="programs.html">Back to Programs</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:hello@maasinspiration.org>hello@maasinspiration.org</a>."</script>'''+foot
 
-hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
+hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
 <section><div class="wrap">
 <div class="psel" role="tablist">
 <button role="tab" data-p="meals" class="p-meals">🍽️<b>Weekly Meal Service</b></button>
