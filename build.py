@@ -28,7 +28,7 @@ head=lambda t:f'''<!DOCTYPE html>
                 <li><a href="{B}schedule.html">Schedule</a></li>
                 <li><a href="{B}gallery.html">Gallery</a></li>
                 <li><a href="programs.html">Programs</a></li>
-                <li><a href="{B}meals.html#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><button class="donate-btn" onclick="window.location.href='{B}donate.html'">Donate</button></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -59,7 +59,7 @@ foot=f'''</main>
                     <li><a href="{B}volunteer.html">Volunteer</a></li>
                     <li><a href="{B}schedule.html">Schedule</a></li>
                     <li><a href="{B}gallery.html">Gallery</a></li>
-                    <li><a href="{B}meals.html#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -102,11 +102,11 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
 <p>Open: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
 <div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
-<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p>A look at what's happening this week. {ph("Maa's Place photos of consenting seniors to be added")}</p><div class="gal" id="gal" data-program="maas-place"></div></div></section>
+<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p class="soon-line">Photos coming soon. Maa's Place opens its doors shortly!</p></div></section>
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+12145171938">214-517-1938</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
 <div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
-<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit.</p></div></div>
+<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a></p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
 <h3>Enrollment / Interest Form</h3><p>Maa's Place is opening soon – sign up now and we'll contact you when it opens.</p>
 <form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
@@ -121,7 +121,7 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 
 <label>Photo/video consent<select><option>Yes, I consent</option><option>No</option></select></label>
 <label class="full">How did you hear about us?<input></label>
-<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the participation waiver.</label>
+<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the <a href="maas-place-waiver.html" target="_blank">participation waiver</a>.</label>
 <div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
 <section id="volunteer"><div class="wrap"><h2>Volunteer at Maa's Place</h2>
 <p>Share a skill, lead an activity, or simply sit and talk.</p>
@@ -143,12 +143,12 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi purple bsvp">')+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Activities</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
 <header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
 <h1>Blooming Star Village</h1><p>A free, caring day program where children with sensory, developmental and other special needs can play, learn and belong, and their families can find support.</p>
-<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 Mon – Thu, 9 AM – 2 PM</div><div>💛 Free</div></div>
+<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages 5–17</div><div>🕙 Mon – Thu, 9 AM – 2 PM</div><div>💛 Free</div></div>
 <a class="btn alt" href="#enroll">Join the Interest List</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
 <section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
 <div class="grid"><div class="card"><h3>🌱 Belonging</h3><p>A place where differences are welcomed, not just accommodated.</p></div><div class="card"><h3>🤝 Family support</h3><p>Caring for the whole family, including parents, siblings and caregivers.</p></div><div class="card"><h3>⭐ Growth</h3><p>Helping each person build skills and confidence at their own pace.</p></div></div></div></section>
 <section id="serve"><div class="wrap"><h2>Who We Serve</h2><p>Blooming Star Village is planned for individuals with sensory processing differences, autism, developmental delays and other special needs, together with their families, across Dallas–Fort Worth.</p>
-<p>Ages served: {ph("to confirm")} · Eligibility / referral needed?: {ph("to confirm")}</p></div></section>
+<p>Ages served: 5–17 · No referral needed. Families simply join the interest list, and we'll follow up to learn about your child's needs.</p></div></section>
 <section id="programs"><div class="wrap"><h2>What Your Child Will Do</h2><p>Each day blends play, routine and gentle skill-building, at each child's own pace.</p>
 <div class="grid">
 <div class="card"><h3>🧩 Sensory Play &amp; Movement</h3><p>Swinging, climbing, balance and hands-on sensory activities that help the body and mind feel calm and ready.</p></div>
@@ -175,9 +175,9 @@ bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi p
 {donate("Blooming Star Village")}
 <section id="faq"><div class="wrap"><h2>FAQ</h2>
 <details><summary>What are the hours?</summary><p>Monday to Thursday, 9 AM to 2 PM.</p></details>
-<details><summary>When will Blooming Star Village open?</summary><p>{ph("Opening date")}</p></details>
-<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (same location as MAA's Inspiration)</p></details>
-<details><summary>What ages do you serve?</summary><p>{ph("Ages served")}</p></details>
+<details><summary>When will Blooming Star Village open?</summary><p>Opening date to be announced. Join the interest list to be the first to know.</p></details>
+<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (the same location as Maa's Place).</p></details>
+<details><summary>What ages do you serve?</summary><p>Children ages 5–17 with sensory, developmental, or other special needs.</p></details>
 <details><summary>Is there a cost?</summary><p>No. Blooming Star Village is free.</p></details>
 <details><summary>Is this therapy?</summary><p>No. Blooming Star Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
 <details><summary>Do you provide transportation?</summary><p>No, families arrange their own transportation.</p></details>
@@ -313,3 +313,51 @@ _b=open('blooming-star-village.html').read()
 _b=_b.replace('<main class="mi purple bsvp">','<main class="mi purple bsvp d2">',1).replace('<header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)">','<header class="hero split"><div class="split-text">',1)
 _b=_b.replace('</header>','</div><div class="split-img"><img src="gallery/bsv-girl-at-desk.jpg" alt="A child working happily at a desk"></div></header>',1)
 open('blooming-star-village.html','w').write(_b)
+
+# ---- Maa's Place waiver ----
+WV=head("Maa's Place Participation Waiver").replace('<main class="mi">','<main class="mi purple waiver">').replace('</head>','''<style>
+.mi.waiver .wv{max-width:820px;margin:0 auto;background:#fff;border-radius:14px;border-top:6px solid #5B2A86;padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.06);line-height:1.6}
+.mi.waiver .wv h1{color:#3D1A6E;font-size:1.9rem;margin:0 0 12px}.mi.waiver .wv h2{color:#3D1A6E;font-size:1.1rem;margin:22px 0 6px}
+.mi.waiver .release{font-weight:800;text-transform:uppercase;border:3px solid #3D1A6E;padding:14px;background:#F6F1FB}
+.mi.waiver .box{font-size:1.2rem;margin-right:6px}.mi.waiver .sig{display:grid;grid-template-columns:2fr 2fr 1fr;gap:18px;margin-top:22px}
+.mi.waiver .sig div{border-bottom:1.5px solid #2E2438;padding-top:34px;font-size:.85rem;color:#6b5f7a}
+.mi.waiver .pbar{text-align:center;margin:20px 0}
+@media(max-width:640px){.mi.waiver .wv{padding:20px}.mi.waiver .sig{grid-template-columns:1fr}}
+@media print{nav,footer,.preview-banner,.pbar,.sticky,.stickybar,#lb,body>div:first-child[style*="C0392B"]{display:none!important}body,.mi{background:#fff!important}.mi.waiver .wv{box-shadow:none;border:0;padding:0;max-width:none}.mi.waiver section{padding:0!important}}
+</style></head>''',1)+'''<section><div class="wrap"><div class="wv">
+<h1>Maa's Place Participation Waiver and Release</h1>
+<p>Maa's Place is a free senior center operated by MAA's Inspiration Inc., a 501(c)(3) nonprofit located at 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006.</p>
+<h2>1. Voluntary participation.</h2><p>I am choosing to take part in Maa's Place activities, which may include light exercise, chair yoga, walks, games, arts and crafts, outings, and meals or snacks. I understand that participation is voluntary and that I may stop at any time.</p>
+<h2>2. Health and fitness.</h2><p>I confirm that I am able to take part in these activities. I will consult my doctor if I have any doubts, and I will tell staff about any health, mobility, or dietary needs. I understand that Maa's Place does not provide medical care, supervision for memory care, or transportation.</p>
+<h2>3. Risks.</h2><p>I understand that physical activities and outings carry some risk of injury, including falls, strains, and illness. I accept these risks.</p>
+<h2>4. RELEASE OF LIABILITY.</h2><p class="release">I RELEASE MAA'S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS, AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS, OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</p>
+<h2>5. Emergencies.</h2><p>In an emergency, I authorize staff to call 911 and contact my emergency contact. I am responsible for any resulting medical costs.</p>
+<h2>6. Food.</h2><p>I will tell staff about any food allergies. Food may be prepared in a kitchen that also handles common allergens.</p>
+<h2>7. Photo and video consent (optional).</h2><p><span class="box">☐</span> Yes, MAA's Inspiration may use photos and videos of me on its website and social media.<br><span class="box">☐</span> No, please do not include me in photos or videos.</p><p>I may withdraw consent at any time by emailing aslam@maasinspiration.org.</p>
+<h2>8. Signature.</h2><p>I have read and understand this waiver.</p>
+<div class="sig"><div>Participant name</div><div>Signature</div><div>Date</div></div>
+<div class="sig"><div>Signed by family member / guardian on participant's behalf (if applicable)</div><div>Relationship</div><div>Date</div></div>
+<p class="pbar"><button class="btn" onclick="window.print()">🖨️ Print this waiver</button> &nbsp; <a class="btn green" href="maas-place.html#visit">Back to Maa's Place</a></p>
+</div></div></section>
+'''+foot
+open('maas-place-waiver.html','w').write(WV)
+
+# ---- Contact ----
+MAP=lambda q:'https://www.google.com/maps/search/?api=1&query='+q
+CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contactp">').replace('</head>','<link rel="stylesheet" href="vol-form.css"><style>.mi.contactp{background:#F3EBDD}.mi.contactp .hero{text-align:center;background:#F3EBDD!important;color:#3D1A6E;padding:56px 20px 24px}.mi.contactp .hero p{max-width:640px;margin:8px auto 0}.ccards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.ccard{background:#fff;border-radius:14px;border-top:5px solid #5B2A86;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.06)}.ccard h3{color:#3D1A6E;margin:0 0 8px}.ccard p{margin:6px 0}.ccard a{color:#5B2A86;font-weight:700}.social{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.social a{background:#5B2A86;color:#fff;border-radius:30px;padding:10px 20px;font-weight:700;text-decoration:none}.np{text-align:center;color:#6b5f7a;font-size:.9rem;margin-top:18px}.mi.contactp h2{text-align:center;color:#3D1A6E}</style></head>',1)+f'''<header class="hero"><h1>Contact Us</h1><p>We'd love to hear from you, whether you want to volunteer, donate, partner with us, or learn more about our programs.</p></header>
+<section><div class="wrap"><div class="ccards">
+<div class="ccard"><h3>📍 Main Office &amp; Maa's Meals</h3><p>1445 MacArthur Drive, Suite 104<br>Carrollton, TX 75007</p><p><b>Maa's Meals:</b> Saturdays, 10 AM – 12 PM</p><p><a href="{MAP('1445+MacArthur+Drive+Suite+104+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
+<div class="ccard"><h3>🏡 Maa's Place &amp; Blooming Star Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75006</p><p><b>Maa's Place:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Blooming Star Village:</b> Monday – Thursday, 9 AM – 2 PM (coming soon)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006')}" target="_blank" rel="noopener">Get directions →</a></p></div>
+<div class="ccard"><h3>📞 Phone &amp; ✉️ Email</h3><p><b>Phone:</b> <a href="tel:+12145171938">214-517-1938</a></p><p><b>Email:</b> <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div>
+</div></div></section>
+<section><div class="wrap"><h2>Send us a message</h2><div class="lvf-wrap"><form class="lvf" id="contactForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Contact Message — MAA's Inspiration"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Email <span class="req">*</span></label><input type="email" name="Email" required autocomplete="email"></div></div>
+<div class="form-row"><div class="form-group"><label>Phone <small>(optional)</small></label><input type="tel" name="Phone" autocomplete="tel"></div><div class="form-group"><label>I'm interested in</label><select name="Interested In"><option>Volunteering</option><option>Donating</option><option>Partnering</option><option>Maa's Place</option><option>Blooming Star Village</option><option>Other</option></select></div></div>
+<div class="form-row"><div class="form-group full"><label>Message <span class="req">*</span></label><textarea name="Message" required></textarea></div></div>
+<p class="err" id="cErr" hidden></p><button type="submit" class="submit-btn">Send Message</button></form></div></div></section>
+<section><div class="wrap"><h2>Follow us</h2><div class="social"><a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a><a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a><a href="https://www.tiktok.com/@maasinspiration" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></div>
+<p class="np">MAA's Inspiration Inc. is a registered 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>
+<script>(function(){{var f=document.getElementById('contactForm');f.addEventListener('submit',async function(e){{e.preventDefault();var b=f.querySelector('.submit-btn'),er=document.getElementById('cErr');b.disabled=true;b.textContent='Sending…';try{{var r=await fetch('https://formsubmit.co/ajax/aslamhemani@gmail.com',{{method:'POST',headers:{{Accept:'application/json'}},body:new FormData(f)}});var j=await r.json().catch(function(){{return{{}}}});if(r.ok&&(j.success===true||j.success==='true')){{location.href='thank-you.html';return}}er.textContent='Submission issue: '+(j.message||('HTTP '+r.status))+'. Please email aslam@maasinspiration.org.'}}catch(x){{er.textContent='Network error – please try again or email aslam@maasinspiration.org.'}}er.hidden=false;b.disabled=false;b.textContent='Send Message'}})}})();</script>
+'''+foot
+open('contact.html','w').write(CT)
