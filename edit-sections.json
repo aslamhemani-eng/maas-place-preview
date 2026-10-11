@@ -284,14 +284,14 @@
   "id": "website-e6638455",
   "page": "bsv",
   "label": "Top banner: quick facts",
-  "text": "location 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · Ages served · NEEDS INFO: Hours; buttons \"Join the Interest List\" + \"Volunteer\"",
-  "need": "What ages does Blooming Star Village serve, and what are its hours?"
+  "text": "location 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · Ages served · Mon – Thu, 9 AM – 2 PM · Free; buttons \"Join the Interest List\" + \"Volunteer\"",
+  "need": "What ages does Blooming Star Village serve?"
  },
  {
   "id": "website-8f835814",
   "page": "bsv",
   "label": "Our mission",
-  "text": "Every person deserves a place where they are understood, included and helped to grow. A free recreation program, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.",
+  "text": "Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them.",
   "need": ""
  },
  {
@@ -319,8 +319,8 @@
   "id": "website-ddb56be6",
   "page": "bsv",
   "label": "Activities: intro",
-  "text": "\"These are program ideas under consideration; final programs will be announced.\" – confirm which programs will be offered",
-  "need": "Which activities will Blooming Star Village actually offer?"
+  "text": "What Your Child Will Do: Sensory Play & Movement · Friendship & Communication · Arts, Music & Stories · Daily Routine & Life Skills · Active & Outdoor Play · Family & Caregiver Support · Snacks",
+  "need": ""
  },
  {
   "id": "website-ebd566ec",
@@ -368,8 +368,8 @@
   "id": "website-0b8243b0",
   "page": "bsv",
   "label": "Schedule",
-  "text": "\"Weekly schedule – coming soon\"; Hours placeholder; Cost: Free; Transportation: not provided",
-  "need": "What days and hours will Blooming Star Village run?"
+  "text": "Monday – Thursday, 9 AM – 2 PM (Coming soon). Cost: Free · Transportation: not provided",
+  "need": ""
  },
  {
   "id": "website-8603ab3b",
@@ -431,7 +431,7 @@
   "id": "website-be4541a2",
   "page": "bsv",
   "label": "FAQ: Is this therapy?",
-  "text": "No. Blooming Star Village is a recreation program: fun, inclusive activities and community. It does not provide therapy or medical services.",
+  "text": "No. Blooming Star Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.",
   "need": ""
  },
  {

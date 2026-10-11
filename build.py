@@ -84,7 +84,7 @@ donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Su
 <a class="btn alt" href="{DON}">Donate Now</a>
 <p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
 mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a><a href="get-involved.html#maas-place">Get Involved</a></div>
-<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p><span class="soon-badge">🌱 Opening soon</span>
+<header class="hero" style="--img:url(gallery/maas-place-seniors-painting.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p><span class="soon-badge">🌱 Opening soon</span>
 <h1>Maa's Place Senior Center</h1>
 <p class="tagline">Place where everybody knows your name</p>
 <p class="soon-line">Maa's Place is opening soon. Join the interest list below and we'll let you know when doors open.</p>
@@ -140,29 +140,31 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to Maa's Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
 '''+foot.replace('<h4>Follow Us</h4>','<h4>Maa\'s Place</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006<br><a href="tel:+12145171938" style="color:inherit">214-517-1938</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
-bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi purple bsvp">')+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Programs</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
-<header class="hero" style="--img:url(gallery/2026-10-10-service-05.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
-<h1>Blooming Star Village</h1><p>A planned, welcoming recreation program where children and adults with sensory, developmental and special needs, and their families, can learn, play and belong.</p>
-<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 {ph("Hours")}</div></div>
+bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi purple bsvp">')+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Activities</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
+<header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
+<h1>Blooming Star Village</h1><p>A free, caring day program where children with sensory, developmental and other special needs can play, learn and belong, and their families can find support.</p>
+<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 Mon – Thu, 9 AM – 2 PM</div><div>💛 Free</div></div>
 <a class="btn alt" href="#enroll">Join the Interest List</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
-<section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free recreation program, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
+<section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
 <div class="grid"><div class="card"><h3>🌱 Belonging</h3><p>A place where differences are welcomed, not just accommodated.</p></div><div class="card"><h3>🤝 Family support</h3><p>Caring for the whole family, including parents, siblings and caregivers.</p></div><div class="card"><h3>⭐ Growth</h3><p>Helping each person build skills and confidence at their own pace.</p></div></div></div></section>
 <section id="serve"><div class="wrap"><h2>Who We Serve</h2><p>Blooming Star Village is planned for individuals with sensory processing differences, autism, developmental delays and other special needs, together with their families, across Dallas–Fort Worth.</p>
 <p>Ages served: {ph("to confirm")} · Eligibility / referral needed?: {ph("to confirm")}</p></div></section>
-<section id="programs"><div class="wrap"><h2>Programs &amp; Services <span class="tag">Planned</span></h2><p>These are program ideas under consideration; final programs will be announced. {ph("Confirm which programs Maa's will offer")}</p>
+<section id="programs"><div class="wrap"><h2>What Your Child Will Do</h2><p>Each day blends play, routine and gentle skill-building, at each child's own pace.</p>
 <div class="grid">
-<div class="card"><h3>🧩 Sensory Play &amp; Regulation</h3><p>Calm, sensory-friendly play and games where everyone can join in comfortably. <span class="tag">Planned</span></p></div>
-<div class="card"><h3>💬 Social Skills Groups</h3><p>Small, friendly groups for practicing communication, sharing and friendship. <span class="tag">Planned</span></p></div>
-<div class="card"><h3>☀️ Seasonal &amp; Weekend Activities</h3><p>Routine-friendly recreation during school breaks and weekends. <span class="tag">Planned</span></p></div>
-<div class="card"><h3>👨‍👩‍👧 Family &amp; Caregiver Support</h3><p>Gatherings, resources and community for parents and caregivers. <span class="tag">Planned</span></p></div>
-<div class="card"><h3>🍲 Meals &amp; Snacks</h3><p>Shared meals in the MAA's Inspiration tradition, with care for dietary and sensory needs. <span class="tag">Planned</span></p></div>
+<div class="card"><h3>🧩 Sensory Play &amp; Movement</h3><p>Swinging, climbing, balance and hands-on sensory activities that help the body and mind feel calm and ready.</p></div>
+<div class="card"><h3>💬 Friendship &amp; Communication</h3><p>Small, friendly groups to practice taking turns, sharing, expressing feelings and making friends.</p></div>
+<div class="card"><h3>🎨 Arts, Music &amp; Stories</h3><p>Painting, crafts, music, movement and story time to spark creativity and joy.</p></div>
+<div class="card"><h3>🗓️ Daily Routine &amp; Life Skills</h3><p>A predictable, visual daily routine with simple everyday skills that build independence.</p></div>
+<div class="card"><h3>🌳 Active &amp; Outdoor Play</h3><p>Games, ball play and outdoor time to build strength, coordination and confidence.</p></div>
+<div class="card"><h3>👨‍👩‍👧 Family &amp; Caregiver Support</h3><p>A few hours of peace of mind for parents, plus a friendly community of families who understand.</p></div>
+<div class="card"><h3>🍎 Snacks</h3><p>Healthy snacks in the MAA's Inspiration tradition, with care for dietary and sensory needs.</p></div>
 </div></div></section>
 <section id="visit"><div class="wrap"><h2>What a Visit Looks Like</h2><div class="grid">
 <div class="card"><h3>1. Reach out</h3><p>Tell us about your family by email or the interest form below.</p></div>
-<div class="card"><h3>2. Tour &amp; meet</h3><p>Visit with your loved one, meet our team and see the space. {ph("Tours: confirm once location opens")}</p></div>
+<div class="card"><h3>2. Tour &amp; meet</h3><p>Visit with your child, meet our team and see the space once we open.</p></div>
 <div class="card"><h3>3. A plan that fits</h3><p>We talk through needs, interests and comfort to suggest the right activities.</p></div>
 <div class="card"><h3>4. Join in</h3><p>Start attending at a pace that feels right.</p></div></div></div></section>
-<section id="schedule"><div class="wrap"><h2>Schedule</h2><p>{ph("Weekly schedule – coming soon")}</p><p>Hours: {ph("Hours")} · Cost: Free · Transportation: not provided</p></div></section>
+<section id="schedule"><div class="wrap"><h2>Schedule</h2><p><b>Monday – Thursday, 9 AM – 2 PM</b> <span class="soon-badge sm">Coming soon</span></p><p>Cost: Free · Transportation: not provided · 2700 Old Denton Rd, Suite 102, Carrollton</p></div></section>
 <section id="enroll"><div class="wrap"><h2>Enroll &amp; Get Involved</h2><p>Blooming Star Village is coming soon. Join our interest list and we'll contact you as programs open.</p>
 <form id="enroll"><label>Parent / caregiver name *<input required></label><label>Phone *<input type="tel" required></label>
 <label>Email<input type="email"></label><label>Participant's age<input type="number" min="0"></label>
@@ -172,11 +174,12 @@ bsv=head("Blooming Star Village").replace('<main class="mi">','<main class="mi p
 <section id="volunteer"><div class="wrap"><h2>Volunteer</h2><p>Patient, caring volunteers will be at the heart of Blooming Star Village. Educators, students, parents and anyone with a big heart are welcome.</p><a class="btn" href="{VOL}">Sign Up to Volunteer</a></div></section>
 {donate("Blooming Star Village")}
 <section id="faq"><div class="wrap"><h2>FAQ</h2>
+<details><summary>What are the hours?</summary><p>Monday to Thursday, 9 AM to 2 PM.</p></details>
 <details><summary>When will Blooming Star Village open?</summary><p>{ph("Opening date")}</p></details>
 <details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (same location as MAA's Inspiration)</p></details>
 <details><summary>What ages do you serve?</summary><p>{ph("Ages served")}</p></details>
 <details><summary>Is there a cost?</summary><p>No. Blooming Star Village is free.</p></details>
-<details><summary>Is this therapy?</summary><p>No. Blooming Star Village is a recreation program: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
+<details><summary>Is this therapy?</summary><p>No. Blooming Star Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
 <details><summary>Do you provide transportation?</summary><p>No, families arrange their own transportation.</p></details>
 <details><summary>How can I help now?</summary><p>Volunteer, donate, or share this page with families who may benefit.</p></details>
 <p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
@@ -185,7 +188,7 @@ pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+
 <section><div class="wrap"><div class="grid">
 <div class="card"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
 <div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
-<div class="card"><h3>🌟 Blooming Star Village</h3><p>A free, planned recreation program for children and adults with special needs and their families. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
+<div class="card"><h3>🌟 Blooming Star Village</h3><p>A free day program for recreation and care for children with special needs. Mon–Thu, 9 AM–2 PM. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
@@ -236,7 +239,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <section><div class="wrap"><h2>Where you can help</h2><div class="vcards">
 <div class="vcard"><span class="vt open">✅ Open now</span><h3>🍲 Maa's Meals</h3><p><b>Saturdays only</b> 10 AM – noon<br>Packing &amp; delivery</p><small>📍 1445 MacArthur Dr, Suite 104, Carrollton</small></div>
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa's Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
-<div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Blooming Star Village</h3><p>Recreation for children and adults with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
+<div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Blooming Star Village</h3><p><b>Mon – Thu</b> 9 AM – 2 PM<br>A free day program for children with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
 </div></div></section>
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
@@ -264,8 +267,8 @@ _wire('maas-place.html',"Maa's Place enrollment"); _wire('blooming-star-village.
 # --- Design variants of Maa's Place (same content, different layouts) ---
 d1=mp.replace('<main class="mi purple">','<main class="mi purple d1">').replace("<title>Maa's Place Senior Center","<title>Design 1 Classic – Maa's Place Senior Center")
 d2=mp.replace('<main class="mi purple">','<main class="mi purple d2">').replace("<title>Maa's Place Senior Center","<title>Design 2 Magazine – Maa's Place Senior Center")
-d2=d2.replace('<header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)">','<header class="hero split"><div class="split-text">',1)
-d2=d2.replace('</header>','</div><div class="split-img"><img src="gallery/2026-10-10-service-02.jpg" alt="Maa\'s Place volunteers"></div></header>',1)
+d2=d2.replace('<header class="hero" style="--img:url(gallery/maas-place-seniors-painting.jpg)">','<header class="hero split"><div class="split-text">',1)
+d2=d2.replace('</header>','</div><div class="split-img"><img src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting together at Maa\'s Place"></div></header>',1)
 for sid,img in [('what','04'),('visit','05'),('volunteer','03')]:
     d2=d2.replace(f'<section id="{sid}"><div class="wrap">',f'<section id="{sid}" class="row"><div class="wrap"><img class="row-img" src="gallery/2026-10-10-service-{img}.jpg" alt=""><div class="row-body">',1)
 import re as _r
@@ -295,7 +298,7 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <a class="pmain" href="{href}"><img src="gallery/{img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
-<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","2026-10-10-service-02.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","2026-10-10-service-05.jpg","A free recreation program for children and adults with special needs and their families.","Opening soon · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","2026-10-10-service-03.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa's Place","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Blooming Star Village","bsv-girl-at-desk.jpg","A free day program for recreation and care for children with special needs.","Coming soon · Mon–Thu · 9 AM–2 PM · Carrollton","blooming-star-village.html","bsv","Coming Soon")+'''</div></div></section>
 <section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="https://maasinspiration.org/donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)

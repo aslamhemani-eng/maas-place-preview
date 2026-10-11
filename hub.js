@@ -2,7 +2,7 @@ const P={
  meals:{name:"Maa's Meals",desc:"Every Saturday our volunteers cook, pack and deliver 2,200 fresh meals to seniors, the homeless and shelter homes across DFW.",cls:"p-meals",
   sched:[["Saturday","10am–noon","Meal packing & delivery"]],more:'Full schedule: <a href="https://maasinspiration.org/schedule.html">maasinspiration.org/schedule.html</a>'},
  "maas-place":{name:"Maa's Place Senior Center",desc:"Opening soon! Free activities, snacks, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Maa\'s Place page</a>'},
- bsv:{name:"Blooming Star Village",desc:"A free, planned recreation program for children and adults with special needs and their families. Coming soon.",cls:"p-bsv",sched:[["Coming soon","",""]],more:'<a href="blooming-star-village.html">Visit the Blooming Star Village page</a>'}
+ bsv:{name:"Blooming Star Village",desc:"A free day program for recreation and care for children with special needs. Coming soon.",cls:"p-bsv",sched:[["Mon–Thu","9 AM–2 PM","Coming soon"]],more:'<a href="blooming-star-village.html">Visit the Blooming Star Village page</a>'}
 };
 let MPS=null;
 fetch('schedule.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{MPS=d.days.filter(x=>!x.hidden).map(x=>[x.day,'10 AM–2 PM',x.slots?x.slots.filter(c=>c!=='TBD').join(' · '):x.all_day]);if(cur==='maas-place')show(cur)});
