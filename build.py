@@ -84,7 +84,7 @@ donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Su
 <p>Donations are taken through our existing secure donation page.</p>
 <a class="btn alt" href="{DON}">Donate Now</a>
 <p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
-mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a></div>
+mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a><a href="get-involved.html#maas-place">Get Involved</a></div>
 <header class="hero" style="--img:url(gallery/2026-10-10-service-02.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p>
 <h1>Maa's Place Senior Center</h1>
 <p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
@@ -139,7 +139,7 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to Maa's Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
 '''+foot.replace('<h4>Follow Us</h4>','<h4>Maa\'s Place</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006<br><a href="tel:+12145171938" style="color:inherit">214-517-1938</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
-bsv=head("Blooming Star Village")+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Programs</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a></div>
+bsv=head("Blooming Star Village")+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Programs</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
 <header class="hero" style="--img:url(gallery/2026-10-10-service-05.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
 <h1>Blooming Star Village</h1><p>A planned, welcoming recreation program where children and adults with sensory, developmental and special needs, and their families, can learn, play and belong.</p>
 <div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages: {ph("Ages served")}</div><div>🕙 {ph("Hours")}</div></div>
@@ -186,10 +186,38 @@ pg=head("Our Programs")+f'''<header class="hero" style="--img:url(gallery/2026-1
 <div class="card purple-card"><h3>🏡 Maa's Place Senior Center</h3><p>Activities, snacks, chai and companionship for seniors. Ages 55+. Mon–Fri 10am–2pm, Sat 9:30am–noon.</p><a class="btn" href="maas-place.html">Visit Maa's Place</a></div>
 <div class="card"><h3>🌟 Blooming Star Village</h3><p>A free, planned recreation program for children and adults with special needs and their families. Coming soon.</p><a class="btn" href="blooming-star-village.html">Learn More</a></div>
 </div></div></section>
+<section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
 '''+foot
 ty=head('Thank You')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="programs.html">Back to Programs</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:hello@maasinspiration.org>hello@maasinspiration.org</a>."</script>'''+foot
-for n,h in [('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
+
+hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
+<section><div class="wrap">
+<div class="psel" role="tablist">
+<button role="tab" data-p="meals" class="p-meals">🍽️<b>Weekly Meal Service</b></button>
+<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Seniors 55+</small></button>
+<button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
+</div>
+<div id="panel" class="panel">
+<h2 id="pname"></h2><p id="pdesc"></p>
+<div class="acts">
+<a id="actDonate" class="act" href="{DON}">💜<b>Donate</b><small>Secure checkout via our donation page</small></a>
+<a class="act" href="#vol">🙌<b>Volunteer</b><small>Sign up in 1 minute</small></a>
+<a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
+</div>
+<div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
+<div id="vol"><h3>Volunteer sign-up</h3>
+<p id="mealsVol" hidden>Meal-service volunteers sign up on our main volunteer page: <a class="btn" href="{VOL}">Volunteer sign-up</a></p>
+<form id="volform" method="post" action="enroll.php"><input type="hidden" name="form" value="Volunteer sign-up"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<label>Program<select name="program" id="volprog"><option value="Maa's Place">Maa's Place</option><option value="Blooming Star Village">Blooming Star Village</option></select></label>
+<label>Full name *<input name="full_name" required></label><label>Phone *<input name="phone" type="tel" required></label><label>Email<input name="email" type="email"></label>
+<label>Days available<select name="days_available[]" multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
+<label>Skills / how you'd like to help<input name="skills" placeholder="e.g. yoga, crafts, games, health, tech help"></label>
+<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" name="agree_conduct" value="Yes" required> I agree to the volunteer code of conduct.</label>
+<div class="full"><button class="btn">Sign Up</button></div></form></div>
+</div></div></section>
+'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="hub.js"></script>')
+for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('blooming-star-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=programs.html"><a href="programs.html">Programs</a>')
 
 # --- form wiring: name attributes, honeypot, action ---

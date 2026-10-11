@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Get Involved - MAA's Inspiration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site-chrome.css">
+    <link rel="stylesheet" href="section.css">
+</head>
+<body>
+<div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>
+    <nav>
+        <div class="navbar-container">
+            <a href="https://maasinspiration.org/" class="logo-section">
+                <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                <span class="logo-text">MAA's Inspiration</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://maasinspiration.org/">Home</a></li>
+                <li><a href="https://maasinspiration.org/about.html">About</a></li>
+                <li><a href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>
+                <li><a href="https://maasinspiration.org/schedule.html">Schedule</a></li>
+                <li><a href="https://maasinspiration.org/gallery.html">Gallery</a></li>
+                <li><a href="https://maasinspiration.org/#contact">Contact</a></li>
+                <li><button class="donate-btn" onclick="window.location.href='https://maasinspiration.org/donate.html'">Donate</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+<main class="mi hub">
+<header class="hero" style="--img:url(gallery/2026-10-10-service-04.jpg)"><p class="eyebrow">MAA's Inspiration</p><h1>Get Involved</h1><p>Choose a program, then donate, volunteer, or see when it happens.</p></header>
+<section><div class="wrap">
+<div class="psel" role="tablist">
+<button role="tab" data-p="meals" class="p-meals">🍽️<b>Weekly Meal Service</b></button>
+<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa's Place</b><small>Seniors 55+</small></button>
+<button role="tab" data-p="bsv" class="p-bsv">🌟<b>Blooming Star Village</b><small>Coming soon</small></button>
+</div>
+<div id="panel" class="panel">
+<h2 id="pname"></h2><p id="pdesc"></p>
+<div class="acts">
+<a id="actDonate" class="act" href="https://maasinspiration.org/donate.html">💜<b>Donate</b><small>Secure checkout via our donation page</small></a>
+<a class="act" href="#vol">🙌<b>Volunteer</b><small>Sign up in 1 minute</small></a>
+<a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
+</div>
+<div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
+<div id="vol"><h3>Volunteer sign-up</h3>
+<p id="mealsVol" hidden>Meal-service volunteers sign up on our main volunteer page: <a class="btn" href="https://maasinspiration.org/volunteer.html">Volunteer sign-up</a></p>
+<form id="volform" method="post" action="enroll.php"><input type="hidden" name="form" value="Volunteer sign-up"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<label>Program<select name="program" id="volprog"><option value="Maa's Place">Maa's Place</option><option value="Blooming Star Village">Blooming Star Village</option></select></label>
+<label>Full name *<input name="full_name" required></label><label>Phone *<input name="phone" type="tel" required></label><label>Email<input name="email" type="email"></label>
+<label>Days available<select name="days_available[]" multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
+<label>Skills / how you'd like to help<input name="skills" placeholder="e.g. yoga, crafts, games, health, tech help"></label>
+<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" name="agree_conduct" value="Yes" required> I agree to the volunteer code of conduct.</label>
+<div class="full"><button class="btn">Sign Up</button></div></form></div>
+</div></div></section>
+</main>
+<div id="lb" onclick="this.style.display='none'"><img alt=""></div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo-section">
+                    <img src="img/site-logo.png" alt="MAA's Inspiration Logo">
+                </div>
+                <div class="footer-motto">LOVE ALL SERVE ALL</div>
+                <p class="footer-description">Serving our community with warmth, dignity, and compassion through nourishing meals and genuine care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="https://maasinspiration.org/">Home</a></li>
+                    <li><a href="https://maasinspiration.org/about.html">About</a></li>
+                    <li><a href="https://maasinspiration.org/volunteer.html">Volunteer</a></li>
+                    <li><a href="https://maasinspiration.org/schedule.html">Schedule</a></li>
+                    <li><a href="https://maasinspiration.org/gallery.html">Gallery</a></li>
+                    <li><a href="https://maasinspiration.org/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="http://www.maasinspiration.org/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
+        </div>
+    </footer>
+<script src="section.js"></script><script src="hub.js"></script>
+</body>
+</html>

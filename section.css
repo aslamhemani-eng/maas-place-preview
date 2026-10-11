@@ -25,3 +25,16 @@
 .mi.purple section:nth-of-type(odd){background:#fff}.mi.purple section:nth-of-type(even){background:var(--beige)}
 .mi.purple section:nth-of-type(odd) .card{background:var(--beige)}.mi.purple section:nth-of-type(even) .card{background:#fff}
 .mi.purple .btn.alt{color:#2E2438}.mi .card.purple-card{border-top-color:#5B2A86}.mi .card.purple-card .btn{background:#5B2A86}.mi .card.purple-card h3{color:#3D1A6E}
+/* Get Involved hub */
+.mi.hub .psel{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.mi.hub .psel button{border:2px solid #ddd;background:#fff;border-radius:14px;padding:14px 8px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:1.4rem}
+.mi.hub .psel b{font-size:.95rem}.mi.hub .psel small{font-size:.75rem;color:#777}
+.mi.hub .psel button[aria-selected=true]{border-color:var(--green);box-shadow:0 0 0 3px var(--sand)}
+.mi.hub .panel{background:#fff;border-radius:16px;padding:22px;border-top:6px solid var(--green)}
+.mi.hub .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.mi.hub .act{background:var(--green);color:#fff;text-decoration:none;border-radius:14px;padding:18px;display:flex;flex-direction:column;align-items:center;text-align:center;font-size:1.6rem}
+.mi.hub .act b{font-size:1.1rem}.mi.hub .act small{font-size:.8rem;opacity:.9}
+.mi.hub #when,.mi.hub #vol{margin-top:26px}
+.mi.p-meals,.mi.p-mp{--beige:#F6F1FB;--sand:#E9DDF5;--green:#5B2A86;--dgreen:#3D1A6E;--clay:#E0A526;--hero1:#3D1A6Eee;--hero2:#5B2A8688}
+.mi.p-meals{--green:#6B3FA0}
+@media(max-width:640px){.mi.hub .psel{grid-template-columns:1fr}.mi.hub .psel button{flex-direction:row;justify-content:flex-start;gap:10px;padding:12px}.mi.hub .acts{grid-template-columns:1fr}.mi.hub .act{flex-direction:row;gap:10px;justify-content:flex-start;text-align:left;padding:14px}}

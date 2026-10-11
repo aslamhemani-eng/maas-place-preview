@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: /programs.html');
 if (!empty($_POST['website'])) { header('Location: /thank-you.html'); exit; }   // honeypot: bots fill it
 $clean = function($v){ $v = is_array($v) ? implode(', ', $v) : (string)$v; return trim(str_replace(["\r","\n"], ' ', substr($v, 0, 2000))); };
 $form = $clean($_POST['form'] ?? 'Enrollment');
-$allowed = ["Maa's Place enrollment", 'Blooming Star Village interest list'];
+$allowed = ["Maa's Place enrollment", 'Blooming Star Village interest list', 'Volunteer sign-up'];
 if (!in_array($form, $allowed, true)) { http_response_code(400); exit('Bad request'); }
 $lines = [];
 foreach ($_POST as $k => $v) { if (in_array($k, ['website','form'], true)) continue;
