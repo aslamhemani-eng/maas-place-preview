@@ -36,3 +36,4 @@ footer{background:#2E2438!important;background-image:none!important}
 [style*="linear-gradient"]{background:#F3EBDD!important;color:#3D1A6E!important;border:1px solid #E3D6C0}
 [style*="linear-gradient"] h2,[style*="linear-gradient"] h3,[style*="linear-gradient"] p{color:#3D1A6E!important}
 .page-hero p,.page-hero span,.page-hero h1,.page-hero h1 i,.page-hero .subtitle{color:#3D1A6E!important;opacity:1!important;-webkit-text-fill-color:#3D1A6E!important}
+@media(max-width:768px){.nav-links:not(.active){padding-top:0!important;padding-bottom:0!important;box-shadow:none!important;transition:none!important}}
