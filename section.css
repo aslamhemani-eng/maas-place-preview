@@ -72,3 +72,28 @@
 .mi.hub.purple .panel{border-top-color:#5B2A86;background:#fff}
 .mi.hub.purple .act{background:#5B2A86}.mi.hub.purple .act:nth-child(3){background:var(--sageD)}
 .mi.hub.purple .psel button[aria-selected=true]{border-color:var(--sage);box-shadow:0 0 0 3px #E4EBDA}
+/* === Flat theme (Oct 11, final): solid blocks, one color per element, no gradients === */
+.mi.purple{--P:#4A2580;--G:#4F7A3A;--C:#F3EBDD;--Y:#E0A526}
+.mi.purple .hero{background:var(--P)!important;color:#fff}
+.mi.purple .sub{background:var(--P);border:0}
+.mi.purple section:nth-of-type(odd){background:#fff}.mi.purple section:nth-of-type(even){background:var(--C)}
+.mi.purple section:nth-of-type(3n),.mi.purple section:nth-of-type(3n+1),.mi.purple section:nth-of-type(3n+2){}
+.mi.purple section:nth-of-type(odd) .card{background:var(--C)!important}.mi.purple section:nth-of-type(even) .card{background:#fff!important}
+.mi.purple .card,.mi.purple .card:nth-child(n){border:0!important;box-shadow:0 1px 4px #0000000f}
+.mi.purple .card h3,.mi.purple .card:nth-child(n) h3{color:var(--P)}
+.mi.purple .btn{background:var(--P);color:#fff;border:0}
+.mi.purple .btn.ghost,.mi.purple #volunteer .btn,.mi.purple form .btn{background:var(--G);color:#fff;border:0}
+.mi.purple .btn.alt,.mi.purple .donate .btn,.mi.hub.purple #actDonate{background:var(--Y);color:#2E2438}
+.mi.purple .donate{background:var(--P)!important}
+.mi.purple th{background:var(--P)}.mi.purple tbody tr:nth-child(n){background:#fff}.mi.purple td:first-child{border-left:0}
+.mi.purple details{border-left:0}
+.mi.purple .tag{background:#E8EFE2;color:#2F4A22}
+.mi.purple form{background:#fff}.mi.purple section:nth-of-type(odd) form{background:var(--C)}
+/* Get Involved: beige only, white cards */
+.mi.hub.purple section,.mi.hub.purple section:nth-of-type(n){background:var(--C)!important}
+.mi.hub.purple .panel{background:#fff;border:0;box-shadow:none}.mi.hub.purple .panel[data-p]{box-shadow:none}
+.mi.hub.purple .psel button,.mi.hub.purple .psel button.p-bsv{background:#fff;border:3px solid #fff;border-left-width:3px}
+.mi.hub.purple .psel button[aria-selected=true]{border-color:var(--P);box-shadow:none}
+.mi.hub.purple .psel button.p-bsv small{color:#777}
+.mi.hub.purple .act,.mi.hub.purple .act:nth-child(n){background:var(--P)}.mi.hub.purple .act:nth-child(2){background:var(--G)}
+.mi.hub.purple form{background:var(--C)}
