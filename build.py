@@ -100,7 +100,7 @@ mp=head("Maa's Place Senior Center").replace('<main class="mi">','<main class="m
 <div class="card"><h3>🍲 Meals &amp; Chai</h3><ul class="ticks"><li>One hearty, nutritious meal daily</li><li>Healthy snacks and refreshments</li><li>Tea and coffee</li><li>Fresh fruit</li><li>Special treats for birthdays and holidays</li><li>Meals prepared with care for senior dietary needs</li></ul></div>
 </div></div></section>
 <section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
-<p>Week of: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
+<p>Open: <b id="weekOf">…</b> · <span id="schedNote" class="ph"></span></p>
 <div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
 <section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p>A look at what's happening this week. {ph("Maa's Place photos of consenting seniors to be added")}</p><div class="gal" id="gal" data-program="maas-place"></div></div></section>
 <section id="visit"><div class="wrap"><h2>Visit or Enroll</h2>
