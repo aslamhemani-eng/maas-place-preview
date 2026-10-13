@@ -270,7 +270,7 @@
   "id": "website-35f1fc58",
   "page": "bsv",
   "label": "Top banner: tagline (under \"Maa's Place Senior Center\")",
-  "text": "\"Blooming Star Village\" (eyebrow: \"Programs · MAA's Inspiration · Coming soon\")",
+  "text": "\"Star Village\" (eyebrow: \"Programs · MAA's Inspiration · Coming soon\")",
   "need": ""
  },
  {
@@ -285,13 +285,13 @@
   "page": "bsv",
   "label": "Top banner: quick facts",
   "text": "location 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · Ages served · Mon – Thu, 9 AM – 2 PM · Free; buttons \"Join the Interest List\" + \"Volunteer\"",
-  "need": "What ages does Blooming Star Village serve?"
+  "need": "What ages does Star Village serve?"
  },
  {
   "id": "website-8f835814",
   "page": "bsv",
   "label": "Our mission",
-  "text": "Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Blooming Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them.",
+  "text": "Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Star Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them.",
   "need": ""
  },
  {
@@ -313,7 +313,7 @@
   "page": "bsv",
   "label": "Ages served",
   "text": "",
-  "need": "What ages does Blooming Star Village serve? Is a referral needed?"
+  "need": "What ages does Star Village serve? Is a referral needed?"
  },
  {
   "id": "website-ddb56be6",
@@ -375,7 +375,7 @@
   "id": "website-8603ab3b",
   "page": "bsv",
   "label": "Join the interest list",
-  "text": "Blooming Star Village is coming soon. Join our interest list and we'll contact you as programs open.",
+  "text": "Star Village is coming soon. Join our interest list and we'll contact you as programs open.",
   "need": ""
  },
  {
@@ -389,22 +389,22 @@
   "id": "website-f119e053",
   "page": "bsv",
   "label": "Volunteer",
-  "text": "\"Patient, caring volunteers will be at the heart of Blooming Star Village. Educators, students, parents and anyone with a big heart are welcome.\" → volunteer.html",
+  "text": "\"Patient, caring volunteers will be at the heart of Star Village. Educators, students, parents and anyone with a big heart are welcome.\" → volunteer.html",
   "need": ""
  },
  {
   "id": "website-b30ebeb6",
   "page": "bsv",
   "label": "Donate",
-  "text": "\"Support Blooming Star Village\" → maasinspiration.org/donate.html",
+  "text": "\"Support Star Village\" → maasinspiration.org/donate.html",
   "need": ""
  },
  {
   "id": "website-02dfa2d4",
   "page": "bsv",
-  "label": "FAQ: When will Blooming Star Village open?",
+  "label": "FAQ: When will Star Village open?",
   "text": "",
-  "need": "When will Blooming Star Village open?"
+  "need": "When will Star Village open?"
  },
  {
   "id": "website-b3f59a03",
@@ -418,20 +418,20 @@
   "page": "bsv",
   "label": "FAQ: What ages do you serve?",
   "text": "",
-  "need": "What ages does Blooming Star Village serve?"
+  "need": "What ages does Star Village serve?"
  },
  {
   "id": "website-aab4f820",
   "page": "bsv",
   "label": "FAQ: Is there a cost?",
-  "text": "No. Blooming Star Village is free.",
+  "text": "No. Star Village is free.",
   "need": ""
  },
  {
   "id": "website-be4541a2",
   "page": "bsv",
   "label": "FAQ: Is this therapy?",
-  "text": "No. Blooming Star Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.",
+  "text": "No. Star Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.",
   "need": ""
  },
  {

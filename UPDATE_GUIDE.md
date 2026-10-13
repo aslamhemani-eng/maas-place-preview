@@ -29,7 +29,7 @@ Do not upload `index.html` from this folder (it would replace the homepage).
 **Current recipient: aslamhemani@gmail.com** (`$TO` in enroll.php). Switch `$TO` to hello@maasinspiration.org once that mailbox is set up in Microsoft 365.
 Note: Gmail is strict about mail "From" no-reply@maasinspiration.org sent by GoDaddy's server; the first messages may land in Spam. Mark them "Not spam" / create a Gmail filter, and add GoDaddy to the domain SPF record (or use SMTP) for reliable delivery.
 
-Both forms (Maa's Place enrollment, Blooming Star Village interest list) post to `enroll.php`,
+Both forms (Maa's Place enrollment, Star Village interest list) post to `enroll.php`,
 a small PHP mail handler that emails each submission to the `$TO` address
 (Reply-To = the submitter's email when given) and then shows `thank-you.html`.
 - Spam protection: hidden "website" honeypot field (bots that fill it are silently dropped), plus a

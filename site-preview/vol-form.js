@@ -1,7 +1,7 @@
 (function(){
 var f=document.getElementById('volunteerForm');if(!f)return;
 var DAYS={meals:[['Saturday (10 AM – 12 PM) · Maa\'s Meals','Saturday']],mp:[['Monday (Maa\'s Place)','Monday'],['Tuesday (Maa\'s Place)','Tuesday'],['Wednesday (Maa\'s Place)','Wednesday'],['Thursday (Maa\'s Place)','Thursday']]};
-var HELP={meals:['Food Packing','Meal Delivery'],mp:['Senior Activities','Snacks & Chai','Companionship / Conversation','Tech Help for Seniors'],bsv:['Activities & Events (Blooming Star Village)']};
+var HELP={meals:['Food Packing','Meal Delivery'],mp:['Senior Activities','Snacks & Chai','Companionship / Conversation','Tech Help for Seniors'],bsv:['Activities & Events (Star Village)']};
 var $=function(id){return document.getElementById(id)};
 function sel(){return [].map.call(f.querySelectorAll('.prog input:checked'),function(c){return c.dataset.p})}
 function render(){var s=sel(),keep={};f.querySelectorAll('#daysGrid input:checked').forEach(function(i){keep[i.value]=1});
