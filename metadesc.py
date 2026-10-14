@@ -11,7 +11,7 @@ D={'index':"MAA's Inspiration serves our Dallas–Fort Worth community through M
 'blooming-star-village':"Star Village: a free day program in Carrollton, TX for children with special needs and their families. Coming soon.",
 'get-involved':"Get involved with MAA's Inspiration: donate, volunteer or see schedules for Maa's Meals, the Senior Center and Star Village.",
 'thank-you':"Thank you for contacting MAA's Inspiration.",
-'contact':"Contact MAA's Inspiration in Carrollton, TX: addresses, hours, phone 214-517-1938 and email aslam@maasinspiration.org.",
+'contact':"Contact MAA's Inspiration in Carrollton, TX: addresses, hours, phone (469) 270-8156 and email aslam@maasinspiration.org.",
 'maas-place-waiver':"Senior Center participation waiver and release – read and print before your first visit.",
 'volunteer-policy':"MAA's Inspiration volunteer photo consent policy and code of conduct."}
 for f in sys.argv[1:]:
