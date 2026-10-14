@@ -1,7 +1,7 @@
 const P={
  meals:{name:"Maa's Meals",desc:"Every Saturday our volunteers cook, pack and deliver 2,200 fresh meals to seniors, the homeless and shelter homes across DFW.",cls:"p-meals",
   sched:[["Saturday","10am–noon","Meal packing & delivery"]],more:'Full schedule: <a href="schedule.html">maasinspiration.org/schedule.html</a>'},
- "maas-place":{name:"Maa's Place Senior Center",desc:"Opening soon! Free activities, snacks, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Maa\'s Place page</a>'},
+ "maas-place":{name:"Senior Center",desc:"Opening soon! Free activities, snacks, chai and companionship for adults 55+, Monday to Thursday 10 AM–2 PM. 2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 · 214-517-1938.",cls:"p-mp",more:'<a href="maas-place.html">Visit the Senior Center page</a>'},
  bsv:{name:"Star Village",desc:"A free day program for recreation and care for children with special needs. Coming soon.",cls:"p-bsv",sched:[["Mon–Thu","9 AM–2 PM","Coming soon"]],more:'<a href="blooming-star-village.html">Visit the Star Village page</a>'}
 };
 let MPS=null;
@@ -15,7 +15,7 @@ function show(p){if(!P[p])p='meals';cur=p;const c=P[p];
  const rows=p==='maas-place'?(MPS||[["Loading…","",""]]):c.sched;
  hsched.innerHTML=rows.map(r=>'<tr>'+r.map(x=>'<td>'+(/PLACEHOLDER/.test(x)?'<span class="ph">To be scheduled</span>':x)+'</td>').join('')+'</tr>').join('');
  if(window.VF)VF.select(p);
- if(p!=='meals')volprog.value=p==='bsv'?'Star Village':"Maa's Place";
+ if(p!=='meals')volprog.value=p==='bsv'?'Star Village':"Senior Center";
  if(location.hash.slice(1)!==p)history.replaceState(null,'','#'+p);}
 document.querySelectorAll('.psel button').forEach(b=>b.onclick=()=>show(b.dataset.p));
 addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(P[h])show(h)});

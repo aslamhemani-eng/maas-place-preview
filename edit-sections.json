@@ -10,7 +10,7 @@
  {
   "id": "website-1b8429a0",
   "page": "mp",
-  "label": "Top banner: tagline (under \"Maa's Place Senior Center\")",
+  "label": "Top banner: tagline (under \"Senior Center\")",
   "text": "Place where everybody knows your name",
   "need": "",
   "applied": true
@@ -33,7 +33,7 @@
   "id": "website-e7d08f81",
   "page": "mp",
   "label": "What we do",
-  "text": "Every activity at Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone",
+  "text": "Every activity at the Senior Center is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone",
   "need": "",
   "applied": true
  },
@@ -120,7 +120,7 @@
   "id": "website-ff339392",
   "page": "mp",
   "label": "Schedule: Friday",
-  "text": "Closed (Maa's Place is open Monday to Thursday)",
+  "text": "Closed (The Senior Center is open Monday to Thursday)",
   "need": "",
   "applied": true
  },
@@ -136,8 +136,8 @@
   "id": "website-ef08b2af",
   "page": "mp",
   "label": "Photo gallery",
-  "text": "currently 6 photos from Oct 10 meal service, captioned \"Weekly meal service – Oct 10, 2026\"; Maa's Place photos of consenting seniors needed",
-  "need": "Can you share photos from Maa's Place (only seniors who said yes to photos)?"
+  "text": "currently 6 photos from Oct 10 meal service, captioned \"Weekly meal service – Oct 10, 2026\"; Senior Center photos of consenting seniors needed",
+  "need": "Can you share photos from the Senior Center (only seniors who said yes to photos)?"
  },
  {
   "id": "website-36b19345",
@@ -192,7 +192,7 @@
   "id": "website-ba54abd0",
   "page": "mp",
   "label": "Donate",
-  "text": "\"Support Maa's Place – Donations are taken through our existing secure donation page.\" Button \"Donate Now\" → maasinspiration.org/donate.html; \"501(c)(3) nonprofit · EIN 86-2221897\"",
+  "text": "\"Support the Senior Center – Donations are taken through our existing secure donation page.\" Button \"Donate Now\" → maasinspiration.org/donate.html; \"501(c)(3) nonprofit · EIN 86-2221897\"",
   "need": ""
  },
  {
@@ -205,14 +205,14 @@
  {
   "id": "website-d9104221",
   "page": "mp",
-  "label": "FAQ: Who can attend Maa's Place?",
+  "label": "FAQ: Who can attend the Senior Center?",
   "text": "Adults 55 and up",
   "need": ""
  },
  {
   "id": "website-4d7a5026",
   "page": "mp",
-  "label": "FAQ: Where is Maa's Place?",
+  "label": "FAQ: Where is the Senior Center?",
   "text": "2700 Old Denton Rd, Suite 102, Carrollton, TX 75006",
   "need": ""
  },
@@ -227,7 +227,7 @@
   "id": "website-62acaf60",
   "page": "mp",
   "label": "FAQ: Is there a cost?",
-  "text": "No. Maa's Place is free.",
+  "text": "No. The Senior Center is free.",
   "need": ""
  },
  {
@@ -269,7 +269,7 @@
  {
   "id": "website-35f1fc58",
   "page": "bsv",
-  "label": "Top banner: tagline (under \"Maa's Place Senior Center\")",
+  "label": "Top banner: tagline (under \"Senior Center\")",
   "text": "\"Star Village\" (eyebrow: \"Programs · MAA's Inspiration · Coming soon\")",
   "need": ""
  },
@@ -410,7 +410,7 @@
   "id": "website-b3f59a03",
   "page": "bsv",
   "label": "FAQ: Where is it located?",
-  "text": "2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 (same location as Maa's Place)",
+  "text": "2700 Old Denton Rd, Suite 102, Carrollton, TX 75006 (same location as the Senior Center)",
   "need": ""
  },
  {
