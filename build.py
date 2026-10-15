@@ -361,3 +361,46 @@ CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contac
 <script>(function(){{var f=document.getElementById('contactForm');f.addEventListener('submit',async function(e){{e.preventDefault();var b=f.querySelector('.submit-btn'),er=document.getElementById('cErr');b.disabled=true;b.textContent='Sending…';try{{var r=await fetch('https://formsubmit.co/ajax/aslamhemani@gmail.com',{{method:'POST',headers:{{Accept:'application/json'}},body:new FormData(f)}});var j=await r.json().catch(function(){{return{{}}}});if(r.ok&&(j.success===true||j.success==='true')){{location.href='thank-you.html';return}}er.textContent='Submission issue: '+(j.message||('HTTP '+r.status))+'. Please email aslam@maasinspiration.org.'}}catch(x){{er.textContent='Network error – please try again or email aslam@maasinspiration.org.'}}er.hidden=false;b.disabled=false;b.textContent='Send Message'}})}})();</script>
 '''+foot
 open('contact.html','w').write(CT)
+
+# ---- Legal + SMS pages (for Twilio A2P compliance) ----
+LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms &amp; Conditions</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a></div>'
+PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Privacy Policy</h1><p>How Maa's Inspiration Inc. collects and uses your information.</p></header>
+<section><div class="wrap">
+<p>This Privacy Policy applies to Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, including our Maa's Meals program, Senior Center and Star Village.</p>
+<h2>What data we collect</h2><ul><li>Name</li><li>Phone number</li><li>Email address</li><li>Address (for meal delivery)</li></ul>
+<h2>How we use it</h2><ul><li>Volunteer scheduling, including shift and route reminders</li><li>Meal delivery notices to meal recipients</li><li>Answering questions you send us</li></ul>
+<h2>Text messages (SMS)</h2>
+<p>If you opt in to text messages from Maa's Inspiration Inc., we use your phone number only to send the messages described in our <a href="terms.html">Terms &amp; Conditions</a>. You can reply STOP at any time to opt out, or HELP for help.</p>
+<p><b>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.</b></p>
+<h2>Keeping your data safe</h2><p>Only authorized Maa's Inspiration staff and volunteers can see your information, and only what they need for their role.</p>
+<h2>Contact us</h2><p>Maa's Inspiration Inc., Carrollton, TX · <a href="tel:+14692708156">(469) 270-8156</a> · <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p>
+</div></section>
+'''+foot
+open('privacy.html','w').write(PV)
+TM=head("Terms & Conditions").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Terms &amp; Conditions</h1><p>Terms for using the Maa's Inspiration Inc. website and text messages.</p></header>
+<section><div class="wrap">
+<p>These terms apply to the website and services of Maa's Inspiration Inc., a 501(c)(3) nonprofit in Carrollton, Texas.</p>
+<h2 id="sms">SMS Terms</h2><ul>
+<li><b>Brand:</b> Maa's Inspiration Inc. (Maa's Meals)</li>
+<li><b>Message types:</b> volunteer shift and route reminders, and meal delivery notices.</li>
+<li><b>Frequency:</b> message frequency varies.</li>
+<li>Message and data rates may apply.</li>
+<li><b>Opt out:</b> reply STOP to any message to opt out. You will get one confirmation and no further messages.</li>
+<li><b>Help:</b> reply HELP for help.</li>
+<li><b>Contact:</b> <a href="tel:+14692708156">(469) 270-8156</a> or <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></li>
+<li>Carriers are not liable for delayed or undelivered messages.</li>
+<li>Consent to receive texts is not a condition of volunteering or receiving meals.</li></ul>
+<p>See our <a href="privacy.html">Privacy Policy</a> for how we handle your information.</p>
+</div></section>
+'''+foot
+open('terms.html','w').write(TM)
+SS=head("Get Text Updates").replace('<main class="mi">','<main class="mi purple">').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)+'''<header class="hero"><h1>Get text updates from Maa's Meals</h1><p>Volunteer shift reminders and meal delivery notices from Maa's Inspiration Inc.</p></header>
+<section><div class="wrap"><div class="lvf-wrap"><form class="lvf" id="smsForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New SMS Opt-in — Maa's Meals"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://maasinspiration.org/thank-you.html"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Mobile phone <span class="req">*</span></label><input type="tel" name="Phone" required autocomplete="tel"></div></div>
+<div class="form-row"><div class="form-group"><label>I am a <span class="req">*</span></label><select name="Role" required><option value="">Choose…</option><option>Volunteer</option><option>Recipient</option></select></div></div>
+<div class="form-row"><div class="form-group full"><label style="font-weight:400"><input type="checkbox" name="SMS Consent" value="Yes" required> I agree to receive text messages from Maa's Inspiration Inc. about volunteer shifts and meal deliveries. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</label>
+<p><small>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</small></p></div></div>
+<button type="submit" class="submit-btn">Sign up for texts</button></form></div></div></section>
+'''+foot
+open('sms-signup.html','w').write(SS)
