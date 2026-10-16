@@ -10,6 +10,8 @@ CSS='''<style>
 .mi.bvp section:nth-of-type(odd){background:#fff}.mi.bvp section:nth-of-type(even){background:#E8E0D4}
 .mi.bvp section .card{background:#fff!important;border-top:6px solid #8DA98A}.mi.bvp section .card:nth-child(even){border-top-color:#8870A8}
 .mi.bvp h2,.mi.bvp .card h3{color:#5F4A80}.mi.bvp .btn,.mi.bvp .btn.ghost{background:#8870A8!important;color:#fff!important;border:2px solid #5F4A80!important}.mi.bvp .btn.alt{background:#8DA98A!important;color:#1F2E1E!important;border:2px solid #5E7A5B!important}
+body.bvpage .donate-btn,body.bvpage .donate-btn:hover{background:#8870A8!important;background-color:#8870A8!important;background-image:none!important;color:#fff!important;border-color:#5F4A80!important}
+.mi.bvp .soon-line{border-left-color:#8DA98A!important}
 .mi.bvp .soon-badge{background:#E8E0D4!important;color:#5F4A80!important;border:2px solid #8DA98A}
 .mi.bvp th{background:#8DA98A}.mi.bvp td:first-child{border-left:4px solid #8870A8}
 .bv-status{background:#E8E0D4;border:2px solid #8DA98A;border-left:8px solid #8870A8;border-radius:12px;padding:14px 18px;color:#2E2438;margin:14px 0}
@@ -55,7 +57,7 @@ def FORMS(TY):
   return inq,vol
 def page(head,foot,DON,TY):
   inq,vol=FORMS(TY)
-  return head("Bloom Village").replace('<main class="mi">','<main class="mi bvp">').replace('</head>',CSS+'</head>',1)+f'''<div class="sub"><a href="#heart">Our Heart</a><a href="#serve">Who We Serve</a><a href="#space">Our Space</a><a href="#admission">Admission</a><a href="#journey">Bloom Journey</a><a href="#day">Daily Schedule</a><a href="#tuition">Tuition</a><a href="#give">Give</a><a href="#status">Licensing</a><a href="#rights">Rights</a><a href="#contact">Contact &amp; Tour</a><a href="#volunteer">Volunteer</a></div>
+  return head("Bloom Village").replace('<main class="mi">','<main class="mi bvp">').replace('<body>','<body class="bvpage">',1).replace('</head>',CSS+'</head>',1)+f'''<div class="sub"><a href="#heart">Our Heart</a><a href="#serve">Who We Serve</a><a href="#space">Our Space</a><a href="#admission">Admission</a><a href="#journey">Bloom Journey</a><a href="#day">Daily Schedule</a><a href="#tuition">Tuition</a><a href="#give">Give</a><a href="#status">Licensing</a><a href="#rights">Rights</a><a href="#contact">Contact &amp; Tour</a><a href="#volunteer">Volunteer</a></div>
 <header class="hero"><img class="bv-hero-img" src="img/bv-art.jpg" alt="A woman with Down syndrome painting at an easel with a supportive staff member"><p class="eyebrow">A Program of Maa's Inspiration</p><span class="soon-badge">🌸 Licensing pending with HHSC</span>
 <h1>Bloom Village</h1><p class="tagline">Meaningful Days. Meaningful Lives.</p>
 <p>A safe, welcoming adult enrichment program where adults with intellectual and developmental disabilities can build friendships, learn life skills, enjoy meaningful activities and keep growing throughout adulthood, while families gain peace of mind.</p>
