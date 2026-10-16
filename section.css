@@ -206,3 +206,8 @@ footer{background:#2E2438!important}
 .mi.volp .vsign .vsub{text-align:center;margin:-4px auto 18px}
 .mi.volp .vf{max-width:720px}
 .mi .pc-img{display:block;width:100%;height:190px;object-fit:cover;border-radius:10px;margin:0 0 12px}
+
+/* Bloom Village palette (Warm Ivory / Sage / Gentle Purple) – no gold */
+.mi .soon-badge.bv,.mi .vt.soon.bv{background:#E8E0D4!important;color:#5F4A80!important;border:2px solid #8DA98A}
+.mi .bv-card .btn,.mi .pc-bsv .btn{background:#8870A8!important;color:#fff!important}
+.mi .pc-bsv .ribbon{background:#8DA98A!important;color:#1F2E1E!important}

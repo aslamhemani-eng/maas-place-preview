@@ -146,7 +146,7 @@ pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+
 <section><div class="wrap"><div class="grid">
 <div class="card"><img class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt="Maa's Meals volunteers"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
 <div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at the Senior Center"><h3>🏡 Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit the Senior Center</a></div>
-<div class="card"><img class="pc-img" src="img/bv-art.jpg" alt="A Bloom Village member with Down syndrome painting with staff"><h3>🌸 Bloom Village</h3><p><span class="soon-badge sm">Licensing pending</span> Adult enrichment for adults 18+ with intellectual and developmental disabilities. 9 AM–1 PM; 2–3 days/week pilot, then Mon–Fri. Begins after HHSC license is issued.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
+<div class="card bv-card"><img class="pc-img" src="img/bv-art.jpg" alt="A Bloom Village member with Down syndrome painting with staff"><h3>🌸 Bloom Village</h3><p><span class="soon-badge sm bv">Licensing pending</span> Adult enrichment for adults 18+ with intellectual and developmental disabilities. 9 AM–1 PM; 2–3 days/week pilot, then Mon–Fri. Begins after HHSC license is issued.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
@@ -197,7 +197,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <section><div class="wrap"><h2>Where you can help</h2><div class="vcards">
 <div class="vcard"><span class="vt open">✅ Open now</span><h3>🍲 Maa's Meals</h3><p><b>Saturdays only</b> 10 AM – noon<br>Packing &amp; delivery</p><small>📍 1445 MacArthur Dr, Suite 104, Carrollton</small></div>
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Senior Center</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</small></div>
-<div class="vcard"><span class="vt soon">Licensing pending</span><h3>🌸 Bloom Village</h3><p><b>Mon – Fri</b> 9 AM – 1 PM<br>Adult enrichment for adults 18+ with I/DD: arts, music, games, gardening, life skills. Volunteers 18+, screening &amp; training required. Begins after HHSC license is issued.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007 · <a href="bloom-village.html#volunteer">Bloom Village volunteer form</a></small></div>
+<div class="vcard bv-card"><span class="vt soon bv">Licensing pending</span><h3>🌸 Bloom Village</h3><p><b>Mon – Fri</b> 9 AM – 1 PM<br>Adult enrichment for adults 18+ with I/DD: arts, music, games, gardening, life skills. Volunteers 18+, screening &amp; training required. Begins after HHSC license is issued.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007 · <a href="bloom-village.html#volunteer">Bloom Village volunteer form</a></small></div>
 </div></div></section>
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
@@ -252,7 +252,7 @@ open('maas-place.html','w').write(main)
 
 # --- Proposed new front page (home.html) ---
 def _pcard(title,img,desc,facts,href,key,badge=''):
-    return f'''<div class="pcard">{'<span class="ribbon">'+badge+'</span>' if badge else ''}
+    return f'''<div class="pcard pc-{key}">{'<span class="ribbon">'+badge+'</span>' if badge else ''}
 <a class="pmain" href="{href}"><img src="{img if "/" in img else "gallery/"+img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
