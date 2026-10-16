@@ -54,7 +54,7 @@ def FORMS(TY):
 def page(head,foot,DON,TY):
   inq,vol=FORMS(TY)
   return head("Bloom Village").replace('<main class="mi">','<main class="mi bvp">').replace('</head>',CSS+'</head>',1)+f'''<div class="sub"><a href="#heart">Our Heart</a><a href="#serve">Who We Serve</a><a href="#admission">Admission</a><a href="#journey">Bloom Journey</a><a href="#day">Daily Schedule</a><a href="#tuition">Tuition</a><a href="#give">Give</a><a href="#status">Licensing</a><a href="#contact">Contact &amp; Tour</a><a href="#volunteer">Volunteer</a></div>
-<header class="hero"><img class="bv-hero-img" src="img/bv-art.jpg" alt="Adults with disabilities painting and making art together at a bright table"><p class="eyebrow">A Program of Maa's Inspiration</p><span class="soon-badge">🌸 Licensing pending with HHSC</span>
+<header class="hero"><img class="bv-hero-img" src="img/bv-art.jpg" alt="A woman with Down syndrome painting at an easel with a supportive staff member"><p class="eyebrow">A Program of Maa's Inspiration</p><span class="soon-badge">🌸 Licensing pending with HHSC</span>
 <h1>Bloom Village</h1><p class="tagline">Meaningful Days. Meaningful Lives.</p>
 <p>A safe, welcoming adult enrichment program where adults with intellectual and developmental disabilities can build friendships, learn life skills, enjoy meaningful activities and keep growing throughout adulthood, while families gain peace of mind.</p>
 <div class="facts"><div>🧑‍🤝‍🧑 Adults 18+ with I/DD</div><div>🕘 Mon–Fri, 9 AM–1 PM (pilot 2–3 days/week)</div><div>💜 $30 per program day</div><div>📞 <a href="tel:+14692708156" style="color:#fff">(469) 270-8156</a></div><div>📍 <a href="{MAPQ}" target="_blank" rel="noopener" style="color:inherit">{ADDR}</a></div></div>
@@ -91,9 +91,9 @@ def page(head,foot,DON,TY):
 <div class="card"><h3>🤝 CONNECT</h3><p><b>Friendship, communication and belonging.</b> Morning circle, cooperative games, conversation prompts, music sharing, turn-taking, group celebrations.</p></div>
 <div class="card"><h3>🎨 CREATE</h3><p><b>Expression, imagination and fine-motor practice.</b> Arts and crafts, painting, collage, LEGO/building wall, seasonal projects, digital art.</p></div>
 <div class="card"><h3>🌸 THRIVE</h3><p><b>Choice, wellness and meaningful participation.</b> Music, sensory exploration, games, reading, personal choices, quiet breaks.</p></div></div>
-<figure class="bv-fig"><img src="img/bv-garden.jpg" alt="Adults tending plants together in a garden, building everyday skills and confidence" loading="lazy"></figure>
+<figure class="bv-fig"><img src="img/bv-garden.jpg" alt="A wheelchair user and a young man with Down syndrome potting lavender together" loading="lazy"></figure>
 <p style="margin-top:16px">Every day we use a picture-based notice board and a visual schedule, and we respect speech, pictures, gestures, communication devices and every preferred way of communicating.</p></div></section>
-<section id="day"><div class="wrap"><h2>A Day at Bloom Village (9:00 AM–1:00 PM)</h2><figure class="bv-fig"><img src="img/bv-music.jpg" alt="Adults smiling and making music together with simple instruments" loading="lazy"></figure>
+<section id="day"><div class="wrap"><h2>A Day at Bloom Village (9:00 AM–1:00 PM)</h2><figure class="bv-fig"><img src="img/bv-music.jpg" alt="Young adults with intellectual and developmental disabilities sharing a music circle" loading="lazy"></figure>
 <p>Draft routine; we adjust by day, member preference and individual goals.</p>
 <div class="tw"><table><thead><tr><th>Time</th><th>Activity</th><th>Skills / social purpose</th></tr></thead><tbody>
 <tr><td>9:00</td><td>Arrival and welcome</td><td>Safe handoff, visual schedule, personal choice</td></tr>
