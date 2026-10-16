@@ -140,55 +140,13 @@ mp=head("Senior Center").replace('<main class="mi">','<main class="mi purple">')
 <div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to the Senior Center" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75006&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
 '''+foot.replace('<h4>Follow Us</h4>','<h4>Senior Center</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006<br><a href="tel:+14692708156" style="color:inherit">(469) 270-8156</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
-bsv=head("Bloom Village").replace('<main class="mi">','<main class="mi purple bsvp">')+f'''<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Activities</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
-<header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
-<h1>Bloom Village</h1><p>A free, caring day program where children with sensory, developmental and other special needs can play, learn and belong, and their families can find support.</p>
-<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages 5–17</div><div>🕙 Mon – Thu, 9 AM – 2 PM</div><div>💛 Free</div></div>
-<a class="btn alt" href="#enroll">Join the Interest List</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
-<section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Bloom Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
-<div class="grid"><div class="card"><h3>🌱 Belonging</h3><p>A place where differences are welcomed, not just accommodated.</p></div><div class="card"><h3>🤝 Family support</h3><p>Caring for the whole family, including parents, siblings and caregivers.</p></div><div class="card"><h3>⭐ Growth</h3><p>Helping each person build skills and confidence at their own pace.</p></div></div></div></section>
-<section id="serve"><div class="wrap"><h2>Who We Serve</h2><p>Bloom Village is planned for individuals with sensory processing differences, autism, developmental delays and other special needs, together with their families, across Dallas–Fort Worth.</p>
-<p>Ages served: 5–17 · No referral needed. Families simply join the interest list, and we'll follow up to learn about your child's needs.</p></div></section>
-<section id="programs"><div class="wrap"><h2>What Your Child Will Do</h2><p>Each day blends play, routine and gentle skill-building, at each child's own pace.</p>
-<div class="grid">
-<div class="card"><h3>🧩 Sensory Play &amp; Movement</h3><p>Swinging, climbing, balance and hands-on sensory activities that help the body and mind feel calm and ready.</p></div>
-<div class="card"><h3>💬 Friendship &amp; Communication</h3><p>Small, friendly groups to practice taking turns, sharing, expressing feelings and making friends.</p></div>
-<div class="card"><h3>🎨 Arts, Music &amp; Stories</h3><p>Painting, crafts, music, movement and story time to spark creativity and joy.</p></div>
-<div class="card"><h3>🗓️ Daily Routine &amp; Life Skills</h3><p>A predictable, visual daily routine with simple everyday skills that build independence.</p></div>
-<div class="card"><h3>🌳 Active &amp; Outdoor Play</h3><p>Games, ball play and outdoor time to build strength, coordination and confidence.</p></div>
-<div class="card"><h3>👨‍👩‍👧 Family &amp; Caregiver Support</h3><p>A few hours of peace of mind for parents, plus a friendly community of families who understand.</p></div>
-<div class="card"><h3>🍎 Snacks</h3><p>Healthy snacks in the MAA's Inspiration tradition, with care for dietary and sensory needs.</p></div>
-</div></div></section>
-<section id="visit"><div class="wrap"><h2>What a Visit Looks Like</h2><div class="grid">
-<div class="card"><h3>1. Reach out</h3><p>Tell us about your family by email or the interest form below.</p></div>
-<div class="card"><h3>2. Tour &amp; meet</h3><p>Visit with your child, meet our team and see the space once we open.</p></div>
-<div class="card"><h3>3. A plan that fits</h3><p>We talk through needs, interests and comfort to suggest the right activities.</p></div>
-<div class="card"><h3>4. Join in</h3><p>Start attending at a pace that feels right.</p></div></div></div></section>
-<section id="schedule"><div class="wrap"><h2>Schedule</h2><p><b>Monday – Thursday, 9 AM – 2 PM</b> <span class="soon-badge sm">Coming soon</span></p><p>Cost: Free · Transportation: not provided · 2700 Old Denton Rd, Suite 102, Carrollton</p></div></section>
-<section id="enroll"><div class="wrap"><h2>Enroll &amp; Get Involved</h2><p>Bloom Village is coming soon. Join our interest list and we'll contact you as programs open.</p>
-<form id="enroll"><label>Parent / caregiver name *<input required></label><label>Phone *<input type="tel" required></label>
-<label>Email<input type="email"></label><label>Participant's age<input type="number" min="0"></label>
-<label class="full">Programs of interest<input placeholder="e.g. sensory play, social skills, family support"></label>
-<label class="full">Anything you'd like us to know (needs, communication, interests)<textarea rows="3"></textarea></label>
-<div class="full"><button class="btn">Join Interest List</button> <span class="ph">Form not connected yet</span></div></form></div></section>
-<section id="volunteer"><div class="wrap"><h2>Volunteer</h2><p>Patient, caring volunteers will be at the heart of Bloom Village. Educators, students, parents and anyone with a big heart are welcome.</p><a class="btn" href="{VOL}">Sign Up to Volunteer</a></div></section>
-{donate("Bloom Village")}
-<section id="faq"><div class="wrap"><h2>FAQ</h2>
-<details><summary>What are the hours?</summary><p>Monday to Thursday, 9 AM to 2 PM.</p></details>
-<details><summary>When will Bloom Village open?</summary><p>Opening date to be announced. Join the interest list to be the first to know.</p></details>
-<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (the same location as the Senior Center).</p></details>
-<details><summary>What ages do you serve?</summary><p>Children ages 5–17 with sensory, developmental, or other special needs.</p></details>
-<details><summary>Is there a cost?</summary><p>No. Bloom Village is free.</p></details>
-<details><summary>Is this therapy?</summary><p>No. Bloom Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
-<details><summary>Do you provide transportation?</summary><p>No, families arrange their own transportation.</p></details>
-<details><summary>How can I help now?</summary><p>Volunteer, donate, or share this page with families who may benefit.</p></details>
-<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
-'''+foot
+import bv_page
+bsv=bv_page.page(head,foot,DON,'https://maasinspiration.org/thank-you.html')
 pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through the Senior Center and Bloom Village.</p></header>
 <section><div class="wrap"><div class="grid">
 <div class="card"><img class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt="Maa's Meals volunteers"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
 <div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at the Senior Center"><h3>🏡 Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit the Senior Center</a></div>
-<div class="card"><img class="pc-img" src="gallery/bsv-girl-at-desk.jpg" alt="Child at Bloom Village"><h3>🌟 Bloom Village</h3><p>A free day program for recreation and care for children with special needs. Mon–Thu, 9 AM–2 PM. Coming soon.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
+<div class="card"><h3>🌸 Bloom Village</h3><p><span class="soon-badge sm">Licensing pending</span> Adult enrichment for adults 18+ with intellectual and developmental disabilities. Mon–Fri, 9 AM–1 PM. Begins after HHSC license is issued.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
 {donate("our programs")}
@@ -200,7 +158,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <div class="psel" role="tablist">
 <button role="tab" data-p="meals" class="p-meals">🍲<b>Maa's Meals</b></button>
 <button role="tab" data-p="maas-place" class="p-mp">🏡<b>Senior Center</b><small>Opening soon · 55+</small></button>
-<button role="tab" data-p="bsv" class="p-bsv">🌟<b>Bloom Village</b><small>Coming soon</small></button>
+<button role="tab" data-p="bsv" class="p-bsv">🌸<b>Bloom Village</b><small>Licensing pending · 18+</small></button>
 </div>
 <div id="panel" class="panel">
 <img id="pimg" class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt=""><h2 id="pname"></h2><p id="pdesc"></p>
@@ -239,7 +197,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <section><div class="wrap"><h2>Where you can help</h2><div class="vcards">
 <div class="vcard"><span class="vt open">✅ Open now</span><h3>🍲 Maa's Meals</h3><p><b>Saturdays only</b> 10 AM – noon<br>Packing &amp; delivery</p><small>📍 1445 MacArthur Dr, Suite 104, Carrollton</small></div>
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Senior Center</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
-<div class="vcard"><span class="vt soon">Coming soon</span><h3>🌟 Bloom Village</h3><p><b>Mon – Thu</b> 9 AM – 2 PM<br>A free day program for children with special needs. Join the interest list – we'll contact you when it opens.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton</small></div>
+<div class="vcard"><span class="vt soon">Licensing pending</span><h3>🌸 Bloom Village</h3><p><b>Mon – Fri</b> 9 AM – 1 PM<br>Adult enrichment for adults 18+ with I/DD: arts, music, games, gardening, life skills. Volunteers 18+, screening &amp; training required. Begins after HHSC license is issued.</p><small>📍 2700 Old Denton Rd, Carrollton · <a href="bloom-village.html#volunteer">Bloom Village volunteer form</a></small></div>
 </div></div></section>
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
@@ -262,7 +220,7 @@ def _wire(fn,formname):
     h=h.replace('<span class="ph">Form not connected yet – submission destination to be decided</span>','').replace('<span class="ph">Form not connected yet</span>','')
     for a,b in [('name="field"','name="agree_waiver" value="Yes"'),('email_optional','email'),('_amp_','_'),('senior_s_','senior_'),('participant_s_','participant_'),('anything_you_d_like_us_to_know_needs_com','notes')]: h=h.replace(a,b)
     open(fn,'w').write(h)
-_wire('maas-place.html',"Senior Center enrollment"); _wire('bloom-village.html','Bloom Village interest list')
+_wire('maas-place.html',"Senior Center enrollment")
 
 # --- Design variants of the Senior Center (same content, different layouts) ---
 d1=mp.replace('<main class="mi purple">','<main class="mi purple d1">').replace("<title>Senior Center","<title>Design 1 Classic – Senior Center")
@@ -298,7 +256,7 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <a class="pmain" href="{href}"><img src="gallery/{img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
-<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","maas-meals-volunteers.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Senior Center","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Bloom Village","bsv-girl-at-desk.jpg","A free day program for recreation and care for children with special needs.","Coming soon · Mon–Thu · 9 AM–2 PM · Carrollton","bloom-village.html","bsv","Coming Soon")+'''</div></div></section>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","maas-meals-volunteers.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Senior Center","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Bloom Village","2026-10-10-service-05.jpg","Adult enrichment for adults 18+ with intellectual and developmental disabilities. Meaningful Days. Meaningful Lives.","Licensing pending with HHSC · Mon–Fri · 9 AM–1 PM · Carrollton","bloom-village.html","bsv","Licensing Pending")+'''</div></div></section>
 <section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)
@@ -309,10 +267,7 @@ import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-n
 
 _wire('maas-place.html',"Senior Center enrollment")
 
-_b=open('bloom-village.html').read()
-_b=_b.replace('<main class="mi purple bsvp">','<main class="mi purple bsvp d2">',1).replace('<header class="hero" style="--img:url(gallery/bsv-girl-at-desk.jpg)">','<header class="hero split"><div class="split-text">',1)
-_b=_b.replace('</header>','</div><div class="split-img"><img src="gallery/bsv-girl-at-desk.jpg" alt="A child working happily at a desk"></div></header>',1)
-open('bloom-village.html','w').write(_b)
+
 
 # ---- Senior Center waiver ----
 WV=head("Senior Center Participation Waiver").replace('<main class="mi">','<main class="mi purple waiver">').replace('</head>','''<style>
@@ -347,7 +302,7 @@ MAP=lambda q:'https://www.google.com/maps/search/?api=1&query='+q
 CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contactp">').replace('</head>','<link rel="stylesheet" href="vol-form.css"><style>.mi.contactp{background:#F3EBDD}.mi.contactp .hero{text-align:center;background:#F3EBDD!important;color:#3D1A6E;padding:56px 20px 24px}.mi.contactp .hero p{max-width:640px;margin:8px auto 0}.ccards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.ccard{background:#fff;border-radius:14px;border-top:5px solid #5B2A86;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.06)}.ccard h3{color:#3D1A6E;margin:0 0 8px}.ccard p{margin:6px 0}.ccard a{color:#5B2A86;font-weight:700}.social{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.social a{background:#5B2A86;color:#fff;border-radius:30px;padding:10px 20px;font-weight:700;text-decoration:none}.np{text-align:center;color:#6b5f7a;font-size:.9rem;margin-top:18px}.mi.contactp h2{text-align:center;color:#3D1A6E}</style></head>',1)+f'''<header class="hero"><h1>Contact Us</h1><p>We'd love to hear from you, whether you want to volunteer, donate, partner with us, or learn more about our programs.</p></header>
 <section><div class="wrap"><div class="ccards">
 <div class="ccard"><h3>📍 Main Office &amp; Maa's Meals</h3><p>1445 MacArthur Drive, Suite 104<br>Carrollton, TX 75007</p><p><b>Maa's Meals:</b> Saturdays, 10 AM – 12 PM</p><p><a href="{MAP('1445+MacArthur+Drive+Suite+104+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
-<div class="ccard"><h3>🏡 Senior Center &amp; Bloom Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75006</p><p><b>Senior Center:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Bloom Village:</b> Monday – Thursday, 9 AM – 2 PM (coming soon)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006')}" target="_blank" rel="noopener">Get directions →</a></p></div>
+<div class="ccard"><h3>🏡 Senior Center &amp; 🌸 Bloom Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75006</p><p><b>Senior Center:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Bloom Village:</b> Monday – Friday, 9 AM – 1 PM (licensing pending with HHSC; services begin after the license is issued)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006')}" target="_blank" rel="noopener">Get directions →</a></p></div>
 <div class="ccard"><h3>📞 Phone &amp; ✉️ Email</h3><p><b>Phone:</b> <a href="tel:+14692708156">(469) 270-8156</a></p><p><b>Email:</b> <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div>
 </div></div></section>
 <section><div class="wrap"><h2>Send us a message</h2><div class="lvf-wrap"><form class="lvf" id="contactForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
