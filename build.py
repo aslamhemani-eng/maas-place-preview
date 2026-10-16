@@ -83,15 +83,15 @@ donate=lambda w:f'''<section id="donate" class="donate"><div class="wrap"><h2>Su
 <p>Donations are taken through our existing secure donation page.</p>
 <a class="btn alt" href="{DON}">Donate Now</a>
 <p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>'''
-mp=head("Senior Center").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a><a href="get-involved.html#maas-place">Get Involved</a></div>
+mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')+f'''<div class="sub"><a href="#what">What We Do</a><a href="#schedule">Schedule</a><a href="#gallery">Gallery</a><a href="#visit">Visit / Enroll</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#contact">Contact &amp; FAQ</a><a href="get-involved.html#maas-place">Get Involved</a></div>
 <header class="hero" style="--img:url(gallery/maas-place-seniors-painting.jpg)"><p class="eyebrow">Programs · MAA's Inspiration</p><span class="soon-badge">🌱 Opening soon</span>
-<h1>Senior Center</h1>
+<h1>Maa’s Place</h1>
 <p class="tagline">Place where everybody knows your name</p>
-<p class="soon-line">The Senior Center is opening soon. Join the interest list below and we'll let you know when doors open.</p>
+<p class="soon-line">The Maa’s Place is opening soon. Join the interest list below and we'll let you know when doors open.</p>
 <p>A warm, welcoming place where seniors in Dallas–Fort Worth gather for activities, homestyle snacks, chai and companionship, carried forward in the spirit of Maa, whose greatest joy was feeding others.</p>
 <div class="facts"><div>🕙 Monday to Thursday, 10 AM to 2 PM</div><div>👵 Ages 55+</div><div>📞 <a href="tel:+14692708156" style="color:#fff">(469) 270-8156</a></div><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></div></div>
 <a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost" href="{VOL}" style="color:#fff">Volunteer</a></header>
-<section id="what"><div class="wrap"><h2>What We Do</h2><p>Every activity at the Senior Center is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone.</p>
+<section id="what"><div class="wrap"><h2>What We Do</h2><p>Every activity at the Maa’s Place is chosen to keep seniors active in body and mind, from gentle exercise and brain games to arts, music, and learning something new. Just as important, it’s a place to share laughter, snacks, and friendship, where every senior feels valued and no one is alone.</p>
 <div class="grid">
 <div class="card"><h3>💪 Physical</h3><ul class="ticks"><li>Chair exercises and gentle stretching</li><li>Balance and fall-prevention exercises</li><li>Group walks</li><li>Light dance and movement to music</li><li>Chair yoga or tai chi</li><li>Fun movement games (balloon toss, bean bag games)</li><li>Healthy snacks</li><li>Health checks and wellness talks</li></ul></div>
 <div class="card"><h3>🧠 Mental</h3><ul class="ticks"><li>Puzzles, word games, and trivia</li><li>Memory and brain-training games</li><li>Reading and storytelling circles</li><li>Learning sessions (technology, health talks, new skills)</li><li>Music, singing, and sing-alongs</li><li>Arts and crafts for creativity and focus</li><li>Group discussions and sharing life stories</li><li>Bingo, cards, and board games</li></ul></div>
@@ -102,13 +102,13 @@ mp=head("Senior Center").replace('<main class="mi">','<main class="mi purple">')
 <section id="schedule"><div class="wrap"><h2>Weekly Schedule of Activities</h2>
 <p>Open: <b id="weekOf">…</b></p>
 <div class="tw"><table><thead id="schedHead"></thead><tbody id="sched"><tr><td>Loading…</td></tr></tbody></table></div></div></section>
-<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p class="soon-line">Photos coming soon. The Senior Center opens its doors shortly!</p></div></section>
+<section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p class="soon-line">Photos coming soon. The Maa’s Place opens its doors shortly!</p></div></section>
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+14692708156">(469) 270-8156</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
 <div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
 <div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a></p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
-<h3>Enrollment / Interest Form</h3><p>The Senior Center is opening soon – sign up now and we'll contact you when it opens.</p>
+<h3>Enrollment / Interest Form</h3><p>The Maa’s Place is opening soon – sign up now and we'll contact you when it opens.</p>
 <form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
 <label>Phone *<input type="tel" required></label><label>Email (optional)<input type="email"></label>
 <label class="full">Home address / city &amp; ZIP<input></label>
@@ -123,29 +123,29 @@ mp=head("Senior Center").replace('<main class="mi">','<main class="mi purple">')
 <label class="full">How did you hear about us?<input></label>
 <label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the <a href="maas-place-waiver.html" target="_blank">participation waiver</a>.</label>
 <div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
-<section id="volunteer"><div class="wrap"><h2>Volunteer at the Senior Center</h2>
+<section id="volunteer"><div class="wrap"><h2>Volunteer at the Maa’s Place</h2>
 <p>Share a skill, lead an activity, or simply sit and talk.</p>
 <div class="grid"><div class="card"><h3>Lead an activity</h3><p>Yoga, crafts, games, planting, karaoke.</p></div><div class="card"><h3>Share expertise</h3><p>Health, insurance, phone and tech help.</p></div><div class="card"><h3>Serve &amp; connect</h3><p>Snacks, chai, conversation and companionship.</p></div></div>
 <p style="margin-top:24px"><a class="btn" href="{VOL}">Sign Up to Volunteer</a></p></div></section>
-{donate("the Senior Center")}
+{donate("the Maa’s Place")}
 <section id="contact"><div class="wrap"><h2>Contact &amp; FAQ</h2>
 <p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a> · 📞 <a href="tel:+14692708156">(469) 270-8156</a></p>
-<details><summary>Who can attend the Senior Center?</summary><p>Adults 55 and up</p></details>
-<details><summary>Where is the Senior Center?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></p></details>
+<details><summary>Who can attend the Maa’s Place?</summary><p>Adults 55 and up</p></details>
+<details><summary>Where is the Maa’s Place?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></p></details>
 <details><summary>What are your hours?</summary><p>Monday to Thursday, 10 AM to 2 PM.</p></details>
-<details><summary>Is there a cost?</summary><p>No. The Senior Center is free.</p></details>
+<details><summary>Is there a cost?</summary><p>No. The Maa’s Place is free.</p></details>
 <details><summary>Do you provide transportation?</summary><p>No, transportation is not provided.</p></details>
 <details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.</p></details>
 <details><summary>How do I volunteer?</summary><p>Sign up on our <a href="{VOL}">volunteer page</a> and we'll reach out to get you started.</p></details>
-<div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to the Senior Center" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75007&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
+<div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to the Maa’s Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75007&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
-'''+foot.replace('<h4>Follow Us</h4>','<h4>Senior Center</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007<br><a href="tel:+14692708156" style="color:inherit">(469) 270-8156</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
+'''+foot.replace('<h4>Follow Us</h4>','<h4>Maa’s Place</h4><p class="footer-description">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007<br><a href="tel:+14692708156" style="color:inherit">(469) 270-8156</a><br><a href="mailto:aslam@maasinspiration.org" style="color:inherit">aslam@maasinspiration.org</a></p><h4 style="margin-top:1rem">Follow Us</h4>')
 import bv_page
 bsv=bv_page.page(head,foot,DON,'https://maasinspiration.org/thank-you.html')
-pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through the Senior Center and Bloom Village.</p></header>
+pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+f'''<header class="hero" style="--img:url(gallery/2026-10-10-service-03.jpg)"><p class="eyebrow">Under the MAA's Inspiration umbrella</p><h1>Our Programs</h1><p>Beyond our weekly meal service, MAA's Inspiration cares for our community through the Maa’s Place and Bloom Village.</p></header>
 <section><div class="wrap"><div class="grid">
 <div class="card"><img class="pc-img" src="gallery/maas-meals-volunteers.jpg" alt="Maa's Meals volunteers"><h3>🍲 Maa's Meals</h3><p>2,200 fresh meals every Saturday for seniors, the homeless and shelter homes across DFW.</p><a class="btn" href="meals.html">See Schedule</a></div>
-<div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at the Senior Center"><h3>🏡 Senior Center</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit the Senior Center</a></div>
+<div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at the Maa’s Place"><h3>🏡 Maa’s Place</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit the Maa’s Place</a></div>
 <div class="card bv-card"><img class="pc-img" src="img/bv-art.jpg" alt="A Bloom Village member with Down syndrome painting with staff"><h3>🌸 Bloom Village</h3><p><span class="soon-badge sm bv">Licensing pending</span> Adult enrichment for adults 18+ with intellectual and developmental disabilities. 9 AM–1 PM; 2–3 days/week pilot, then Mon–Fri. Begins after HHSC license is issued.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
 </div></div></section>
 <section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
@@ -157,7 +157,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <section><div class="wrap">
 <div class="psel" role="tablist">
 <button role="tab" data-p="meals" class="p-meals">🍲<b>Maa's Meals</b></button>
-<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Senior Center</b><small>Opening soon · 55+</small></button>
+<button role="tab" data-p="maas-place" class="p-mp">🏡<b>Maa’s Place</b><small>Opening soon · 55+</small></button>
 <button role="tab" data-p="bsv" class="p-bsv">🌸<b>Bloom Village</b><small>Licensing pending · 18+</small></button>
 </div>
 <div id="panel" class="panel">
@@ -175,7 +175,7 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 
 pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Photo consent and code of conduct for MAA's Inspiration volunteers.</p></header>
 <section id="consent"><div class="wrap"><h2>Photo &amp; Video Consent</h2><ul>
-<li>We take photos and videos at meal service, the Senior Center and events to share our work on our website and social media (Facebook, Instagram, TikTok).</li>
+<li>We take photos and videos at meal service, the Maa’s Place and events to share our work on our website and social media (Facebook, Instagram, TikTok).</li>
 <li>Ticking the photo consent box means MAA's Inspiration may use photos/videos that include you for these purposes, without payment. We never sell images.</li>
 <li>With your permission we may use your first name only. We never post phone numbers, addresses or other private details.</li>
 <li>Consent is optional – you can still volunteer without it. You can withdraw consent any time by emailing <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>; we will stop using new images and remove posts we control where possible.</li>
@@ -196,7 +196,7 @@ hub=hub.replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1
 VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp">').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)+'''<header class="hero vhero"><h1>Volunteer with us</h1><p>Give a few hours, share a smile, and help feed and care for our neighbors in Dallas–Fort Worth. No experience needed.</p><a class="btn alt" href="#signup">Sign up</a></header>
 <section><div class="wrap"><h2>Where you can help</h2><div class="vcards">
 <div class="vcard"><span class="vt open">✅ Open now</span><h3>🍲 Maa's Meals</h3><p><b>Saturdays only</b> 10 AM – noon<br>Packing &amp; delivery</p><small>📍 1445 MacArthur Dr, Suite 104, Carrollton</small></div>
-<div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Senior Center</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</small></div>
+<div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa’s Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</small></div>
 <div class="vcard bv-card"><span class="vt soon bv">Licensing pending</span><h3>🌸 Bloom Village</h3><p><b>Mon – Fri</b> 9 AM – 1 PM<br>Adult enrichment for adults 18+ with I/DD: arts, music, games, gardening, life skills. Volunteers 18+, screening &amp; training required. Begins after HHSC license is issued.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007 · <a href="bloom-village.html#volunteer">Bloom Village volunteer form</a></small></div>
 </div></div></section>
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
@@ -220,13 +220,13 @@ def _wire(fn,formname):
     h=h.replace('<span class="ph">Form not connected yet – submission destination to be decided</span>','').replace('<span class="ph">Form not connected yet</span>','')
     for a,b in [('name="field"','name="agree_waiver" value="Yes"'),('email_optional','email'),('_amp_','_'),('senior_s_','senior_'),('participant_s_','participant_'),('anything_you_d_like_us_to_know_needs_com','notes')]: h=h.replace(a,b)
     open(fn,'w').write(h)
-_wire('maas-place.html',"Senior Center enrollment")
+_wire('maas-place.html',"Maa’s Place enrollment")
 
-# --- Design variants of the Senior Center (same content, different layouts) ---
-d1=mp.replace('<main class="mi purple">','<main class="mi purple d1">').replace("<title>Senior Center","<title>Design 1 Classic – Senior Center")
-d2=mp.replace('<main class="mi purple">','<main class="mi purple d2">').replace("<title>Senior Center","<title>Design 2 Magazine – Senior Center")
+# --- Design variants of the Maa’s Place (same content, different layouts) ---
+d1=mp.replace('<main class="mi purple">','<main class="mi purple d1">').replace("<title>Maa’s Place","<title>Design 1 Classic – Maa’s Place")
+d2=mp.replace('<main class="mi purple">','<main class="mi purple d2">').replace("<title>Maa’s Place","<title>Design 2 Magazine – Maa’s Place")
 d2=d2.replace('<header class="hero" style="--img:url(gallery/maas-place-seniors-painting.jpg)">','<header class="hero split"><div class="split-text">',1)
-d2=d2.replace('</header>','</div><div class="split-img"><img src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting together at the Senior Center"></div></header>',1)
+d2=d2.replace('</header>','</div><div class="split-img"><img src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting together at the Maa’s Place"></div></header>',1)
 for sid,img in [('what','04'),('visit','05'),('volunteer','03')]:
     d2=d2.replace(f'<section id="{sid}"><div class="wrap">',f'<section id="{sid}" class="row"><div class="wrap"><img class="row-img" src="gallery/2026-10-10-service-{img}.jpg" alt=""><div class="row-body">',1)
 import re as _r
@@ -234,9 +234,9 @@ for sid in ['what','visit','volunteer']:
     i=d2.find(f'<section id="{sid}" class="row">'); j=d2.find('</div></section>',i)
     d2=d2[:j]+'</div>'+d2[j:]
 d2=d2.replace('</main>','<aside class="side-cta"><a class="btn alt" href="donate.html?program=maas-place">💜 Donate</a><a class="btn green" href="volunteer.html">🙌 Volunteer</a><a class="btn" href="tel:+14692708156">📞 Call</a></aside></main>',1)
-d3=mp.replace('<main class="mi purple">','<main class="mi purple d3">').replace("<title>Senior Center","<title>Design 3 App – Senior Center")
+d3=mp.replace('<main class="mi purple">','<main class="mi purple d3">').replace("<title>Maa’s Place","<title>Design 3 App – Maa’s Place")
 i=d3.find('<header class="hero"'); j=d3.find('</header>',i)+9
-d3=d3[:i]+'''<header class="appbar"><div><h1>Senior Center</h1><p class="tagline">Place where everybody knows your name</p><p class="meta">Mon–Thu · 10 AM–2 PM · Ages 55+ · Free</p></div></header>
+d3=d3[:i]+'''<header class="appbar"><div><h1>Maa’s Place</h1><p class="tagline">Place where everybody knows your name</p><p class="meta">Mon–Thu · 10 AM–2 PM · Ages 55+ · Free</p></div></header>
 <nav class="tiles"><a href="#visit" data-tab="visit">📍<b>Visit</b></a><a href="#schedule" data-tab="schedule">🗓️<b>Schedule</b></a><a href="#volunteer" data-tab="volunteer">🙌<b>Volunteer</b></a><a href="donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+14692708156" class="green">📞<b>Call</b></a></nav>
 <div class="apptabs" role="tablist"><button data-tab="what">What we do</button><button data-tab="schedule">Schedule</button><button data-tab="gallery">Gallery</button><button data-tab="visit">Visit / Enroll</button><button data-tab="volunteer">Volunteer</button><button data-tab="contact">FAQ</button></div>'''+d3[j:]
 _s=d3.find('<div class="sub">'); _e=d3.find('</div>',_s)+6; d3=d3[:_s]+d3[_e:]
@@ -245,7 +245,7 @@ for n,h in [('maas-place-design-1.html',d1),('maas-place-design-2.html',d2),('ma
 
 # --- Final main page: Design 2 + app tiles in hero ---
 TILES='''<nav class="tiles hero-tiles"><a href="#visit">📍<b>Visit</b></a><a href="#schedule">🗓️<b>Schedule</b></a><a href="#volunteer">🙌<b>Volunteer</b></a><a href="donate.html?program=maas-place" class="gold">💜<b>Donate</b></a><a href="tel:+14692708156" class="green">📞<b>Call</b></a></nav>'''
-main=d2.replace("<title>Design 2 Magazine – Senior Center","<title>Senior Center")
+main=d2.replace("<title>Design 2 Magazine – Maa’s Place","<title>Maa’s Place")
 main=main.replace('<p class="tagline">Place where everybody knows your name</p>','<p class="tagline">Place where everybody knows your name</p>\n'+TILES,1)
 main=_r.sub(r'<a class="btn alt" href="#visit">Plan a Visit</a> &nbsp; <a class="btn ghost"[^>]*>Volunteer</a>','',main,1)
 open('maas-place.html','w').write(main)
@@ -256,7 +256,7 @@ def _pcard(title,img,desc,facts,href,key,badge=''):
 <a class="pmain" href="{href}"><img src="{img if "/" in img else "gallery/"+img}" alt="{title}"><div class="pbody"><h2>{title}</h2><p>{desc}</p><p class="pfacts">{facts}</p><span class="btn">Learn more →</span></div></a>
 <div class="pquick"><a class="q-donate" href="get-involved.html#{key}">💜 Donate</a><a class="q-vol" href="get-involved.html#{key}">🙌 Volunteer</a></div></div>'''
 home=head("Home").replace('<main class="mi">','<main class="mi purple home">')+'''<header class="hero home-hero"><h1>Serving with love. Feeding with dignity.</h1><p>Three ways MAA's Inspiration cares for our Dallas–Fort Worth community. Tap a program to learn more.</p></header>
-<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","maas-meals-volunteers.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Senior Center","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Bloom Village","img/bv-art.jpg","Adult enrichment for adults 18+ with intellectual and developmental disabilities. Meaningful Days. Meaningful Lives.","Licensing pending with HHSC · Mon–Fri · 9 AM–1 PM · Carrollton","bloom-village.html","bsv","Licensing Pending")+'''</div></div></section>
+<section><div class="wrap"><div class="pgrid">'''+_pcard("Maa's Meals","maas-meals-volunteers.jpg","Fresh, hot meals cooked, packed and delivered by our volunteers.","✅ Open now · 2,200 fresh meals every Saturday","meals.html","meals")+_pcard("Maa’s Place","maas-place-seniors-painting.jpg","A free senior center for activities, snacks, chai and friendship.","Opening soon · Mon–Thu 10 AM–2 PM · Ages 55+","maas-place.html","maas-place","Coming Soon")+_pcard("Bloom Village","img/bv-art.jpg","Adult enrichment for adults 18+ with intellectual and developmental disabilities. Meaningful Days. Meaningful Lives.","Licensing pending with HHSC · Mon–Fri · 9 AM–1 PM · Carrollton","bloom-village.html","bsv","Licensing Pending")+'''</div></div></section>
 <section class="donate"><div class="wrap"><h2>Every meal, every smile, every visit</h2><p>Your gift keeps all three programs going.</p><a class="btn alt" href="donate.html">Donate Now</a> &nbsp; <a class="btn green" href="get-involved.html">Get Involved</a></div></section>
 '''+foot
 open('home.html','w').write(home)
@@ -265,12 +265,12 @@ for a,b in [('href="site-chrome.css"','href="../site-chrome.css"'),('href="secti
 sp=sp.replace('href="https://maasinspiration.org/">Home','href="index.html">Home').replace('href="about.html"','href="about.html"').replace('href="volunteer.html">Volunteer</a></li>','href="volunteer.html">Volunteer</a></li>')
 import os; os.makedirs('site-preview',exist_ok=True); open('site-preview/index-new.html','w').write(sp)
 
-_wire('maas-place.html',"Senior Center enrollment")
+_wire('maas-place.html',"Maa’s Place enrollment")
 
 
 
-# ---- Senior Center waiver ----
-WV=head("Senior Center Participation Waiver").replace('<main class="mi">','<main class="mi purple waiver">').replace('</head>','''<style>
+# ---- Maa’s Place waiver ----
+WV=head("Maa’s Place Participation Waiver").replace('<main class="mi">','<main class="mi purple waiver">').replace('</head>','''<style>
 .mi.waiver .wv{max-width:820px;margin:0 auto;background:#fff;border-radius:14px;border-top:6px solid #5B2A86;padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.06);line-height:1.6}
 .mi.waiver .wv h1{color:#3D1A6E;font-size:1.9rem;margin:0 0 12px}.mi.waiver .wv h2{color:#3D1A6E;font-size:1.1rem;margin:22px 0 6px}
 .mi.waiver .release{font-weight:800;text-transform:uppercase;border:3px solid #3D1A6E;padding:14px;background:#F6F1FB}
@@ -280,10 +280,10 @@ WV=head("Senior Center Participation Waiver").replace('<main class="mi">','<main
 @media(max-width:640px){.mi.waiver .wv{padding:20px}.mi.waiver .sig{grid-template-columns:1fr}}
 @media print{nav,footer,.preview-banner,.pbar,.sticky,.stickybar,#lb,body>div:first-child[style*="C0392B"]{display:none!important}body,.mi{background:#fff!important}.mi.waiver .wv{box-shadow:none;border:0;padding:0;max-width:none}.mi.waiver section{padding:0!important}}
 </style></head>''',1)+'''<section><div class="wrap"><div class="wv">
-<h1>Senior Center Participation Waiver and Release</h1>
-<p>The Senior Center is a free center for seniors operated by MAA's Inspiration Inc., a 501(c)(3) nonprofit located at 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007.</p>
-<h2>1. Voluntary participation.</h2><p>I am choosing to take part in Senior Center activities, which may include light exercise, chair yoga, walks, games, arts and crafts, outings, and meals or snacks. I understand that participation is voluntary and that I may stop at any time.</p>
-<h2>2. Health and fitness.</h2><p>I confirm that I am able to take part in these activities. I will consult my doctor if I have any doubts, and I will tell staff about any health, mobility, or dietary needs. I understand that the Senior Center does not provide medical care, supervision for memory care, or transportation.</p>
+<h1>Maa’s Place Participation Waiver and Release</h1>
+<p>The Maa’s Place is a free center for seniors operated by MAA's Inspiration Inc., a 501(c)(3) nonprofit located at 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007.</p>
+<h2>1. Voluntary participation.</h2><p>I am choosing to take part in Maa’s Place activities, which may include light exercise, chair yoga, walks, games, arts and crafts, outings, and meals or snacks. I understand that participation is voluntary and that I may stop at any time.</p>
+<h2>2. Health and fitness.</h2><p>I confirm that I am able to take part in these activities. I will consult my doctor if I have any doubts, and I will tell staff about any health, mobility, or dietary needs. I understand that the Maa’s Place does not provide medical care, supervision for memory care, or transportation.</p>
 <h2>3. Risks.</h2><p>I understand that physical activities and outings carry some risk of injury, including falls, strains, and illness. I accept these risks.</p>
 <h2>4. RELEASE OF LIABILITY.</h2><p class="release">I RELEASE MAA'S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS, AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS, OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</p>
 <h2>5. Emergencies.</h2><p>In an emergency, I authorize staff to call 911 and contact my emergency contact. I am responsible for any resulting medical costs.</p>
@@ -292,7 +292,7 @@ WV=head("Senior Center Participation Waiver").replace('<main class="mi">','<main
 <h2>8. Signature.</h2><p>I have read and understand this waiver.</p>
 <div class="sig"><div>Participant name</div><div>Signature</div><div>Date</div></div>
 <div class="sig"><div>Signed by family member / guardian on participant's behalf (if applicable)</div><div>Relationship</div><div>Date</div></div>
-<p class="pbar"><button class="btn" onclick="window.print()">🖨️ Print this waiver</button> &nbsp; <a class="btn green" href="maas-place.html#visit">Back to the Senior Center</a></p>
+<p class="pbar"><button class="btn" onclick="window.print()">🖨️ Print this waiver</button> &nbsp; <a class="btn green" href="maas-place.html#visit">Back to the Maa’s Place</a></p>
 </div></div></section>
 '''+foot
 open('maas-place-waiver.html','w').write(WV)
@@ -302,13 +302,13 @@ MAP=lambda q:'https://www.google.com/maps/search/?api=1&query='+q
 CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contactp">').replace('</head>','<link rel="stylesheet" href="vol-form.css"><style>.mi.contactp{background:#F3EBDD}.mi.contactp .hero{text-align:center;background:#F3EBDD!important;color:#3D1A6E;padding:56px 20px 24px}.mi.contactp .hero p{max-width:640px;margin:8px auto 0}.ccards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.ccard{background:#fff;border-radius:14px;border-top:5px solid #5B2A86;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.06)}.ccard h3{color:#3D1A6E;margin:0 0 8px}.ccard p{margin:6px 0}.ccard a{color:#5B2A86;font-weight:700}.social{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.social a{background:#5B2A86;color:#fff;border-radius:30px;padding:10px 20px;font-weight:700;text-decoration:none}.np{text-align:center;color:#6b5f7a;font-size:.9rem;margin-top:18px}.mi.contactp h2{text-align:center;color:#3D1A6E}</style></head>',1)+f'''<header class="hero"><h1>Contact Us</h1><p>We'd love to hear from you, whether you want to volunteer, donate, partner with us, or learn more about our programs.</p></header>
 <section><div class="wrap"><div class="ccards">
 <div class="ccard"><h3>📍 Main Office &amp; Maa's Meals</h3><p>1445 MacArthur Drive, Suite 104<br>Carrollton, TX 75007</p><p><b>Maa's Meals:</b> Saturdays, 10 AM – 12 PM</p><p><a href="{MAP('1445+MacArthur+Drive+Suite+104+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
-<div class="ccard"><h3>🏡 Senior Center &amp; 🌸 Bloom Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75007</p><p><b>Senior Center:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Bloom Village:</b> Monday – Friday, 9 AM – 1 PM (licensing pending with HHSC; services begin after the license is issued)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
+<div class="ccard"><h3>🏡 Maa’s Place &amp; 🌸 Bloom Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75007</p><p><b>Maa’s Place:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Bloom Village:</b> Monday – Friday, 9 AM – 1 PM (licensing pending with HHSC; services begin after the license is issued)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
 <div class="ccard"><h3>📞 Phone &amp; ✉️ Email</h3><p><b>Phone:</b> <a href="tel:+14692708156">(469) 270-8156</a></p><p><b>Email:</b> <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div>
 </div></div></section>
 <section><div class="wrap"><h2>Send us a message</h2><div class="lvf-wrap"><form class="lvf" id="contactForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="New Contact Message — MAA's Inspiration"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 <div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Email <span class="req">*</span></label><input type="email" name="Email" required autocomplete="email"></div></div>
-<div class="form-row"><div class="form-group"><label>Phone <small>(optional)</small></label><input type="tel" name="Phone" autocomplete="tel"></div><div class="form-group"><label>I'm interested in</label><select name="Interested In"><option>Volunteering</option><option>Donating</option><option>Partnering</option><option>Senior Center</option><option>Bloom Village</option><option>Other</option></select></div></div>
+<div class="form-row"><div class="form-group"><label>Phone <small>(optional)</small></label><input type="tel" name="Phone" autocomplete="tel"></div><div class="form-group"><label>I'm interested in</label><select name="Interested In"><option>Volunteering</option><option>Donating</option><option>Partnering</option><option>Maa’s Place</option><option>Bloom Village</option><option>Other</option></select></div></div>
 <div class="form-row"><div class="form-group full"><label>Message <span class="req">*</span></label><textarea name="Message" required></textarea></div></div>
 <p class="err" id="cErr" hidden></p><button type="submit" class="submit-btn">Send Message</button></form></div></div></section>
 <section><div class="wrap"><h2>Follow us</h2><div class="social"><a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a><a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a><a href="https://www.tiktok.com/@maasinspiration" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></div>
@@ -321,7 +321,7 @@ open('contact.html','w').write(CT)
 LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms &amp; Conditions</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a></div>'
 PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Privacy Policy</h1><p>How Maa's Inspiration Inc. collects and uses your information.</p></header>
 <section><div class="wrap">
-<p>This Privacy Policy applies to Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, including our Maa's Meals program, Senior Center and Bloom Village.</p>
+<p>This Privacy Policy applies to Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, including our Maa's Meals program, Maa’s Place and Bloom Village.</p>
 <h2>What data we collect</h2><ul><li>Name</li><li>Phone number</li><li>Email address</li><li>Address (for meal delivery)</li></ul>
 <h2>How we use it</h2><ul><li>Volunteer scheduling, including shift and route reminders</li><li>Meal delivery notices to meal recipients</li><li>Answering questions you send us</li></ul>
 <h2>Text messages (SMS)</h2>

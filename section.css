@@ -20,7 +20,7 @@
 .mi .donate{background:var(--dgreen)!important;color:#fff;text-align:center}.mi .donate h2{color:#fff}
 .preview-banner{background:#C0392B;color:#fff;text-align:center;font-size:.85rem;padding:6px}
 @media(max-width:768px){.mi form{grid-template-columns:1fr}.mi .hero{padding:60px 6%}.mi section{padding:44px 6%}.mi .sub{top:70px}}
-/* Senior Center: brand purple & white */
+/* Maa’s Place: brand purple & white */
 .mi.purple{--beige:#F6F1FB;--sand:#E9DDF5;--green:#5B2A86;--dgreen:#3D1A6E;--clay:#E0A526;--txt:#2E2438;--hero1:#3D1A6Eee;--hero2:#5B2A8688;background:#fff}
 .mi.purple section:nth-of-type(odd){background:#fff}.mi.purple section:nth-of-type(even){background:var(--beige)}
 .mi.purple section:nth-of-type(odd) .card{background:var(--beige)}.mi.purple section:nth-of-type(even) .card{background:#fff}
@@ -44,7 +44,7 @@
 .mi.hub.purple .panel[data-p=bsv]{box-shadow:inset 0 6px 0 #4F6B3A}
 .mi.hub.purple #actDonate{background:#E0A526;color:#2E2438}
 .mi.hub.purple .panel{background:#fff;box-shadow:0 4px 18px #3D1A6E14}
-/* Senior Center accents per Aslam: yellow + earthy green within purple/white */
+/* Maa’s Place accents per Aslam: yellow + earthy green within purple/white */
 .mi.purple .tagline{font-style:italic;font-size:1.25rem;color:#F6D365;margin:-4px 0 10px}
 .mi.purple .card:nth-child(3n+2){border-top-color:#E0A526}.mi.purple .card:nth-child(3n){border-top-color:#6E8B4E}
 .mi .ticks{list-style:none;padding:0;margin:6px 0 0}.mi .ticks li{padding:3px 0 3px 22px;position:relative;font-size:.95rem}
@@ -148,7 +148,7 @@
 .mi.d2 section.row .wrap,.mi.d2 section.row:nth-of-type(even) .wrap{grid-template-columns:1fr}.mi.d2 section.row:nth-of-type(even) .row-img{order:0}.mi.d2 .row-img{aspect-ratio:4/3}
 .side-cta{top:auto;bottom:0;right:0;left:0;transform:none;flex-direction:row;gap:0}.side-cta .btn{flex:1;border-radius:0;padding:14px 4px;font-size:.9rem}
 .mi.d2{padding-bottom:50px}.mi.d3 .tiles{grid-template-columns:repeat(3,1fr)}.mi.d3 .apptabs{top:70px}}
-/* Hero app tiles (main Senior Center page) */
+/* Hero app tiles (main Maa’s Place page) */
 .mi .hero-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0 18px;padding:0;max-width:640px;background:none}
 .mi .hero-tiles a{background:var(--P);color:#fff;text-decoration:none;border-radius:16px;padding:14px 4px;display:flex;flex-direction:column;align-items:center;font-size:1.5rem;border:2px solid #ffffff33}
 .mi .hero-tiles a b{font-size:.9rem}.mi .hero-tiles a.gold{background:var(--Y);color:#2E2438;border-color:var(--Y)}.mi .hero-tiles a.green{background:var(--G);border-color:var(--G)}
