@@ -1,6 +1,6 @@
 import re,sys
 L='https://maasinspiration.org/'
-NEW={'programs.html','maas-place.html','blooming-star-village.html','get-involved.html','thank-you.html','volunteer-policy.html'}
+NEW={'programs.html','maas-place.html','bloom-village.html','get-involved.html','thank-you.html','volunteer-policy.html'}
 LOCAL={'enroll.php','vol-form.css','vol-form.js'}
 for p in sys.argv[1:]:
   s=open(f'live-upload/{p}.html').read()

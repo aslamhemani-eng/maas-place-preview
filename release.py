@@ -13,7 +13,7 @@ subprocess.run([sys.executable,'build.py'],cwd=T,env={**os.environ,'PREVIEW':'0'
 R=os.path.join(H,'release');shutil.rmtree(R,ignore_errors=True);os.makedirs(R+'/gallery');os.makedirs(R+'/img')
 cp=lambda a,b:shutil.copy(os.path.join(T,a),os.path.join(R,b))
 cp('home.html','index.html');cp('volunteer-page.html','volunteer.html')
-for f in ['maas-place.html','blooming-star-village.html','programs.html','get-involved.html','thank-you.html','volunteer-policy.html','privacy.html','terms.html','sms-signup.html','contact.html','maas-place-waiver.html','enroll.php','site-chrome.css','section.css','section.js','hub.js','vol-form.css','vol-form.js','schedule.json','gallery.json']:cp(f,f)
+for f in ['maas-place.html','bloom-village.html','blooming-star-village.html','programs.html','get-involved.html','thank-you.html','volunteer-policy.html','privacy.html','terms.html','sms-signup.html','contact.html','maas-place-waiver.html','enroll.php','site-chrome.css','section.css','section.js','hub.js','vol-form.css','vol-form.js','schedule.json','gallery.json']:cp(f,f)
 for p in ['meals','about','schedule','gallery','donate']:cp(f'live-upload/{p}.html',f'{p}.html')
 cp('live-upload/maas-theme.css','maas-theme.css');cp('img/site-logo.png','img/site-logo.png')
 for g in glob.glob(T+'/gallery/*.jpg'):shutil.copy(g,R+'/gallery/')
