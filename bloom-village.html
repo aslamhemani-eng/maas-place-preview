@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="site-chrome.css">
     <link rel="stylesheet" href="section.css">
-</head>
+<style>
+.mi.bvp{--ivory:#E8E0D4;--sage:#8DA98A;--sageD:#5E7A5B;--gp:#8870A8;--gpD:#5F4A80;background:#fff}
+.mi.bvp .hero{background:linear-gradient(135deg,#5F4A80 0%,#8870A8 55%,#8DA98A 100%)!important;color:#fff}
+.mi.bvp .hero .tagline{color:#E8E0D4;font-style:normal;letter-spacing:.08em;font-weight:700;text-transform:uppercase;font-size:1rem}
+.mi.bvp section:nth-of-type(odd){background:#fff}.mi.bvp section:nth-of-type(even){background:#E8E0D4}
+.mi.bvp section .card{background:#fff!important;border-top:6px solid #8DA98A}.mi.bvp section .card:nth-child(even){border-top-color:#8870A8}
+.mi.bvp h2,.mi.bvp .card h3{color:#5F4A80}.mi.bvp .btn{background:#8870A8;color:#fff}.mi.bvp .btn.alt{background:#8DA98A;color:#fff}
+.mi.bvp th{background:#8DA98A}.mi.bvp td:first-child{border-left:4px solid #8870A8}
+.bv-status{background:#FFF8E6;border:2px solid #C9A227;border-radius:12px;padding:14px 18px;color:#4a3b10;margin:14px 0}
+.mi.bvp .hero .bv-status{color:#4a3b10}
+.bv-steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:10px}.bv-steps li{counter-increment:s;background:#fff;border-left:6px solid #8DA98A;border-radius:10px;padding:12px 14px 12px 54px;position:relative}
+.bv-steps li:before{content:counter(s);position:absolute;left:14px;top:10px;width:28px;height:28px;border-radius:50%;background:#8870A8;color:#fff;font-weight:700;display:grid;place-items:center}
+.bvp form.bvf{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff;padding:20px;border-radius:14px;border-top:6px solid #8870A8}
+.bvp form.bvf label{display:flex;flex-direction:column;font-weight:600;gap:4px}.bvp form.bvf .full{grid-column:1/-1}
+.bvp form.bvf input,.bvp form.bvf select,.bvp form.bvf textarea{padding:10px;border:1px solid #cfc6b8;border-radius:8px;font:inherit}
+.bvp form.bvf .chk{flex-direction:row;align-items:flex-start;font-weight:400}
+.bv-note{font-size:.9rem;color:#5c5346}
+@media(max-width:640px){.bvp form.bvf{grid-template-columns:1fr}}
+</style></head>
 <body>
 <div class="preview-banner">PREVIEW FOR APPROVAL — not live yet. <b style="background:#FFF4D6;color:#7a4b1f;padding:0 6px;border-radius:4px">Dashed boxes</b> = info still needed.</div>
     <nav>
@@ -35,53 +53,109 @@
             </div>
         </div>
     </nav>
-<main class="mi purple bsvp d2">
-<div class="sub"><a href="#mission">Mission</a><a href="#serve">Who We Serve</a><a href="#programs">Activities</a><a href="#visit">Your Visit</a><a href="#schedule">Schedule</a><a href="#enroll">Get Involved</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a><a href="#faq">FAQ</a><a href="get-involved.html#bsv">Get Involved</a></div>
-<header class="hero split"><div class="split-text"><p class="eyebrow">Programs · MAA's Inspiration · Coming soon</p>
-<h1>Bloom Village</h1><p>A free, caring day program where children with sensory, developmental and other special needs can play, learn and belong, and their families can find support.</p>
-<div class="facts"><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a></div><div>🧒 Ages 5–17</div><div>🕙 Mon – Thu, 9 AM – 2 PM</div><div>💛 Free</div></div>
-<a class="btn alt" href="#enroll">Join the Interest List</a> &nbsp; <a class="btn ghost" href="volunteer.html" style="color:#fff">Volunteer</a></div><div class="split-img"><img src="gallery/bsv-girl-at-desk.jpg" alt="A child working happily at a desk"></div></header>
-<section id="mission"><div class="wrap"><h2>Our Mission</h2><p>Every person deserves a place where they are understood, included and helped to grow. A free day program for recreation and care, Bloom Village carries Maa's spirit of unconditional care to neurodiverse individuals and the families who love them, offering a calm, supportive community so no family has to find its way alone.</p>
-<div class="grid"><div class="card"><h3>🌱 Belonging</h3><p>A place where differences are welcomed, not just accommodated.</p></div><div class="card"><h3>🤝 Family support</h3><p>Caring for the whole family, including parents, siblings and caregivers.</p></div><div class="card"><h3>⭐ Growth</h3><p>Helping each person build skills and confidence at their own pace.</p></div></div></div></section>
-<section id="serve"><div class="wrap"><h2>Who We Serve</h2><p>Bloom Village is planned for individuals with sensory processing differences, autism, developmental delays and other special needs, together with their families, across Dallas–Fort Worth.</p>
-<p>Ages served: 5–17 · No referral needed. Families simply join the interest list, and we'll follow up to learn about your child's needs.</p></div></section>
-<section id="programs"><div class="wrap"><h2>What Your Child Will Do</h2><p>Each day blends play, routine and gentle skill-building, at each child's own pace.</p>
-<div class="grid">
-<div class="card"><h3>🧩 Sensory Play &amp; Movement</h3><p>Swinging, climbing, balance and hands-on sensory activities that help the body and mind feel calm and ready.</p></div>
-<div class="card"><h3>💬 Friendship &amp; Communication</h3><p>Small, friendly groups to practice taking turns, sharing, expressing feelings and making friends.</p></div>
-<div class="card"><h3>🎨 Arts, Music &amp; Stories</h3><p>Painting, crafts, music, movement and story time to spark creativity and joy.</p></div>
-<div class="card"><h3>🗓️ Daily Routine &amp; Life Skills</h3><p>A predictable, visual daily routine with simple everyday skills that build independence.</p></div>
-<div class="card"><h3>🌳 Active &amp; Outdoor Play</h3><p>Games, ball play and outdoor time to build strength, coordination and confidence.</p></div>
-<div class="card"><h3>👨‍👩‍👧 Family &amp; Caregiver Support</h3><p>A few hours of peace of mind for parents, plus a friendly community of families who understand.</p></div>
-<div class="card"><h3>🍎 Snacks</h3><p>Healthy snacks in the MAA's Inspiration tradition, with care for dietary and sensory needs.</p></div>
-</div></div></section>
-<section id="visit"><div class="wrap"><h2>What a Visit Looks Like</h2><div class="grid">
-<div class="card"><h3>1. Reach out</h3><p>Tell us about your family by email or the interest form below.</p></div>
-<div class="card"><h3>2. Tour &amp; meet</h3><p>Visit with your child, meet our team and see the space once we open.</p></div>
-<div class="card"><h3>3. A plan that fits</h3><p>We talk through needs, interests and comfort to suggest the right activities.</p></div>
-<div class="card"><h3>4. Join in</h3><p>Start attending at a pace that feels right.</p></div></div></div></section>
-<section id="schedule"><div class="wrap"><h2>Schedule</h2><p><b>Monday – Thursday, 9 AM – 2 PM</b> <span class="soon-badge sm">Coming soon</span></p><p>Cost: Free · Transportation: not provided · 2700 Old Denton Rd, Suite 102, Carrollton</p></div></section>
-<section id="enroll"><div class="wrap"><h2>Enroll &amp; Get Involved</h2><p>Bloom Village is coming soon. Join our interest list and we'll contact you as programs open.</p>
-<form id="enroll" method="post" action="enroll.php"><input type="hidden" name="form" value="Bloom Village interest list"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><label>Parent / caregiver name *<input name="parent_caregiver_name" required></label><label>Phone *<input name="phone" type="tel" required></label>
-<label>Email<input name="email" type="email"></label><label>Participant's age<input name="participant_age" type="number" min="0"></label>
-<label class="full">Programs of interest<input name="programs_of_interest" placeholder="e.g. sensory play, social skills, family support"></label>
-<label class="full">Anything you'd like us to know (needs, communication, interests)<textarea name="notes" rows="3"></textarea></label>
-<div class="full"><button class="btn">Join Interest List</button> </div></form></div></section>
-<section id="volunteer"><div class="wrap"><h2>Volunteer</h2><p>Patient, caring volunteers will be at the heart of Bloom Village. Educators, students, parents and anyone with a big heart are welcome.</p><a class="btn" href="volunteer.html">Sign Up to Volunteer</a></div></section>
-<section id="donate" class="donate"><div class="wrap"><h2>Support Bloom Village</h2>
-<p>Donations are taken through our existing secure donation page.</p>
-<a class="btn alt" href="donate.html">Donate Now</a>
-<p style="font-size:.85rem;margin-top:14px">MAA's Inspiration is a 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>
+<main class="mi bvp">
+<div class="sub"><a href="#heart">Our Heart</a><a href="#serve">Who We Serve</a><a href="#admission">Admission</a><a href="#journey">Bloom Journey</a><a href="#day">Daily Schedule</a><a href="#tuition">Tuition</a><a href="#give">Give</a><a href="#status">Licensing</a><a href="#contact">Contact &amp; Tour</a><a href="#volunteer">Volunteer</a></div>
+<header class="hero"><p class="eyebrow">A Program of Maa's Inspiration</p><span class="soon-badge">🌸 Licensing pending with HHSC</span>
+<h1>Bloom Village</h1><p class="tagline">Meaningful Days. Meaningful Lives.</p>
+<p>A safe, welcoming adult enrichment program where adults with intellectual and developmental disabilities can build friendships, learn life skills, enjoy meaningful activities and keep growing throughout adulthood, while families gain peace of mind.</p>
+<div class="facts"><div>🧑‍🤝‍🧑 Adults 18+ with I/DD</div><div>🕘 Mon–Fri, 9 AM–1 PM (pilot 2–3 days/week)</div><div>💜 $30 per program day</div><div>📞 <a href="tel:+14692708156" style="color:#fff">(469) 270-8156</a></div><div>📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></div></div>
+<a class="btn alt" href="#contact">Request a Tour</a> &nbsp; <a class="btn ghost" href="#volunteer" style="color:#fff">Volunteer</a></header>
+<section id="heart"><div class="wrap"><h2>Our Heart</h2>
+<p><b>Bloom Village was created from love.</b> It was inspired by the compassion of a mother who believed in serving others and by the dream of a husband who envisioned a place where adults with intellectual and developmental disabilities could continue to grow, build friendships and live with dignity.</p>
+<p>Every person who walks through our doors becomes part of that story. We are not simply operating a program. We are building a community.</p>
+<div class="grid"><div class="card"><h3>🌱 Our Vision</h3><p>A welcoming community where adults with intellectual and developmental disabilities can continue learning, connecting, creating and growing throughout adulthood.</p></div>
+<div class="card"><h3>🎯 Our Mission</h3><p>Bloom Village provides a safe, welcoming adult enrichment center where adults with intellectual and developmental disabilities can build friendships, learn life skills, enjoy meaningful activities and continue growing throughout adulthood, while giving families peace of mind.</p></div>
+<div class="card"><h3>✨ Meaningful Days. Meaningful Lives.</h3><p>Life is made up of everyday moments. Friendship, creativity, learning, choice and purpose can make those days, and the lives built from them, more meaningful.</p></div></div>
+<h3 style="margin-top:24px">Our Values: every person at Bloom Village should feel…</h3>
+<div class="tw"><table><thead><tr><th>Feel</th><th>How we put it into practice</th></tr></thead><tbody>
+<tr><td>Welcomed</td><td>Using the person's preferred name and communication method.</td></tr>
+<tr><td>Respected</td><td>Protecting dignity, privacy, rights and personal choice.</td></tr>
+<tr><td>Encouraged</td><td>Offering useful supports and recognizing effort, not just results.</td></tr>
+<tr><td>Valued</td><td>Building activities around interests, strengths and goals.</td></tr>
+<tr><td>Included</td><td>Supporting meaningful participation, belonging and friendship.</td></tr></tbody></table></div></div></section>
+<section id="serve"><div class="wrap"><h2>Who We Serve</h2>
+<p>Bloom Village is planned for <b>adults age 18 and older with intellectual and/or developmental disabilities</b> who are interested in meaningful activities and social connection. Admission depends on each adult's needs and whether we can support them safely. A diagnosis alone never decides admission.</p>
+<div class="grid"><div class="card"><h3>A good fit</h3><ul class="ticks"><li>Adults 18+ with I/DD who enjoy activities and social connection</li><li>Able to take part in a small group with the support we can safely provide</li><li>Eats and uses the restroom independently, or with help our staff are trained and available to give</li><li>Communication, health, sensory, movement and behavior support needs our team can meet</li></ul></div>
+<div class="card"><h3>What we are, and are not</h3><ul class="ticks"><li>Adult enrichment, individualized skills and socialization</li><li>Not skilled nursing, clinical treatment or continuous medical care</li><li>Staff do not give, store, hand out or remind members to take medicine at launch</li><li>On-site activities at opening; no outings planned at launch</li><li>Transportation is not provided</li></ul></div>
+<div class="card"><h3>Small and careful</h3><p>Our three-month pilot will serve up to 8 adults, 2–3 days per week, only within the HHSC-licensed capacity, building occupancy and safe staffing. We discuss reasonable supports and explain every decision respectfully.</p></div></div></div></section>
+<section id="admission"><div class="wrap"><h2>How Admission Works: 7 Steps</h2><ol class="bv-steps">
+<li><b>Initial inquiry</b> and a brief conversation about fit and program scope.</li>
+<li><b>Facility tour</b> and a communication and accessibility check.</li>
+<li><b>Enrollment</b> and confidential health, allergy and support forms.</li>
+<li><b>Welcome conversation</b> with the adult participant and legal representative, if applicable.</li>
+<li><b>Introductory visit</b>, only after the right permissions are in place and the HHSC license is issued.</li>
+<li><b>Administrator review</b> of support needs, staffing, risks and required documents.</li>
+<li><b>Written admission decision</b> and an individual enrichment and activity plan.</li></ol>
+<p class="bv-note">A legal representative is someone legally allowed to make certain decisions for an adult, such as a court-appointed guardian. Being a parent or relative alone does not automatically give that authority, and we involve each adult in their own decisions as much as possible.</p></div></section>
+<section id="journey"><div class="wrap"><h2>The Bloom Journey</h2><p>Four pillars keep activities meaningful, respectful for adults, and matched to each person's strengths and goals.</p>
+<div class="grid"><div class="card"><h3>🌿 GROW</h3><p><b>Everyday independence and confidence.</b> Life skills, simple cooking tasks, gardening, organizing, safe movement and exercise, handwashing routines.</p></div>
+<div class="card"><h3>🤝 CONNECT</h3><p><b>Friendship, communication and belonging.</b> Morning circle, cooperative games, conversation prompts, music sharing, turn-taking, group celebrations.</p></div>
+<div class="card"><h3>🎨 CREATE</h3><p><b>Expression, imagination and fine-motor practice.</b> Arts and crafts, painting, collage, LEGO/building wall, seasonal projects, digital art.</p></div>
+<div class="card"><h3>🌸 THRIVE</h3><p><b>Choice, wellness and meaningful participation.</b> Music, sensory exploration, games, reading, personal choices, quiet breaks.</p></div></div>
+<p style="margin-top:16px">Every day we use a picture-based notice board and a visual schedule, and we respect speech, pictures, gestures, communication devices and every preferred way of communicating.</p></div></section>
+<section id="day"><div class="wrap"><h2>A Day at Bloom Village (9:00 AM–1:00 PM)</h2><p>Draft routine; we adjust by day, member preference and individual goals.</p>
+<div class="tw"><table><thead><tr><th>Time</th><th>Activity</th><th>Skills / social purpose</th></tr></thead><tbody>
+<tr><td>9:00</td><td>Arrival and welcome</td><td>Safe handoff, visual schedule, personal choice</td></tr>
+<tr><td>9:15</td><td>Morning group</td><td>Greeting, communication, calendar/weather, turn-taking</td></tr>
+<tr><td>9:30</td><td>Movement and exercise</td><td>Choice, coordination, wellness; seated options</td></tr>
+<tr><td>10:00</td><td>Life skills or sensory station</td><td>Daily routines, matching, fine-motor practice</td></tr>
+<tr><td>10:30</td><td>Snack / hydration</td><td>Communication, choice, safe eating supports and allergy checks</td></tr>
+<tr><td>11:00</td><td>Arts and crafts / maker activity</td><td>Creativity, following instructions, organizing materials</td></tr>
+<tr><td>11:30</td><td>Music and social activity</td><td>Rhythm, listening, expression, shared participation</td></tr>
+<tr><td>12:00</td><td>Lunch / personal choice</td><td>Independence, safe food routines, personal preferences</td></tr>
+<tr><td>12:30</td><td>Social time / games / reading</td><td>Friendship, self-advocacy, leisure choices</td></tr>
+<tr><td>12:50</td><td>Review and prepare to leave</td><td>Reflect, organize belongings, transition support</td></tr>
+<tr><td>1:00</td><td>Dismissal / authorized pickup</td><td>Verified handoff and sign-out</td></tr></tbody></table></div>
+<p><b>Pilot:</b> 2–3 days per week for three months (exact days announced before enrollment). <b>Phase 2:</b> Monday–Friday, 9 AM–1 PM.</p></div></section>
+<section id="tuition"><div class="wrap"><h2>Tuition &amp; Scholarships</h2>
+<p>Tuition is <b>$30 per program day</b>, plus a one-time <b>$100 non-refundable enrollment fee</b>. Every family receives a written fee policy before enrolling.</p>
+<div class="tw"><table><thead><tr><th>Attendance plan</th><th>Days per month (4-week example)</th><th>Monthly estimate</th></tr></thead><tbody>
+<tr><td>2 days / week</td><td>8</td><td>$240</td></tr><tr><td>3 days / week</td><td>12</td><td>$360</td></tr><tr><td>5 days / week</td><td>20</td><td>$600</td></tr></tbody></table></div>
+<h3>Need-based tuition assistance</h3>
+<div class="grid"><div class="card"><h3>Bloom Scholarship</h3><p>25% of program-day tuition</p></div><div class="card"><h3>Hope Scholarship</h3><p>50% of program-day tuition</p></div><div class="card"><h3>Legacy Scholarship</h3><p>75% of program-day tuition</p></div><div class="card"><h3>Full Bloom Scholarship</h3><p>Up to 100%, as funds are available</p></div></div>
+<p class="bv-note">Assistance depends on current need and available funds and is not guaranteed. The $100 enrollment fee is not automatically covered. Every application is reviewed privately, with the same written rules for every family. To ask for the confidential application, call <a href="tel:+14692708156">(469) 270-8156</a> or choose "Tuition assistance information" in the form below.</p></div></section>
+<section id="give"><div class="wrap"><h2>Adopt-a-Participant</h2><p>Your gift helps an adult take part in Bloom Village, whatever their family's budget.</p>
+<div class="grid"><div class="card"><h3>$30</h3><p>One program day</p></div><div class="card"><h3>$240</h3><p>A month at 2 days a week</p></div><div class="card"><h3>$360</h3><p>A month at 3 days a week</p></div><div class="card"><h3>$600</h3><p>A month at 5 days a week</p></div></div>
+<p style="margin-top:16px"><a class="btn alt" href="donate.html?program=bsv">Sponsor a participant</a></p>
+<p class="bv-note">Gifts go through Maa's Inspiration's secure donation page. Maa's Inspiration Inc. is a 501(c)(3) nonprofit · EIN 86-2221897.</p></div></section>
+<section id="status"><div class="wrap"><h2>Licensing Status</h2><div class="bv-status"><b>Licensing status:</b> Bloom Village has applied to the Texas Health and Human Services Commission (HHSC) for a Day Activity and Health Services license, Individualized Skills &amp; Socialization Only (application APP-0062670597). <b>The license is pending. Bloom Village services will begin only after HHSC issues the license.</b> Until then we are taking inquiries and scheduling tours, and we will contact families as soon as an opening date is confirmed.</div>
+<p>Separately from HHSC, the City of Carrollton must approve the space (permits, inspections and Certificate of Occupancy). We will post the issued license and HHSC complaint information on site once licensed.</p></div></section>
+<section id="contact"><div class="wrap"><h2>Contact Us &amp; Request a Tour</h2>
+<p>📞 <a href="tel:+14692708156">(469) 270-8156</a> · 📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> · 📍 <a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></p>
+<form class="bvf" id="bvInquiry" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Bloom Village – New inquiry / tour request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://maasinspiration.org/thank-you.html"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Form" value="Bloom Village inquiry / tour request">
+<label>Your name *<input name="Name" required autocomplete="name"></label>
+<label>I am the… *<select name="Relationship" required><option value="">Choose…</option><option>Adult who wants to attend</option><option>Parent / family member</option><option>Legal guardian / authorized representative</option><option>Service coordinator / referral partner</option><option>Other</option></select></label>
+<label>Phone *<input type="tel" name="Phone" required autocomplete="tel"></label>
+<label>Email<input type="email" name="Email" autocomplete="email"></label>
+<label>Best way to reach you<select name="Preferred contact"><option>Call</option><option>Text</option><option>Email</option></select></label>
+<label>Request<select name="Request"><option>Schedule a tour</option><option>Ask a question</option><option>Join the opening wait list</option><option>Tuition assistance information</option></select></label>
+<label>Preferred tour days / times<input name="Tour availability" placeholder="e.g. weekday mornings"></label>
+<label>Days per week of interest<select name="Days per week"><option>Not sure yet</option><option>2 days</option><option>3 days</option><option>5 days (Phase 2)</option></select></label>
+<label class="full">Questions or anything you would like us to know<textarea name="Message" rows="3"></textarea></label>
+<p class="bv-note full">Please do not include medical, diagnosis or financial details here. We collect confidential health and support information only during enrollment, through a private form.</p>
+<label class="chk full"><input type="checkbox" name="Contact consent" value="Yes" required>&nbsp; I agree that Maa's Inspiration may contact me about Bloom Village.</label>
+<div class="full"><button class="btn" type="submit">Send inquiry / request a tour</button></div></form></div></section>
+<section id="volunteer"><div class="wrap"><h2>Volunteer at Bloom Village</h2><p>Kind, patient adults who enjoy arts, music, games, gardening or simply good conversation are welcome. Volunteers support, but never replace, our trained staff.</p>
+<form class="bvf" id="bvVolunteer" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Bloom Village – Volunteer interest"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://maasinspiration.org/thank-you.html"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Form" value="Bloom Village volunteer interest">
+<label>Full name *<input name="Name" required autocomplete="name"></label>
+<label>Phone *<input type="tel" name="Phone" required autocomplete="tel"></label>
+<label>Email *<input type="email" name="Email" required autocomplete="email"></label>
+<label>Are you 18 or older? *<select name="Age 18+" required><option value="">Choose…</option><option>Yes</option><option>No</option></select></label>
+<label>Days available (Mon–Fri, 9 AM–1 PM)<input name="Days available" placeholder="e.g. Tue, Thu"></label>
+<label>How would you like to help?<select name="Help with"><option>Arts, crafts &amp; music</option><option>Games, reading &amp; social time</option><option>Gardening / life skills</option><option>Setup, cleanup &amp; supplies</option><option>Events &amp; fundraising</option><option>Other</option></select></label>
+<label class="full">Experience with adults with disabilities (optional)<textarea name="Experience" rows="2"></textarea></label>
+<p class="bv-note full">Direct-support volunteers must be 18+, complete required background/registry screening and training, and always work under a designated supervisor.</p>
+<label class="chk full"><input type="checkbox" name="Screening acknowledgment" value="Yes" required>&nbsp; I understand screening and training are required before I help with participants.</label>
+<div class="full"><button class="btn" type="submit">Send volunteer interest</button></div></form></div></section>
 <section id="faq"><div class="wrap"><h2>FAQ</h2>
-<details><summary>What are the hours?</summary><p>Monday to Thursday, 9 AM to 2 PM.</p></details>
-<details><summary>When will Bloom Village open?</summary><p>Opening date to be announced. Join the interest list to be the first to know.</p></details>
-<details><summary>Where is it located?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75006" target="_blank" rel="noopener" style="color:inherit">2700 Old Denton Rd, Suite 102, Carrollton, TX 75006</a> (the same location as the Senior Center).</p></details>
-<details><summary>What ages do you serve?</summary><p>Children ages 5–17 with sensory, developmental, or other special needs.</p></details>
-<details><summary>Is there a cost?</summary><p>No. Bloom Village is free.</p></details>
-<details><summary>Is this therapy?</summary><p>No. Bloom Village is a day program for recreation and care: fun, inclusive activities and community. It does not provide therapy or medical services.</p></details>
-<details><summary>Do you provide transportation?</summary><p>No, families arrange their own transportation.</p></details>
-<details><summary>How can I help now?</summary><p>Volunteer, donate, or share this page with families who may benefit.</p></details>
-<p>📧 <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
+<details><summary>When will Bloom Village open?</summary><p>After HHSC issues our license. The application is pending, so we have no opening date yet. Send an inquiry and we'll contact you.</p></details>
+<details><summary>Who can attend?</summary><p>Adults 18 and older with intellectual and/or developmental disabilities, when we can safely meet their support needs.</p></details>
+<details><summary>What does it cost?</summary><p>$30 per program day plus a one-time $100 non-refundable enrollment fee. Need-based scholarships of 25%, 50%, 75% or up to 100% are available as funds allow.</p></details>
+<details><summary>Do you give medication or nursing care?</summary><p>No. Bloom Village is adult enrichment, not skilled nursing or clinical care. At launch, staff do not give, store, hand out or remind members to take medicine.</p></details>
+<details><summary>Do you provide transportation or outings?</summary><p>No. Activities are on-site at opening, and families arrange transportation.</p></details>
+<details><summary>Where is it?</summary><p><a href="https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007" target="_blank" rel="noopener">2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</a></p></details></div></section>
 </main>
 <div id="lb" onclick="this.style.display='none'"><img alt=""></div>
     <footer>
@@ -105,7 +179,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Follow Us</h4>
+                <h4>Bloom Village</h4><p class="footer-description">A Program of Maa's Inspiration<br>2700 Old Denton Rd, Suite 102, Carrollton, TX 75007<br><a href="tel:+14692708156" style="color:inherit">(469) 270-8156</a></p><h4 style="margin-top:1rem">Follow Us</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>

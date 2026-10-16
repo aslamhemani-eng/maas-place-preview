@@ -1,6 +1,6 @@
 # Bloom Village page source (imported by build.py). Public content only – no participant data.
-ADDR='2700 Old Denton Road, Carrollton, TX 75007'
-MAPQ='https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Carrollton+TX+75007'
+ADDR='2700 Old Denton Rd, Suite 102, Carrollton, TX 75007'
+MAPQ='https://www.google.com/maps/search/?api=1&query=2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007'
 CSS='''<style>
 .mi.bvp{--ivory:#E8E0D4;--sage:#8DA98A;--sageD:#5E7A5B;--gp:#8870A8;--gpD:#5F4A80;background:#fff}
 .mi.bvp .hero{background:linear-gradient(135deg,#5F4A80 0%,#8870A8 55%,#8DA98A 100%)!important;color:#fff}
