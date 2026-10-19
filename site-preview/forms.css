@@ -56,3 +56,8 @@
 .mi.mfp form.mf-form .mf-field>label{display:block}
 .mi.mfp fieldset.mf-step{border-left:0;border-right:0;border-bottom:0;margin:0;min-width:0}
 .mi.mfp .mf-choices.row{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}.mi.mfp form.mf-form .mf-choices.row label.mf-choice{padding:12px 10px;gap:8px}
+.mi.mfp details.mf-terms{border:2px solid var(--acc);border-radius:14px;background:#fff;margin:0 0 12px}
+.mi.mfp details.mf-terms>summary{padding:16px;font-weight:700;color:var(--hi);cursor:pointer;min-height:58px;box-sizing:border-box;font-size:1.05rem}
+.mi.mfp .mf-terms-box{max-height:55vh;overflow-y:auto;padding:4px 16px 16px;border-top:1px solid #ddd3c3;font-size:1rem}
+.mi.mfp .mf-terms-box h3{font-size:1.05rem}
+.mi.mfp .mf-terms-page h3:first-child{margin-top:0}

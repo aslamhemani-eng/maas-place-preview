@@ -28,9 +28,10 @@ def checks(name,q,opts,minimum=1,row=False,hint=''):
     h=f'<small>{hint}</small>' if hint else ''
     return f'<div class="mf-field" {"data-min="+chr(34)+str(minimum)+chr(34) if minimum else ""}><p class="mf-q">{q}</p>{h}<div class="mf-choices{" row" if row else ""}">{items}</div></div>'
 
-def tick(name,text,req=True,consent=True):
+def tick(name,text,req=True,consent=True,msg=''):
     dc=' data-consent' if consent else ''
-    return f'<label class="mf-tick"><input type="checkbox" name="{name}" value="yes"{" required" if req else ""}> <span{dc}>{text}</span></label>'
+    dm=f' data-msg="{msg}"' if msg else ''
+    return f'<label class="mf-tick"><input type="checkbox" name="{name}" value="yes"{" required" if req else ""}{dm}> <span{dc}>{text}</span></label>'
 
 def file(name,label):
     return f'<div class="mf-field mf-file"><label for="f_{name}">{label}</label><small>Take a photo or choose a file: JPG, PNG or PDF, 5 MB or less.</small><input id="f_{name}" type="file" name="{name}" accept="image/jpeg,image/png,application/pdf,.jpg,.jpeg,.png,.pdf" required></div>'
@@ -66,7 +67,42 @@ def page(head,foot,fn,title,eyebrow,intro,form_type,steps,bv=False):
     f=foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="forms-config.js"></script><script src="forms.js"></script>')
     open(fn,'w').write(h+body+f)
 
-FILES=['forms.html','form-meals-recipient.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','form-text-consent.html']
+
+DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
+<li>You must be at least 18 years old.</li>
+<li>You must have a valid driver’s license and tell Maa’s right away if it is suspended, revoked or expires.</li>
+<li>You must carry auto liability insurance on the vehicle you use that meets at least the Texas minimum: $30,000 for injury to one person, $60,000 for injury to two or more people, and $25,000 for property damage.</li>
+<li>Keep the vehicle registered and in safe working condition (lights, brakes, tires, wipers, seat belts).</li>
+<li>Show proof of license and insurance before your first route and every year, or whenever your policy changes.</li></ul>
+<h3>2. Insurance and liability</h3><ul>
+<li>Your own auto insurance is primary. If there is an accident while you are volunteering, your insurance is expected to pay first.</li>
+<li>Covered under {LEGAL}’s liability insurance policy (carrier and policy number on file with the administrator).</li>
+<li>Texas law that protects volunteers from some lawsuits does not fully protect volunteers who are driving, because auto insurance is expected to cover driving. Check with your insurance company that delivering meals as an unpaid volunteer is covered.</li></ul>
+<h3>3. Safe driving and phone use</h3><ul>
+<li>Obey all traffic laws and wear your seat belt.</li>
+<li>Do not text or read messages while driving. Texas law bans it. Look at the app, call or take photos only when parked.</li>
+<li>Do not drive after drinking alcohol or using drugs or medicine that make you drowsy.</li>
+<li>Do not drive when you are too tired, sick, or the weather is unsafe. Tell the coordinator if you cannot drive.</li>
+<li>Do not give rides to meal recipients or other people as part of Maa’s Meals unless Maa’s has approved it in writing.</li>
+<li>Keep the meals in the insulated bags Maa’s gives you and deliver them on time.</li></ul>
+<h3>4. At the door</h3><ul>
+<li>Be friendly and respectful, and wear your Maa’s name badge (if provided).</li>
+<li>Do not go inside a recipient’s home unless there is an emergency.</li>
+<li><b>Photo at every stop:</b> take one delivery photo at every stop. It shows the meal at the door and the house number only – never the person, the inside of the home, or a license plate. Use only the Maa’s app, not your phone’s camera roll, and never post or share delivery photos. Maa’s keeps delivery photos for 1 week, then deletes them.</li>
+<li>If no one answers, follow the app steps and call the coordinator. Do not leave food where it can spoil unless the recipient’s instructions say so.</li></ul>
+<h3>5. Privacy</h3><p>Recipients’ names, addresses, phone numbers and delivery photos are private. Use them only to deliver meals. Do not share, copy, post or keep them after your route, and do not contact recipients for personal reasons.</p>
+<h3>6. Emergencies and reporting</h3><ul>
+<li>If someone looks hurt, very sick or in danger, call 911, then the coordinator.</li>
+<li>If you think an older adult is being abused, neglected or exploited, you must report it to the Texas Abuse Hotline: <a href="tel:+18002525400">1-800-252-5400</a>, and tell the coordinator.</li></ul>
+<h3>7. Accidents, tickets and problems</h3><ol>
+<li>Stop safely. Call 911 if anyone is hurt. Follow the law for exchanging information.</li>
+<li>Call the Maa’s Meals coordinator as soon as it is safe.</li>
+<li>Report the accident to your own insurance company.</li>
+<li>Tell Maa’s in writing within 24 hours about any accident, injury or traffic ticket that happened while volunteering, and within 7 days if you get a ticket or your license changes at any other time.</li></ol>
+<h3>8. Costs</h3><p>Volunteer driving is unpaid. {LEGAL} does not pay for gas, mileage, tolls, parking, tickets or vehicle damage unless approved in writing before the trip. Some mileage for charity driving may be tax-deductible – ask your tax adviser.</p>
+<h3>9. Your agreement</h3><p>By agreeing, you confirm you meet the requirements in Part 1 and will follow these rules. {LEGAL} may stop your driving role at any time for safety reasons. You will give Maa’s updated copies of your license and insurance every year.</p>'''
+
+FILES=['forms.html','form-meals-recipient.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
 
 def build(head,foot):
     # 1. Meals recipient
@@ -154,21 +190,27 @@ def build(head,foot):
 {fld('sig_name','Type your name, or “Anonymous”',hint='You may type Anonymous.')}
 <label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick to send."> <span><b>I agree.</b> Send this complaint to Bloom Village.</span></label><p>Date: <b class="mf-date"></b></p>''')],bv=True)
 
-    # 4. Driver agreement
+    # 4. Driver agreement (simplified: 3 steps; all rules live in DRIVER_TERMS / driver-terms.html)
+    TV='driver-terms-v3-2026-10-19'
+    AGREE='I have read and agree to the Driver Terms &amp; Policies.'
     page(head,foot,'form-driver.html',"Volunteer Driver Agreement","Maa’s Meals · a program of "+LEGAL,
-      "Thank you for driving for Maa’s Meals! On Saturdays from 10 AM to noon, you bring meals to seniors in your own vehicle. Please read each part, tick the boxes, and add a photo of your driver’s license and insurance card.",
+      "Thank you for driving for Maa’s Meals! Three short steps: tell us about you, add your license and insurance, then agree to the Driver Terms &amp; Policies.",
       'driver_agreement',[
-      step('About you',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('dob','Date of birth',type='date',auto='bday',extra=' data-minage="18"',hint='Drivers must be 18 or older.')+fld('address','Address',auto='street-address')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')),
-      step('Emergency contact',fld('emergency_name','Emergency contact name')+fld('emergency_phone','Emergency contact phone',type='tel')),
-      step('To drive for Maa’s Meals, I must',tick('req_18','Be at least 18 years old.')+tick('req_license','Have a valid driver’s license and tell Maa’s right away if it is suspended, revoked or expires.')+tick('req_insurance','Carry auto liability insurance on the vehicle I use that meets at least the Texas minimum: $30,000 for injury to one person, $60,000 for injury to two or more people, and $25,000 for property damage.')+tick('req_vehicle','Keep the vehicle registered and in safe working condition (lights, brakes, tires, wipers, seat belts).')+tick('req_proof','Show proof of license and insurance before my first route and every year, or whenever my policy changes.')),
-      step('Insurance – please read',f'''<div data-consent><ul><li>My own auto insurance is primary. If there is an accident while I am volunteering, my insurance is expected to pay first.</li><li>Covered under {LEGAL}’s liability insurance policy (carrier and policy number on file with the administrator).</li><li>Texas law that protects volunteers from some lawsuits does not fully protect volunteers who are driving, because auto insurance is expected to cover driving. I should check with my insurance company that delivering meals as an unpaid volunteer is covered.</li></ul></div>'''+tick('ins_read','I have read and understand the insurance section.')),
-      step('Safe driving rules',tick('drive_laws','I will obey all traffic laws and wear my seat belt.')+tick('drive_no_text','I will not text or read messages while driving. Texas law bans it. I will look at the app, call or take photos only when parked.')+tick('drive_sober','I will not drive after drinking alcohol or using drugs or medicine that make me drowsy.')+tick('drive_fit','I will not drive when I am too tired, sick, or the weather is unsafe. I will tell the coordinator if I cannot drive.')+tick('drive_no_rides','I will not give rides to meal recipients or other people as part of Maa’s Meals unless Maa’s has approved it in writing.')+tick('drive_bags','I will keep the meals in the insulated bags Maa’s gives me and deliver them on time.')),
-      step('At the door',tick('door_respect','I will be friendly and respectful, and wear my Maa’s name badge (if provided).')+tick('door_no_enter','I will not go inside a recipient’s home unless there is an emergency.')+tick('door_photo','<b>Photo at the door:</b> I will take one delivery photo at every stop. The photo shows the meal at the door and the house number only – never the person, the inside of the home, or a license plate. I will use only the Maa’s app, not my phone’s camera roll, and never post or share delivery photos. Maa’s keeps delivery photos for 1 week, then deletes them.')+tick('door_no_answer','If no one answers, I will follow the app steps and call the coordinator. I will not leave food where it can spoil unless the recipient’s instructions say so.')+tick('door_911','If someone looks hurt, very sick or in danger, I will call 911, then the coordinator.')+tick('door_report','If I think an older adult is being abused, neglected or exploited, I must report it to the Texas Abuse Hotline: 1-800-252-5400, and tell the coordinator.')),
-      step('Privacy, accidents and costs',f'''<div data-consent><h3>Privacy</h3><p>Recipients’ names, addresses, phone numbers and delivery photos are private. I will use them only to deliver meals. I will not share, copy, post or keep them after my route, and I will not contact recipients for personal reasons.</p>
-<h3>If there is an accident, ticket or problem</h3><ol><li>Stop safely. Call 911 if anyone is hurt. Follow the law for exchanging information.</li><li>Call the Maa’s Meals coordinator as soon as it is safe.</li><li>Report the accident to my own insurance company.</li><li>Tell Maa’s in writing within 24 hours about any accident, injury or traffic ticket that happened while volunteering, and within 7 days if I get a ticket or my license changes at any other time.</li></ol>
-<h3>Costs</h3><p>Volunteer driving is unpaid. {LEGAL} does not pay for gas, mileage, tolls, parking, tickets or vehicle damage unless approved in writing before the trip. Some mileage for charity driving may be tax-deductible – ask your tax adviser.</p></div>'''+tick('privacy_ok','I agree to the privacy, accident and cost rules above.')),
+      step('About you',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')+tick('age_18_plus','I am 18 or older.',consent=False,msg='Drivers must be 18 or older. Please tick to confirm.')),
       step('Your license and insurance',file('license','Driver’s license (front)')+file('insurance','Auto insurance card')),
-      sig_step(f"I have read this agreement. I meet the requirements above. I will follow these rules. I understand that {LEGAL} may stop my driving role at any time for safety reasons. I will give Maa’s updated copies of my license and insurance every year.")])
+      ('Agree and send',f'''<details class="mf-terms"><summary>Read the Driver Terms &amp; Policies</summary><div class="mf-terms-box" tabindex="0">{DRIVER_TERMS}</div></details>
+<p><a href="driver-terms.html" target="_blank" rel="noopener">Open the Driver Terms &amp; Policies on their own page</a></p>
+<input type="hidden" name="terms_version" value="{TV}">
+<label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Driver Terms &amp; Policies."> <span data-consent>{AGREE}</span></label>
+<span hidden data-consent>Terms version: {TV}</span>
+{fld('sig_name','Type your full name to sign',auto='name',extra=' data-fullname="1"',hint='Typing your name here is your signature.')}
+<p>Date: <b class="mf-date"></b></p>''')])
+    th=head('Driver Terms & Policies').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
+    open('driver-terms.html','w').write(th+f'''{DRAFT}
+<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Driver Terms &amp; Policies</h1><p>For volunteers who deliver Maa’s Meals in their own vehicles. Version {TV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
+<div class="mf-wrap"><div class="mf-step mf-terms-page">{DRIVER_TERMS}</div>
+<p style="margin-top:20px"><a class="mf-btn" href="form-driver.html">Go to the Driver Agreement form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p></div>
+'''+foot)
 
     # 5. SMS consent
     CONSENT="I agree to receive text messages from Maa’s Inspiration Inc. about volunteer shifts and meal deliveries. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our Privacy Policy and Terms &amp; Conditions."
@@ -186,7 +228,7 @@ def build(head,foot):
     open('forms.html','w').write(h+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{LEGAL}</p><h1>Forms</h1><p>Fill in and sign our forms on your phone. Each form takes a few short steps. Need help? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap">
-<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries. About you and delivery instructions.')}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Have your license and insurance card ready.')}</div>
+<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries. About you and delivery instructions.')}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. 3 short steps. Have your license and insurance card ready.')}{card('driver-terms.html','Driver Terms &amp; Policies','The rules every volunteer driver agrees to.')}</div>
 <div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-text-consent.html','Text Message Consent','Choose whether to get volunteer text reminders. Optional.')}{card('form-driver.html','Volunteer Driver Agreement','For Maa’s Meals delivery drivers. Must be 18 or older.')}</div>
 <div class="mf-group"><h2>🌸 Bloom Village</h2>{card('form-bloom-fee.html','Fee Agreement','Tuition, program days and fee terms for families.',True)}{card('form-bloom-rights.html','Participant Rights','Read your rights and sign that you received them.',True)}{card('form-bloom-complaint.html','Complaint Form','Tell us about a concern. You can stay anonymous.',True)}</div>
 <p class="mf-call">Your form goes to {LEGAL}’s private system. {ADDR} · <a href="{TEL}">{PH}</a></p>
