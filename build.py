@@ -106,7 +106,7 @@ mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+14692708156">(469) 270-8156</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
 <div class="card"><h3>2. Sign up</h3><p><a href="form-maas-place.html">Sign up online</a> on one short page; family members can fill it out on a senior's behalf.</p></div>
-<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver on your first visit. Texts, photos and video are covered in our terms; you can opt out anytime. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a> or <a href="form-maas-place.html">sign up and sign the waiver online</a>.</p></div></div>
+<div class="card"><h3>3. One agreement covers it</h3><p>Signing up includes our <a href="maas-place-terms.html">Maa’s Place Terms, Policies &amp; Waiver</a>: the participation waiver, emergency care, texts, photos and video. There are no separate consent forms. You can opt out of texts or photos anytime by replying STOP or calling <a href="tel:+14692708156">(469) 270-8156</a>.</p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
 <div id="enroll" class="mp-enroll" style="margin-top:22px;text-align:center"><h3>Sign up online</h3><p>The Maa’s Place is opening soon. Sign up now on one short page and we'll contact you when it opens. A family member can fill it out for you.</p>
 <p><a class="btn" href="form-maas-place.html" style="display:inline-block;font-size:1.25rem;padding:18px 34px;min-width:260px">Sign up for Maa’s Place →</a></p>
@@ -123,7 +123,7 @@ mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')
 <details><summary>What are your hours?</summary><p>Monday to Thursday, 10 AM to 2 PM.</p></details>
 <details><summary>Is there a cost?</summary><p>No. The Maa’s Place is free.</p></details>
 <details><summary>Do you provide transportation?</summary><p>No, transportation is not provided.</p></details>
-<details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Tell us about any allergies on the enrollment form.</p></details>
+<details><summary>Are snacks provided?</summary><p>Yes, homestyle snacks and chai. Please tell staff about any food allergies.</p></details>
 <details><summary>How do I volunteer?</summary><p>Sign up on our <a href="{VOL}">volunteer page</a> and we'll reach out to get you started.</p></details>
 <div style="margin-top:20px;border-radius:14px;overflow:hidden"><iframe title="Map to the Maa’s Place" src="https://www.google.com/maps?q=2700+Old+Denton+Rd+Suite+102,+Carrollton,+TX+75007&output=embed" width="100%" height="320" style="border:0" loading="lazy"></iframe></div>
 </div></section>
@@ -171,7 +171,7 @@ pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purp
 <li><b>Dignity first:</b> treat every guest, senior, family and fellow volunteer with kindness and respect – Love All, Serve All.</li>
 <li><b>Show up:</b> arrive on time, check in and check out with the shift lead, and let us know early if you can't make it.</li>
 <li><b>Food safety:</b> wash hands, wear gloves and hair covering in the kitchen, and follow the lead's instructions.</li>
-<li><b>Privacy:</b> keep guests' personal information private; no photos of guests without consent.</li>
+<li><b>Privacy:</b> keep guests' personal information private. Do not take personal photos of guests; take photos only when Maa’s asks, and never of anyone who has opted out.</li>
 <li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site; drivers must have a valid license and insurance.</li>
 <li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
@@ -259,31 +259,7 @@ _wire('maas-place.html',"Maa’s Place enrollment")
 
 
 # ---- Maa’s Place waiver ----
-WV=head("Maa’s Place Participation Waiver").replace('<main class="mi">','<main class="mi purple waiver">').replace('</head>','''<style>
-.mi.waiver .wv{max-width:820px;margin:0 auto;background:#fff;border-radius:14px;border-top:6px solid #5B2A86;padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.06);line-height:1.6}
-.mi.waiver .wv h1{color:#3D1A6E;font-size:1.9rem;margin:0 0 12px}.mi.waiver .wv h2{color:#3D1A6E;font-size:1.1rem;margin:22px 0 6px}
-.mi.waiver .release{font-weight:800;text-transform:uppercase;border:3px solid #3D1A6E;padding:14px;background:#F6F1FB}
-.mi.waiver .box{font-size:1.2rem;margin-right:6px}.mi.waiver .sig{display:grid;grid-template-columns:2fr 2fr 1fr;gap:18px;margin-top:22px}
-.mi.waiver .sig div{border-bottom:1.5px solid #2E2438;padding-top:34px;font-size:.85rem;color:#6b5f7a}
-.mi.waiver .pbar{text-align:center;margin:20px 0}
-@media(max-width:640px){.mi.waiver .wv{padding:20px}.mi.waiver .sig{grid-template-columns:1fr}}
-@media print{nav,footer,.preview-banner,.pbar,.sticky,.stickybar,#lb,body>div:first-child[style*="C0392B"]{display:none!important}body,.mi{background:#fff!important}.mi.waiver .wv{box-shadow:none;border:0;padding:0;max-width:none}.mi.waiver section{padding:0!important}}
-</style></head>''',1)+'''<section><div class="wrap"><div class="wv">
-<h1>Maa’s Place Participation Waiver and Release</h1>
-<p>The Maa’s Place is a free center for seniors operated by MAA's Inspiration Inc., a 501(c)(3) nonprofit located at 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007.</p>
-<h2>1. Voluntary participation.</h2><p>I am choosing to take part in Maa’s Place activities, which may include light exercise, chair yoga, walks, games, arts and crafts, outings, and meals or snacks. I understand that participation is voluntary and that I may stop at any time.</p>
-<h2>2. Health and fitness.</h2><p>I confirm that I am able to take part in these activities. I will consult my doctor if I have any doubts, and I will tell staff about any health, mobility, or dietary needs. I understand that the Maa’s Place does not provide medical care, supervision for memory care, or transportation.</p>
-<h2>3. Risks.</h2><p>I understand that physical activities and outings carry some risk of injury, including falls, strains, and illness. I accept these risks.</p>
-<h2>4. RELEASE OF LIABILITY.</h2><p class="release">I RELEASE MAA'S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS, AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS, OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</p>
-<h2>5. Emergencies.</h2><p>In an emergency, I authorize staff to call 911 and contact my emergency contact. I am responsible for any resulting medical costs.</p>
-<h2>6. Food.</h2><p>I will tell staff about any food allergies. Food may be prepared in a kitchen that also handles common allergens.</p>
-<h2>7. Texts, photos and video.</h2><p>By signing, I agree to receive informational texts from Maa's Inspiration Inc. about its programs (message frequency varies, message and data rates may apply, reply STOP to opt out and HELP for help; consent is not a condition of services), and that Maa's may take photos and video at programs and events and use them on its website, social media and materials. If I do not want to be photographed or featured, I will tell Maa's at (469) 270-8156 or aslam@maasinspiration.org, and Maa's will honor it.</p>
-<h2>8. Signature.</h2><p>I have read and understand this waiver.</p>
-<div class="sig"><div>Participant name</div><div>Signature</div><div>Date</div></div>
-<div class="sig"><div>Signed by family member / guardian on participant's behalf (if applicable)</div><div>Relationship</div><div>Date</div></div>
-<p class="pbar"><button class="btn" onclick="window.print()">🖨️ Print this waiver</button> &nbsp; <a class="btn green" href="maas-place.html#visit">Back to the Maa’s Place</a></p>
-</div></div></section>
-'''+foot
+WV='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Maa’s Place Terms, Policies &amp; Waiver – Maa’s Inspiration</title><link rel="canonical" href="maas-place-terms.html"><meta http-equiv="refresh" content="0; url=maas-place-terms.html"><script>location.replace("maas-place-terms.html")</script></head><body><p>The Maa’s Place waiver is now part of the <a href="maas-place-terms.html">Maa’s Place Terms, Policies &amp; Waiver</a>.</p></body></html>'
 open('maas-place-waiver.html','w').write(WV)
 
 # ---- Contact ----
@@ -330,7 +306,7 @@ PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple le
 <h2>3. We do not sell your information</h2>
 <p>We never sell, rent or trade your personal information.</p>
 <p><b>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</b></p>
-<p>We share information only with service providers who help us run our programs (for example our secure database, text message and payment providers), and only as needed, or when the law requires it.</p>
+<p>We share information only with service providers who help us run our programs (for example our secure database, text message and payment providers), and only as needed; with the volunteer driver assigned to a meal delivery (name, address, phone and delivery notes, for that delivery only); with a participant's emergency contact or family if the person is hurt, ill or we are worried about their safety; or when the law requires it.</p>
 <h2 id="sms">4. Text messages (SMS)</h2><ul>
 <li><b>How you agree:</b> when you give us your phone number on one of our forms and agree to that form's terms, you agree to receive informational texts from Maa's Inspiration Inc. about volunteering, deliveries and programs.</li>
 <li>Message frequency varies. Message and data rates may apply.</li>

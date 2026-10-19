@@ -75,19 +75,21 @@ DOOR_LI="<li><b>Delivery door photos</b> are for delivery confirmation only. The
 BV_PV_LI="<li><b>Photos and video:</b> Maa’s may take photos and video at Bloom Village. Photos of participants are used publicly (website, social media, materials) only with the guardian’s agreement under these terms. The guardian can opt out at any time by calling <a href=\"tel:+14692708156\">(469) 270-8156</a> or emailing <a href=\"mailto:aslam@maasinspiration.org\">aslam@maasinspiration.org</a>, and we will honor it.</li>"
 def TPV_SEC(n,items):return f"<h3>{n}. Texts, Photos &amp; Video</h3><ul>{items}</ul>"
 OPT_LINE="Agreeing includes our texts, photos &amp; video terms. You can opt out anytime."
+def OPTOUT_SEC(n,extra=''):return f"<h3>{n}. How to opt out</h3><ul><li><b>Texts:</b> reply <b>STOP</b> to any text, or call us. Reply <b>HELP</b> for help.</li><li><b>Photos, video and anything else in these terms you can opt out of:</b> call <a href=\"tel:+14692708156\">(469) 270-8156</a> or email <a href=\"mailto:aslam@maasinspiration.org\">aslam@maasinspiration.org</a>. Tell us what you want to stop and we will honor it.</li>{extra}<li>Opting out does not affect your services or your place in the program.</li></ul>"
 
-MEALS_TERMS=f'''<h3>1. The service and delivery</h3><ul>
+MEALS_TERMS=f'''<p>Maa’s Meals is a free meal delivery program of {LEGAL}, a 501(c)(3) nonprofit. By agreeing to these terms you also agree to the consents below. You can opt out of texts and photos at any time (see section 9).</p>
+<h3>1. The service and delivery</h3><ul>
 <li>Volunteer drivers bring a free meal to your door on <b>Saturdays between 10 AM and noon</b>.</li>
 <li>The driver hands you the meal or leaves it as your notes say, and does not come inside unless there is an emergency.</li>
-<li>If no one answers, the driver calls our coordinator and we may call you. Food is not left where it can spoil. If someone seems hurt or in danger, the driver calls 911.</li></ul>
-<h3>2. Door photo and privacy</h3><ul>
-<li>The driver takes one photo at every stop, showing only the meal at the door and the house number – never you or the inside of your home.</li>
-<li>Photos are kept for 1 week, then deleted, and are never posted or shared.</li>
-<li>We use your information only to deliver your meals. We do not sell or share it. See our <a href="privacy.html">Privacy Policy</a>.</li></ul>
-<h3>3. Food and changes</h3><ul>
-<li>Food may be made in a kitchen that also handles common allergens, and is not made for special medical diets. Please call us about any serious food allergy.</li>
-<li>Call <a href="{TEL}">{PH}</a> if your address or phone changes, or to pause or stop deliveries.</li>
-<li>By agreeing, you confirm your information is true. Someone helping you may agree for you, with your permission.</li></ul>'''+TPV_SEC(4,TXT_LI+PV_LI+DOOR_LI)+f''''''
+<li>If no one answers, the driver calls our coordinator and we may call you. Food is not left where it can spoil.</li></ul>
+<h3>2. Text messages</h3><ul><li>By giving your phone number and agreeing to these terms, you agree to receive informational texts from Maa’s Inspiration Inc. about your deliveries and our programs, such as delivery reminders.</li><li>Message frequency varies. Message and data rates may apply. Reply <b>STOP</b> to opt out, <b>HELP</b> for help. Texts are not a condition of getting meals. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
+<h3>3. Door photo (kept 7 days)</h3><ul><li>The driver takes one photo at every stop to confirm delivery. It shows only the meal at the door and the house number – never you or the inside of your home.</li><li>Door photos are kept for <b>7 days</b>, then deleted. They are never posted or shared.</li></ul>
+<h3>4. Your address and information</h3><ul><li>We share your name, address, phone and delivery notes <b>only with the volunteer driver assigned to your delivery</b>, and only for that delivery. Drivers agree to keep it private.</li><li>We do not sell or share your information with anyone else for marketing. See our <a href="privacy.html">Privacy Policy</a>.</li></ul>
+<h3>5. Food safety and allergies</h3><ul><li>Meals are made with care, but may be made in a kitchen that also handles common allergens (such as nuts, milk, eggs, wheat and soy). They are not made for special medical diets.</li><li>Please tell us about any serious food allergy. Eat or refrigerate your meal soon after delivery, and do not eat food that looks or smells spoiled.</li></ul>
+<h3>6. Emergencies</h3><p>If a driver finds that someone seems hurt, very sick or in danger, you agree that the driver may call 911 and tell our coordinator. If we have a family or emergency contact for you, we may let them know.</p>
+<h3>7. Photos and video at events</h3><ul><li>If you come to a Maa’s event, we may take photos and video and use them on our website, social media and materials. Tell us if you do not want to be photographed and we will honor it.</li></ul>
+<h3>8. Release</h3><p><b>TO THE EXTENT TEXAS LAW ALLOWS, YOU RELEASE MAA’S INSPIRATION INC. AND ITS DIRECTORS, STAFF, VOLUNTEERS AND DRIVERS FROM CLAIMS FOR ILLNESS, ALLERGIC REACTION, INJURY OR LOSS ARISING FROM THE MEALS OR THEIR DELIVERY.</b></p>
+'''+OPTOUT_SEC(9)+f'''<h3>10. Changes and your agreement</h3><ul><li>Call <a href="{TEL}">{PH}</a> if your address or phone changes, or to pause or stop deliveries.</li><li>By agreeing, you confirm your information is true. Someone helping you may agree for you, with your permission.</li></ul>'''
 
 DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li>You must be at least 18 years old.</li>
@@ -111,7 +113,7 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <h3>4. At the door</h3><ul>
 <li>Be friendly and respectful, and wear your Maa’s name badge (if provided).</li>
 <li>Do not go inside a recipient’s home unless there is an emergency.</li>
-<li><b>Photo at every stop:</b> take one delivery photo at every stop. It shows the meal at the door and the house number only – never the person, the inside of the home, or a license plate. Use only the Maa’s app, not your phone’s camera roll, and never post or share delivery photos. Maa’s keeps delivery photos for 1 week, then deletes them.</li>
+<li><b>Photo at every stop:</b> take one delivery photo at every stop. It shows the meal at the door and the house number only – never the person, the inside of the home, or a license plate. Use only the Maa’s app, not your phone’s camera roll, and never post or share delivery photos. Maa’s keeps delivery photos for 7 days, then deletes them.</li>
 <li>If no one answers, follow the app steps and call the coordinator. Do not leave food where it can spoil unless the recipient’s instructions say so.</li></ul>
 <h3>5. Privacy</h3><p>Recipients’ names, addresses, phone numbers and delivery photos are private. Use them only to deliver meals. Do not share, copy, post or keep them after your route, and do not contact recipients for personal reasons.</p>
 <h3>6. Emergencies and reporting</h3><ul>
@@ -131,7 +133,7 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li><b>No compensation.</b> I am an unpaid volunteer. I will not receive pay, mileage or other compensation unless approved in writing before the trip.</li>
 <li><b>Emergency medical care.</b> If I am hurt or ill while volunteering, I allow Maa’s to call 911 and get emergency medical care for me. I am responsible for the cost of that care.</li>
 <li><b>Read and understood.</b> I have read and understood this waiver and release, and I sign it voluntarily.</li></ul>
-<h3>10. Your agreement</h3><p>By agreeing, you confirm that you are 18 or older, that you hold a valid Texas driver’s license and current auto insurance that meets the Texas minimums, that you will keep them current, and that you will tell Maa’s if either one lapses. You agree to follow these rules and to the Driver Waiver and Release of Liability. {LEGAL} may stop your driving role at any time for safety reasons.</p>'''+TPV_SEC(11,TXT_LI+PV_LI+DOOR_LI)+f''''''
+<h3>10. Your agreement</h3><p>By agreeing, you confirm that you are 18 or older, that you hold a valid Texas driver’s license and current auto insurance that meets the Texas minimums, that you will keep them current, and that you will tell Maa’s if either one lapses. You agree to follow these rules and to the Driver Waiver and Release of Liability. {LEGAL} may stop your driving role at any time for safety reasons.</p>'''+TPV_SEC(11,TXT_LI+PV_LI+DOOR_LI)+OPTOUT_SEC(12)
 
 def agree_block(terms_title,terms_html,terms_href,tv,agree_text,sign_hint='Typing your name here is your signature.',note=''):
     return f'''<h3>Terms and signature</h3><details class="mf-terms"><summary>Read the {terms_title}</summary><div class="mf-terms-box" tabindex="0">{terms_html}</div></details>
@@ -148,7 +150,7 @@ def terms_page(head,foot,fn,title,eyebrow,intro,tv,html,form_href,form_label,bv=
     open(fn,'w').write(th+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{intro} Version {tv}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap"><div class="mf-step mf-terms-page">{html}</div>
-<p style="margin-top:20px"><a class="mf-btn" href="{form_href}">{form_label}</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
+<p style="margin-top:20px"><a class="mf-btn" href="{form_href}">{form_label}</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p><a href="javascript:print()">Print these terms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
 '''+foot)
 
 FEE_TERMS='''<h3>1. Program days and hours</h3><ul><li>Bloom Village is open Monday to Friday, 9:00 AM to 1:00 PM. Pick up is at 1:00 PM.</li><li>During the pilot, participants attend 2 or 3 days a week, with up to 8 adults in the group.</li><li>To change days, ask the administrator. Changes start when space and staffing allow.</li></ul>
@@ -163,23 +165,27 @@ FEE_TERMS='''<h3>1. Program days and hours</h3><ul><li>Bloom Village is open Mon
 <h3>8. Your agreement</h3><p>By agreeing, you confirm you have read these terms, had your questions answered, and agree to them for the participant named on the form. You will receive a copy.</p>'''+TPV_SEC(9,TXT_LI+BV_PV_LI)+''''''
 
 TEXT_TERMS=f'''<table class="mf-tbl"><tr><td><b>From</b></td><td>{LEGAL} (Maa’s Meals)</td></tr><tr><td><b>What</b></td><td>Informational texts about volunteering, deliveries and programs, such as the Thursday “are you available this Saturday?” question, a Friday reminder if there is no reply, a confirmation of your reply, your Saturday assignment (deliver or packing), and a thank-you after the shift.</td></tr><tr><td><b>How often</b></td><td>Message frequency varies.</td></tr><tr><td><b>Cost</b></td><td>Message and data rates may apply.</td></tr><tr><td><b>To stop</b></td><td>Reply <b>STOP</b> (or STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) at any time. You will get one confirmation and no further texts. Reply START to opt back in.</td></tr><tr><td><b>For help</b></td><td>Reply <b>HELP</b>, call <a href="{TEL}">{PH}</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</td></tr><tr><td><b>How you agree</b></td><td>By giving your phone number and agreeing to the terms of one of our forms (volunteer sign-up, driver agreement, Maa’s Place sign-up, meal recipient form or Bloom Village fee agreement), you agree to receive informational texts from {LEGAL} about volunteering, deliveries and programs. You can opt out at any time.</td></tr><tr><td><b>Not required</b></td><td>Consent to texts is not a condition of receiving services or volunteering. Reply STOP or call us and you can still take part.</td></tr><tr><td><b>Privacy</b></td><td>We do not sell or share mobile numbers or text opt-in information with anyone for marketing. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</td></tr></table>
-<p>Carriers are not liable for delayed or undelivered messages. If your phone number changes, please sign up again with the new number.</p>'''
+<p>Carriers are not liable for delayed or undelivered messages. If your phone number changes, call us at (469) 270-8156 so we can update it.</p>'''
 
-MP_TERMS=f'''<p>Maa’s Place is a free center for seniors operated by {LEGAL}, a 501(c)(3) nonprofit at {ADDR}. Open Monday to Thursday, 10 AM to 2 PM. Ages 55 and up.</p>
-<h3>1. Voluntary participation</h3><p>I am choosing to take part in Maa’s Place activities, which may include light exercise, chair yoga, walks, games, arts and crafts, outings, and meals or snacks. Participation is voluntary and I may stop at any time.</p>
-<h3>2. Health and fitness</h3><p>I am able to take part in these activities. I will consult my doctor if I have any doubts, and I will tell staff about any health, mobility, or dietary needs. Maa’s Place does not provide medical care, supervision for memory care, or transportation.</p>
-<h3>3. Risks</h3><p>Physical activities and outings carry some risk of injury, including falls, strains, and illness. I accept these risks.</p>
-<h3>4. Release of liability</h3><p><b>I RELEASE MAA’S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS, AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS, OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</b></p>
-<h3>5. Emergencies</h3><p>In an emergency, I authorize staff to call 911 and contact my emergency contact. I am responsible for any resulting medical costs.</p>
-<h3>6. Food</h3><p>I will tell staff about any food allergies. Food may be prepared in a kitchen that also handles common allergens.</p>
-<h3>7. Signing for someone else</h3><p>A family member or guardian may sign on the participant’s behalf and agrees to these terms for them.</p>'''+TPV_SEC(8,TXT_LI+PV_LI)+f''''''
+MP_TERMS=f'''<p>Maa’s Place is a free center for adults 55 and up, run by {LEGAL}, a 501(c)(3) nonprofit at {ADDR}. <b>Open Monday to Thursday, 10 AM to 2 PM.</b> By agreeing to these terms you also agree to the waiver and consents below. You can opt out of texts and photos at any time (see section 10).</p>
+<h3>1. Taking part</h3><p>Activities may include light exercise, chair yoga, walks, games, arts and crafts, and snacks. Taking part is voluntary and you may stop at any time. I am able to take part, I will ask my doctor if I have doubts, and I will tell staff about any health, mobility or dietary needs. Maa’s Place does not provide medical care, memory care supervision or transportation.</p>
+<h3>2. Participation Waiver &amp; Release</h3><ul><li><b>Assumption of risk.</b> Physical activities, games and outings carry some risk of injury, including falls, strains and illness. I understand and accept these risks.</li>
+<li><b>Release.</b> <b>I RELEASE MAA’S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</b></li></ul>
+<h3>3. Emergency medical consent</h3><p>In an emergency, I authorize Maa’s staff and volunteers to call 911 and to get emergency medical care for me. I am responsible for any medical costs.</p>
+<h3>4. Sharing information with my emergency contact</h3><p>If I am hurt, become ill, or staff are worried about my safety, Maa’s may contact my emergency contact or family and share what they need to know to help me. Maa’s does not share my information with anyone else except when the law requires it.</p>
+<h3>5. Outings and transportation</h3><p>Maa’s Place does not provide transportation. If Maa’s offers an outing, it is optional, Maa’s will tell me the details first, and this waiver and release also cover outings. I get myself to and from Maa’s Place and any outing unless Maa’s tells me otherwise in writing.</p>
+<h3>6. Food and snacks</h3><p>Snacks, chai and meals may be prepared in a kitchen that also handles common allergens (such as nuts, milk, eggs, wheat and soy) and are not made for special medical diets. I will tell staff about any food allergy and choose what I eat.</p>
+<h3>7. Text messages</h3><ul><li>By giving my phone number and agreeing to these terms, I agree to receive informational texts from Maa’s Inspiration Inc. about Maa’s Place and our programs. Message frequency varies. Message and data rates may apply. Reply <b>STOP</b> to opt out, <b>HELP</b> for help. Texts are not a condition of taking part. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
+<h3>8. Photos and video</h3><ul><li>Maa’s may take photos and video at Maa’s Place and events and use them on its website, social media and materials, using first names only. If I do not want to be photographed or featured, I will tell Maa’s and they will honor it.</li></ul>
+<h3>9. Signing for someone else</h3><p>A family member or guardian may sign for the participant and agrees to these terms for them.</p>
+'''+OPTOUT_SEC(10)
 
 VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>Dignity first:</b> treat every guest, senior, family and fellow volunteer with kindness and respect – Love All, Serve All.</li>
 <li><b>Show up:</b> arrive on time, check in and check out with the shift lead, and let us know early if you can’t make it.</li>
 <li><b>Food safety:</b> wash hands, wear gloves and hair covering in the kitchen, and follow the lead’s instructions.</li>
-<li><b>Privacy:</b> keep guests’ personal information private; no photos of guests without consent.</li>
-<li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site. Drivers must also agree to the <a href="driver-terms.html">Driver Terms &amp; Policies</a>.</li>
+<li><b>Privacy:</b> keep guests’ personal information private. Do not take personal photos of guests; take photos only when Maa’s asks, and never of anyone who has opted out.</li>
+<li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site. Drivers must also agree to the <a href="driver-terms.html">Driver Terms, Policies &amp; Waiver</a>.</li>
 <li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
 '''+'''
@@ -191,26 +197,26 @@ VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>Own health insurance.</b> Maa’s Inspiration does not provide health or accident insurance for volunteers. I will rely on my own health insurance and am responsible for my own medical costs.</li>
 <li><b>Volunteers under 18.</b> A parent or guardian must agree to these terms and sign the sign-up form for a volunteer under 18, and accepts this waiver and release for the minor to the extent the law allows. Volunteers under 18 must be supervised by an adult.</li></ul>
 '''+TPV_SEC(3,TXT_LI+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li>')+'''
-<h3>4. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''
+<h3>4. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''+OPTOUT_SEC(5)
 
 FILES=['forms.html','bloom-fee-terms.html','bloom-rights.html','text-terms.html','form-maas-place.html','maas-place-terms.html','form-volunteer.html','volunteer-terms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
 
 def build(head,foot):
     # 1. Meals recipient (simplified: 3 steps; all rules live in MEALS_TERMS / meals-terms.html)
-    MV='meals-terms-v3.3-2026-10-19'
+    MV='meals-terms-v3.4-2026-10-19'
     page(head,foot,'form-meals-recipient.html',"Maa’s Meals Recipient Form","Maa’s Meals · a program of "+LEGAL,
       "Sign up for free Saturday meal delivery. One short page. A family member or volunteer can help you fill this out.",
       'meals_recipient',[
-      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('street','Street address',auto='address-line1')+fld('apt','Apt / unit',req=False,auto='address-line2')+fld('city','City',auto='address-level2',extra=' value="Carrollton"')+fld('zip','ZIP code',auto='postal-code',extra=' inputmode="numeric" data-zip="1"')+fld('phone','Phone number',type='tel',auto='tel')+fld('delivery_notes','Delivery notes',req=False,type='textarea',hint='For example: gate code, pets, which door, stairs.')+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Meal Recipient Terms &amp; Policies</summary><div class="mf-terms-box" tabindex="0">{MEALS_TERMS}</div></details>
-<p><a href="meals-terms.html" target="_blank" rel="noopener">Open the Meal Recipient Terms &amp; Policies on their own page</a></p>
+      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('street','Street address',auto='address-line1')+fld('apt','Apt / unit',req=False,auto='address-line2')+fld('city','City',auto='address-level2',extra=' value="Carrollton"')+fld('zip','ZIP code',auto='postal-code',extra=' inputmode="numeric" data-zip="1"')+fld('phone','Phone number',type='tel',auto='tel')+fld('delivery_notes','Delivery notes',req=False,type='textarea',hint='For example: gate code, pets, which door, stairs.')+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Meal Recipient Terms, Policies &amp; Waiver</summary><div class="mf-terms-box" tabindex="0">{MEALS_TERMS}</div></details>
+<p><a href="meals-terms.html" target="_blank" rel="noopener">Open the Meal Recipient Terms, Policies &amp; Waiver on their own page</a></p>
 <input type="hidden" name="terms_version" value="{MV}">
-<p class="mf-optline" data-consent>{OPT_LINE}</p><label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Meal Recipient Terms &amp; Policies."> <span data-consent>I have read and agree to the Meal Recipient Terms &amp; Policies.</span></label>
+<p class="mf-optline" data-consent>{OPT_LINE}</p><label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Meal Recipient Terms, Policies &amp; Waiver."> <span data-consent>I have read and agree to the Meal Recipient Terms, Policies &amp; Waiver.</span></label>
 <span hidden data-consent>Terms version: {MV}</span>
 {fld('sig_name','Type your full name to sign',auto='name',extra=' data-fullname="1"',hint='Typing your name here is your signature. If you are helping someone, type your own name.')}
 <p>Date: <b class="mf-date"></b></p>''')])
-    th=head('Meal Recipient Terms & Policies').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
+    th=head('Meal Recipient Terms, Policies & Waiver').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
     open('meals-terms.html','w').write(th+f'''{DRAFT}
-<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Meal Recipient Terms &amp; Policies</h1><p>For seniors who get Saturday meal deliveries. Version {MV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
+<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Meal Recipient Terms, Policies &amp; Waiver</h1><p>For seniors who get Saturday meal deliveries. Version {MV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap"><div class="mf-step mf-terms-page">{MEALS_TERMS}</div>
 <p style="margin-top:20px"><a class="mf-btn" href="form-meals-recipient.html">Go to the Meal Recipient Form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
 '''+foot)
@@ -280,12 +286,12 @@ def build(head,foot):
       +'<p>Date: <b class="mf-date"></b></p>')],bv=True)
 
     # 4. Driver agreement (simplified: 3 steps; all rules live in DRIVER_TERMS / driver-terms.html)
-    TV='driver-terms-v3.3-2026-10-19'
+    TV='driver-terms-v3.4-2026-10-19'
     AGREE='I have read and agree to the Driver Terms, Policies &amp; Waiver.'
     page(head,foot,'form-driver.html',"Volunteer Driver Agreement","Maa’s Meals · a program of "+LEGAL,
       "Thank you for driving for Maa’s Meals! One short page: tell us about you, then agree to the Driver Terms, Policies &amp; Waiver.",
       'driver_agreement',[
-      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')+tick('age_18_plus','I am 18 or older.',consent=False,msg='Drivers must be 18 or older. Please tick to confirm.')+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Driver Terms, Policies &amp; Waiver</summary><div class="mf-terms-box" tabindex="0">{DRIVER_TERMS}</div></details>
+      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')+'<p class="mf-optline">Drivers must be 18 or older with a valid Texas driver’s license and auto insurance. Agreeing confirms this.</p>'+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Driver Terms, Policies &amp; Waiver</summary><div class="mf-terms-box" tabindex="0">{DRIVER_TERMS}</div></details>
 <p><a href="driver-terms.html" target="_blank" rel="noopener">Open the Driver Terms, Policies &amp; Waiver on their own page</a></p>
 <input type="hidden" name="terms_version" value="{TV}">
 <p class="mf-optline" data-consent>{OPT_LINE}</p><label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Driver Terms, Policies &amp; Waiver."> <span data-consent>{AGREE}</span></label>
@@ -300,21 +306,21 @@ def build(head,foot):
 '''+foot)
 
     # 5. SMS consent (one page; details in text-terms.html)
-    XV='text-terms-v3.3-2026-10-19'
+    XV='text-terms-v3.4-2026-10-19'
     open('form-text-consent.html','w').write('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Forms – Maa’s Inspiration</title><link rel="canonical" href="forms.html"><meta http-equiv="refresh" content="0; url=forms.html"><script>location.replace("forms.html")</script></head><body><p>This page has moved to <a href="forms.html">Forms</a>. Text messages are now covered by each program’s terms.</p></body></html>')
     terms_page(head,foot,'text-terms.html','Text Message Terms','Volunteer program · '+LEGAL,'What texts you get, how you agree, and how to stop.',XV,TEXT_TERMS,'forms.html','See all forms')
 
     # 6. Maa's Place enrollment + waiver (one page; waiver in maas-place-terms.html)
-    PV='maas-place-terms-v3.3-2026-10-19'
+    PV='maas-place-terms-v3.4-2026-10-19'
     page(head,foot,'form-maas-place.html',"Maa’s Place Sign-up","Maa’s Place · a program of "+LEGAL,
       "Free activities, snacks and chai for adults 55+, Monday to Thursday, 10 AM to 2 PM. One short page. A family member can fill it out for you.",
       'maas_place_enrollment',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')
       +fld('emergency_contact','Emergency contact name and phone')
-      +agree_block('Maa’s Place Terms &amp; Waiver',MP_TERMS,'maas-place-terms.html',PV,'I have read and agree to the Maa’s Place Terms &amp; Waiver, including the release of liability.',sign_hint='If you are signing for someone, type your own name.',note=OPT_LINE))])
-    terms_page(head,foot,'maas-place-terms.html','Maa’s Place Terms &amp; Waiver','Maa’s Place · a program of '+LEGAL,'Participation waiver and release for Maa’s Place.',PV,MP_TERMS,'form-maas-place.html','Go to the Maa’s Place Sign-up')
+      +agree_block('Maa’s Place Terms, Policies &amp; Waiver',MP_TERMS,'maas-place-terms.html',PV,'I have read and agree to the Maa’s Place Terms, Policies &amp; Waiver.',sign_hint='If you are signing for someone, type your own name.',note=OPT_LINE))])
+    terms_page(head,foot,'maas-place-terms.html','Maa’s Place Terms, Policies &amp; Waiver','Maa’s Place · a program of '+LEGAL,'Participation waiver and release for Maa’s Place.',PV,MP_TERMS,'form-maas-place.html','Go to the Maa’s Place Sign-up')
 
     # 7. Volunteer sign-up (one page; code of conduct in volunteer-terms.html)
-    VV='volunteer-terms-v3.4-2026-10-19'
+    VV='volunteer-terms-v3.5-2026-10-19'
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
@@ -332,9 +338,9 @@ def build(head,foot):
     open('forms.html','w').write(h+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{LEGAL}</p><h1>Forms</h1><p>Each form is one short page you can fill in on your phone. Need help? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap">
-<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries.',('meals-terms.html','Meal Recipient Terms &amp; Policies'))}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Must be 18 or older.',('driver-terms.html','Driver Terms, Policies &amp; Waiver'))}</div>
+<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries.',('meals-terms.html','Meal Recipient Terms, Policies &amp; Waiver'))}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Must be 18 or older.',('driver-terms.html','Driver Terms, Policies &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-volunteer.html','Volunteer Sign-up','Help at Maa’s Meals, Maa’s Place or Bloom Village.',('volunteer-terms.html','Volunteer Terms, Policies &amp; Waiver'))}</div>
-<div class="mf-group"><h2>🏡 Maa’s Place</h2>{card('form-maas-place.html','Maa’s Place Sign-up','For adults 55+. Includes the participation waiver.',('maas-place-terms.html','Maa’s Place Terms &amp; Waiver'))}</div>
+<div class="mf-group"><h2>🏡 Maa’s Place</h2>{card('form-maas-place.html','Maa’s Place Sign-up','For adults 55+. Includes the participation waiver.',('maas-place-terms.html','Maa’s Place Terms, Policies &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🌸 Bloom Village</h2>{card('form-bloom-fee.html','Fee Agreement','Program days, weekly cost and fee terms for families.',('bloom-fee-terms.html','Bloom Village Fee Terms &amp; Policies'),True)}{card('form-bloom-rights.html','Participant Rights','A short summary of your rights, then sign.',('bloom-rights.html','Full Participant Rights'),True)}{card('form-bloom-complaint.html','Complaint Form','Tell us about a concern. Your name is optional.',('bloom-rights.html#complaint','How complaints are handled'),True)}</div>
 <p class="mf-call">Text messages, photos and video are covered in each form’s terms. See our <a href="text-terms.html">Text Message Terms</a>.</p><p class="mf-call">Your form goes to {LEGAL}’s private system. {ADDR} · <a href="{TEL}">{PH}</a></p>
 </div>
