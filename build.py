@@ -148,7 +148,7 @@ pg=head("Our Programs").replace('<main class="mi">','<main class="mi purple">')+
 <div class="card purple-card"><img class="pc-img" src="gallery/maas-place-seniors-painting.jpg" alt="Seniors painting at the Maa’s Place"><h3>🏡 Maa’s Place</h3><p><span class="soon-badge sm">Opening soon</span> Activities, snacks, chai and companionship for seniors. Ages 55+. Monday to Thursday, 10 AM to 2 PM.</p><a class="btn" href="maas-place.html">Visit the Maa’s Place</a></div>
 <div class="card bv-card"><img class="pc-img" src="img/bv-art.jpg" alt="A Bloom Village member with Down syndrome painting with staff"><h3>🌸 Bloom Village</h3><p><span class="soon-badge sm bv">Licensing pending</span> Adult enrichment for adults 18+ with intellectual and developmental disabilities. 9 AM–1 PM; 2–3 days/week pilot, then Mon–Fri. Begins after HHSC license is issued.</p><a class="btn" href="bloom-village.html">Learn More</a></div>
 </div></div></section>
-<section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a></div></section>
+<section style="text-align:center"><div class="wrap"><h2>Ready to help?</h2><p>Donate, volunteer or see schedules for any program in one place.</p><a class="btn" href="get-involved.html">Get Involved</a> &nbsp; <a class="btn alt" href="forms.html">Forms</a></div></section>
 {donate("our programs")}
 '''+foot
 ty=head('Thank You').replace('<main class="mi">','<main class="mi purple">')+'''<section style="text-align:center;min-height:50vh"><div class="wrap"><h1>Thank you! 💚</h1><p id="tymsg">We received your form and will reach out soon. Questions? Email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</p><p><a class="btn" href="https://maasinspiration.org/">Back to Home</a></p></div></section><script>if(location.search.includes("error"))document.getElementById("tymsg").innerHTML="Sorry, something went wrong sending your form. Please email <a href=mailto:aslam@maasinspiration.org>aslam@maasinspiration.org</a>."</script>'''+foot
@@ -201,6 +201,10 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 </div></div></section>
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
+<section id="forms"><div class="wrap"><h2>Volunteer forms</h2><div class="vcards">
+<a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). Add your license and insurance card.</p></a>
+<a class="vcard" href="form-text-consent.html" style="text-decoration:none;color:inherit"><h3>💬 Text Message Consent</h3><p>Optional: choose to get volunteer text reminders.</p></a>
+</div><p><a href="forms.html">See all forms</a></p></div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
 open('volunteer-page.html','w').write(VOLP)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('bloom-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
@@ -359,3 +363,7 @@ SS=head("Get Text Updates").replace('<main class="mi">','<main class="mi purple"
 <button type="submit" class="submit-btn">Sign up for texts</button></form></div></div></section>
 '''+foot
 open('sms-signup.html','w').write(SS)
+
+# ---- Online forms (Draft v3) ----
+import forms_pages
+forms_pages.build(head,foot)
