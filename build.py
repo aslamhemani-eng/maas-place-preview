@@ -175,6 +175,7 @@ pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purp
 <li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site; drivers must have a valid license and their own auto insurance, which is their only coverage (Maa’s insurance does not cover drivers).</li>
 <li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
+<p><b>Full documents:</b> <a href="volunteer-code-of-conduct.html">Volunteer Code of Conduct &amp; checklists</a> · <a href="maas-place-volunteer-roles.html">Maa’s Place Volunteer Roles</a> · <a href="cash-check-handling.html">Cash &amp; Check Handling</a> · <a href="forms.html#policies">All terms, policies &amp; waivers</a></p>
 <p>Questions? <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
 '''+foot
 open('volunteer-policy.html','w').write(pol)
@@ -363,3 +364,5 @@ open('sms-signup.html','w').write(SS)
 # ---- Online forms (Draft v3) ----
 import forms_pages
 forms_pages.build(head,foot)
+import policy_pages
+policy_pages.build(head,foot)
