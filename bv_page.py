@@ -36,7 +36,7 @@ def FORMS(TY):
 <label class="full">Preferred tour day<select name="preferred_tour_day"><option>Any weekday</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>No tour yet, just questions</option></select></label>
 <label class="full">Questions or anything you would like us to know (optional)<textarea name="message" rows="3"></textarea></label>
 <p class="bv-note full">Please do not include medical, diagnosis or financial details here. We collect confidential health and support information only during enrollment, through a private form.</p>
-<p class="full" style="font-size:.9rem">By sending this form you agree that Maa's Inspiration may contact you about Bloom Village. See our <a href="privacy.html">Privacy Policy</a>.</p>
+<p class="full" style="font-size:.9rem" data-consent>By sending this form you agree that Maa's Inspiration may contact you about Bloom Village. See our <a href="privacy.html">Privacy Policy</a>.</p>
 <div class="full"><button class="btn" type="submit">Send inquiry / request a tour</button></div></form>
 <script src="forms-config.js"></script><script src="mi-post.js"></script>'''
   vol='''<p class="bv-note">Direct-support volunteers must be 18+, have a high school diploma/equivalent or pass a written proficiency evaluation with three non-relative references, complete required background/registry screening and training (CPR, first aid, infection control, abuse reporting), and always work under a designated supervisor. Bloom Village volunteering begins only after the HHSC license is issued.</p>

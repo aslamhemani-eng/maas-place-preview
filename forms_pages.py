@@ -24,7 +24,8 @@ def radio(name,q,opts,req=True,row=False):
     return f'<div class="mf-field" role="radiogroup" aria-label="{E(q)}"><p class="mf-q">{q}{opt}</p><div class="mf-choices{" row" if row else ""}">{items}</div></div>'
 
 def checks(name,q,opts,minimum=1,row=False,hint=''):
-    items=''.join(f'<label class="mf-choice"><input type="checkbox" data-group="1" name="{name}" value="{E(v)}"> {E(v)}</label>' for v in opts)
+    # an option may be (value, label) so the value matches the backend contract while the label stays friendly
+    items=''.join(f'<label class="mf-choice"><input type="checkbox" data-group="1" name="{name}" value="{E(v[0] if isinstance(v,tuple) else v)}"> {E(v[1] if isinstance(v,tuple) else v)}</label>' for v in opts)
     h=f'<small>{hint}</small>' if hint else ''
     return f'<div class="mf-field" {"data-min="+chr(34)+str(minimum)+chr(34) if minimum else ""}><p class="mf-q">{q}</p>{h}<div class="mf-choices{" row" if row else ""}">{items}</div></div>'
 
@@ -325,7 +326,7 @@ def build(head,foot):
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
-      +checks('programs','Where would you like to help?',['Maa’s Meals (Saturdays)','Maa’s Place (Mon–Thu)','Bloom Village (18+)'])
+      +checks('programs','Where would you like to help?',[("Maa's Meals",'Maa’s Meals (Saturdays)'),("Maa's Place",'Maa’s Place (Mon–Thu)'),('Bloom Village','Bloom Village (18+)')])
       +'<label class="mf-tick"><input type="checkbox" name="age_18_plus" value="yes" data-under18="1"> <span>I am 18 or older.</span></label>'
       +'<div data-show-if="age_18_plus!=yes"><p class="mf-optline">Volunteers under 18 need a parent or guardian to sign. The parent or guardian should type their own name below to sign.</p>'+fld('guardian_name','Parent or guardian full name',auto='off',extra=' data-fullname="1"')+'</div>'
       +agree_block('Volunteer Terms, Policies &amp; Waiver',VOL_TERMS,'volunteer-terms.html',VV,'I have read and agree to the Volunteer Terms, Policies &amp; Waiver.',sign_hint='Typing your name here is your signature. Under 18? A parent or guardian signs here.',note=OPT_LINE))])

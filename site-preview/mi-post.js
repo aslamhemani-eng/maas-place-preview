@@ -5,13 +5,23 @@
   var C = window.MAAS_FORMS_CONFIG || {};
   var PH = C.help_phone || '(469) 270-8156', TEL = C.help_tel || '+14692708156';
   window.MI_FAIL_HTML = 'Sorry, we couldn’t send your message. Please try again, or call us at <a href="tel:' + TEL + '">' + PH + '</a>.';
-  window.miPost = function (formType, data, signerName, website) {
+  /* contact: the backend program must be meals | maas-place | bloom-village | general.
+     Keep the visitor's choice (e.g. "Volunteering", "Donation dedication") as topic. */
+  var SLUG = { 'maa\u2019s meals': 'meals', "maa's meals": 'meals', 'maa\u2019s place': 'maas-place', "maa's place": 'maas-place', 'bloom village': 'bloom-village' };
+  function contactProgram(data) {
+    var p = String(data.program || '').trim();
+    if (['meals', 'maas-place', 'bloom-village', 'general'].indexOf(p) >= 0) return;
+    if (p) data.topic = p;
+    data.program = SLUG[p.toLowerCase()] || 'general';
+  }
+  window.miPost = function (formType, data, signerName, website, consentText) {
+    if (formType === 'contact') contactProgram(data);
     var ctl = window.AbortController ? new AbortController() : null;
     var t = ctl ? setTimeout(function () { ctl.abort(); }, C.timeout_ms || 45000) : null;
     data.page = location.pathname.split('/').pop();
     data.sent_at = new Date().toISOString();
     var body = { form_type: formType, data: data, signer_name: signerName || data.name || 'Anonymous',
-      agreement_version: C.agreement_version, consent_text: '', website: website || '' };
+      agreement_version: C.agreement_version, consent_text: consentText || '', website: website || '' };
     return fetch(C.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
       signal: ctl ? ctl.signal : undefined, credentials: 'omit', referrerPolicy: 'no-referrer' })
       .then(function (r) {
@@ -40,7 +50,8 @@
       });
       if (opts.prepare) data = opts.prepare(data);
       var label = btn.textContent; btn.disabled = true; btn.textContent = 'Sending…'; msg.hidden = true;
-      window.miPost(type, data, data.name, hp).then(function (ref) {
+      var consent = [].map.call(form.querySelectorAll('[data-consent]'), function (e) { return e.textContent.replace(/\s+/g, ' ').trim(); }).join('\n');
+      window.miPost(type, data, data.name, hp, consent).then(function (ref) {
         btn.disabled = false; btn.textContent = label;
         if (opts.done) return opts.done(ref, data);
         var ok = document.createElement('div'); ok.className = 'mi-ok'; ok.setAttribute('role', 'status'); ok.tabIndex = -1;
