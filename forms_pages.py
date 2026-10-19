@@ -68,6 +68,30 @@ def page(head,foot,fn,title,eyebrow,intro,form_type,steps,bv=False):
     open(fn,'w').write(h+body+f)
 
 
+MEALS_TERMS=f'''<h3>1. About Maa’s Meals</h3><ul>
+<li>Volunteer drivers bring a meal to your door on <b>Saturdays between 10 AM and noon</b>.</li>
+<li>There is no charge.</li>
+<li>Meals are delivered when volunteers and food are available. We will call you if a delivery must change.</li></ul>
+<h3>2. Delivery</h3><ul>
+<li>The driver hands you the meal or leaves it where your delivery notes say.</li>
+<li>Drivers do not come inside your home unless there is an emergency.</li>
+<li>If no one answers, the driver follows our steps and calls our coordinator, and we may call you. The driver will not leave food where it can spoil unless your notes say so.</li>
+<li>If a driver sees that someone looks hurt, very sick or in danger, they will call 911.</li></ul>
+<h3>3. Door photo at every stop</h3><ul>
+<li>The driver takes one delivery photo at every stop. It shows the meal at the door and the house number only – never you, the inside of your home, or a license plate.</li>
+<li>Photos are taken only in the Maa’s app, are never posted or shared, and are kept for 1 week, then deleted.</li></ul>
+<h3>4. Food</h3><ul>
+<li>Food may be prepared in a kitchen that also handles common allergens, such as nuts, milk, eggs and wheat.</li>
+<li>Meals are not made for special medical diets. Please call us about any serious food allergy.</li></ul>
+<h3>5. Privacy</h3><ul>
+<li>We use your name, address, phone number and delivery notes only to deliver your meals and contact you about them.</li>
+<li>Only authorized Maa’s staff and volunteers see your information, and drivers keep it private.</li>
+<li>We do not sell or share your information. See our <a href="privacy.html">Privacy Policy</a>.</li></ul>
+<h3>6. Changes</h3><ul>
+<li>Please tell us if your address, phone or delivery needs change.</li>
+<li>To pause or stop deliveries, call <a href="{TEL}">{PH}</a>.</li></ul>
+<h3>7. Your agreement</h3><p>By agreeing, you confirm the information on your form is true as far as you know, and you agree to these terms. If someone helped you fill out the form, they agree on your behalf with your permission.</p>'''
+
 DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li>You must be at least 18 years old.</li>
 <li>You must have a valid driver’s license and tell Maa’s right away if it is suspended, revoked or expires.</li>
@@ -102,20 +126,29 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <h3>8. Costs</h3><p>Volunteer driving is unpaid. {LEGAL} does not pay for gas, mileage, tolls, parking, tickets or vehicle damage unless approved in writing before the trip. Some mileage for charity driving may be tax-deductible – ask your tax adviser.</p>
 <h3>9. Your agreement</h3><p>By agreeing, you confirm you meet the requirements in Part 1 and will follow these rules. {LEGAL} may stop your driving role at any time for safety reasons. You will give Maa’s updated copies of your license and insurance every year.</p>'''
 
-FILES=['forms.html','form-meals-recipient.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
+FILES=['forms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
 
 def build(head,foot):
-    # 1. Meals recipient
+    # 1. Meals recipient (simplified: 3 steps; all rules live in MEALS_TERMS / meals-terms.html)
+    MV='meals-terms-v3-2026-10-19'
     page(head,foot,'form-meals-recipient.html',"Maa’s Meals Recipient Form","Maa’s Meals · a program of "+LEGAL,
-      "For seniors who get Saturday meal deliveries. Volunteer drivers bring a meal to your door on Saturdays between 10 AM and noon. There is no charge. A family member or volunteer can help you fill this out.",
+      "Sign up for free Saturday meal delivery. Three short steps. A family member or volunteer can help you fill this out.",
       'meals_recipient',[
-      step('About you',fld('full_name','Full name',auto='name')+fld('dob','Date of birth',type='date',auto='bday')+fld('preferred_name','Name you like to be called',req=False)+fld('language','Language you speak',req=False)),
-      step('Your address',fld('street','Street address',auto='address-line1')+fld('apt','Apt / unit',req=False,auto='address-line2')+fld('city','City',auto='address-level2')+fld('zip','ZIP code',auto='postal-code',extra=' inputmode="numeric" data-zip="1"')+fld('gate_code','Gate or door code',req=False)),
-      step('Your phone',fld('home_phone','Home phone',req=False,type='tel',extra=' data-req-if="best_contact=Call home phone"')+fld('cell_phone','Cell phone',req=False,type='tel',auto='tel',extra=' data-req-if="best_contact=Call cell phone"')+radio('best_contact','Best way to reach you',['Call home phone','Call cell phone'])),
-      step('Delivery instructions',radio('leave_meal','Where should the driver leave the meal?',['Hand it to me','Front door','Back door','Other'])+fld('delivery_notes','Other delivery notes',req=False,type='textarea',hint='Stairs, parking, which door, best time.')),
-      step('Pets and the door',radio('pets','Pets at home?',['No','Yes'],row=True)+f'<div data-show-if="pets=Yes">{fld("pets_kind","What kind of pet?",req=True)}</div>'+radio('door_trouble','Trouble hearing the door or getting to it?',['No','Yes'],row=True)+f'<div data-show-if="door_trouble=Yes">{fld("door_trouble_notes","Tell us more",req=True)}</div>'),
-      step('Did someone help you?',radio('helped','Did someone help you fill out this form?',['No, I filled it out myself','Yes, someone helped me'])+f'<div data-show-if="helped=Yes, someone helped me">{fld("helper_name","Helper’s full name")}{fld("helper_relationship","Relationship to the recipient")}{fld("helper_phone","Helper’s phone",type="tel")}</div>'),
-      sig_step("The information on this form is true as far as I know. I agree to the delivery choices I checked above. I will tell Maa’s Meals if my address, phone or delivery needs change.",['The meal recipient','The person who helped the recipient'])])
+      step('About you',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('street','Street address',auto='address-line1')+fld('apt','Apt / unit',req=False,auto='address-line2')+fld('city','City',auto='address-level2')+fld('zip','ZIP code',auto='postal-code',extra=' inputmode="numeric" data-zip="1"')),
+      step('Phone and delivery notes','<p class="mf-note">Give at least one phone number.</p>'+(fld('home_phone','Home phone',req=False,type='tel',extra=' data-req-if="best_contact=Call home phone"')+fld('cell_phone','Cell phone',req=False,type='tel',auto='tel',extra=' data-req-if="best_contact=Call cell phone"')).replace(' <span class="mf-opt">(optional)</span>','')+radio('best_contact','Best way to reach you',['Call home phone','Call cell phone'])+fld('delivery_notes','Delivery notes',req=False,type='textarea',hint='For example: gate code, pets, which door, stairs.')),
+      ('Agree and send',f'''<details class="mf-terms"><summary>Read the Meal Recipient Terms &amp; Policies</summary><div class="mf-terms-box" tabindex="0">{MEALS_TERMS}</div></details>
+<p><a href="meals-terms.html" target="_blank" rel="noopener">Open the Meal Recipient Terms &amp; Policies on their own page</a></p>
+<input type="hidden" name="terms_version" value="{MV}">
+<label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Meal Recipient Terms &amp; Policies."> <span data-consent>I have read and agree to the Meal Recipient Terms &amp; Policies.</span></label>
+<span hidden data-consent>Terms version: {MV}</span>
+{fld('sig_name','Type your full name to sign',auto='name',extra=' data-fullname="1"',hint='Typing your name here is your signature. If you are helping someone, type your own name.')}
+<p>Date: <b class="mf-date"></b></p>''')])
+    th=head('Meal Recipient Terms & Policies').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
+    open('meals-terms.html','w').write(th+f'''{DRAFT}
+<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Meal Recipient Terms &amp; Policies</h1><p>For seniors who get Saturday meal deliveries. Version {MV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
+<div class="mf-wrap"><div class="mf-step mf-terms-page">{MEALS_TERMS}</div>
+<p style="margin-top:20px"><a class="mf-btn" href="form-meals-recipient.html">Go to the Meal Recipient Form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p></div>
+'''+foot)
 
     # 2. Bloom fee agreement
     fee_tbl='''<table class="mf-tbl"><tr><th>Fee</th><th>Amount</th><th>When due</th></tr><tr><td>Enrollment fee (one time)</td><td>$100 – non-refundable</td><td>When this agreement is signed, before the first day</td></tr><tr><td>Tuition</td><td>$30 per program day</td><td>Billed weekly. Due on the last day of the week.</td></tr></table>
@@ -228,7 +261,7 @@ def build(head,foot):
     open('forms.html','w').write(h+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{LEGAL}</p><h1>Forms</h1><p>Fill in and sign our forms on your phone. Each form takes a few short steps. Need help? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap">
-<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries. About you and delivery instructions.')}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. 3 short steps. Have your license and insurance card ready.')}{card('driver-terms.html','Driver Terms &amp; Policies','The rules every volunteer driver agrees to.')}</div>
+<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries. 3 short steps.')}{card('meals-terms.html','Meal Recipient Terms &amp; Policies','How deliveries, door photos, food and privacy work.')}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. 3 short steps. Have your license and insurance card ready.')}{card('driver-terms.html','Driver Terms &amp; Policies','The rules every volunteer driver agrees to.')}</div>
 <div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-text-consent.html','Text Message Consent','Choose whether to get volunteer text reminders. Optional.')}{card('form-driver.html','Volunteer Driver Agreement','For Maa’s Meals delivery drivers. Must be 18 or older.')}</div>
 <div class="mf-group"><h2>🌸 Bloom Village</h2>{card('form-bloom-fee.html','Fee Agreement','Tuition, program days and fee terms for families.',True)}{card('form-bloom-rights.html','Participant Rights','Read your rights and sign that you received them.',True)}{card('form-bloom-complaint.html','Complaint Form','Tell us about a concern. You can stay anonymous.',True)}</div>
 <p class="mf-call">Your form goes to {LEGAL}’s private system. {ADDR} · <a href="{TEL}">{PH}</a></p>
