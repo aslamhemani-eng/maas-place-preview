@@ -39,7 +39,7 @@ def FORMS(TY):
 <label>Days per week of interest<select name="Days per week"><option>Not sure yet</option><option>2 days</option><option>3 days</option><option>5 days (Phase 2)</option></select></label>
 <label class="full">Questions or anything you would like us to know<textarea name="Message" rows="3"></textarea></label>
 <p class="bv-note full">Please do not include medical, diagnosis or financial details here. We collect confidential health and support information only during enrollment, through a private form.</p>
-<label class="chk full"><input type="checkbox" name="Contact consent" value="Yes" required>&nbsp; I agree that Maa's Inspiration may contact me about Bloom Village.</label>
+<p class="full" style="font-size:.9rem">By sending this form you agree that Maa's Inspiration may contact you about Bloom Village. See our <a href="privacy.html">Privacy Policy</a>.</p>
 <div class="full"><button class="btn" type="submit">Send inquiry / request a tour</button></div></form>'''
   vol=f'''<form class="bvf" id="bvVolunteer" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="Bloom Village – Volunteer interest"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="{TY}"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Form" value="Bloom Village volunteer interest">

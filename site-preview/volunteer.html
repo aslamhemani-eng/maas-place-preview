@@ -9,9 +9,9 @@
     <meta name="description" content="Volunteer with MAA's Inspiration: Maa's Meals on Saturdays 10 AM–noon, the Maa’s Place Mon–Thu 10 AM–2 PM, and Bloom Village.">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="site-chrome.css?v=202610190702">
-    <link rel="stylesheet" href="section.css?v=202610190702">
-<link rel="stylesheet" href="vol-form.css?v=202610190702"></head>
+    <link rel="stylesheet" href="site-chrome.css?v=202610190717">
+    <link rel="stylesheet" href="section.css?v=202610190717">
+<link rel="stylesheet" href="vol-form.css?v=202610190717"></head>
 <body><div style="background:#C0392B;color:#fff;text-align:center;font:14px sans-serif;padding:6px;position:relative;z-index:9999">PREVIEW of the final site — not live yet.</div>
     <nav>
         <div class="navbar-container">
@@ -70,7 +70,7 @@
 <p class="hint" id="bsvHint" hidden>🌸 Bloom Village (Mon – Fri, 9 AM – 1 PM) begins only after its HHSC license is issued. Volunteers must be 18+ and complete screening and training – we'll contact you.</p>
 <div class="form-row"><div class="form-group full"><label>How would you like to help?</label><select name="How to Help" id="helpType"></select></div></div>
 <div class="form-row"><div class="form-group full"><label>Anything else you'd like us to know?</label><textarea name="Notes" placeholder="Special skills, dietary restrictions, or any other notes..."></textarea></div></div>
-<label class="agree"><input type="checkbox" name="Photo Consent" value="Yes"> <span>OK to appear in photos (<a href="volunteer-policy.html" target="_blank">volunteer policy</a>)</span></label>
+<p class="vf-note" style="font-size:.9rem;margin:.4rem 0">Signing up includes our <a href="volunteer-terms.html" target="_blank">texts, photos &amp; video terms</a>. You can opt out anytime.</p>
 <p class="err" id="lvfErr" hidden></p>
 <button type="submit" class="submit-btn">📨 Submit Registration</button>
 </form>
@@ -79,7 +79,6 @@
 </div></section>
 <section id="forms"><div class="wrap"><h2>Volunteer forms</h2><div class="vcards">
 <a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). One short page.</p></a>
-<a class="vcard" href="form-text-consent.html" style="text-decoration:none;color:inherit"><h3>💬 Text Message Consent</h3><p>Optional: choose to get volunteer text reminders.</p></a>
 </div><p><a href="forms.html">See all forms</a></p></div></section>
 </main>
 <div id="lb" onclick="this.style.display='none'"><img alt=""></div>
@@ -114,7 +113,7 @@
         <div class="footer-bottom">
             © 2026 MAA's Inspiration. 501(c)(3) Nonprofit Organization · EIN 86-2221897.
         </div>
-    <div class="footer-bottom legal-links" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a> · <a href="forms.html" style="color:inherit">Forms</a></div></footer>
-<script src="vol-form.js?v=202610190702"></script>
+    <div class="footer-bottom legal-links" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="text-terms.html" style="color:inherit">Text message terms</a> · <a href="forms.html" style="color:inherit">Forms</a></div></footer>
+<script src="vol-form.js?v=202610190717"></script>
 <script>document.querySelectorAll("form[action$='enroll.php']").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();location.href="thank-you.html"}))</script></body>
 </html>

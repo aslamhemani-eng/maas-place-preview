@@ -20,7 +20,7 @@ for g in glob.glob(T+'/img/bv-*.jpg'):shutil.copy(g,R+'/img/')
 for g in glob.glob(T+'/gallery/*.jpg'):shutil.copy(g,R+'/gallery/')
 shutil.copy(R+'/volunteer.html',H+'/live-upload/volunteer.html')
 html=glob.glob(R+'/*.html')
-LEGAL='<div class="footer-bottom legal-links" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a> · <a href="forms.html" style="color:inherit">Forms</a></div>'
+LEGAL='<div class="footer-bottom legal-links" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="text-terms.html" style="color:inherit">Text message terms</a> · <a href="forms.html" style="color:inherit">Forms</a></div>'
 for f in html:
   s=open(f).read()
   if '</footer>' in s and 'legal-links' not in s:open(f,'w').write(s.replace('</footer>',LEGAL+'</footer>',1))

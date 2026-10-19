@@ -106,7 +106,7 @@ mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+14692708156">(469) 270-8156</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
 <div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
-<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver and optional photo/video consent on your first visit. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a> or <a href="form-maas-place.html">sign up and sign the waiver online</a>.</p></div></div>
+<div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver on your first visit. Texts, photos and video are covered in our terms; you can opt out anytime. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a> or <a href="form-maas-place.html">sign up and sign the waiver online</a>.</p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
 <h3>Enrollment / Interest Form</h3><p>The Maa’s Place is opening soon – sign up now and we'll contact you when it opens.</p>
 <form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
@@ -119,7 +119,6 @@ mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')
 <label class="full">Dietary needs / food allergies<input></label>
 <label class="full">Mobility or health needs (optional)<textarea rows="2"></textarea></label>
 
-<label>Photo/video consent<select><option>Yes, I consent</option><option>No</option></select></label>
 <label class="full">How did you hear about us?<input></label>
 <label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the <a href="maas-place-waiver.html" target="_blank">participation waiver</a>.</label>
 <div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
@@ -173,13 +172,12 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 </div></div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>')
 
-pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Photo consent and code of conduct for MAA's Inspiration volunteers.</p></header>
-<section id="consent"><div class="wrap"><h2>Photo &amp; Video Consent</h2><ul>
-<li>We take photos and videos at meal service, the Maa’s Place and events to share our work on our website and social media (Facebook, Instagram, TikTok).</li>
-<li>Ticking the photo consent box means MAA's Inspiration may use photos/videos that include you for these purposes, without payment. We never sell images.</li>
-<li>With your permission we may use your first name only. We never post phone numbers, addresses or other private details.</li>
-<li>Consent is optional – you can still volunteer without it. You can withdraw consent any time by emailing <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>; we will stop using new images and remove posts we control where possible.</li>
-<li>Seniors and participants are only filmed with their own written consent. Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul></div></section>
+pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Texts, photos, video and code of conduct for MAA's Inspiration volunteers.</p></header>
+<section id="consent"><div class="wrap"><h2>Texts, Photos &amp; Video</h2><ul>
+<li>By signing up and agreeing to our <a href="volunteer-terms.html">Volunteer Terms &amp; Policies</a>, you agree to receive informational texts from Maa's Inspiration Inc. about volunteering, deliveries and programs. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of volunteering.</li>
+<li>We take photos and videos at meal service, Maa’s Place and events and may use them on our website, social media and materials, without payment. We never sell images, use first names only, and never post phone numbers, addresses or other private details.</li>
+<li>If you do not want to be photographed or featured, tell us at <a href="tel:+14692708156">(469) 270-8156</a> or <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> and we will honor it, and remove posts we control where possible.</li>
+<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul></div></section>
 <section id="conduct"><div class="wrap"><h2>Volunteer Code of Conduct</h2><ul>
 <li><b>Dignity first:</b> treat every guest, senior, family and fellow volunteer with kindness and respect – Love All, Serve All.</li>
 <li><b>Show up:</b> arrive on time, check in and check out with the shift lead, and let us know early if you can't make it.</li>
@@ -203,7 +201,6 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 '''+open('vol_form.html').read()+'''</div></section>
 <section id="forms"><div class="wrap"><h2>Volunteer forms</h2><div class="vcards">
 <a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). One short page.</p></a>
-<a class="vcard" href="form-text-consent.html" style="text-decoration:none;color:inherit"><h3>💬 Text Message Consent</h3><p>Optional: choose to get volunteer text reminders.</p></a>
 </div><p><a href="forms.html">See all forms</a></p></div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
 open('volunteer-page.html','w').write(VOLP)
@@ -292,7 +289,7 @@ WV=head("Maa’s Place Participation Waiver").replace('<main class="mi">','<main
 <h2>4. RELEASE OF LIABILITY.</h2><p class="release">I RELEASE MAA'S INSPIRATION INC., ITS DIRECTORS, VOLUNTEERS, AND STAFF FROM ANY CLAIMS FOR INJURY, ILLNESS, OR LOSS ARISING FROM MY PARTICIPATION, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE, TO THE FULLEST EXTENT ALLOWED BY TEXAS LAW.</p>
 <h2>5. Emergencies.</h2><p>In an emergency, I authorize staff to call 911 and contact my emergency contact. I am responsible for any resulting medical costs.</p>
 <h2>6. Food.</h2><p>I will tell staff about any food allergies. Food may be prepared in a kitchen that also handles common allergens.</p>
-<h2>7. Photo and video consent (optional).</h2><p><span class="box">☐</span> Yes, MAA's Inspiration may use photos and videos of me on its website and social media.<br><span class="box">☐</span> No, please do not include me in photos or videos.</p><p>I may withdraw consent at any time by emailing aslam@maasinspiration.org.</p>
+<h2>7. Texts, photos and video.</h2><p>By signing, I agree to receive informational texts from Maa's Inspiration Inc. about its programs (message frequency varies, message and data rates may apply, reply STOP to opt out and HELP for help; consent is not a condition of services), and that Maa's may take photos and video at programs and events and use them on its website, social media and materials. If I do not want to be photographed or featured, I will tell Maa's at (469) 270-8156 or aslam@maasinspiration.org, and Maa's will honor it.</p>
 <h2>8. Signature.</h2><p>I have read and understand this waiver.</p>
 <div class="sig"><div>Participant name</div><div>Signature</div><div>Date</div></div>
 <div class="sig"><div>Signed by family member / guardian on participant's behalf (if applicable)</div><div>Relationship</div><div>Date</div></div>
@@ -322,7 +319,7 @@ CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contac
 open('contact.html','w').write(CT)
 
 # ---- Legal + SMS pages (for Twilio A2P compliance) ----
-LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a></div>'
+LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="text-terms.html" style="color:inherit">Text message terms</a></div>'
 LDRAFT='<p style="background:#fff;border:3px dashed #5B2A86;color:#5B2A86;text-align:center;font-weight:700;padding:10px 14px;margin:0">DRAFT – pending attorney review</p>'
 LCSS='<style>.mi.legal section{padding:28px 5% 40px}.mi.legal .wrap{max-width:760px;font-size:1.1rem;line-height:1.6}.mi.legal h2{font-size:1.35rem;margin-top:1.6rem}.mi.legal ul{padding-left:1.2em}.mi.legal li{margin-bottom:.5rem}.mi.legal .hero{padding:40px 5% 28px}</style>'
 CONTACT_L='<p>Maa\'s Inspiration Inc.<br>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75007<br>Phone: <a href="tel:+14692708156">(469) 270-8156</a><br>Email: <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p>'
@@ -331,7 +328,7 @@ PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple le
 <p>This policy covers Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, and its programs: Maa's Meals, Maa's Place and Bloom Village.</p>
 <h2>1. What we collect</h2><ul>
 <li><b>Forms you send us:</b> your name, phone, email, address and anything you type in a form, such as delivery notes or a complaint.</li>
-<li><b>Volunteers:</b> contact details, which programs you help with, your agreement to our volunteer and driver terms, and whether you agreed to texts or photos.</li>
+<li><b>Volunteers:</b> contact details, which programs you help with, and your agreement to our volunteer and driver terms.</li>
 <li><b>Meal recipients:</b> name, address, phone and delivery notes.</li>
 <li><b>Bloom Village families:</b> the participant's and guardian's names, phone and program days. Health and other private details are collected in person, not on this website.</li>
 <li><b>Donations:</b> online gifts are processed by Stripe. Stripe handles your card details; we never see or store your full card number. We receive your name, email, amount and date.</li>
@@ -345,16 +342,17 @@ PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple le
 <p><b>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</b></p>
 <p>We share information only with service providers who help us run our programs (for example our secure database, text message and payment providers), and only as needed, or when the law requires it.</p>
 <h2 id="sms">4. Text messages (SMS)</h2><ul>
-<li>If you agree to texts, we use your mobile number only for the messages you agreed to, such as volunteer shift reminders and meal delivery notices.</li>
+<li><b>How you agree:</b> when you give us your phone number on one of our forms and agree to that form's terms, you agree to receive informational texts from Maa's Inspiration Inc. about volunteering, deliveries and programs.</li>
 <li>Message frequency varies. Message and data rates may apply.</li>
-<li>Reply <b>STOP</b> at any time to stop. Reply <b>HELP</b> for help, or call (469) 270-8156.</li>
-<li>Agreeing to texts is never required to volunteer or get meals. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
+<li>Reply <b>STOP</b> at any time to opt out. Reply <b>HELP</b> for help, or call (469) 270-8156.</li>
+<li>Consent to texts is not a condition of receiving services or volunteering. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
 <h2>5. Donor confidentiality</h2>
 <p>Donor names, amounts and contact details are kept confidential. We do not publish a donor's name without permission, and we never sell or share donor lists.</p>
 <h2>6. Photos and videos</h2><ul>
-<li>We post photos of people only with their consent, and use first names only.</li>
-<li>Delivery door photos are never posted or shared, and are deleted after 7 days.</li>
-<li>You may withdraw photo consent at any time by calling or emailing us.</li></ul>
+<li>Our program terms explain that Maa's may take photos and video at programs and events and use them on its website, social media and materials. We use first names only.</li>
+<li>If you do not want to be photographed or featured, call (469) 270-8156 or email aslam@maasinspiration.org at any time, and we will honor it.</li>
+<li>Bloom Village participants appear publicly only with their guardian's agreement under the Bloom Village terms. The guardian can opt out at any time.</li>
+<li>Delivery door photos are for delivery confirmation only. They are never published and are deleted after 7 days.</li></ul>
 <h2>7. Keeping your information safe</h2>
 <p>Only authorized staff and volunteers can see your information, and only what they need for their role. We use secure, password-protected systems. No system is perfectly secure, so please call us if you think something is wrong.</p>
 <h2>8. Children</h2>
@@ -382,7 +380,7 @@ TM=head("Terms of Use").replace('<main class="mi">','<main class="mi purple lega
 <h2>5. Links to other websites</h2>
 <p>Our site links to other websites, such as Stripe, Facebook and Instagram. We are not responsible for their content or privacy practices.</p>
 <h2 id="sms">6. Text messages</h2>
-<p>Texts are sent only to people who agree to them. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Carriers are not liable for delayed or undelivered messages. See our <a href="text-terms.html">Text Message Terms</a> and <a href="privacy.html#sms">Privacy Policy</a>.</p>
+<p>We send informational texts to people who give us their phone number and agree to the terms of one of our forms. You can opt out anytime. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Carriers are not liable for delayed or undelivered messages. See our <a href="text-terms.html">Text Message Terms</a> and <a href="privacy.html#sms">Privacy Policy</a>.</p>
 <h2>7. Limitation of liability</h2>
 <p>This website is provided "as is." To the extent allowed by law, Maa's Inspiration Inc., its volunteers, board and partners are not liable for any loss or damage from using this website or relying on its content.</p>
 <h2>8. Texas law</h2>
@@ -393,15 +391,7 @@ TM=head("Terms of Use").replace('<main class="mi">','<main class="mi purple lega
 </div></section>
 '''+foot
 open('terms.html','w').write(TM)
-SS=head("Get Text Updates").replace('<main class="mi">','<main class="mi purple">').replace('</head>','<link rel="stylesheet" href="vol-form.css"></head>',1)+'''<header class="hero"><h1>Get text updates from Maa's Meals</h1><p>Volunteer shift reminders and meal delivery notices from Maa's Inspiration Inc.</p></header>
-<section><div class="wrap"><div class="lvf-wrap"><form class="lvf" id="smsForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New SMS Opt-in — Maa's Meals"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://maasinspiration.org/thank-you.html"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Mobile phone <span class="req">*</span></label><input type="tel" name="Phone" required autocomplete="tel"></div></div>
-<div class="form-row"><div class="form-group"><label>I am a <span class="req">*</span></label><select name="Role" required><option value="">Choose…</option><option>Volunteer</option><option>Recipient</option></select></div></div>
-<div class="form-row"><div class="form-group full"><label style="font-weight:400"><input type="checkbox" name="SMS Consent" value="Yes" required> I agree to receive text messages from Maa's Inspiration Inc. about volunteer shifts and meal deliveries. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</label>
-<p><small>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</small></p></div></div>
-<button type="submit" class="submit-btn">Sign up for texts</button></form></div></div></section>
-'''+foot
+SS='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Text Message Terms – Maa’s Inspiration</title><link rel="canonical" href="text-terms.html"><meta http-equiv="refresh" content="0; url=text-terms.html"><script>location.replace("text-terms.html")</script></head><body><p>Text messages are now covered by the terms of each program. See our <a href="text-terms.html">Text Message Terms</a>.</p></body></html>'
 open('sms-signup.html','w').write(SS)
 
 # ---- Online forms (Draft v3) ----
