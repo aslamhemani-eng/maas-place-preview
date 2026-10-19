@@ -99,7 +99,7 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li>Keep your license and insurance current. Tell Maa’s right away if either one lapses, is suspended, revoked or cancelled, or expires.</li>
 <li>You do not need to send us copies. Maa’s may ask to see your license and insurance if needed.</li></ul>
 <h3>2. Insurance and liability</h3><ul>
-<li><b>Your own auto insurance is primary and is the only coverage while you drive for Maa’s.</b> If there is an accident while you are volunteering, your insurance is expected to pay.</li>
+<li><b>Your own auto insurance is your only coverage while you drive for Maa’s.</b> You are not covered by any Maa’s insurance. If there is an accident while you are volunteering, your own insurance is expected to pay.</li>
 <li>{LEGAL} does <b>not</b> provide auto, liability or accident insurance for volunteer drivers.</li>
 <li>You confirm that your auto insurance meets at least the Texas minimums: $30,000 / $60,000 / $25,000.</li>
 <li>Texas law that protects volunteers from some lawsuits does not fully protect volunteers who are driving, because auto insurance is expected to cover driving. Check with your insurance company that delivering meals as an unpaid volunteer is covered.</li></ul>
@@ -196,8 +196,9 @@ VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>Emergency medical consent.</b> In an emergency, I authorize Maa’s Inspiration staff and volunteers to call 911, to get emergency medical care for me, and to contact my emergency contact if I have given one. I am responsible for the cost of that care.</li>
 <li><b>Own health insurance.</b> Maa’s Inspiration does not provide health or accident insurance for volunteers. I will rely on my own health insurance and am responsible for my own medical costs.</li>
 <li><b>Volunteers under 18.</b> A parent or guardian must agree to these terms and sign the sign-up form for a volunteer under 18, and accepts this waiver and release for the minor to the extent the law allows. Volunteers under 18 must be supervised by an adult.</li></ul>
-'''+TPV_SEC(3,TXT_LI+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li>')+'''
-<h3>4. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''+OPTOUT_SEC(5)
+'''+'''<h3>3. Text messages</h3><ul><li>By giving your phone number and agreeing to these terms, you agree to receive informational texts from Maa’s Inspiration Inc. about volunteering, shifts and programs (for example, “are you available this Saturday?” and shift reminders).</li><li>Message frequency varies. Message and data rates may apply.</li><li><b>To stop:</b> reply <b>STOP</b> (or STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) at any time. You will get one confirmation and no further texts. Reply <b>START</b> to opt back in.</li><li><b>For help:</b> reply <b>HELP</b>, call <a href="tel:+14692708156">(469) 270-8156</a> or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</li><li>Texts are not a condition of volunteering. We do not sell or share mobile numbers or text opt-in information with anyone for marketing. Carriers are not liable for delayed or undelivered messages. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
+<h3>4. Photos and video</h3><ul>'''+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul>'+'''
+<h3>5. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''+OPTOUT_SEC(6)
 
 FILES=['forms.html','bloom-fee-terms.html','bloom-rights.html','text-terms.html','form-maas-place.html','maas-place-terms.html','form-volunteer.html','volunteer-terms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
 
@@ -286,7 +287,7 @@ def build(head,foot):
       +'<p>Date: <b class="mf-date"></b></p>')],bv=True)
 
     # 4. Driver agreement (simplified: 3 steps; all rules live in DRIVER_TERMS / driver-terms.html)
-    TV='driver-terms-v3.4-2026-10-19'
+    TV='driver-terms-v3.5-2026-10-19'
     AGREE='I have read and agree to the Driver Terms, Policies &amp; Waiver.'
     page(head,foot,'form-driver.html',"Volunteer Driver Agreement","Maa’s Meals · a program of "+LEGAL,
       "Thank you for driving for Maa’s Meals! One short page: tell us about you, then agree to the Driver Terms, Policies &amp; Waiver.",
@@ -320,7 +321,7 @@ def build(head,foot):
     terms_page(head,foot,'maas-place-terms.html','Maa’s Place Terms, Policies &amp; Waiver','Maa’s Place · a program of '+LEGAL,'Participation waiver and release for Maa’s Place.',PV,MP_TERMS,'form-maas-place.html','Go to the Maa’s Place Sign-up')
 
     # 7. Volunteer sign-up (one page; code of conduct in volunteer-terms.html)
-    VV='volunteer-terms-v3.5-2026-10-19'
+    VV='volunteer-terms-v3.6-2026-10-19'
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
