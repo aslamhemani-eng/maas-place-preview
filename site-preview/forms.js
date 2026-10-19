@@ -22,9 +22,9 @@
   }
   function applyShowIf() {
     [].forEach.call(form.querySelectorAll('[data-show-if]'), function (b) {
-      var kv = b.getAttribute('data-show-if').split('='), on = false;
+      var rule = b.getAttribute('data-show-if'), neg = rule.indexOf('!=') > 0, kv = rule.split(neg ? '!=' : '='), on = false;
       [].forEach.call(form.querySelectorAll('[name="' + kv[0] + '"]'), function (i) { if ((i.type === 'radio' || i.type === 'checkbox') ? i.checked && i.value === kv[1] : i.value === kv[1]) on = true; });
-      b.hidden = !on;
+      b.hidden = neg ? on : !on;
     });
   }
   form.addEventListener('change', applyShowIf); applyShowIf();
@@ -139,6 +139,8 @@
     data.signed_date = dateTxt;
     data.signed_at = new Date().toISOString();
     var sa = form.querySelector('[name="sig_agree"]'); if (sa) data.sig_agree = sa.checked;
+    var u18 = form.querySelector('[data-under18]');
+    if (u18) { data.under_18 = !u18.checked; if (!data.under_18) data.guardian_name = ''; }
     data.page = location.pathname.split('/').pop();
     return Promise.all(jobs).then(function () { return { data: data, files: files }; });
   }

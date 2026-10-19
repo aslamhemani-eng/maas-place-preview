@@ -105,23 +105,12 @@ mp=head("Maa’s Place").replace('<main class="mi">','<main class="mi purple">')
 <section id="gallery"><div class="wrap"><h2>Photo Gallery</h2><p class="soon-line">Photos coming soon. The Maa’s Place opens its doors shortly!</p></div></section>
 <section id="visit"><div class="wrap"><h2>Visit or Enroll <span class="soon-badge sm">Opening soon</span></h2>
 <div class="grid"><div class="card"><h3>1. Come say hello</h3><p>Drop in Monday to Thursday, 10 AM to 2 PM, call <a href="tel:+14692708156">(469) 270-8156</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> to schedule a tour.</p></div>
-<div class="card"><h3>2. Enroll</h3><p>Complete the short form below; family members can fill it out on a senior's behalf.</p></div>
+<div class="card"><h3>2. Sign up</h3><p><a href="form-maas-place.html">Sign up online</a> on one short page; family members can fill it out on a senior's behalf.</p></div>
 <div class="card"><h3>3. Sign the waiver</h3><p>Sign our participation waiver on your first visit. Texts, photos and video are covered in our terms; you can opt out anytime. <a href="maas-place-waiver.html">Read &amp; print the participation waiver</a> or <a href="form-maas-place.html">sign up and sign the waiver online</a>.</p></div></div>
 <p style="margin-top:18px">Who can attend: Adults 55 and up · Cost: Free · Transportation: not provided</p>
-<h3>Enrollment / Interest Form</h3><p>The Maa’s Place is opening soon – sign up now and we'll contact you when it opens.</p>
-<form id="enroll"><label>Senior's full name *<input required></label><label>Date of birth<input type="date"></label>
-<label>Phone *<input type="tel" required></label><label>Email (optional)<input type="email"></label>
-<label class="full">Home address / city &amp; ZIP<input></label>
-<label>Preferred language<select><option>English</option><option>Urdu / Hindi</option><option>Gujarati</option><option>Other</option></select></label>
-<label>Days you plan to attend<select multiple size="3"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option></select></label>
-<label class="full">Activities of interest<input placeholder="e.g. yoga, bingo, crafts, planting"></label>
-<label>Emergency contact name &amp; relationship *<input required></label><label>Emergency contact phone *<input type="tel" required></label>
-<label class="full">Dietary needs / food allergies<input></label>
-<label class="full">Mobility or health needs (optional)<textarea rows="2"></textarea></label>
-
-<label class="full">How did you hear about us?<input></label>
-<label class="full" style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" required> I agree to the <a href="maas-place-waiver.html" target="_blank">participation waiver</a>.</label>
-<div class="full"><button class="btn">Submit Enrollment</button> <span class="ph">Form not connected yet – submission destination to be decided</span></div></form></div></section>
+<div id="enroll" class="mp-enroll" style="margin-top:22px;text-align:center"><h3>Sign up online</h3><p>The Maa’s Place is opening soon. Sign up now on one short page and we'll contact you when it opens. A family member can fill it out for you.</p>
+<p><a class="btn" href="form-maas-place.html" style="display:inline-block;font-size:1.25rem;padding:18px 34px;min-width:260px">Sign up for Maa’s Place →</a></p>
+<p style="font-size:.95rem">Need help? Call <a href="tel:+14692708156">(469) 270-8156</a>.</p></div></div></section>
 <section id="volunteer"><div class="wrap"><h2>Volunteer at the Maa’s Place</h2>
 <p>Share a skill, lead an activity, or simply sit and talk.</p>
 <div class="grid"><div class="card"><h3>Lead an activity</h3><p>Yoga, crafts, games, planting, karaoke.</p></div><div class="card"><h3>Share expertise</h3><p>Health, insurance, phone and tech help.</p></div><div class="card"><h3>Serve &amp; connect</h3><p>Snacks, chai, conversation and companionship.</p></div></div>
@@ -167,14 +156,14 @@ hub=head("Get Involved").replace('<main class="mi">','<main class="mi hub purple
 <a class="act" href="#when">🗓️<b>Schedule</b><small>See when we meet</small></a>
 </div>
 <div id="when"><h3>Schedule</h3><div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>What</th></tr></thead><tbody id="hsched"></tbody></table></div><p id="pmore"></p></div>
-<div id="vol"><h3>Volunteer sign-up</h3><p>Takes about a minute.</p>
+<div id="vol"><h3>Volunteer sign-up</h3>
 '''+open('vol_form.html').read()+'''</div>
 </div></div></section>
-'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="vol-form.js"></script><script src="hub.js"></script>')
+'''+foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="hub.js"></script>')
 
 pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Volunteer Policies</h1><p>Texts, photos, video and code of conduct for MAA's Inspiration volunteers.</p></header>
 <section id="consent"><div class="wrap"><h2>Texts, Photos &amp; Video</h2><ul>
-<li>By signing up and agreeing to our <a href="volunteer-terms.html">Volunteer Terms &amp; Policies</a>, you agree to receive informational texts from Maa's Inspiration Inc. about volunteering, deliveries and programs. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of volunteering.</li>
+<li>By signing up and agreeing to our <a href="volunteer-terms.html">Volunteer Terms, Policies &amp; Waiver</a>, you agree to receive informational texts from Maa's Inspiration Inc. about volunteering, deliveries and programs. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of volunteering.</li>
 <li>We take photos and videos at meal service, Maa’s Place and events and may use them on our website, social media and materials, without payment. We never sell images, use first names only, and never post phone numbers, addresses or other private details.</li>
 <li>If you do not want to be photographed or featured, tell us at <a href="tel:+14692708156">(469) 270-8156</a> or <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a> and we will honor it, and remove posts we control where possible.</li>
 <li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul></div></section>
@@ -197,12 +186,12 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <div class="vcard"><span class="vt soon">Opening soon</span><h3>🏡 Maa’s Place</h3><p><b>Mon – Thu</b> 10 AM – 2 PM<br>Activities, exercise, tech help, snacks &amp; chai, companionship</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007</small></div>
 <div class="vcard bv-card"><span class="vt soon bv">Licensing pending</span><h3>🌸 Bloom Village</h3><p><b>Mon – Fri</b> 9 AM – 1 PM<br>Adult enrichment for adults 18+ with I/DD: arts, music, games, gardening, life skills. Volunteers 18+, screening &amp; training required. Begins after HHSC license is issued.</p><small>📍 2700 Old Denton Rd, Suite 102, Carrollton, TX 75007 · <a href="bloom-village.html#volunteer">Bloom Village volunteer form</a></small></div>
 </div></div></section>
-<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
+<section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2>
 '''+open('vol_form.html').read()+'''</div></section>
 <section id="forms"><div class="wrap"><h2>Volunteer forms</h2><div class="vcards">
 <a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). One short page.</p></a>
 </div><p><a href="forms.html">See all forms</a></p></div></section>
-'''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
+'''+foot
 open('volunteer-page.html','w').write(VOLP)
 for n,h in [('get-involved.html',hub),('thank-you.html',ty),('maas-place.html',mp),('bloom-village.html',bsv),('programs.html',pg)]:open(n,'w').write(h)
 open('index.html','w').write('<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=site-preview/index.html"><a href="site-preview/index.html">Site preview</a>')
@@ -217,7 +206,6 @@ def _wire(fn,formname):
         return m.group(0).replace('<'+m.group(2),'<'+m.group(2)+f' name="{slug}"',1)
     h=_re.sub(r'<label[^>]*>([^<]*(?:<[^>]+>[^<]*)*?)<(input|select|textarea)(?![^>]*name=)',nm,h)
     h=h.replace('<select name="days_you_plan_to_attend" multiple','<select name="days_you_plan_to_attend[]" multiple')
-    h=h.replace('<form id="enroll">',f'<form id="enroll" method="post" action="enroll.php"><input type="hidden" name="form" value="{formname}"><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>')
     h=h.replace('<span class="ph">Form not connected yet – submission destination to be decided</span>','').replace('<span class="ph">Form not connected yet</span>','')
     for a,b in [('name="field"','name="agree_waiver" value="Yes"'),('email_optional','email'),('_amp_','_'),('senior_s_','senior_'),('participant_s_','participant_'),('anything_you_d_like_us_to_know_needs_com','notes')]: h=h.replace(a,b)
     open(fn,'w').write(h)
@@ -306,15 +294,17 @@ CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contac
 <div class="ccard"><h3>🏡 Maa’s Place &amp; 🌸 Bloom Village</h3><p>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75007</p><p><b>Maa’s Place:</b> Monday – Thursday, 10 AM – 2 PM (opening soon)</p><p><b>Bloom Village:</b> Monday – Friday, 9 AM – 1 PM (licensing pending with HHSC; services begin after the license is issued)</p><p><a href="{MAP('2700+Old+Denton+Rd+Suite+102+Carrollton+TX+75007')}" target="_blank" rel="noopener">Get directions →</a></p></div>
 <div class="ccard"><h3>📞 Phone &amp; ✉️ Email</h3><p><b>Phone:</b> <a href="tel:+14692708156">(469) 270-8156</a></p><p><b>Email:</b> <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div>
 </div></div></section>
-<section><div class="wrap"><h2>Send us a message</h2><div class="lvf-wrap"><form class="lvf" id="contactForm" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New Contact Message — MAA's Inspiration"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Email <span class="req">*</span></label><input type="email" name="Email" required autocomplete="email"></div></div>
-<div class="form-row"><div class="form-group"><label>Phone <small>(optional)</small></label><input type="tel" name="Phone" autocomplete="tel"></div><div class="form-group"><label>I'm interested in</label><select name="Interested In"><option>Volunteering</option><option>Donating</option><option>Partnering</option><option>Maa’s Place</option><option>Bloom Village</option><option>Other</option></select></div></div>
-<div class="form-row"><div class="form-group full"><label>Message <span class="req">*</span></label><textarea name="Message" required></textarea></div></div>
-<p class="err" id="cErr" hidden></p><button type="submit" class="submit-btn">Send Message</button></form></div></div></section>
+<section><div class="wrap"><h2>Send us a message</h2><div class="lvf-wrap"><form class="lvf" id="contactForm" data-mi-type="contact" novalidate>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-row"><div class="form-group"><label for="c_name">Name <span class="req">*</span></label><input id="c_name" type="text" name="name" required autocomplete="name"></div><div class="form-group"><label for="c_phone">Phone <small>(optional)</small></label><input id="c_phone" type="tel" name="phone" autocomplete="tel" inputmode="tel"></div></div>
+<div class="form-row"><div class="form-group"><label for="c_email">Email <small>(optional)</small></label><input id="c_email" type="email" name="email" autocomplete="email"></div><div class="form-group"><label for="c_prog">I'm interested in</label><select id="c_prog" name="program"><option>Volunteering</option><option>Donating</option><option>Partnering</option><option>Maa’s Meals</option><option>Maa’s Place</option><option>Bloom Village</option><option>Other</option></select></div></div>
+<div class="form-row"><div class="form-group full"><label for="c_msg">Message <span class="req">*</span></label><textarea id="c_msg" name="message" required></textarea></div></div>
+<p class="np" style="text-align:left;margin:0 0 10px">Please give a phone or email so we can reply. Please don’t include health or financial details. See our <a href="privacy.html">Privacy Policy</a>.</p>
+<button type="submit" class="submit-btn">Send Message</button></form></div></div></section>
 <section><div class="wrap"><h2>Follow us</h2><div class="social"><a href="https://www.facebook.com/maasinspiration" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a><a href="https://www.instagram.com/maasinspiration/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a><a href="https://www.tiktok.com/@maasinspiration" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></div>
 <p class="np">MAA's Inspiration Inc. is a registered 501(c)(3) nonprofit · EIN 86-2221897</p></div></section>
-<script>(function(){{var f=document.getElementById('contactForm');f.addEventListener('submit',async function(e){{e.preventDefault();var b=f.querySelector('.submit-btn'),er=document.getElementById('cErr');b.disabled=true;b.textContent='Sending…';try{{var r=await fetch('https://formsubmit.co/ajax/aslamhemani@gmail.com',{{method:'POST',headers:{{Accept:'application/json'}},body:new FormData(f)}});var j=await r.json().catch(function(){{return{{}}}});if(r.ok&&(j.success===true||j.success==='true')){{location.href='thank-you.html';return}}er.textContent='Submission issue: '+(j.message||('HTTP '+r.status))+'. Please email aslam@maasinspiration.org.'}}catch(x){{er.textContent='Network error – please try again or email aslam@maasinspiration.org.'}}er.hidden=false;b.disabled=false;b.textContent='Send Message'}})}})();</script>
+<script src="forms-config.js"></script><script src="mi-post.js"></script>
+<script>(function(){{var f=document.getElementById('contactForm');f.addEventListener('submit',function(e){{var p=f.phone.value.trim(),m=f.email.value.trim();f.phone.setCustomValidity(p||m?'':'Please give a phone number or email so we can reply.');}},true);f.phone.addEventListener('input',function(){{f.phone.setCustomValidity('')}});f.email.addEventListener('input',function(){{f.phone.setCustomValidity('')}});}})();</script>
 '''+foot
 open('contact.html','w').write(CT)
 

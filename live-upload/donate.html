@@ -911,7 +911,7 @@
             <div class="donation-info">
                 <h2>Your Support Changes Lives</h2>
                 <p>At MAA's Inspiration, we believe no one should go hungry. Since our founding, we've served thousands of meals to seniors, families, and individuals in need throughout the Dallas-Fort Worth community.</p>
-                <p>100% of your donation goes directly toward purchasing food, preparing meals, and delivering them to those who need it most. We are a registered 501(c)(3) nonprofit, and your donation is fully tax-deductible.</p>
+                <p>100% of your donation goes directly toward purchasing food, preparing meals, and delivering them to those who need it most. We are a registered 501(c)(3) nonprofit, and your donation is tax-deductible to the extent allowed by law.</p>
 
                 <div class="trust-badges">
                     <div class="trust-badge">
@@ -985,6 +985,7 @@
                     <i class="fas fa-lock"></i>
                     <span>Payments are secure and encrypted</span>
                 </div>
+                <p class="donate-legal" style="text-align:center;font-size:0.85rem;color:#555;margin-top:0.6rem;line-height:1.4;">Donations go to Maa's Inspiration Inc., a 501(c)(3) nonprofit, EIN 86-2221897.</p>
             </div>
         </div>
     </section>
@@ -1078,9 +1079,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes! MAA's Inspiration is a registered 501(c)(3) nonprofit organization. All donations are fully tax-deductible to the extent allowed by law.</p>
+                    <p>Yes! MAA's Inspiration is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the extent allowed by law.</p>
                     <p><strong>EIN: 86-2221897</strong></p>
-                    <p>You will receive an emailed donation receipt from Stripe immediately after your gift, which serves as your official acknowledgment for tax purposes.</p>
+                    <p>You'll receive an email receipt from Stripe right away and an official acknowledgment letter from Maa's Inspiration Inc. (EIN 86-2221897) for your tax records.</p>
                 </div>
             </div>
 
@@ -1327,6 +1328,16 @@
             <p style="color:#555; font-size:0.9rem; text-align:center; margin-bottom:1.5rem;">Dedicate your donation in honor or memory of a loved one.</p>
             <form id="honorForm" onsubmit="submitHonorForm(event)">
                 <div style="margin-bottom:1rem;">
+                    <label for="honorFrom" style="display:block; font-weight:600; color:#3D1A6E; margin-bottom:0.3rem; font-size:0.9rem;">Your Name</label>
+                    <input type="text" id="honorFrom" required autocomplete="name" placeholder="Your full name" style="width:100%; padding:0.75rem 1rem; border:2px solid #e0d4f5; border-radius:10px; font-size:0.95rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <label for="honorContact" style="display:block; font-weight:600; color:#3D1A6E; margin-bottom:0.3rem; font-size:0.9rem;">Your Phone or Email (optional)</label>
+                    <input type="text" id="honorContact" autocomplete="email" placeholder="So we can thank you" style="width:100%; padding:0.75rem 1rem; border:2px solid #e0d4f5; border-radius:10px; font-size:0.95rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box;">
+                </div>
+                <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" id="honorWebsite" tabindex="-1" autocomplete="off"></label></div>
+                <p id="honorErr" role="alert" hidden style="background:#fdecea;color:#7a1f16;border-radius:10px;padding:10px 12px;font-size:0.9rem;font-weight:600;margin-bottom:1rem;"></p>
+                <div style="margin-bottom:1rem;">
                     <label style="display:block; font-weight:600; color:#3D1A6E; margin-bottom:0.3rem; font-size:0.9rem;">Honoree's Name</label>
                     <input type="text" id="honoreeName" required placeholder="Enter their name" style="width:100%; padding:0.75rem 1rem; border:2px solid #e0d4f5; border-radius:10px; font-size:0.95rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#6B3FA0'" onblur="this.style.borderColor='#e0d4f5'">
                 </div>
@@ -1357,37 +1368,34 @@
     <script>
         async function submitHonorForm(e) {
             e.preventDefault();
-            const name = document.getElementById('honoreeName').value;
+            const name = document.getElementById('honoreeName').value.trim();
             const reason = document.getElementById('honorReason').value;
-            const prayer = document.getElementById('honorPrayer').value;
-
-            // Send directly via FormSubmit (FormData avoids CORS preflight)
-            const formData = new FormData();
-            formData.set('_subject', `Honor Donation — ${reason}: ${name}`);
-            formData.set('_captcha', 'false');
-            formData.set('_template', 'table');
-            formData.set('Honoree Name', name);
-            formData.set('Reason', reason);
-            formData.set('Special Prayer / Message', prayer || 'None provided');
-
+            const prayer = document.getElementById('honorPrayer').value.trim();
+            const from = document.getElementById('honorFrom').value.trim();
+            const reach = document.getElementById('honorContact').value.trim();
+            const err = document.getElementById('honorErr');
+            const btn = document.querySelector('#honorForm button[type="submit"]');
+            const isEmail = reach.indexOf('@') > 0;
+            const data = {
+                name: from,
+                phone: isEmail ? '' : reach,
+                email: isEmail ? reach : '',
+                message: 'Gift dedication: ' + reason + ' – ' + name + (prayer ? '\nMessage: ' + prayer : ''),
+                program: 'Donation dedication'
+            };
+            err.hidden = true; btn.disabled = true; const label = btn.textContent; btn.textContent = 'Sending…';
             try {
-                const response = await fetch('https://formsubmit.co/ajax/aslamhemani@gmail.com', {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: formData
-                });
-                const result = await response.json().catch(() => ({}));
-                console.log('FormSubmit (honor) response:', response.status, result);
-            } catch (err) {
-                console.error('FormSubmit (honor) error:', err);
+                await window.miPost('contact', data, from, document.getElementById('honorWebsite').value);
+            } catch (x) {
+                err.innerHTML = window.MI_FAIL_HTML || 'Sorry, we couldn’t send this. Please call us at <a href="tel:+14692708156">(469) 270-8156</a>.';
+                err.hidden = false; btn.disabled = false; btn.textContent = label;
+                return;
             }
-
-            // Show confirmation
+            btn.disabled = false; btn.textContent = label;
             document.getElementById('honorForm').style.display = 'none';
             document.getElementById('honorConfirmation').style.display = 'block';
-            document.getElementById('honorConfirmText').textContent = `Your donation will be dedicated ${reason.toLowerCase()} ${name}. A confirmation will be sent to the honoree or their family.`;
+            document.getElementById('honorConfirmText').textContent = `Thank you. We have noted your dedication (${reason.toLowerCase()} ${name}). Please continue with your donation.`;
 
-            // Close after 3 seconds
             setTimeout(() => {
                 document.getElementById('honorModal').style.display = 'none';
                 document.getElementById('honorForm').style.display = 'block';
@@ -1396,5 +1404,6 @@
             }, 4000);
         }
     </script>
+<script src="forms-config.js"></script><script src="mi-post.js"></script>
 </body>
 </html>

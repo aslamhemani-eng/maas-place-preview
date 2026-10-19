@@ -13,7 +13,7 @@ subprocess.run([sys.executable,'build.py'],cwd=T,env={**os.environ,'PREVIEW':'0'
 R=os.path.join(H,'release');shutil.rmtree(R,ignore_errors=True);os.makedirs(R+'/gallery');os.makedirs(R+'/img')
 cp=lambda a,b:shutil.copy(os.path.join(T,a),os.path.join(R,b))
 cp('home.html','index.html');cp('volunteer-page.html','volunteer.html')
-for f in ['maas-place.html','bloom-village.html','blooming-star-village.html','programs.html','get-involved.html','thank-you.html','volunteer-policy.html','privacy.html','terms.html','sms-signup.html','contact.html','forms.html','bloom-fee-terms.html','bloom-rights.html','text-terms.html','form-maas-place.html','maas-place-terms.html','form-volunteer.html','volunteer-terms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html','forms.css','forms.js','forms-config.js','maas-place-waiver.html','enroll.php','site-chrome.css','section.css','section.js','hub.js','vol-form.css','vol-form.js','schedule.json','gallery.json']:cp(f,f)
+for f in ['maas-place.html','bloom-village.html','blooming-star-village.html','programs.html','get-involved.html','thank-you.html','volunteer-policy.html','privacy.html','terms.html','sms-signup.html','contact.html','forms.html','bloom-fee-terms.html','bloom-rights.html','text-terms.html','form-maas-place.html','maas-place-terms.html','form-volunteer.html','volunteer-terms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html','forms.css','forms.js','forms-config.js','mi-post.js','maas-place-waiver.html','site-chrome.css','section.css','section.js','hub.js','vol-form.css','schedule.json','gallery.json']:cp(f,f)
 for p in ['meals','about','schedule','gallery','donate']:cp(f'live-upload/{p}.html',f'{p}.html')
 cp('live-upload/maas-theme.css','maas-theme.css');cp('img/site-logo.png','img/site-logo.png')
 for g in glob.glob(T+'/img/bv-*.jpg'):shutil.copy(g,R+'/img/')
@@ -34,7 +34,6 @@ with zipfile.ZipFile(Z,'w',zipfile.ZIP_DEFLATED) as z:
     for x in fs:z.write(os.path.join(r,x),os.path.relpath(os.path.join(r,x),R))
 # preview
 P=os.path.join(H,'site-preview');shutil.rmtree(P,ignore_errors=True);shutil.copytree(R,P)
-os.remove(P+'/enroll.php')
 files=set(os.path.relpath(os.path.join(r,x),P) for r,d,fs in os.walk(P) for x in fs)
 BAN='<div style="background:#C0392B;color:#fff;text-align:center;font:14px sans-serif;padding:6px;position:relative;z-index:9999">PREVIEW of the final site — not live yet.</div>'
 def fix(m):
@@ -58,6 +57,5 @@ for f in glob.glob(P+'/*.html'):
   s=re.sub(r"(['\"])(?!https?:|data:|/)((?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_.-]+\.(?:jpe?g|png|webp|mp4|gif))\1",lambda m:m.group(0) if m.group(2) in files else m.group(1)+L+m.group(2)+m.group(1),s)
   s=s.replace('<head>','<head>\n    <meta name="robots" content="noindex,nofollow">',1)
   s=re.sub(r'(<body[^>]*>)',r'\1'+BAN,s,1)
-  s=s.replace('</body>','<script>document.querySelectorAll("form[action$=\'enroll.php\']").forEach(f=>f.addEventListener("submit",e=>{e.preventDefault();location.href="thank-you.html"}))</script></body>',1)
   open(f,'w').write(s)
 print('release files',sum(len(fs) for _,_,fs in os.walk(R)),'preview pages',len(glob.glob(P+'/*.html')))

@@ -182,8 +182,16 @@ VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site. Drivers must also agree to the <a href="driver-terms.html">Driver Terms &amp; Policies</a>.</li>
 <li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
-'''+TPV_SEC(2,TXT_LI+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li>')+'''
-<h3>3. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''
+'''+'''
+<h3>2. Volunteer Waiver &amp; Release</h3><ul>
+<li><b>Assumption of risk.</b> Volunteering can involve lifting and carrying boxes and supplies; kitchen work and food handling, including hot surfaces, sharp tools and common food allergens; standing, walking and deliveries; and outings and events. These activities carry some risk of injury or illness. I understand these risks, I choose to accept them, and I will follow instructions and stop if something feels unsafe.</li>
+<li><b>Release and hold harmless.</b> <b>TO THE EXTENT TEXAS LAW ALLOWS, I RELEASE AND AGREE TO HOLD HARMLESS MAA’S INSPIRATION INC., ITS DIRECTORS, OFFICERS, STAFF AND VOLUNTEERS FROM ANY CLAIMS FOR INJURY, ILLNESS, LOSS OR DAMAGE ARISING FROM MY VOLUNTEERING, INCLUDING CLAIMS ARISING FROM THEIR OWN NEGLIGENCE.</b></li>
+<li><b>No pay.</b> I am a volunteer, not an employee. I will not receive wages or employee benefits for my time.</li>
+<li><b>Emergency medical consent.</b> In an emergency, I authorize Maa’s Inspiration staff and volunteers to call 911, to get emergency medical care for me, and to contact my emergency contact if I have given one. I am responsible for the cost of that care.</li>
+<li><b>Own health insurance.</b> Maa’s Inspiration does not provide health or accident insurance for volunteers. I will rely on my own health insurance and am responsible for my own medical costs.</li>
+<li><b>Volunteers under 18.</b> A parent or guardian must agree to these terms and sign the sign-up form for a volunteer under 18, and accepts this waiver and release for the minor to the extent the law allows. Volunteers under 18 must be supervised by an adult.</li></ul>
+'''+TPV_SEC(3,TXT_LI+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li>')+'''
+<h3>4. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''
 
 FILES=['forms.html','bloom-fee-terms.html','bloom-rights.html','text-terms.html','form-maas-place.html','maas-place-terms.html','form-volunteer.html','volunteer-terms.html','form-meals-recipient.html','meals-terms.html','form-bloom-fee.html','form-bloom-rights.html','form-bloom-complaint.html','form-driver.html','driver-terms.html','form-text-consent.html']
 
@@ -306,13 +314,15 @@ def build(head,foot):
     terms_page(head,foot,'maas-place-terms.html','Maa’s Place Terms &amp; Waiver','Maa’s Place · a program of '+LEGAL,'Participation waiver and release for Maa’s Place.',PV,MP_TERMS,'form-maas-place.html','Go to the Maa’s Place Sign-up')
 
     # 7. Volunteer sign-up (one page; code of conduct in volunteer-terms.html)
-    VV='volunteer-terms-v3.3-2026-10-19'
+    VV='volunteer-terms-v3.4-2026-10-19'
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
       +checks('programs','Where would you like to help?',['Maa’s Meals (Saturdays)','Maa’s Place (Mon–Thu)','Bloom Village (18+)'])
-      +agree_block('Volunteer Terms &amp; Policies',VOL_TERMS,'volunteer-terms.html',VV,'I have read and agree to the Volunteer Terms &amp; Policies.',note=OPT_LINE))])
-    terms_page(head,foot,'volunteer-terms.html','Volunteer Terms &amp; Policies','Volunteer program · '+LEGAL,'Code of conduct and photo policy for volunteers.',VV,VOL_TERMS,'form-volunteer.html','Go to the Volunteer Sign-up')
+      +'<label class="mf-tick"><input type="checkbox" name="age_18_plus" value="yes" data-under18="1"> <span>I am 18 or older.</span></label>'
+      +'<div data-show-if="age_18_plus!=yes"><p class="mf-optline">Volunteers under 18 need a parent or guardian to sign. The parent or guardian should type their own name below to sign.</p>'+fld('guardian_name','Parent or guardian full name',auto='off',extra=' data-fullname="1"')+'</div>'
+      +agree_block('Volunteer Terms, Policies &amp; Waiver',VOL_TERMS,'volunteer-terms.html',VV,'I have read and agree to the Volunteer Terms, Policies &amp; Waiver.',sign_hint='Typing your name here is your signature. Under 18? A parent or guardian signs here.',note=OPT_LINE))])
+    terms_page(head,foot,'volunteer-terms.html','Volunteer Terms, Policies &amp; Waiver','Volunteer program · '+LEGAL,'Code of conduct, waiver and release, and photo policy for volunteers.',VV,VOL_TERMS,'form-volunteer.html','Go to the Volunteer Sign-up')
 
     # Hub
     def card(href,t,d,terms=None,bv=False):
@@ -323,7 +333,7 @@ def build(head,foot):
 <div class="mf-top"><p class="eyebrow">{LEGAL}</p><h1>Forms</h1><p>Each form is one short page you can fill in on your phone. Need help? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap">
 <div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries.',('meals-terms.html','Meal Recipient Terms &amp; Policies'))}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Must be 18 or older.',('driver-terms.html','Driver Terms, Policies &amp; Waiver'))}</div>
-<div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-volunteer.html','Volunteer Sign-up','Help at Maa’s Meals, Maa’s Place or Bloom Village.',('volunteer-terms.html','Volunteer Terms &amp; Policies'))}</div>
+<div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-volunteer.html','Volunteer Sign-up','Help at Maa’s Meals, Maa’s Place or Bloom Village.',('volunteer-terms.html','Volunteer Terms, Policies &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🏡 Maa’s Place</h2>{card('form-maas-place.html','Maa’s Place Sign-up','For adults 55+. Includes the participation waiver.',('maas-place-terms.html','Maa’s Place Terms &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🌸 Bloom Village</h2>{card('form-bloom-fee.html','Fee Agreement','Program days, weekly cost and fee terms for families.',('bloom-fee-terms.html','Bloom Village Fee Terms &amp; Policies'),True)}{card('form-bloom-rights.html','Participant Rights','A short summary of your rights, then sign.',('bloom-rights.html','Full Participant Rights'),True)}{card('form-bloom-complaint.html','Complaint Form','Tell us about a concern. Your name is optional.',('bloom-rights.html#complaint','How complaints are handled'),True)}</div>
 <p class="mf-call">Text messages, photos and video are covered in each form’s terms. See our <a href="text-terms.html">Text Message Terms</a>.</p><p class="mf-call">Your form goes to {LEGAL}’s private system. {ADDR} · <a href="{TEL}">{PH}</a></p>

@@ -21,29 +21,20 @@ Page text lives in `build.py`. Edit, then run `python3 build.py` (preview) or
 
 ## Publishing on the live site (GoDaddy cPanel)
 Upload via cPanel File Manager to `public_html/`: `maas-place.html`, `bloom-village.html`,
-`programs.html`, `thank-you.html`, `enroll.php`, `site-chrome.css`, `section.css`, `section.js`, `schedule.json`, `gallery.json`,
+`programs.html`, `thank-you.html`, `site-chrome.css`, `section.css`, `section.js`, `schedule.json`, `gallery.json`,
 `img/site-logo.png`, `gallery/`. Weekly, only `schedule.json`, `gallery.json` and new photos change.
 Do not upload `index.html` from this folder (it would replace the homepage).
 
-## Enrollment forms → aslamhemani@gmail.com (for now)
-**Current recipient: aslamhemani@gmail.com** (`$TO` in enroll.php). Switch `$TO` to hello@maasinspiration.org once that mailbox is set up in Microsoft 365.
-Note: Gmail is strict about mail "From" no-reply@maasinspiration.org sent by GoDaddy's server; the first messages may land in Spam. Mark them "Not spam" / create a Gmail filter, and add GoDaddy to the domain SPF record (or use SMTP) for reliable delivery.
-
-Both forms (Maa's Place enrollment, Bloom Village interest list) post to `enroll.php`,
-a small PHP mail handler that emails each submission to the `$TO` address
-(Reply-To = the submitter's email when given) and then shows `thank-you.html`.
-- Spam protection: hidden "website" honeypot field (bots that fill it are silently dropped), plus a
-  whitelist of form names, header-injection stripping, and a minimum-fields check.
-- Live setup (GoDaddy cPanel): upload `enroll.php` and `thank-you.html` with the other files to `public_html/`.
-  In cPanel › Email Accounts make sure `hello@maasinspiration.org` receives mail (the domain's MX is Microsoft 365,
-  so create the mailbox/alias there). `$FROM` in enroll.php is `no-reply@maasinspiration.org`; GoDaddy requires a
-  From on your own domain. If messages land in spam, add GoDaddy's server to the domain's SPF record
-  or switch the handler to SMTP.
-- Test after upload: submit each form once with your own email and confirm it arrives at hello@.
-- To change the recipient, edit `$TO` at the top of enroll.php.
-- Preview (github.io) cannot run PHP: there the forms just show the thank-you page and nothing is sent.
-- Fallback if PHP mail is blocked: set the form `action` to `https://formsubmit.co/hello@maasinspiration.org`
-  (one-time activation email to hello@).
+## Online forms → secure public-forms endpoint (no email services)
+Every form on the site sends JSON to the public-forms endpoint set in `forms-config.js`. No form
+uses an email relay or a personal mailbox.
+- Signed forms (meals, driver, volunteer, Maa's Place, Bloom Village fee/rights/complaint) use `forms.js`.
+- Simple forms use `mi-post.js`: the Contact page and the Meals page contact form (`form_type: "contact"`),
+  the Bloom Village tour/interest form (`form_type: "bloom_inquiry"`), and the gift dedication pop-up on the
+  donate and meals pages (`contact`, program "Donation dedication").
+- Volunteer and Maa's Place sign-ups are big buttons to `form-volunteer.html` and `form-maas-place.html`.
+- If a send fails, the page asks the person to call (469) 270-8156. There is no email fallback.
+- Spam protection: hidden "website" honeypot field.
 
 ## Donations tagged by program (donate.html)
 `live-upload/donate.html` is the live donate page with one change: it reads `?program=` from the URL

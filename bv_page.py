@@ -27,33 +27,21 @@ body.bvpage .donate-btn,body.bvpage .donate-btn:hover{background:#8870A8!importa
 </style>'''
 STATUS='''<div class="bv-status"><b>Licensing status:</b> Bloom Village has applied to the Texas Health and Human Services Commission (HHSC) for a Day Activity and Health Services license, Individualized Skills &amp; Socialization Only (application APP-0062670597). <b>The license is pending. Bloom Village services will begin only after HHSC issues the license and lists Bloom Village in its directory.</b> A pending application is not permission to operate. Until then we are taking inquiries and scheduling tours, and we will contact families as soon as an opening date is confirmed.</div>'''
 def FORMS(TY):
-  inq=f'''<form class="bvf" id="bvInquiry" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="Bloom Village – New inquiry / tour request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="{TY}"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Form" value="Bloom Village inquiry / tour request">
-<label>Your name *<input name="Name" required autocomplete="name"></label>
-<label>I am the… *<select name="Relationship" required><option value="">Choose…</option><option>Adult who wants to attend</option><option>Parent / family member</option><option>Legal guardian / authorized representative</option><option>Service coordinator / referral partner</option><option>Other</option></select></label>
-<label>Phone *<input type="tel" name="Phone" required autocomplete="tel"></label>
-<label>Email<input type="email" name="Email" autocomplete="email"></label>
-<label>Best way to reach you<select name="Preferred contact"><option>Call</option><option>Text</option><option>Email</option></select></label>
-<label>Request<select name="Request"><option>Schedule a tour</option><option>Ask a question</option><option>Join the opening wait list</option><option>Tuition assistance information</option></select></label>
-<label>Preferred tour days / times<input name="Tour availability" placeholder="e.g. weekday mornings"></label>
-<label>Days per week of interest<select name="Days per week"><option>Not sure yet</option><option>2 days</option><option>3 days</option><option>5 days (Phase 2)</option></select></label>
-<label class="full">Questions or anything you would like us to know<textarea name="Message" rows="3"></textarea></label>
+  inq='''<form class="bvf" id="bvInquiry" data-mi-type="bloom_inquiry" novalidate>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<label>Your name *<input name="name" required autocomplete="name"></label>
+<label>Phone *<input type="tel" name="phone" required autocomplete="tel" inputmode="tel"></label>
+<label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
+<label>Is the person who would attend 18 or older? *<select name="participant_age_18_plus" required><option value="">Choose…</option><option>Yes</option><option>No</option><option>Not sure</option></select></label>
+<label class="full">Preferred tour day<select name="preferred_tour_day"><option>Any weekday</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>No tour yet, just questions</option></select></label>
+<label class="full">Questions or anything you would like us to know (optional)<textarea name="message" rows="3"></textarea></label>
 <p class="bv-note full">Please do not include medical, diagnosis or financial details here. We collect confidential health and support information only during enrollment, through a private form.</p>
 <p class="full" style="font-size:.9rem">By sending this form you agree that Maa's Inspiration may contact you about Bloom Village. See our <a href="privacy.html">Privacy Policy</a>.</p>
-<div class="full"><button class="btn" type="submit">Send inquiry / request a tour</button></div></form>'''
-  vol=f'''<form class="bvf" id="bvVolunteer" action="https://formsubmit.co/aslamhemani@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="Bloom Village – Volunteer interest"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="{TY}"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Form" value="Bloom Village volunteer interest">
-<label>Full name *<input name="Name" required autocomplete="name"></label>
-<label>Phone *<input type="tel" name="Phone" required autocomplete="tel"></label>
-<label>Email *<input type="email" name="Email" required autocomplete="email"></label>
-<label>Are you 18 or older? *<select name="Age 18+" required><option value="">Choose…</option><option>Yes</option><option>No</option></select></label>
-<label>Days available (Mon–Fri, 9 AM–1 PM)<input name="Days available" placeholder="e.g. Tue, Thu"></label>
-<label>High school diploma or equivalent?<select name="HS diploma or equivalent"><option value="">Choose…</option><option>Yes</option><option>No (a proficiency evaluation with 3 references is an alternative)</option></select></label>
-<label>How would you like to help?<select name="Help with"><option>Arts, crafts &amp; music</option><option>Games, reading &amp; social time</option><option>Gardening / life skills</option><option>Setup, cleanup &amp; supplies</option><option>Events &amp; fundraising</option><option>Other</option></select></label>
-<label class="full">Experience with adults with disabilities (optional)<textarea name="Experience" rows="2"></textarea></label>
-<p class="bv-note full">Direct-support volunteers must be 18+, have a high school diploma/equivalent or pass a written proficiency evaluation with three non-relative references, complete required background/registry screening and training (CPR, first aid, infection control, abuse reporting), and always work under a designated supervisor.</p>
-<label class="chk full"><input type="checkbox" name="Screening acknowledgment" value="Yes" required>&nbsp; I understand screening and training are required before I help with participants.</label>
-<div class="full"><button class="btn" type="submit">Send volunteer interest</button></div></form>'''
+<div class="full"><button class="btn" type="submit">Send inquiry / request a tour</button></div></form>
+<script src="forms-config.js"></script><script src="mi-post.js"></script>'''
+  vol='''<p class="bv-note">Direct-support volunteers must be 18+, have a high school diploma/equivalent or pass a written proficiency evaluation with three non-relative references, complete required background/registry screening and training (CPR, first aid, infection control, abuse reporting), and always work under a designated supervisor. Bloom Village volunteering begins only after the HHSC license is issued.</p>
+<p style="text-align:center;margin:18px 0"><a class="btn" href="form-volunteer.html" style="display:inline-block;font-size:1.25rem;padding:18px 34px;min-width:260px">Sign up to volunteer →</a></p>
+<p style="text-align:center;font-size:.95rem">On the sign-up form, choose “Bloom Village (18+)”. Questions? Call <a href="tel:+14692708156">(469) 270-8156</a>.</p>'''
   return inq,vol
 def page(head,foot,DON,TY):
   inq,vol=FORMS(TY)

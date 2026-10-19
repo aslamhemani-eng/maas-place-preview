@@ -178,7 +178,7 @@
   "id": "website-f5802742",
   "page": "mp",
   "label": "Where sign-ups are sent",
-  "text": "submissions emailed to aslamhemani@gmail.com (switch to hello@maasinspiration.org later); thank-you page after submit",
+  "text": "button to the online Maa’s Place Sign-up (form-maas-place.html); sign-ups go to our secure online forms system",
   "need": ""
  },
  {
@@ -382,7 +382,7 @@
   "id": "website-cbd36770",
   "page": "bsv",
   "label": "Interest list form questions",
-  "text": "Parent/caregiver name*, Phone*, Email, Participant's age, Programs of interest, Anything you'd like us to know (needs, communication, interests); emailed to aslamhemani@gmail.com for now",
+  "text": "Your name*, Phone*, Email, Is the participant 18 or older?*, Preferred tour day, Message; sent to our secure online forms system",
   "need": ""
  },
  {
