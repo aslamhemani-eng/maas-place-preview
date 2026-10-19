@@ -9,6 +9,7 @@ CSS='''<style>.pd-callout{background:var(--accL,#F4EFE8);border-left:5px solid v
 DOCS=[('volunteer-code-of-conduct.html','01_Volunteer_Code_of_Conduct_Registration_and_Event_Checklists','docs/volunteer-code-of-conduct.pdf','Volunteer Code of Conduct','Volunteers · All programs','Code of conduct, sign-up checklist and event checklists for every volunteer.',False),
 ('cash-check-handling.html','02_Cash_and_Check_Handling_Procedure','docs/cash-check-handling.pdf','Cash &amp; Check Handling Procedure','Finance · All programs','How we receive, deposit and record every cash gift and check.',False),
 ('maas-place-volunteer-roles.html','03_Maas_Place_Volunteer_Roles','docs/maas-place-volunteer-roles.pdf','Maa’s Place Volunteer Roles','Maa’s Place · Volunteers','The six volunteer roles at Maa’s Place and what each one does.',False),
+('emergency-plan.html','04_Emergency_Plan','docs/emergency-plan.pdf','Maa’s Place &amp; Bloom Village Emergency Plan','Safety · Maa’s Place &amp; Bloom Village','What to do in a fire, medical emergency, severe weather, lockdown, lost participant or power outage.',False),
 ('bloom-cash-check-handling.html','02_Cash_and_Check_Handling_Procedure','docs/cash-check-handling.pdf','Bloom Village Cash &amp; Check Handling (Policy 9)','Bloom Village · Policy book','Bloom Village follows this procedure for tuition, enrollment fees, gifts and any cash or check received.',True)]
 PAGES=[d[0] for d in DOCS]
 def build(head,foot):
