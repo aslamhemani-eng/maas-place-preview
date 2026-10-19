@@ -104,6 +104,11 @@
   });
   form.addEventListener('input', function (e) { var b = e.target.closest('.bad'); if (b) { b.classList.remove('bad'); var m = b.querySelector('.mf-err'); if (m) m.remove(); } });
 
+  function signer(d) { // typed signature; forms without a separate signature line use the full name; complaints may be anonymous
+    var s = form.querySelector('[name="sig_name"]');
+    var v = (s ? s.value : (d.full_name || d.name || '')).trim();
+    return v || 'Anonymous';
+  }
   function plain(el) { // readable text of the exact wording shown, keeping list items and headings apart
     var c = el.cloneNode(true);
     [].forEach.call(c.querySelectorAll('li,p,h3,h2,tr'), function (b) { b.insertAdjacentText('afterbegin', b.tagName === 'LI' ? '• ' : ''); b.insertAdjacentText('beforeend', '\n'); });
@@ -133,7 +138,7 @@
     });
     data.signed_date = dateTxt;
     data.signed_at = new Date().toISOString();
-    data.sig_agree = form.querySelector('[name="sig_agree"]').checked;
+    var sa = form.querySelector('[name="sig_agree"]'); if (sa) data.sig_agree = sa.checked;
     data.page = location.pathname.split('/').pop();
     return Promise.all(jobs).then(function () { return { data: data, files: files }; });
   }
@@ -148,7 +153,7 @@
       var body = {
         form_type: form.dataset.formType,
         data: c.data,
-        signer_name: form.querySelector('[name="sig_name"]').value.trim(),
+        signer_name: signer(c.data),
         agreement_version: C.agreement_version,
         consent_text: [].map.call(form.querySelectorAll('[data-consent]'), plain).join('\n\n'),
         website: (form.querySelector('[name="website"]') || {}).value || ''

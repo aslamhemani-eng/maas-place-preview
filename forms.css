@@ -62,3 +62,6 @@
 .mi.mfp .mf-terms-box h3{font-size:1.05rem}
 .mi.mfp .mf-terms-page h3:first-child{margin-top:0}
 .mi.mfp form.mf-form label.mf-tick{flex-wrap:wrap}.mi.mfp .mf-tick>.mf-err{flex:0 0 100%;margin:4px 0 0}.mi.mfp .mf-tick>span{flex:1 1 0;min-width:0}
+.mi.mfp .mf-card .mf-go{margin-top:12px;min-height:54px;font-size:1.1rem}
+.mi.mfp .mf-card a.mf-tlink{display:block;margin-top:10px;font-weight:700;color:var(--hi);font-size:1rem}
+.mi.mfp .mf-card.bv a.mf-tlink{color:#5F4A80}.mi.mfp .mf-card.bv .mf-go{background:#5F4A80}

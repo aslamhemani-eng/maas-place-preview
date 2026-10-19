@@ -9,7 +9,7 @@ window.MAAS_FORMS_CONFIG = {
   help_tel: "+14692708156",
   timezone: "America/Chicago",
   /* form_type values the backend accepts */
-  form_types: ["meals_recipient", "bloom_fee_agreement", "bloom_rights_ack", "bloom_grievance", "driver_agreement", "volunteer_sms_consent"],
+  form_types: ["meals_recipient", "bloom_fee_agreement", "bloom_rights_ack", "bloom_grievance", "driver_agreement", "volunteer_sms_consent", "maas_place_enrollment", "volunteer_signup"],
   /* Request body sent as JSON (POST, Content-Type: application/json):
      { form_type, data:{...fields}, signer_name, agreement_version, consent_text,
        (no form uploads files; there is no files field),
