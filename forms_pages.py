@@ -322,7 +322,7 @@ def build(head,foot):
     terms_page(head,foot,'maas-place-terms.html','Maa’s Place Terms, Policies &amp; Waiver','Maa’s Place · a program of '+LEGAL,'Participation waiver and release for Maa’s Place.',PV,MP_TERMS,'form-maas-place.html','Go to the Maa’s Place Sign-up')
 
     # 7. Volunteer sign-up (one page; code of conduct in volunteer-terms.html)
-    VV='volunteer-terms-v3.6-2026-10-19'
+    VV='volunteer-terms-v3.7-2026-10-19'
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
