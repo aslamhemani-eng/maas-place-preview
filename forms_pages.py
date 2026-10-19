@@ -187,7 +187,7 @@ VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>Food safety:</b> wash hands, wear gloves and hair covering in the kitchen, and follow the lead’s instructions.</li>
 <li><b>Privacy:</b> keep guests’ personal information private. Do not take personal photos of guests; take photos only when Maa’s asks, and never of anyone who has opted out.</li>
 <li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site. Drivers must also agree to the <a href="driver-terms.html">Driver Terms, Policies &amp; Waiver</a>.</li>
-<li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
+<li><b>No harassment or discrimination</b> of any kind. Maa’s Place and Bloom Village volunteers must be 18 or older. At Maa’s Meals, minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
 '''+'''
 <h3>2. Volunteer Waiver &amp; Release</h3><ul>
@@ -196,7 +196,7 @@ VOL_TERMS='''<h3>1. Code of conduct</h3><ul>
 <li><b>No pay.</b> I am a volunteer, not an employee. I will not receive wages or employee benefits for my time.</li>
 <li><b>Emergency medical consent.</b> In an emergency, I authorize Maa’s Inspiration staff and volunteers to call 911, to get emergency medical care for me, and to contact my emergency contact if I have given one. I am responsible for the cost of that care.</li>
 <li><b>Own health insurance.</b> Maa’s Inspiration does not provide health or accident insurance for volunteers. I will rely on my own health insurance and am responsible for my own medical costs.</li>
-<li><b>Volunteers under 18.</b> A parent or guardian must agree to these terms and sign the sign-up form for a volunteer under 18, and accepts this waiver and release for the minor to the extent the law allows. Volunteers under 18 must be supervised by an adult.</li></ul>
+<li><b>Volunteers under 18.</b> A parent or guardian must agree to these terms and sign the sign-up form for a volunteer under 18, and accepts this waiver and release for the minor to the extent the law allows. Volunteers under 18 must be supervised by an adult and may help only at Maa’s Meals (not Maa’s Place or Bloom Village).</li></ul>
 '''+'''<h3>3. Text messages</h3><ul><li>By giving your phone number and agreeing to these terms, you agree to receive informational texts from Maa’s Inspiration Inc. about volunteering, shifts and programs (for example, “are you available this Saturday?” and shift reminders).</li><li>Message frequency varies. Message and data rates may apply.</li><li><b>To stop:</b> reply <b>STOP</b> (or STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) at any time. You will get one confirmation and no further texts. Reply <b>START</b> to opt back in.</li><li><b>For help:</b> reply <b>HELP</b>, call <a href="tel:+14692708156">(469) 270-8156</a> or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</li><li>Texts are not a condition of volunteering. We do not sell or share mobile numbers or text opt-in information with anyone for marketing. Carriers are not liable for delayed or undelivered messages. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
 <h3>4. Photos and video</h3><ul>'''+PV_LI+'<li>Volunteers must not post photos of seniors, guests or meal recipients on personal accounts.</li></ul>'+'''
 <h3>5. Bloom Village</h3><p>Bloom Village begins only after its HHSC license is issued. Bloom Village volunteers must be 18 or older and complete screening and training. We will contact you.</p>'''+OPTOUT_SEC(6)
@@ -326,9 +326,9 @@ def build(head,foot):
     page(head,foot,'form-volunteer.html',"Volunteer Sign-up","Volunteer program · "+LEGAL,
       "One short page. We will call you to get started.",
       'volunteer_signup',[('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('phone','Phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')
-      +checks('programs','Where would you like to help?',[("Maa's Meals",'Maa’s Meals (Saturdays)'),("Maa's Place",'Maa’s Place (Mon–Thu)'),('Bloom Village','Bloom Village (18+)')])
+      +checks('programs','Where would you like to help?',[("Maa's Meals",'Maa’s Meals (Saturdays)'),("Maa's Place",'Maa’s Place (Mon–Thu, 18+)'),('Bloom Village','Bloom Village (18+)')])
       +'<label class="mf-tick"><input type="checkbox" name="age_18_plus" value="yes" data-under18="1"> <span>I am 18 or older.</span></label>'
-      +'<div data-show-if="age_18_plus!=yes"><p class="mf-optline">Volunteers under 18 need a parent or guardian to sign. The parent or guardian should type their own name below to sign.</p>'+fld('guardian_name','Parent or guardian full name',auto='off',extra=' data-fullname="1"')+'</div>'
+      +'<div data-show-if="age_18_plus!=yes"><p class="mf-optline">Volunteers under 18 can help only at Maa’s Meals and need a parent or guardian to sign. The parent or guardian should type their own name below to sign.</p>'+fld('guardian_name','Parent or guardian full name',auto='off',extra=' data-fullname="1"')+'</div>'
       +agree_block('Volunteer Terms, Policies &amp; Waiver',VOL_TERMS,'volunteer-terms.html',VV,'I have read and agree to the Volunteer Terms, Policies &amp; Waiver.',sign_hint='Typing your name here is your signature. Under 18? A parent or guardian signs here.',note=OPT_LINE))])
     terms_page(head,foot,'volunteer-terms.html','Volunteer Terms, Policies &amp; Waiver','Volunteer program · '+LEGAL,'Code of conduct, waiver and release, and photo policy for volunteers. See also the full <a href="volunteer-code-of-conduct.html">Volunteer Code of Conduct</a> and <a href="maas-place-volunteer-roles.html">Maa’s Place Volunteer Roles</a>.',VV,VOL_TERMS,'form-volunteer.html','Go to the Volunteer Sign-up')
 

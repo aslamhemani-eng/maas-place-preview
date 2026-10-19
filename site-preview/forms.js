@@ -149,6 +149,8 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!checkStep(steps[cur])) return;
+    var u18b = form.querySelector('[data-under18]'), mpb = form.querySelector('input[name="programs"][value="Maa\'s Place"]'), bvb = form.querySelector('input[name="programs"][value="Bloom Village"]');
+    if (u18b && !u18b.checked && ((mpb && mpb.checked) || (bvb && bvb.checked))) { alert('Maa\u2019s Place and Bloom Village volunteers must be 18 or older. Volunteers under 18 can help at Maa\u2019s Meals.'); return; }
     if (status) { status.hidden = true; status.innerHTML = ''; }
     send.disabled = true; var label = send.textContent; send.textContent = 'Sending…';
     collect().then(function (c) {

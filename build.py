@@ -173,7 +173,7 @@ pol=head("Volunteer Policies").replace('<main class="mi">','<main class="mi purp
 <li><b>Food safety:</b> wash hands, wear gloves and hair covering in the kitchen, and follow the lead's instructions.</li>
 <li><b>Privacy:</b> keep guests' personal information private. Do not take personal photos of guests; take photos only when Maa’s asks, and never of anyone who has opted out.</li>
 <li><b>Safety:</b> no alcohol, drugs, smoking or weapons at any site; drivers must have a valid license and their own auto insurance, which is their only coverage (Maa’s insurance does not cover drivers).</li>
-<li><b>No harassment or discrimination</b> of any kind. Minors volunteer only with guardian approval and adult supervision.</li>
+<li><b>No harassment or discrimination</b> of any kind. Maa’s Place and Bloom Village volunteers must be 18 or older. At Maa’s Meals, minors volunteer only with guardian approval and adult supervision.</li>
 <li><b>Ask for help:</b> report any concern or injury to the shift lead or Aslam right away.</li></ul>
 <p><b>Full documents:</b> <a href="volunteer-code-of-conduct.html">Volunteer Code of Conduct &amp; checklists</a> · <a href="maas-place-volunteer-roles.html">Maa’s Place Volunteer Roles</a> · <a href="cash-check-handling.html">Cash &amp; Check Handling</a> · <a href="forms.html#policies">All terms, policies &amp; waivers</a></p>
 <p>Questions? <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p></div></section>
