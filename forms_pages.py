@@ -62,6 +62,7 @@ def page(head,foot,fn,title,eyebrow,intro,form_type,steps,bv=False):
 {''.join(out)}
 </form>
 <div id="mfThanks" class="mf-thanks" hidden role="status"><h2>Thank you! We received your form.</h2><p id="mfRefWrap">Your reference number is<br><span id="mfRef" class="mf-ref"></span><br>Please write it down or take a picture of this screen.</p><p>We will call you if we have any questions.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p><p><a class="mf-btn" href="forms.html">Back to all forms</a></p></div>
+<p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
 </div>
 '''
     f=foot.replace('<script src="section.js"></script>','<script src="section.js"></script><script src="forms-config.js"></script><script src="forms.js"></script>')
@@ -89,8 +90,9 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li>Keep your license and insurance current. Tell Maa’s right away if either one lapses, is suspended, revoked or cancelled, or expires.</li>
 <li>You do not need to send us copies. Maa’s may ask to see your license and insurance if needed.</li></ul>
 <h3>2. Insurance and liability</h3><ul>
-<li>Your own auto insurance is primary. If there is an accident while you are volunteering, your insurance is expected to pay first.</li>
-<li>Covered under {LEGAL}’s liability insurance policy (carrier and policy number on file with the administrator).</li>
+<li><b>Your own auto insurance is primary and is the only coverage while you drive for Maa’s.</b> If there is an accident while you are volunteering, your insurance is expected to pay.</li>
+<li>{LEGAL} does <b>not</b> provide auto, liability or accident insurance for volunteer drivers.</li>
+<li>You confirm that your auto insurance meets at least the Texas minimums: $30,000 / $60,000 / $25,000.</li>
 <li>Texas law that protects volunteers from some lawsuits does not fully protect volunteers who are driving, because auto insurance is expected to cover driving. Check with your insurance company that delivering meals as an unpaid volunteer is covered.</li></ul>
 <h3>3. Safe driving and phone use</h3><ul>
 <li>Obey all traffic laws and wear your seat belt.</li>
@@ -114,7 +116,15 @@ DRIVER_TERMS=f'''<h3>1. Who can drive</h3><ul>
 <li>Report the accident to your own insurance company.</li>
 <li>Tell Maa’s in writing within 24 hours about any accident, injury or traffic ticket that happened while volunteering, and within 7 days if you get a ticket or your license changes at any other time.</li></ol>
 <h3>8. Costs</h3><p>Volunteer driving is unpaid. {LEGAL} does not pay for gas, mileage, tolls, parking, tickets or vehicle damage unless approved in writing before the trip. Some mileage for charity driving may be tax-deductible – ask your tax adviser.</p>
-<h3>9. Your agreement</h3><p>By agreeing, you confirm that you are 18 or older, that you hold a valid Texas driver’s license and current auto insurance that meets the Texas minimums, that you will keep them current, and that you will tell Maa’s if either one lapses. You will follow these rules. {LEGAL} may stop your driving role at any time for safety reasons.</p>'''
+<h3>9. Driver Waiver and Release of Liability</h3>
+<p><b>Please read carefully. This section affects your legal rights.</b></p><ul>
+<li><b>Assumption of risk.</b> I understand that driving and delivering meals carry risks, including traffic accidents, injury, illness and damage to my vehicle or property. I choose to volunteer and accept these risks.</li>
+<li><b>Release and hold harmless.</b> To the fullest extent allowed by Texas law, I release and hold harmless {LEGAL} and its volunteers, board members and partners from any claims for injury, illness, loss or damage arising from my volunteer driving.</li>
+<li><b>My vehicle and my driving.</b> I am responsible for my own vehicle, its condition and its insurance, and for any traffic tickets, fines or accidents while I drive.</li>
+<li><b>No compensation.</b> I am an unpaid volunteer. I will not receive pay, mileage or other compensation unless approved in writing before the trip.</li>
+<li><b>Emergency medical care.</b> If I am hurt or ill while volunteering, I allow Maa’s to call 911 and get emergency medical care for me. I am responsible for the cost of that care.</li>
+<li><b>Read and understood.</b> I have read and understood this waiver and release, and I sign it voluntarily.</li></ul>
+<h3>10. Your agreement</h3><p>By agreeing, you confirm that you are 18 or older, that you hold a valid Texas driver’s license and current auto insurance that meets the Texas minimums, that you will keep them current, and that you will tell Maa’s if either one lapses. You agree to follow these rules and to the Driver Waiver and Release of Liability. {LEGAL} may stop your driving role at any time for safety reasons.</p>'''
 
 def agree_block(terms_title,terms_html,terms_href,tv,agree_text,sign_hint='Typing your name here is your signature.'):
     return f'''<h3>Terms and signature</h3><details class="mf-terms"><summary>Read the {terms_title}</summary><div class="mf-terms-box" tabindex="0">{terms_html}</div></details>
@@ -131,7 +141,7 @@ def terms_page(head,foot,fn,title,eyebrow,intro,tv,html,form_href,form_label,bv=
     open(fn,'w').write(th+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{intro} Version {tv}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap"><div class="mf-step mf-terms-page">{html}</div>
-<p style="margin-top:20px"><a class="mf-btn" href="{form_href}">{form_label}</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p></div>
+<p style="margin-top:20px"><a class="mf-btn" href="{form_href}">{form_label}</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
 '''+foot)
 
 FEE_TERMS='''<h3>1. Program days and hours</h3><ul><li>Bloom Village is open Monday to Friday, 9:00 AM to 1:00 PM. Pick up is at 1:00 PM.</li><li>During the pilot, participants attend 2 or 3 days a week, with up to 8 adults in the group.</li><li>To change days, ask the administrator. Changes start when space and staffing allow.</li></ul>
@@ -145,7 +155,7 @@ FEE_TERMS='''<h3>1. Program days and hours</h3><ul><li>Bloom Village is open Mon
 <h3>7. Medicare and Medicaid</h3><p>Within 30 days after starting, we will tell you if Medicare or Medicaid may cover any of our services.</p>
 <h3>8. Your agreement</h3><p>By agreeing, you confirm you have read these terms, had your questions answered, and agree to them for the participant named on the form. You will receive a copy.</p>'''
 
-TEXT_TERMS=f'''<table class="mf-tbl"><tr><td><b>From</b></td><td>{LEGAL} (Maa’s Meals)</td></tr><tr><td><b>What</b></td><td>Volunteer shift and route reminders and meal delivery notices: the Thursday “are you available this Saturday?” question, a Friday reminder if there is no reply, a confirmation of your reply, your Saturday assignment (deliver or packing), and a thank-you after the shift.</td></tr><tr><td><b>How often</b></td><td>Message frequency varies.</td></tr><tr><td><b>Cost</b></td><td>Message and data rates may apply.</td></tr><tr><td><b>To stop</b></td><td>Reply <b>STOP</b> (or STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) at any time. You will get one confirmation and no further texts. Reply START to opt back in.</td></tr><tr><td><b>For help</b></td><td>Reply <b>HELP</b>, call <a href="{TEL}">{PH}</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</td></tr><tr><td><b>Not required</b></td><td>Saying yes to texts is never required to volunteer.</td></tr><tr><td><b>Privacy</b></td><td>We do not sell or share mobile numbers or text opt-in information with anyone for marketing. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</td></tr></table>
+TEXT_TERMS=f'''<table class="mf-tbl"><tr><td><b>From</b></td><td>{LEGAL} (Maa’s Meals)</td></tr><tr><td><b>What</b></td><td>Volunteer shift and route reminders and meal delivery notices: the Thursday “are you available this Saturday?” question, a Friday reminder if there is no reply, a confirmation of your reply, your Saturday assignment (deliver or packing), and a thank-you after the shift.</td></tr><tr><td><b>How often</b></td><td>Message frequency varies.</td></tr><tr><td><b>Cost</b></td><td>Message and data rates may apply.</td></tr><tr><td><b>To stop</b></td><td>Reply <b>STOP</b> (or STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) at any time. You will get one confirmation and no further texts. Reply START to opt back in.</td></tr><tr><td><b>For help</b></td><td>Reply <b>HELP</b>, call <a href="{TEL}">{PH}</a>, or email <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a>.</td></tr><tr><td><b>Not required</b></td><td>Saying yes to texts is never required to volunteer.</td></tr><tr><td><b>Privacy</b></td><td>We do not sell or share mobile numbers or text opt-in information with anyone for marketing. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</td></tr></table>
 <p>Carriers are not liable for delayed or undelivered messages. If your phone number changes, please sign up again with the new number.</p>'''
 
 MP_TERMS=f'''<p>Maa’s Place is a free center for seniors operated by {LEGAL}, a 501(c)(3) nonprofit at {ADDR}. Open Monday to Thursday, 10 AM to 2 PM. Ages 55 and up.</p>
@@ -193,7 +203,7 @@ def build(head,foot):
     open('meals-terms.html','w').write(th+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Meal Recipient Terms &amp; Policies</h1><p>For seniors who get Saturday meal deliveries. Version {MV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap"><div class="mf-step mf-terms-page">{MEALS_TERMS}</div>
-<p style="margin-top:20px"><a class="mf-btn" href="form-meals-recipient.html">Go to the Meal Recipient Form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p></div>
+<p style="margin-top:20px"><a class="mf-btn" href="form-meals-recipient.html">Go to the Meal Recipient Form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
 '''+foot)
 
     # 2. Bloom fee agreement (one page; all rules in FEE_TERMS / bloom-fee-terms.html)
@@ -261,23 +271,23 @@ def build(head,foot):
       +'<p>Date: <b class="mf-date"></b></p>')],bv=True)
 
     # 4. Driver agreement (simplified: 3 steps; all rules live in DRIVER_TERMS / driver-terms.html)
-    TV='driver-terms-v3.1-2026-10-19'
-    AGREE='I have read and agree to the Driver Terms &amp; Policies.'
+    TV='driver-terms-v3.2-2026-10-19'
+    AGREE='I have read and agree to the Driver Terms, Policies &amp; Waiver.'
     page(head,foot,'form-driver.html',"Volunteer Driver Agreement","Maa’s Meals · a program of "+LEGAL,
-      "Thank you for driving for Maa’s Meals! One short page: tell us about you, then agree to the Driver Terms &amp; Policies.",
+      "Thank you for driving for Maa’s Meals! One short page: tell us about you, then agree to the Driver Terms, Policies &amp; Waiver.",
       'driver_agreement',[
-      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')+tick('age_18_plus','I am 18 or older.',consent=False,msg='Drivers must be 18 or older. Please tick to confirm.')+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Driver Terms &amp; Policies</summary><div class="mf-terms-box" tabindex="0">{DRIVER_TERMS}</div></details>
-<p><a href="driver-terms.html" target="_blank" rel="noopener">Open the Driver Terms &amp; Policies on their own page</a></p>
+      ('Your details',fld('full_name','Full name',auto='name',extra=' data-fullname="1"')+fld('cell_phone','Cell phone',type='tel',auto='tel')+fld('email','Email',req=False,type='email',auto='email')+tick('age_18_plus','I am 18 or older.',consent=False,msg='Drivers must be 18 or older. Please tick to confirm.')+'<h3>Terms and signature</h3>'+f'''<details class="mf-terms"><summary>Read the Driver Terms, Policies &amp; Waiver</summary><div class="mf-terms-box" tabindex="0">{DRIVER_TERMS}</div></details>
+<p><a href="driver-terms.html" target="_blank" rel="noopener">Open the Driver Terms, Policies &amp; Waiver on their own page</a></p>
 <input type="hidden" name="terms_version" value="{TV}">
-<label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Driver Terms &amp; Policies."> <span data-consent>{AGREE}</span></label>
+<label class="mf-tick"><input type="checkbox" name="sig_agree" value="yes" required data-msg="Please tick the box to agree to the Driver Terms, Policies &amp; Waiver."> <span data-consent>{AGREE}</span></label>
 <span hidden data-consent>Terms version: {TV}</span>
 {fld('sig_name','Type your full name to sign',auto='name',extra=' data-fullname="1"',hint='Typing your name here is your signature.')}
 <p>Date: <b class="mf-date"></b></p>''')])
-    th=head('Driver Terms & Policies').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
+    th=head('Driver Terms, Policies & Waiver').replace('<main class="mi">','<main class="mi mfp">').replace('</head>','<link rel="stylesheet" href="forms.css"></head>',1)
     open('driver-terms.html','w').write(th+f'''{DRAFT}
-<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Driver Terms &amp; Policies</h1><p>For volunteers who deliver Maa’s Meals in their own vehicles. Version {TV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
+<div class="mf-top"><p class="eyebrow">Maa’s Meals · a program of {LEGAL}</p><h1>Driver Terms, Policies &amp; Waiver</h1><p>For volunteers who deliver Maa’s Meals in their own vehicles. Version {TV}.</p><p class="mf-call">Questions? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap"><div class="mf-step mf-terms-page">{DRIVER_TERMS}</div>
-<p style="margin-top:20px"><a class="mf-btn" href="form-driver.html">Go to the Driver Agreement form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p></div>
+<p style="margin-top:20px"><a class="mf-btn" href="form-driver.html">Go to the Driver Agreement form</a></p><p><a class="mf-btn mf-back" href="forms.html">All forms</a></p><p class="mf-legal">See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p></div>
 '''+foot)
 
     # 5. SMS consent (one page; details in text-terms.html)
@@ -318,7 +328,7 @@ def build(head,foot):
     open('forms.html','w').write(h+f'''{DRAFT}
 <div class="mf-top"><p class="eyebrow">{LEGAL}</p><h1>Forms</h1><p>Each form is one short page you can fill in on your phone. Need help? Call <a href="{TEL}">{PH}</a>.</p></div>
 <div class="mf-wrap">
-<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries.',('meals-terms.html','Meal Recipient Terms &amp; Policies'))}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Must be 18 or older.',('driver-terms.html','Driver Terms &amp; Policies'))}</div>
+<div class="mf-group"><h2>🍲 Maa’s Meals</h2>{card('form-meals-recipient.html','Meal Recipient Form','For seniors who get Saturday meal deliveries.',('meals-terms.html','Meal Recipient Terms &amp; Policies'))}{card('form-driver.html','Volunteer Driver Agreement','For volunteers who deliver meals in their own car. Must be 18 or older.',('driver-terms.html','Driver Terms, Policies &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🙌 Volunteers</h2>{card('form-volunteer.html','Volunteer Sign-up','Help at Maa’s Meals, Maa’s Place or Bloom Village.',('volunteer-terms.html','Volunteer Terms &amp; Policies'))}{card('form-text-consent.html','Text Message Consent','Optional: get volunteer text reminders.',('text-terms.html','Text Message Terms'))}</div>
 <div class="mf-group"><h2>🏡 Maa’s Place</h2>{card('form-maas-place.html','Maa’s Place Sign-up','For adults 55+. Includes the participation waiver.',('maas-place-terms.html','Maa’s Place Terms &amp; Waiver'))}</div>
 <div class="mf-group"><h2>🌸 Bloom Village</h2>{card('form-bloom-fee.html','Fee Agreement','Program days, weekly cost and fee terms for families.',('bloom-fee-terms.html','Bloom Village Fee Terms &amp; Policies'),True)}{card('form-bloom-rights.html','Participant Rights','A short summary of your rights, then sign.',('bloom-rights.html','Full Participant Rights'),True)}{card('form-bloom-complaint.html','Complaint Form','Tell us about a concern. Your name is optional.',('bloom-rights.html#complaint','How complaints are handled'),True)}</div>

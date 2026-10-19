@@ -322,34 +322,74 @@ CT=head("Contact Us").replace('<main class="mi">','<main class="mi purple contac
 open('contact.html','w').write(CT)
 
 # ---- Legal + SMS pages (for Twilio A2P compliance) ----
-LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms &amp; Conditions</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a></div>'
-PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Privacy Policy</h1><p>How Maa's Inspiration Inc. collects and uses your information.</p></header>
+LEGAL='<div class="footer-bottom" style="padding-top:0"><a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a href="terms.html" style="color:inherit">Terms of Use</a> · <a href="sms-signup.html" style="color:inherit">Text updates</a></div>'
+LDRAFT='<p style="background:#fff;border:3px dashed #5B2A86;color:#5B2A86;text-align:center;font-weight:700;padding:10px 14px;margin:0">DRAFT – pending attorney review</p>'
+LCSS='<style>.mi.legal section{padding:28px 5% 40px}.mi.legal .wrap{max-width:760px;font-size:1.1rem;line-height:1.6}.mi.legal h2{font-size:1.35rem;margin-top:1.6rem}.mi.legal ul{padding-left:1.2em}.mi.legal li{margin-bottom:.5rem}.mi.legal .hero{padding:40px 5% 28px}</style>'
+CONTACT_L='<p>Maa\'s Inspiration Inc.<br>2700 Old Denton Rd, Suite 102<br>Carrollton, TX 75007<br>Phone: <a href="tel:+14692708156">(469) 270-8156</a><br>Email: <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p>'
+PV=head("Privacy Policy").replace('<main class="mi">','<main class="mi purple legal">').replace('</head>',LCSS+'</head>',1)+LDRAFT+'''<header class="hero"><h1>Privacy Policy</h1><p>How Maa's Inspiration Inc. collects, uses and protects your information. Last updated October 19, 2026.</p></header>
 <section><div class="wrap">
-<p>This Privacy Policy applies to Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, including our Maa's Meals program, Maa’s Place and Bloom Village.</p>
-<h2>What data we collect</h2><ul><li>Name</li><li>Phone number</li><li>Email address</li><li>Address (for meal delivery)</li></ul>
-<h2>How we use it</h2><ul><li>Volunteer scheduling, including shift and route reminders</li><li>Meal delivery notices to meal recipients</li><li>Answering questions you send us</li></ul>
-<h2>Text messages (SMS)</h2>
-<p>If you opt in to text messages from Maa's Inspiration Inc., we use your phone number only to send the messages described in our <a href="terms.html">Terms &amp; Conditions</a>. You can reply STOP at any time to opt out, or HELP for help.</p>
-<p><b>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.</b></p>
-<h2>Keeping your data safe</h2><p>Only authorized Maa's Inspiration staff and volunteers can see your information, and only what they need for their role.</p>
-<h2>Contact us</h2><p>Maa's Inspiration Inc., Carrollton, TX · <a href="tel:+14692708156">(469) 270-8156</a> · <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></p>
+<p>This policy covers Maa's Inspiration Inc., a 501(c)(3) nonprofit (EIN 86-2221897) in Carrollton, Texas, and its programs: Maa's Meals, Maa's Place and Bloom Village.</p>
+<h2>1. What we collect</h2><ul>
+<li><b>Forms you send us:</b> your name, phone, email, address and anything you type in a form, such as delivery notes or a complaint.</li>
+<li><b>Volunteers:</b> contact details, which programs you help with, your agreement to our volunteer and driver terms, and whether you agreed to texts or photos.</li>
+<li><b>Meal recipients:</b> name, address, phone and delivery notes.</li>
+<li><b>Bloom Village families:</b> the participant's and guardian's names, phone and program days. Health and other private details are collected in person, not on this website.</li>
+<li><b>Donations:</b> online gifts are processed by Stripe. Stripe handles your card details; we never see or store your full card number. We receive your name, email, amount and date.</li>
+<li><b>Delivery door photos:</b> volunteer drivers take one photo at each stop showing only the meal at the door and the house number. These photos are deleted after 7 days.</li></ul>
+<h2>2. How we use it</h2><ul>
+<li>To run our programs: deliver meals, schedule volunteers, enroll participants and answer your questions.</li>
+<li>To send receipts and thank-you notes for donations.</li>
+<li>To keep records the law requires, such as signed agreements and licensing records.</li></ul>
+<h2>3. We do not sell your information</h2>
+<p>We never sell, rent or trade your personal information.</p>
+<p><b>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</b></p>
+<p>We share information only with service providers who help us run our programs (for example our secure database, text message and payment providers), and only as needed, or when the law requires it.</p>
+<h2 id="sms">4. Text messages (SMS)</h2><ul>
+<li>If you agree to texts, we use your mobile number only for the messages you agreed to, such as volunteer shift reminders and meal delivery notices.</li>
+<li>Message frequency varies. Message and data rates may apply.</li>
+<li>Reply <b>STOP</b> at any time to stop. Reply <b>HELP</b> for help, or call (469) 270-8156.</li>
+<li>Agreeing to texts is never required to volunteer or get meals. See our <a href="text-terms.html">Text Message Terms</a>.</li></ul>
+<h2>5. Donor confidentiality</h2>
+<p>Donor names, amounts and contact details are kept confidential. We do not publish a donor's name without permission, and we never sell or share donor lists.</p>
+<h2>6. Photos and videos</h2><ul>
+<li>We post photos of people only with their consent, and use first names only.</li>
+<li>Delivery door photos are never posted or shared, and are deleted after 7 days.</li>
+<li>You may withdraw photo consent at any time by calling or emailing us.</li></ul>
+<h2>7. Keeping your information safe</h2>
+<p>Only authorized staff and volunteers can see your information, and only what they need for their role. We use secure, password-protected systems. No system is perfectly secure, so please call us if you think something is wrong.</p>
+<h2>8. Children</h2>
+<p>This website is not for children. We do not knowingly collect information from children under 13. Bloom Village serves adults 18 and older.</p>
+<h2>9. Your choices</h2>
+<p>You may ask to see, correct or delete your information, or stop texts or emails, by contacting us. Some records must be kept by law.</p>
+<h2>10. Changes to this policy</h2>
+<p>We may update this policy. The date at the top shows the latest version.</p>
+<h2>11. Contact us</h2>'''+CONTACT_L+'''
 </div></section>
 '''+foot
 open('privacy.html','w').write(PV)
-TM=head("Terms & Conditions").replace('<main class="mi">','<main class="mi purple">')+'''<header class="hero"><h1>Terms &amp; Conditions</h1><p>Terms for using the Maa's Inspiration Inc. website and text messages.</p></header>
+TM=head("Terms of Use").replace('<main class="mi">','<main class="mi purple legal">').replace('</head>',LCSS+'</head>',1)+LDRAFT+'''<header class="hero"><h1>Terms of Use</h1><p>The rules for using the Maa's Inspiration Inc. website. Last updated October 19, 2026.</p></header>
 <section><div class="wrap">
-<p>These terms apply to the website and services of Maa's Inspiration Inc., a 501(c)(3) nonprofit in Carrollton, Texas.</p>
-<h2 id="sms">SMS Terms</h2><ul>
-<li><b>Brand:</b> Maa's Inspiration Inc. (Maa's Meals)</li>
-<li><b>Message types:</b> volunteer shift and route reminders, and meal delivery notices.</li>
-<li><b>Frequency:</b> message frequency varies.</li>
-<li>Message and data rates may apply.</li>
-<li><b>Opt out:</b> reply STOP to any message to opt out. You will get one confirmation and no further messages.</li>
-<li><b>Help:</b> reply HELP for help.</li>
-<li><b>Contact:</b> <a href="tel:+14692708156">(469) 270-8156</a> or <a href="mailto:aslam@maasinspiration.org">aslam@maasinspiration.org</a></li>
-<li>Carriers are not liable for delayed or undelivered messages.</li>
-<li>Consent to receive texts is not a condition of volunteering or receiving meals.</li></ul>
-<p>See our <a href="privacy.html">Privacy Policy</a> for how we handle your information.</p>
+<h2>1. Using this website</h2>
+<p>By using this website you agree to these terms. Please use it only for lawful purposes, give true information in our forms, and do not try to harm or misuse the site.</p>
+<h2>2. Donations</h2><ul>
+<li>Online donations are processed securely by Stripe.</li>
+<li>Maa's Inspiration Inc. is a 501(c)(3) nonprofit (EIN 86-2221897). Donations are tax-deductible to the extent allowed by law. No goods or services are provided in exchange for your donation.</li>
+<li>If you made a donation by mistake, contact us within 30 days to ask for a refund. Refunds are given at Maa's Inspiration Inc.'s discretion.</li></ul>
+<h2>3. Program information</h2>
+<p>Program details, such as hours, locations, fees and opening dates, may change. Please call us to confirm before you visit. Each program also has its own terms, which you agree to when you sign its form.</p>
+<h2>4. No medical advice</h2>
+<p>Information on this website is general and is not medical, legal or financial advice. Talk to your doctor or another professional about your own needs.</p>
+<h2>5. Links to other websites</h2>
+<p>Our site links to other websites, such as Stripe, Facebook and Instagram. We are not responsible for their content or privacy practices.</p>
+<h2 id="sms">6. Text messages</h2>
+<p>Texts are sent only to people who agree to them. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Carriers are not liable for delayed or undelivered messages. See our <a href="text-terms.html">Text Message Terms</a> and <a href="privacy.html#sms">Privacy Policy</a>.</p>
+<h2>7. Limitation of liability</h2>
+<p>This website is provided "as is." To the extent allowed by law, Maa's Inspiration Inc., its volunteers, board and partners are not liable for any loss or damage from using this website or relying on its content.</p>
+<h2>8. Texas law</h2>
+<p>These terms are governed by the laws of the State of Texas.</p>
+<h2>9. Changes</h2>
+<p>We may update these terms. The date at the top shows the latest version.</p>
+<h2>10. Contact us</h2>'''+CONTACT_L+'''
 </div></section>
 '''+foot
 open('terms.html','w').write(TM)
@@ -359,7 +399,7 @@ SS=head("Get Text Updates").replace('<main class="mi">','<main class="mi purple"
 <div class="form-row"><div class="form-group"><label>Name <span class="req">*</span></label><input type="text" name="Name" required autocomplete="name"></div><div class="form-group"><label>Mobile phone <span class="req">*</span></label><input type="tel" name="Phone" required autocomplete="tel"></div></div>
 <div class="form-row"><div class="form-group"><label>I am a <span class="req">*</span></label><select name="Role" required><option value="">Choose…</option><option>Volunteer</option><option>Recipient</option></select></div></div>
 <div class="form-row"><div class="form-group full"><label style="font-weight:400"><input type="checkbox" name="SMS Consent" value="Yes" required> I agree to receive text messages from Maa's Inspiration Inc. about volunteer shifts and meal deliveries. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</label>
-<p><small>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</small></p></div></div>
+<p><small>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</small></p></div></div>
 <button type="submit" class="submit-btn">Sign up for texts</button></form></div></div></section>
 '''+foot
 open('sms-signup.html','w').write(SS)
