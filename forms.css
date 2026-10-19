@@ -61,3 +61,4 @@
 .mi.mfp .mf-terms-box{max-height:55vh;overflow-y:auto;padding:4px 16px 16px;border-top:1px solid #ddd3c3;font-size:1rem}
 .mi.mfp .mf-terms-box h3{font-size:1.05rem}
 .mi.mfp .mf-terms-page h3:first-child{margin-top:0}
+.mi.mfp form.mf-form label.mf-tick{flex-wrap:wrap}.mi.mfp .mf-tick>.mf-err{flex:0 0 100%;margin:4px 0 0}.mi.mfp .mf-tick>span{flex:1 1 0;min-width:0}

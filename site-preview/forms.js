@@ -77,8 +77,9 @@
         if (f.required && !file) msg = 'Please add a photo or PDF.';
         else if (file) {
           var ext = (file.name.split('.').pop() || '').toLowerCase();
-          if ((C.files.types.indexOf(file.type) < 0) && C.files.ext.indexOf(ext) < 0) msg = 'Please use a JPG, PNG or PDF file.';
-          else if (file.size > C.files.max_bytes) msg = 'This file is too big. Please use one under 5 MB.';
+          var FL = C.files || { types: ['image/jpeg', 'image/png', 'application/pdf'], ext: ['jpg', 'jpeg', 'png', 'pdf'], max_bytes: 5242880 };
+          if ((FL.types.indexOf(file.type) < 0) && FL.ext.indexOf(ext) < 0) msg = 'Please use a JPG, PNG or PDF file.';
+          else if (file.size > FL.max_bytes) msg = 'This file is too big. Please use one under 5 MB.';
         }
       } else {
         var v = (f.value || '').trim(), ri = f.dataset.reqIf, req = f.required;
@@ -150,7 +151,6 @@
         signer_name: form.querySelector('[name="sig_name"]').value.trim(),
         agreement_version: C.agreement_version,
         consent_text: [].map.call(form.querySelectorAll('[data-consent]'), plain).join('\n\n'),
-        files: c.files,
         website: (form.querySelector('[name="website"]') || {}).value || ''
       };
       var ctl = window.AbortController ? new AbortController() : null;

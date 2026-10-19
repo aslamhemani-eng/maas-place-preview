@@ -202,7 +202,7 @@ VOLP=head("Volunteer").replace('<main class="mi">','<main class="mi purple volp"
 <section id="signup" class="vsign"><div class="wrap"><h2>Volunteer sign-up</h2><p class="vsub">Takes about a minute.</p>
 '''+open('vol_form.html').read()+'''</div></section>
 <section id="forms"><div class="wrap"><h2>Volunteer forms</h2><div class="vcards">
-<a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). Add your license and insurance card.</p></a>
+<a class="vcard" href="form-driver.html" style="text-decoration:none;color:inherit"><h3>🚗 Volunteer Driver Agreement</h3><p>For Maa's Meals delivery drivers (18+). One short page.</p></a>
 <a class="vcard" href="form-text-consent.html" style="text-decoration:none;color:inherit"><h3>💬 Text Message Consent</h3><p>Optional: choose to get volunteer text reminders.</p></a>
 </div><p><a href="forms.html">See all forms</a></p></div></section>
 '''+foot.replace('<script src="section.js"></script>','<script src="vol-form.js"></script>')
